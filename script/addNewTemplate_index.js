@@ -1,50 +1,3 @@
-// if (document.querySelector('#newField')) {
-//     let fieldBlock_index = document.querySelector('.filedBlock_index'); // Контейнер с блоками плоскостей
-//     let template_index = document.querySelector('#newField').content; // Содержимое шаблона
-//     let newField_index = template_index.querySelector('.plane_index'); // Сохраняем содержимое шаблона в переменную
-//     let addNewField_index = document.querySelector('.addNewPlane_index'); // Кнопка добавления новой плоскости
-//     let addBtnArea_index = document.querySelector('.addButton_index'); // Контейнер с кнопкой добавления плоскости и текстом
-//     let nextFieldValue_index = document.querySelector('.filedsValue_index'); // Порядковый номер очередной плоскости
-//     let calculateItBtn_index = document.querySelector('.calculateIt_index'); // Кнопка расчитать
-//     let totalSquare_index = document.querySelector('.totalSquareValue_index'); // Вывод общей влечины S
-//     let requiredNumbers_index = document.querySelector('.requiredNumbersValue_index'); // Вывод общего количества плит
-//     let calcBtn_index = document.querySelector('.orderBtn_index'); // Кнопка заказать
-//     let fields_index = fieldBlock_index.children; // Динамическа коллекция дочерних элементов
-//     let x;
-//
-//
-//     let calculator = function(field) {
-//         let lengthValue = field.querySelector('.lengthField_index');
-//         let heightValue = field.querySelector('.heightField_index');
-//         x = lengthValue.value * heightValue.value;
-//         return x;
-//     }
-//
-//     addNewField_index.addEventListener('click', function() {
-//         let newElement = newField_index.cloneNode(true);
-//         fieldBlock_index.appendChild(newElement);
-//         for (let i = 0; i <= fields_index.length - 1; i ++) {
-//             let fieldNumber_index = fields_index[i].querySelector('.fieldNumber_index');
-//             fieldNumber_index.textContent = i + 1;
-//         }
-//         nextFieldValue_index.textContent = fields_index.length + 1;
-//         if (fields_index.length === 6) {
-//             addBtnArea_index.style.display = "none";
-//             calculateItBtn_index.style.margin = "0px auto";
-//         }
-//     })
-//
-//     calcBtn_index.addEventListener('click', function() {
-//         let total = 0;
-//         for (let i = 0; i <= fields_index.length - 1; i++) {
-//             calculator(fields_index[i]);
-//             total += x;
-//         }
-//         totalSquare_index.textContent = total;
-//     })
-// }
-
-
 
 let formats_select = document.getElementById('format_list')
 let height_select = document.getElementById('heigth_list')
@@ -613,6 +566,7 @@ const panels = [
         "price": 2620
     }
 ]
+
 function changeSelects(event) {
     if (event.target.getAttribute('id') === 'format_list') {
         formats_select = event.target
@@ -686,49 +640,55 @@ function renderResults(array) {
     } )
 }
 
-document.querySelector('.addNewPlane_index').addEventListener('click', (e) => {
-    let template = document.getElementById('template')
-    if (document.querySelectorAll('.child_element').length >= 4) {
-        e.target.classList.add('disabled')
+let add_square = document.querySelector('.addNewPlane_index')
+    if(add_square) {
+        add_square.addEventListener('click', (e) => {
+        let template = document.getElementById('template')
+        if (document.querySelectorAll('.child_element').length >= 4) {
+            e.target.classList.add('disabled')
+        }
+        let clone = template.cloneNode()
+        let id = Date.now()
+        clone.id = id
+        clone.classList.add('child_element')
+        clone.innerHTML = template.innerHTML
+        parent_container.appendChild(clone)
+
+        })
     }
-    let clone = template.cloneNode()
-    let id = Date.now()
-    clone.id = id
-    clone.classList.add('child_element')
-    clone.innerHTML = template.innerHTML
-    parent_container.appendChild(clone)
-
-})
-
 panels.forEach(item => {
     createOption(formats_select, item.length + 'x' + item.width, item)
     createOption(height_select, item.heigth, item)
 })
 
-parent_container.addEventListener('change', e => changeSelects(e))
+if (parent_container) {
+    parent_container.addEventListener('change', e => changeSelects(e))
+}
 
-document.getElementById('calc_button').addEventListener('click', () => {
-    let AllSquares = getAllValues()
-    let results = []
-    AllSquares.forEach(square => {
-        let panel = panels.filter(item => item.id == square.heigth)
-        let obj = {}
-        panel.forEach(item => {
-            let s_user = (Number(square.length_field)* Number(square.height_filed))/1000000
-            let s_panel = (Number(item.length) * Number(item.width))/1000000
-            let count = Math.ceil(s_user/s_panel)
-            let total_cost = count * Number(item.price)
-            obj = {
-                name: item.name,
-                count: count,
-                s_user: parseFloat(s_user).toFixed(2),
-                price: item.price.toLocaleString('ru-RU'),
-                total_cost: total_cost.toLocaleString('ru-RU')
-            }
-            results.push(obj)
+let calc_button = document.getElementById('calc_button')
+    if (calc_button) {
+        calc_button.addEventListener('click', () => {
+            let AllSquares = getAllValues()
+            let results = []
+            AllSquares.forEach(square => {
+                let panel = panels.filter(item => item.id == square.heigth)
+                let obj = {}
+                panel.forEach(item => {
+                    let s_user = (Number(square.length_field) * Number(square.height_filed)) / 1000000
+                    let s_panel = (Number(item.length) * Number(item.width)) / 1000000
+                    let count = Math.ceil(s_user / s_panel)
+                    let total_cost = count * Number(item.price)
+                    obj = {
+                        name: item.name,
+                        count: count,
+                        s_user: parseFloat(s_user).toFixed(2),
+                        price: item.price.toLocaleString('ru-RU'),
+                        total_cost: total_cost.toLocaleString('ru-RU')
+                    }
+                    results.push(obj)
+                })
+
+            })
+            renderResults(results)
         })
-
-    })
-    renderResults(results)
-
-})
+    }
