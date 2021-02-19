@@ -2,7 +2,7 @@ if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
     $(document).ready(function () {
         var offset = $('#fixed').offset();
         var topPadding = 0,
-        bottomPadding = 4810;
+        bottomPadding = 4905;
         $(window).scroll(function() {
             if (window.innerWidth >= 1006) {
                 if ($(window).scrollTop() > offset.top) {

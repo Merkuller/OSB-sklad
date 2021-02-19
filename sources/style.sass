@@ -3440,12 +3440,12 @@ header
           text-align: center
           margin-bottom: 10px
 
-        .materialSizeVariation
-          justify-content: center
-          margin-bottom: 10px
+        // .materialSizeVariation
+        //   justify-content: center
+        //   margin-bottom: 10px
         
-        .materialInStock
-          justify-content: center
+        // .materialInStock
+        //   justify-content: center
         
   @media screen and ( max-width: 426px)
     margin-top: 20px
@@ -3539,15 +3539,138 @@ header
       text-decoration: underline
       transition: all 0.2s ease-in-out
 
-.materialSizeVariation
+.productCardForm
   width: 100%
-  // display: flex
-  display: none
-  align-items: center
-  margin-bottom: 17px
-  flex-wrap: wrap
-  @media screen and ( max-width: 455px)
+  display: flex
+  justify-content: space-between
+  margin-bottom: 10px
+
+  .productCardTotalPrice
+    flex: 1 1 58%
+    padding: 13px 0px
+    display: flex
     justify-content: center
+    align-items: center
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #010101
+    margin-right: 12px
+    background-color: #EC8B33
+    border-radius: 4px
+    border: none
+    outline: none
+    transition: all .2s ease-in-out
+
+    &:hover
+      background-color: #010101
+      color: #EC8B33
+      transition: all .2s ease-in-out
+
+    &:active
+      background-color: #CA782E
+      transition: all .2s ease-in-out
+
+    &:focus
+      outline: none
+
+  .productCardCounter
+    flex: 1 1 37%
+    position: relative
+
+    .productCardCounterBtn
+      text-decoration: none
+      position: absolute
+      display: flex
+      align-items: center
+      justify-content: center
+      font-style: normal
+      font-weight: normal
+      font-size: 20px
+      line-height: 36px
+      background-color: #FFFFFF
+      color: #010101
+      height: 90%
+      z-index: 2
+      transition: all .1s ease-in-out
+
+      &:hover
+        color: #EC8B33
+        transition: all .1s ease-in-out
+
+      &:active
+        color: #CA782E
+        transition: all .1s ease-in-out
+
+
+    .productCounterMinusBtn
+      left: 2px
+      top: 2px
+      padding-left: 10px
+
+    .productCounterPlusBtn
+      right: 2px
+      top: 2px
+      padding-right: 10px
+    
+    .productCardCounterField
+      width: 100%
+      height: 100%
+      position: absolute
+      display: block
+      text-align: center
+      border: 2px solid #BFBFBF
+      border-radius: 4px
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 36px
+      color: #010101
+      z-index: 1
+
+      &:focus
+        outline: none
+    
+.refineRemainder
+  width: 100%
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 13px 0px
+  font-style: normal
+  font-weight: bold
+  font-size: 20px
+  line-height: 36px
+  background-color: #EC8B33 
+  color: #010101
+  border: none
+  border-radius: 4px
+  outline: none
+  transition: all .2s ease-in-out
+
+  &:hover
+    background-color: #010101
+    color: #EC8B33
+    transition: all .2s ease-in-out
+
+  &:active
+    background-color: #CA782E
+    color: #010101
+    transition: all .2s ease-in-out
+
+  &:focus
+    outline: none
+
+// .materialSizeVariation
+//   width: 100%
+  // display: flex
+  // display: none
+  // align-items: center
+  // margin-bottom: 17px
+  // flex-wrap: wrap
+  // @media screen and ( max-width: 455px)
+  //   justify-content: center
 
 .sizeVariationText
   display: block
@@ -3562,41 +3685,41 @@ header
   display: flex
   justify-content: space-between
 
-.productBtn
-  display: block
-  width: 40px
-  height: 40px
-  border-radius: 50%
-  font-style: normal
-  font-weight: normal
-  font-size: 16px
-  line-height: 28px
-  text-align: center
-  color: #010101
-  border: 2px solid #010101
-  background-color: inherit
-  outline: none
-  transition: all 0.2s ease-in-out
+// .productBtn
+//   display: block
+//   width: 40px
+//   height: 40px
+//   border-radius: 50%
+//   font-style: normal
+//   font-weight: normal
+//   font-size: 16px
+//   line-height: 28px
+//   text-align: center
+//   color: #010101
+//   border: 2px solid #010101
+//   background-color: inherit
+//   outline: none
+//   transition: all 0.2s ease-in-out
 
-  &:not(:last-of-type)
-    margin-right: 4px
+  // &:not(:last-of-type)
+  //   margin-right: 4px
 
-  &:hover
-    color: #FFFFFF
-    background-color: #EC8B33
-    border: none
-    transition: all 0.2s ease-in-out
+  // &:hover
+  //   color: #FFFFFF
+  //   background-color: #EC8B33
+  //   border: none
+  //   transition: all 0.2s ease-in-out
 
-  &:active
-    background-color: #010101
-    outline: none
-    transition: all 0.1s ease-in-out
+  // &:active
+  //   background-color: #010101
+  //   outline: none
+  //   transition: all 0.1s ease-in-out
 
-  &:focus
-    outline: none
-    background-color: #EC8B33
-    color: #FFFFFF
-    border-color: #EC8B33
+  // &:focus
+  //   outline: none
+  //   background-color: #EC8B33
+  //   color: #FFFFFF
+  //   border-color: #EC8B33
 
 .moreSizes
   display: block
@@ -3607,38 +3730,38 @@ header
   color: #010101
   margin-left: 12px
 
-.materialInStock
-  width: 100%
-  display: flex
-  align-items: baseline
-  @media screen and ( max-width: 455px)
-    justify-content: center
+// .materialInStock
+//   width: 100%
+//   display: flex
+//   align-items: baseline
+//   @media screen and ( max-width: 455px)
+//     justify-content: center
 
-.materialPriceValue
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #010101
-  display: block
-  margin-right: 5px
+// .materialPriceValue
+//   font-style: normal
+//   font-weight: bold
+//   font-size: 20px
+//   line-height: 36px
+//   color: #010101
+//   display: block
+//   margin-right: 5px
 
-.materialPrice
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #010101
-  display: block
-  margin-right: 12px
+// .materialPrice
+//   font-style: normal
+//   font-weight: bold
+//   font-size: 20px
+//   line-height: 36px
+//   color: #010101
+//   display: block
+//   margin-right: 12px
 
-.materialValue
-  font-style: normal
-  font-weight: normal
-  font-size: 16px
-  line-height: 28px
-  color: #4E4E4E
-  display: block
+// .materialValue
+//   font-style: normal
+//   font-weight: normal
+//   font-size: 16px
+//   line-height: 28px
+//   color: #4E4E4E
+//   display: block
 
 .shipPaz_osbOnFloor
   font-style: italic
@@ -4064,75 +4187,75 @@ header
   display: flex
   margin-right: 12px
 
-.productBtn
-  display: block
-  width: 40px
-  height: 40px
-  border-radius: 50%
-  font-style: normal
-  font-weight: normal
-  font-size: 16px
-  line-height: 28px
-  text-align: center
-  color: #010101
-  border: 2px solid #010101
-  background-color: inherit
-  outline: none
-  transition: all 0.2s ease-in-out
-  margin-right: 4px
+// .productBtn
+//   display: block
+//   width: 40px
+//   height: 40px
+//   border-radius: 50%
+//   font-style: normal
+//   font-weight: normal
+//   font-size: 16px
+//   line-height: 28px
+//   text-align: center
+//   color: #010101
+//   border: 2px solid #010101
+//   background-color: inherit
+//   outline: none
+//   transition: all 0.2s ease-in-out
+//   margin-right: 4px
 
-  &:last-of-type
-    margin-right: 0px
+//   &:last-of-type
+//     margin-right: 0px
 
-  &:hover
-    color: #FFFFFF
-    background-color: #EC8B33
-    border: none
-    transition: all 0.2s ease-in-out
+//   &:hover
+//     color: #FFFFFF
+//     background-color: #EC8B33
+//     border: none
+//     transition: all 0.2s ease-in-out
 
-  &:active
-    background-color: #010101
-    outline: none
-    transition: all 0.1s ease-in-out
+//   &:active
+//     background-color: #010101
+//     outline: none
+//     transition: all 0.1s ease-in-out
 
-.sizeVariationTopPlusNumber_osbOnFloor
-  display: block
-  font-style: normal
-  font-weight: normal
-  font-size: 16px
-  line-height: 28px
-  color: #010101
+// .sizeVariationTopPlusNumber_osbOnFloor
+//   display: block
+//   font-style: normal
+//   font-weight: normal
+//   font-size: 16px
+//   line-height: 28px
+//   color: #010101
 
-.topMaterialInStock_osbOnFloor
-  width: 100%
-  display: flex
-  align-items: baseline
+// .topMaterialInStock_osbOnFloor
+//   width: 100%
+//   display: flex
+//   align-items: baseline
 
-.topMaterialPrice_osbOnFloor
-  display: block
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #010101
-  margin-right: 16px
+// .topMaterialPrice_osbOnFloor
+//   display: block
+//   font-style: normal
+//   font-weight: bold
+//   font-size: 20px
+//   line-height: 36px
+//   color: #010101
+//   margin-right: 16px
 
-.materialValueNumber
-  display: block
-  font-style: normal
-  font-weight: normal
-  font-size: 16px
-  line-height: 28px
-  color: #4E4E4E
-  margin-right: 5px
+// .materialValueNumber
+//   display: block
+//   font-style: normal
+//   font-weight: normal
+//   font-size: 16px
+//   line-height: 28px
+//   color: #4E4E4E
+//   margin-right: 5px
 
-.topMaterialValue_osbOnFloor
-  display: block
-  font-style: normal
-  font-weight: normal
-  font-size: 16px
-  line-height: 28px
-  color: #4E4E4E
+// .topMaterialValue_osbOnFloor
+//   display: block
+//   font-style: normal
+//   font-weight: normal
+//   font-size: 16px
+//   line-height: 28px
+//   color: #4E4E4E
 
 /* Пятая секция. 2 страница. OSB на пол
 
@@ -5210,11 +5333,11 @@ input::-webkit-inner-spin-button
               margin: 0px auto
             .productDescription
               text-align: center
-            .materialSizeVariation
-              justify-content: center
-              margin-bottom: 10px
-            .materialInStock
-              justify-content: center
+            // .materialSizeVariation
+            //   justify-content: center
+            //   margin-bottom: 10px
+            // .materialInStock
+            //   justify-content: center
   @media screen and ( max-width: 425px)
     padding-bottom: 40px
 
@@ -6425,11 +6548,11 @@ input::-webkit-inner-spin-button
             margin: 0px auto
         .productDescription
           text-align: center
-        .materialSizeVariation
-          justify-content: center
-          margin-bottom: 10px
-        .materialInStock
-          justify-content: center
+        // .materialSizeVariation
+        //   justify-content: center
+        //   margin-bottom: 10px
+        // .materialInStock
+        //   justify-content: center
   @media screen and ( max-width: 1025px)
     margin-top: 40px
   @media screen and ( max-width: 426px)
@@ -8944,3 +9067,6 @@ input::-webkit-inner-spin-button
 .accordion-button.filterBtnSelect
   color: #010101
   background-color: #FFFFFF
+
+.blurEffect 
+  filter: blur(10px)
