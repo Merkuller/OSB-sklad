@@ -3791,6 +3791,11 @@ header
       text-decoration: underline
       transition: all 0.2s ease-in-out
 
+/* Модальное окно карты продукта */
+
+.productCardmodalWindow.show
+  padding-right: 0px
+
 /* Третья секция. 2 страница. OSB на пол
 
 .sectionThree_osbOnFloor
@@ -9068,5 +9073,5 @@ input::-webkit-inner-spin-button
   color: #010101
   background-color: #FFFFFF
 
-.blurEffect 
-  filter: blur(10px)
+body.modal-open
+  padding-right: 0px !important

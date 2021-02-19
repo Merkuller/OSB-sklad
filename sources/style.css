@@ -5547,6 +5547,11 @@ header {
   transition: all 0.2s ease-in-out;
 }
 
+/* Модальное окно карты продукта */
+.productCardmodalWindow.show {
+  padding-right: 0px;
+}
+
 /* Третья секция. 2 страница. OSB на пол */
 .sectionThree_osbOnFloor {
   width: 100%;
@@ -13522,8 +13527,7 @@ input::-webkit-inner-spin-button {
   background-color: #FFFFFF;
 }
 
-.blurEffect {
-  -webkit-filter: blur(10px);
-          filter: blur(10px);
+body.modal-open {
+  padding-right: 0px !important;
 }
 /*# sourceMappingURL=style.css.map */
