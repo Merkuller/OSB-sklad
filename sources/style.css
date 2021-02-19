@@ -5180,17 +5180,6 @@ header {
     text-align: center;
     margin-bottom: 10px;
   }
-  .productsInf_certificates > .productCards .materialSizeVariation {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 10px;
-  }
-  .productsInf_certificates > .productCards .materialInStock {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
 }
 
 @media screen and (max-width: 426px) {
@@ -5319,23 +5308,67 @@ header {
   transition: all 0.2s ease-in-out;
 }
 
-.materialSizeVariation {
+.productCardForm {
   width: 100%;
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.productCardForm .productCardTotalPrice {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 58.75%;
+          flex: 1 1 58.75%;
+  padding: 13px 0px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 17px;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+  background-color: #EC8B33;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-@media screen and (max-width: 455px) {
-  .materialSizeVariation {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
+.productCardForm .productCardTotalPrice:hover {
+  background-color: #010101;
+  color: #EC8B33;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.productCardForm .productCardTotalPrice:active {
+  background-color: #CA782E;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.productCardForm .productCardTotalPrice:focus {
+  outline: none;
+}
+
+.productCardForm .productCardCounter {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 37.5%;
+          flex: 1 1 37.5%;
 }
 
 .sizeVariationText {
@@ -5357,50 +5390,6 @@ header {
           justify-content: space-between;
 }
 
-.productBtn {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: center;
-  color: #010101;
-  border: 2px solid #010101;
-  background-color: inherit;
-  outline: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.productBtn:not(:last-of-type) {
-  margin-right: 4px;
-}
-
-.productBtn:hover {
-  color: #FFFFFF;
-  background-color: #EC8B33;
-  border: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.productBtn:active {
-  background-color: #010101;
-  outline: none;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-.productBtn:focus {
-  outline: none;
-  background-color: #EC8B33;
-  color: #FFFFFF;
-  border-color: #EC8B33;
-}
-
 .moreSizes {
   display: block;
   font-style: normal;
@@ -5409,53 +5398,6 @@ header {
   line-height: 28px;
   color: #010101;
   margin-left: 12px;
-}
-
-.materialInStock {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-@media screen and (max-width: 455px) {
-  .materialInStock {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-  }
-}
-
-.materialPriceValue {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 36px;
-  color: #010101;
-  display: block;
-  margin-right: 5px;
-}
-
-.materialPrice {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 36px;
-  color: #010101;
-  display: block;
-  margin-right: 12px;
-}
-
-.materialValue {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: #4E4E4E;
-  display: block;
 }
 
 .shipPaz_osbOnFloor {
@@ -6104,92 +6046,6 @@ header {
   display: -ms-flexbox;
   display: flex;
   margin-right: 12px;
-}
-
-.productBtn {
-  display: block;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  text-align: center;
-  color: #010101;
-  border: 2px solid #010101;
-  background-color: inherit;
-  outline: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-  margin-right: 4px;
-}
-
-.productBtn:last-of-type {
-  margin-right: 0px;
-}
-
-.productBtn:hover {
-  color: #FFFFFF;
-  background-color: #EC8B33;
-  border: none;
-  -webkit-transition: all 0.2s ease-in-out;
-  transition: all 0.2s ease-in-out;
-}
-
-.productBtn:active {
-  background-color: #010101;
-  outline: none;
-  -webkit-transition: all 0.1s ease-in-out;
-  transition: all 0.1s ease-in-out;
-}
-
-.sizeVariationTopPlusNumber_osbOnFloor {
-  display: block;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: #010101;
-}
-
-.topMaterialInStock_osbOnFloor {
-  width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-}
-
-.topMaterialPrice_osbOnFloor {
-  display: block;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 36px;
-  color: #010101;
-  margin-right: 16px;
-}
-
-.materialValueNumber {
-  display: block;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: #4E4E4E;
-  margin-right: 5px;
-}
-
-.topMaterialValue_osbOnFloor {
-  display: block;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 16px;
-  line-height: 28px;
-  color: #4E4E4E;
 }
 
 /* Пятая секция. 2 страница. OSB на пол */
@@ -7764,17 +7620,6 @@ input::-webkit-inner-spin-button {
   }
   .sectionThree_productCard .thirdSection_productCard > .productCards .productCard .productDescription {
     text-align: center;
-  }
-  .sectionThree_productCard .thirdSection_productCard > .productCards .productCard .materialSizeVariation {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 10px;
-  }
-  .sectionThree_productCard .thirdSection_productCard > .productCards .productCard .materialInStock {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
@@ -9627,17 +9472,6 @@ input::-webkit-inner-spin-button {
   }
   .materialCard_articles > .productCards .productCard .productDescription {
     text-align: center;
-  }
-  .materialCard_articles > .productCards .productCard .materialSizeVariation {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    margin-bottom: 10px;
-  }
-  .materialCard_articles > .productCards .productCard .materialInStock {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
   }
 }
 
