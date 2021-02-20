@@ -5548,8 +5548,73 @@ header {
 }
 
 /* Модальное окно карты продукта */
-.productCardmodalWindow.show {
-  padding-right: 0px;
+.popup_osbOnFloor {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  top: 0;
+  left: 0;
+  color: #010101;
+  z-index: 10;
+  opacity: 0;
+  visibility: hidden;
+  overflow-y: auto;
+  overflow-x: hidden;
+}
+
+.popup_osbOnFloor .popupBody_osbOnFloor {
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 30px 30px;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+}
+
+.popup_osbOnFloor .popupBody_osbOnFloor .popupContent_osbOnFloor {
+  background-color: #FFFFFF;
+  border-radius: 4px;
+  padding: 30px 10px;
+  max-width: 800px;
+  position: relative;
+  -webkit-transition: all .6s ease-in-out;
+  transition: all .6s ease-in-out;
+  opacity: 0;
+  -webkit-transform: perspective(600px) translate(0px, 100px) rotateX(45deg);
+          transform: perspective(600px) translate(0px, 100px) rotateX(45deg);
+}
+
+.popup_osbOnFloor .popupBody_osbOnFloor .popupContent_osbOnFloor .popupCloseBtn_osbOnFloor {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  font-size: 20px;
+  color: #010101;
+  text-decoration: none;
+}
+
+.popup_osbOnFloor .popupBody_osbOnFloor .popupContent_osbOnFloor .popupTitle_osbOnFloor {
+  font-size: 40px;
+  margin: 0px 0px .5em 0px;
+}
+
+.popup_osbOnFloor.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.popup_osbOnFloor.open .popupContent_osbOnFloor {
+  -webkit-transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+          transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+  opacity: 1;
 }
 
 /* Третья секция. 2 страница. OSB на пол */
