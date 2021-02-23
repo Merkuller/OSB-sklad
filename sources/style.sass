@@ -987,7 +987,7 @@ header
     margin-right: 0px
 
 .effect-ruby 
-  background-color: #17819c
+  background-color: inherit
   position: relative
   overflow: hidden
   border-radius: 4px
@@ -997,12 +997,10 @@ header
 
 .effect-ruby 
   img 
-    opacity: 0.7
-    transition: opacity 0.35s, transform 0.35s
+    transition: transform 0.35s
     transform: scale(1.15)
     position: relative
     display: block
-    opacity: 0.8
     width: 100%
     object-fit: cover
     object-position: center
@@ -1026,7 +1024,6 @@ header
 
 .effect-ruby
   &:hover > img 
-    opacity: 0.5
     transform: scale(1)
 
 .effect-ruby 
@@ -1839,6 +1836,7 @@ header
   outline: none
   border: none
   position: relative
+  min-height: 500px
   @media screen and ( max-width: 700px)
     width: 80%
 
@@ -1926,6 +1924,11 @@ header
   color: #010101
 
 /* Текст отзыва
+.s3_reviewComment_index
+  height: 100px
+  overflow-y: hidden
+  &:hover
+    overflow-y: auto
 
 .s3_reviewCommentText1_index
   display: inline-block
@@ -1936,19 +1939,6 @@ header
   line-height: 36px
   color: #4E4E4E
   margin-bottom: 8px
-
-.s3_reviewCommentText2_index
-  width: 100%
-  display: inline-block
-  text-align: left
-  font-style: normal
-  font-weight: normal
-  font-size: 16px
-  line-height: 28px
-  color: #010101
-  text-align: left
-  overflow-y: scroll
-  text-overflow: ellipsis
 
 /* Кто оставил отзыв
 
@@ -3439,13 +3429,6 @@ header
         .productDescription
           text-align: center
           margin-bottom: 10px
-
-        // .materialSizeVariation
-        //   justify-content: center
-        //   margin-bottom: 10px
-        
-        // .materialInStock
-        //   justify-content: center
         
   @media screen and ( max-width: 426px)
     margin-top: 20px
@@ -3538,6 +3521,15 @@ header
       color: #EC8B33
       text-decoration: underline
       transition: all 0.2s ease-in-out
+
+.perSquareMeter
+  font-style: normal
+  font-weight: normal
+  font-size: 16px
+  line-height: 28px
+  color: #4E4E4E
+  margin-top: 5px
+  margin-bottom: 10px
 
 .productCardForm
   width: 100%
@@ -3793,62 +3785,110 @@ header
 
 /* Модальное окно карты продукта */
 
-.popup_osbOnFloor
+.popup
   position: fixed
   width: 100%
   height: 100%
   background-color: rgba(0, 0, 0, 0.8)
   top: 0
   left: 0
-  color: #010101
   z-index: 10
   opacity: 0
   visibility: hidden
-  overflow-y: auto
   overflow-x: hidden
-  // transition: all .6s ease-in-out 
-
-  .popupBody_osbOnFloor
+  overflow-y: auto
+  transition: all .3s ease-in-out
+  .popupBody
     min-height: 100%
     display: flex
     align-items: center
     justify-content: center
-    padding: 30px 30px
-    transition: all .6s ease-in-out
-
-    .popupContent_osbOnFloor
-      background-color: #FFFFFF
+    color: #010101
+    padding: 30px 10px
+    .popupContent
       border-radius: 4px
-      padding: 30px 10px
-      max-width: 800px
+      background-color: #FFFFFF
+      max-width: 500px
       position: relative
-      transition: all .6s ease-in-out
+      padding: 20px
+      padding-top: 30px
       opacity: 0
-      transform: perspective(600px) translate(0px, 100px) rotateX(45deg)
-
-      .popupCloseBtn_osbOnFloor
+      transition: all .3s ease-in-out
+      transform: translate(-100%, 0px)
+      .popupCloseBtn
         position: absolute
+        background-image: url('../img/svg/firstSection_page3/closePopupIcon.svg')
+        background-position: center
+        width: 15px 
+        height: 15px
         right: 10px
+        background-color: inherit
         top: 10px
-        font-size: 20px
         color: #010101
         text-decoration: none
+        border: none
+        outline: none
+        &:focus
+          outline: none
+      .popupTitle
+        font-size: 28px
+        font-weight: normal
+        margin: 0px 0px 0.5em 0px
+        .popupProductName
+          color: #4E4E4E
+      .popupField
+        display: block
+        width: 100%
+        padding: 5px
+        margin-bottom: 10px
+        border: 2px solid #BFBFBF
+        border-radius: 4px
+        outline: none
+        &:focus
+          outline: none
+      .popupCommentField
+        width: 100%
+        border: 2px solid #BFBFBF
+        border-radius: 4px
+        outline: none
+        margin-bottom: 10px
+      .popupSubmitBtn
+        display: block
+        padding: 10px 30px
+        margin: 0px auto
+        color: #010101
+        background-color: #EC8B33
+        border-radius: 4px
+        outline: none
+        border: none
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 28px
+        text-transform: uppercase
+        transition: all .2s ease-in-out
+        &:hover
+          background-color: #010101
+          color: #EC8B33
+          transition: all .2s ease-in-out
+        &:active
+          background-color: #CA782E
+          color: #010101
+          transition: all .1s ease-in-out
+        &:focus
+          outline: none
+          border: none
 
-      .popupTitle_osbOnFloor
-        font-size: 40px
-        margin: 0px 0px .5em 0px
-
-      .popupElements_osbOnFloor
-
-.popup_osbOnFloor.open
+.showPopup
   opacity: 1
   visibility: visible
+ 
+.popup.showPopup
+  .popupContent
+    transform: translate(0%, 0px)
+    opacity: 1
 
-.popup_osbOnFloor.open .popupContent_osbOnFloor
-  transform: perspective(600px) translate(0px, 0%) rotateX(0deg)
-  opacity: 1
-
-/* Третья секция. 2 страница. OSB на пол
+  /* Третья секция. 2 страница. OSB на пол
 
 .sectionThree_osbOnFloor
   width: 100%
@@ -5390,11 +5430,7 @@ input::-webkit-inner-spin-button
               margin: 0px auto
             .productDescription
               text-align: center
-            // .materialSizeVariation
-            //   justify-content: center
-            //   margin-bottom: 10px
-            // .materialInStock
-            //   justify-content: center
+        
   @media screen and ( max-width: 425px)
     padding-bottom: 40px
 
@@ -6605,11 +6641,7 @@ input::-webkit-inner-spin-button
             margin: 0px auto
         .productDescription
           text-align: center
-        // .materialSizeVariation
-        //   justify-content: center
-        //   margin-bottom: 10px
-        // .materialInStock
-        //   justify-content: center
+        
   @media screen and ( max-width: 1025px)
     margin-top: 40px
   @media screen and ( max-width: 426px)
@@ -6869,6 +6901,9 @@ input::-webkit-inner-spin-button
   &:active
     color: #CA782E
     transition: color 0.1s ease-in-out
+
+  &:focus
+    outline: none
 
 /* Телефон Mottex
 
@@ -9095,6 +9130,127 @@ input::-webkit-inner-spin-button
   &:active
     background-color: inherit
     transition: transform 0.2s ease-in-out, opacity 0.2s ease-in-out, background-color 0.1s ease-in-out
+
+/* СТРАНИЦА КТО МЫ */
+.sixthSection_whoAreWe
+  .parallax-window
+    height: 800px
+    display: flex
+    align-items: center
+    @media screen and ( max-width: 1440px)
+      height: 600px
+    @media screen and ( max-width: 1024px)
+      height: 400px
+      .sectionTitle_index
+        padding-top: 0px
+        @media screen and ( max-width: 376px)
+          font-size: 38px
+    @media screen and ( max-width: 425px)
+      height: 400px
+      
+.manufacturer_whoAreWe
+  width: 100%
+  .sectionTitle_index
+    text-align: center
+    width: 100% 
+
+.content_whoAreWe
+  padding: 49px 0px 119px 0px
+  @media screen and ( max-width: 1024px)
+    padding: 60px 0px
+  @media screen and ( max-width: 426px)
+    padding: 40px 0px
+    
+  .inf_whoAreWe
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 36px
+    text-align: center
+    margin-bottom: 49px
+    @media screen and ( max-width: 1024px)
+      text-align: left
+      margin-bottom: 40px
+      br
+        display: none
+    @media screen and ( max-width: 426px)
+      margin-bottom: 20px
+
+  .catalog_whoAreWe
+    width: 100%
+    display: block
+    text-align: center
+    text-transform: uppercase
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #999999
+
+/* СТРАНИЦА ПОИСКА */
+
+.content_search
+  padding-bottom: 120px
+  @media screen and ( max-width: 1024px)
+    padding-bottom: 60px
+  @media screen and ( max-width: 425px)
+    padding-bottom: 40px
+    
+  .wrapper
+    flex-direction: column
+    .searchForm_search
+      position: relative
+      margin-bottom: 52px
+      &::after
+        content: ''
+        position: absolute
+        top: 15px
+        right: 20px
+        display: block
+        width: 20px
+        height: 20px
+        background-image: url('../img/svg/search/search_icon.svg')
+      @media screen and ( max-width: 1024px)
+        margin-bottom: 40px
+      .searchField_search
+        width: 100%
+        display: block
+        border: 2px solid #010101
+        outline: none
+        padding: 13px 0px 13px 20px
+        &:focus
+          outline: none
+    .productCards
+      width: 100%
+      .productCard
+        @media screen and ( max-width: 1024px)
+          padding-bottom: 40px
+        @media screen and ( max-width: 743px)
+          flex: 1 1 40%
+        @media screen and ( max-width: 455px)
+          flex: 1 1 100%
+          
+        .productPic
+          .productLink
+            img
+              width: 100%
+        .perSquareMeter
+          text-align: center
+        .productCardForm
+          @media screen and ( max-width: 1001px)
+            flex-direction: column
+          @media screen and ( max-width: 455px)
+            flex-direction: row
+          .productCardTotalPrice
+            margin-right: 0px
+            margin-bottom: 10px
+            @media screen and ( max-width: 455px)
+              margin-right: 10px
+              margin-bottom: 0px
+          
+            
+              
+              
 
 .shown
   opacity: 0.8
