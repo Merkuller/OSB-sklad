@@ -4,1875 +4,1734 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
     <title>OSB-плиты в одном месте</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./sources/style.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
 <body>
-<header>
-    <ul class="topNav firstNavMenu">
+    <header>
+        <ul class="topNav firstNavMenu">
+            <div class="wrapper">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span> Челябинск<img src="img/svg/header_page1/mapMarkerIcon_header.svg" class="youCityPosition"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Троицкий Тракт, 17</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">ПН-ПТ: 8:30-18:00, СБ-ВС: 9:30-15:00</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">osb-sklad@mail.ru <img src="img/svg/header_page1/mailIcon.svg" class="ourMail"></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#"><img src="img/svg/header_page1/phoneIcon.svg"></a>
+                </li>
+            </div>
+            <a class="brandLogo" href="#"><img src="img/svg/header_page1/brand_icon_page1.svg" alt="#"></a>
+        </ul>
         <div class="wrapper">
-            <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span>
-                    Челябинск<img src="img/svg/header_page1/mapMarkerIcon_header.svg" class="youCityPosition"></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Троицкий Тракт, 17</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">ПН-ПТ: 8:30-18:00, СБ-ВС: 9:30-15:00</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">osb-sklad@mail.ru <img src="img/svg/header_page1/mailIcon.svg"
-                                                                    class="ourMail"></a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#"><img src="img/svg/header_page1/phoneIcon.svg"></a>
-            </li>
-        </div>
-        <a class="brandLogo" href="#"><img src="img/svg/header_page1/brand_icon_page1.svg" alt="#"></a>
-    </ul>
-    <div class="wrapper">
-        <nav class="navbar navbar-expand-xl navbar-light">
-            <div class="container-fluid">
-                <div class="headerLogo">
-                    <a class="navbar-brand" href="#"><img src="img/svg/header_page1/brand_icon_page1.svg" alt="#"></a>
-                    <span class="logoText">склад/магазин</span>
-                </div>
-                <form class="searchField">
-                    <input type="search" class="navSearch" placeholder="Найти своё OSB">
-                    <button type="submit" class="navSearchBtn"></button>
-                </form>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <svg class="ham hamRotate ham1" viewBox="10 13 65 75" width="60"
-                         onclick="this.classList.toggle('active1')">
-                        <path
-                                class="line top"
-                                d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40"/>
-                        <path
-                                class="line middle"
-                                d="m 30,50 h 40"/>
-                        <path
-                                class="line bottom"
-                                d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40"/>
-                    </svg>
-                </button>
-                <div class="collapse navbar-collapse headerMenu" id="navbarNav">
-                    <ul class="navbar-nav firstNavMenu">
-                        <li class="nav-item">
-                            <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span>
-                                Челябинск</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Троицкий Тракт, 17</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">ПН-ПТ: 8:30-18:00, СБ-ВС: 9:30-15:00</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">osb-sklad@mail.ru</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">+7 (912) 72-00-00 </a>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav secondNavbar">
-                        <div class="secondNavbarMenu">
-                            <li class="nav-item">
-                                <a class="nav-link menuEl" href="catalog.html">Цены</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link menuEl" href="#">Кто мы?</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link menuEl" href="certificates.html">Сертификаты</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link menuEl" href="delivery.html">Доставка и оплата</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link menuEl" href="osbBlog.html">Блог по OSB</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link menuEl" href="contacts.html">Контакты</a>
-                            </li>
-                        </div>
-                        <div class="secondNavbarIcons">
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><span class="quantityPurchase">0</span></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><img src="img/svg/header_page1/deliveryIcon.svg"
-                                                                  alt="#"></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><img src="img/svg/header_page1/searchIcon.svg" alt="#"></a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" href="#"><img src="img/svg/header_page1/microphoneIcon.svg" alt="#"></a>
-                            </li>
-                        </div>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </div>
-</header>
-<main>
-    <section class="sectionOne_index">
-        <div class="slider1_index">
-            <div class="s1_slide_index">
-                <img src="img/jpg/firstSection_page1/slider1_page1/warehouse1_page1.jpg" alt="">
-                <div class="slideContent_index">
-                    <p class="slideContentText_index">OSB-плиты в одном месте</p>
-                    <a class="meetCatalog_index" href="#">
-                        Ознакомиться с каталогом
-                        <button type="button" class="scrollDown"></button>
-                    </a>
-                </div>
-            </div>
-            <div class="s1_slide_index">
-                <img src="img/jpg/firstSection_page1/slider1_page1/ea09c702f15b4a001d434d3b4f5246c0.jpg" alt="">
-                <div class="slideContent_index">
-                    <p class="slideContentText_index">Текст второго слайдера</p>
-                    <a class="meetCatalog_index" href="#">
-                        Ознакомиться с каталогом
-                        <button type="button" class="scrollDown"></button>
-                    </a>
-                </div>
-            </div>
-            <div class="s1_slide_index">
-                <img src="img/jpg/firstSection_page1/slider1_page1/warehouse2_page1.jpg" alt="">
-                <div class="slideContent_index">
-                    <p class="slideContentText_index">Текст третьего слайдера</p>
-                    <a class="meetCatalog_index" href="#">
-                        Ознакомиться с каталогом
-                        <button type="button" class="scrollDown"></button>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="sectionTwo_index">
-        <div class="wrapper">
-            <div class="secondSectionTabsContainer_index">
-                <div class="sectionTwoText_index">
-                    <h1 class="sectionTitle_index">Каталог OSB</h1>
-                    <p class="secondSectionTabs_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша
-                        команда эффективно подходит к вопросу выбора OSB плит при поставке на наш склад, для решения
-                        проблем строительства. В связи с этим мы сформировали каталог таким образом, чтобы он решил
-                        конкретно вашу задачу</p>
-                </div>
-                <div class="tabs_index slider-osb-nav" id="slider-osb-nav">
-                    <button type="button" class="slider-osb-nav__item button_catalog firstTabs_index"
-                            data-category-id="1" data-category="1" data-link="https://filmz.ru/">по применению
+            <nav class="navbar navbar-expand-xl navbar-light">
+                <div class="container-fluid">
+                    <div class="headerLogo">
+                        <a class="navbar-brand" href="#"><img src="img/svg/header_page1/brand_icon_page1.svg" alt="#"></a>
+                        <span class="logoText">склад/магазин</span>
+                    </div>
+                    <form class="searchField">
+                        <input type="search" class="navSearch" placeholder="Найти своё OSB">
+                        <button type="submit" class="navSearchBtn"></button>
+                    </form>
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <svg class="ham hamRotate ham1" viewBox="10 13 65 75" width="60" onclick="this.classList.toggle('active1')">
+                            <path
+                                  class="line top"
+                                  d="m 30,33 h 40 c 0,0 9.044436,-0.654587 9.044436,-8.508902 0,-7.854315 -8.024349,-11.958003 -14.89975,-10.85914 -6.875401,1.098863 -13.637059,4.171617 -13.637059,16.368042 v 40" />
+                            <path
+                                  class="line middle"
+                                  d="m 30,50 h 40" />
+                            <path
+                                  class="line bottom"
+                                  d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
+                        </svg>
                     </button>
-                    <button type="button" class="slider-osb-nav__item button_catalog firstTabs_index"
-                            data-category-id="2" data-category="2" data-link="https://kinopoisk.ru">по производителю
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="slider2_index">
-            <div class="slider2ControlPanel_index">
-                <div class="slider2Buttons_index">
-                    <button class="left1Index leftIndex" type="button"></button>
-                    <button class="right1Index rightIndex" type="button"></button>
-                    <div class="slider2Counter_index">
-                        <span class="currentNumber_index">1</span>
-                        /
-                        <span class="totalNumber_index"></span>
+                    <div class="collapse navbar-collapse headerMenu" id="navbarNav">
+                        <ul class="navbar-nav firstNavMenu">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span> Челябинск</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Троицкий Тракт, 17</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">ПН-ПТ: 8:30-18:00, СБ-ВС: 9:30-15:00</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">osb-sklad@mail.ru</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">+7 (912) 72-00-00 </a>
+                            </li>
+                        </ul>
+                        <ul class="navbar-nav secondNavbar">
+                            <div class="secondNavbarMenu">
+                                <li class="nav-item">
+                                    <a class="nav-link menuEl" href="catalog.html">Цены</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link menuEl" href="#">Кто мы?</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link menuEl" href="certificates.html">Сертификаты</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link menuEl" href="delivery.html">Доставка и оплата</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link menuEl" href="osbBlog.html">Блог по OSB</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link menuEl" href="contacts.html">Контакты</a>
+                                </li>
+                            </div>
+                            <div class="secondNavbarIcons">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><span class="quantityPurchase">0</span></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="img/svg/header_page1/deliveryIcon.svg" alt="#"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="img/svg/header_page1/searchIcon.svg" alt="#"></a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="#"><img src="img/svg/header_page1/microphoneIcon.svg" alt="#"></a>
+                                </li>
+                            </div>
+                        </ul>
                     </div>
                 </div>
-                <a href="#" class="slider2LinkShowAll_index">
-                    Смотреть все цены OSB <span class="tabTitle_index">по применению</span>
-                </a>
-            </div>
-            <section class="slider_catalog" id="slider">
-                <div class="catalogSlider_catalog swiper-container">
-                    <div class="swiper-wrapper sliderContent_catalog">
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]"
-                             data-id="1">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для обшивки стен</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для стен
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]"
-                             data-id="1">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для обшивки стен</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для стен
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]"
-                             data-id="1">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для обшивки стен</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для стен
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]"
-                             data-id="1">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для обшивки стен</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для стен
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]"
-                             data-id="1">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic2_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для чернового пола</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для пола
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 490 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]"
-                             data-id="1">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic3_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для обрешётки кровли</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для кровли
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]"
-                             data-id="2">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic4_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для сип/сэндвич панелей</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для сип панелей
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]"
-                             data-id="2">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic5_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для потолка</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для потолка
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]"
-                             data-id="2">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic6_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для тары и упаковки</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для тары и упаковки
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]"
-                             data-id="2">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic7_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для мебели</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для мебели
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]"
-                             data-id="2">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для помещения</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для помещения
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]"
-                             data-id="2">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для помещения</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для помещения
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]"
-                             data-id="2">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для помещения</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для помещения
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]"
-                             data-id="2">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для помещения</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для помещения
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
-                        <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]"
-                             data-id="2">
-                            <a href="#">
-                                <figure class="effect-ruby">
-                                    <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
-                                    <figcaption>
-                                        <p>Купить OSB для помещения</p>
-                                    </figcaption>
-                                </figure>
-                            </a>
-                            <a href="#" class="s2_slideText">
-                                ОСП для помещения
-                            </a>
-                            <p class="s2_slidePrice">
-                                От 485 р./лист
-                            </p>
-                            <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
-                        </div>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="sectionOne_index">
+            <div class="slider1_index">
+                <div class="s1_slide_index">
+                    <img src="img/jpg/firstSection_page1/slider1_page1/warehouse1_page1.jpg" alt="">
+                    <div class="slideContent_index">
+                        <p class="slideContentText_index">OSB-плиты в одном месте</p>
+                        <a class="meetCatalog_index" href="#">
+                            Ознакомиться с каталогом
+                            <button type="button" class="scrollDown"></button>
+                        </a>
                     </div>
                 </div>
-            </section>
-        </div>
-    </section>
-    <section class="sectionThree_index">
-        <div class="wrapper">
-            <h2 class="sectionTitle_index white">Почему OSB?</h2>
-            <div class="sectionThreeDignitys_index">
-                <div class="sectionThreeDignity_index">
-                    <p class="dignityTitle_index">Низкая стоимость</p>
-                    <p class="dignityText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда
-                        эффективно подходит к вопросу выбора OSB.</p>
+                <div class="s1_slide_index">
+                    <img src="img/jpg/firstSection_page1/slider1_page1/ea09c702f15b4a001d434d3b4f5246c0.jpg" alt="">
+                    <div class="slideContent_index">
+                        <p class="slideContentText_index">Текст второго слайдера</p>
+                        <a class="meetCatalog_index" href="#">
+                            Ознакомиться с каталогом
+                            <button type="button" class="scrollDown"></button>
+                        </a>
+                    </div>
                 </div>
-                <div class="sectionThreeDignity_index">
-                    <p class="dignityTitle_index">Подтвержденная надежность</p>
-                    <p class="dignityText_index">Этот показатель отражает несколько моментов: модуль упругости,
-                        прочность на изгиб и на разрыв. Они достаточно высоки</p>
-                </div>
-                <div class="sectionThreeDignity_index">
-                    <p class="dignityTitle_index">Внешний вид</p>
-                    <p class="dignityText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда
-                        эффективно подходит к вопросу выбора OSB.</p>
-                </div>
-                <div class="sectionThreeDignity_index">
-                    <p class="dignityTitle_index">Стабильное качество</p>
-                    <p class="dignityText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда
-                        эффективно подходит к вопросу выбора OSB.</p>
-                </div>
-                <div class="sectionThreeDignity_index">
-                    <p class="dignityTitle_index">Низкий вес</p>
-                    <p class="dignityText_index">Этот показатель отражает несколько моментов: модуль упругости,
-                        прочность на изгиб и на разрыв. Они достаточно высоки</p>
-                </div>
-                <div class="sectionThreeDignity_index">
-                    <p class="dignityTitle_index">Показатели деформации</p>
-                    <p class="dignityText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда
-                        эффективно подходит к вопросу выбора OSB.</p>
+                <div class="s1_slide_index">
+                    <img src="img/jpg/firstSection_page1/slider1_page1/warehouse2_page1.jpg" alt="">
+                    <div class="slideContent_index">
+                        <p class="slideContentText_index">Текст третьего слайдера</p>
+                        <a class="meetCatalog_index" href="#">
+                            Ознакомиться с каталогом
+                            <button type="button" class="scrollDown"></button>
+                        </a>
+                    </div>
                 </div>
             </div>
-            <p class="sectionThreeText_index">Плиты ОСБ, технические характеристики которых мы рассмотрели, обладают не
-                только положительными, но и некоторыми отрицательными свойствами. Они касаются продукта не самого
-                высокого качества. К примеру, в состав смол, используемых недобросовестными производителями, входит
-                формальдегид, который испаряется в помещении и наносит вред здоровью.
-            </p>
-        </div>
-    </section>
-    <section class="sectionFour_index">
-        <div class="wrapper">
-            <div class="costCalculator_index">
-                <h2 class="sectionTitle_index">
-                    Расчитайте стоимость
-                </h2>
-                <div class="filedBlock_index" id="parent">
-                    <div class="plane_index" id="template">
-                        <p class="plane_Title_index">Плоскость <span class="fieldNumber_index">1</span></p>
-                        <form id="form " class="form">
-                            <div class="plane_InputFields_index">
-                                <div class="field_index">
-                                    <input type="number" class='length_field lengthField_index' name="length_field"
-                                           required placeholder="Длина плоскости*">
+        </section>
+        <section class="sectionTwo_index">
+            <div class="wrapper">
+                <div class="secondSectionTabsContainer_index">
+                    <div class="sectionTwoText_index">
+                        <h1 class="sectionTitle_index">Каталог OSB</h1>
+                        <p class="secondSectionTabs_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда эффективно подходит к вопросу выбора OSB плит при поставке на наш склад, для решения проблем строительства. В связи с этим мы сформировали каталог таким образом, чтобы он решил конкретно вашу задачу</p>
+                    </div>
+                    <div class="tabs_index slider-osb-nav" id="slider-osb-nav">
+                        <button type="button" class="slider-osb-nav__item button_catalog firstTabs_index" data-category-id="1" data-category="1" data-link="https://filmz.ru/">по применению</button>
+                        <button type="button" class="slider-osb-nav__item button_catalog firstTabs_index" data-category-id="2" data-category="2" data-link="https://kinopoisk.ru">по производителю</button>
+                    </div>
+                </div>
+            </div>
+            <div class="slider2_index">
+                <div class="slider2ControlPanel_index">
+                    <div class="slider2Buttons_index">
+                        <button class="left1Index leftIndex" type="button"></button>
+                        <button class="right1Index rightIndex" type="button"></button>
+                        <div class="slider2Counter_index">
+                            <span class="currentNumber_index">1</span>
+                            /
+                            <span class="totalNumber_index"></span>
+                        </div>
+                    </div>
+                    <a href="#" class="slider2LinkShowAll_index">
+                        Смотреть все цены OSB <span class="tabTitle_index">по применению</span>
+                    </a>
+                </div>
+                <section class="slider_catalog" id="slider">
+                    <div class="catalogSlider_catalog swiper-container">
+                        <div class="swiper-wrapper sliderContent_catalog">
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для обшивки стен</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для стен
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для обшивки стен</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для стен
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для обшивки стен</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для стен
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для обшивки стен</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для стен
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic2_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для чернового пола</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для пола
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 490 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic3_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для обрешётки кровли</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для кровли
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic4_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для сип/сэндвич панелей</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для сип панелей
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic5_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для потолка</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для потолка
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic6_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для тары и упаковки</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для тары и упаковки
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic7_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для мебели</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для мебели
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для помещения</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для помещения
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для помещения</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для помещения
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для помещения</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для помещения
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для помещения</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для помещения
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                            <div class="s2_slide_catalog swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <a href="#">
+                                    <figure class="effect-ruby">
+                                        <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" alt="">
+                                        <figcaption>
+                                            <p>Купить OSB для помещения</p>
+                                        </figcaption>
+                                    </figure>
+                                </a>
+                                <a href="#" class="s2_slideText">
+                                    ОСП для помещения
+                                </a>
+                                <p class="s2_slidePrice">
+                                    От 485 р./лист
+                                </p>
+                                <a href="#" class="showAll_catalog showAllHover_catalog">Смотреть всё</a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </section>
+        <section class="sectionThree_index">
+            <div class="wrapper">
+                <h2 class="sectionTitle_index white">Почему OSB?</h2>
+                <div class="sectionThreeDignitys_index">
+                    <div class="sectionThreeDignity_index">
+                        <p class="dignityTitle_index">Низкая стоимость</p>
+                        <p class="dignityText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда эффективно подходит к вопросу выбора OSB.</p>
+                    </div>
+                    <div class="sectionThreeDignity_index">
+                        <p class="dignityTitle_index">Подтвержденная надежность</p>
+                        <p class="dignityText_index">Этот показатель отражает несколько моментов: модуль упругости, прочность на изгиб и на разрыв. Они достаточно высоки</p>
+                    </div>
+                    <div class="sectionThreeDignity_index">
+                        <p class="dignityTitle_index">Внешний вид</p>
+                        <p class="dignityText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда эффективно подходит к вопросу выбора OSB.</p>
+                    </div>
+                    <div class="sectionThreeDignity_index">
+                        <p class="dignityTitle_index">Стабильное качество</p>
+                        <p class="dignityText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда эффективно подходит к вопросу выбора OSB.</p>
+                    </div>
+                    <div class="sectionThreeDignity_index">
+                        <p class="dignityTitle_index">Низкий вес</p>
+                        <p class="dignityText_index">Этот показатель отражает несколько моментов: модуль упругости, прочность на изгиб и на разрыв. Они достаточно высоки</p>
+                    </div>
+                    <div class="sectionThreeDignity_index">
+                        <p class="dignityTitle_index">Показатели деформации</p>
+                        <p class="dignityText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда эффективно подходит к вопросу выбора OSB.</p>
+                    </div>
+                </div>
+                <p class="sectionThreeText_index">Плиты ОСБ, технические характеристики которых мы рассмотрели, обладают не только положительными, но и некоторыми отрицательными свойствами. Они касаются продукта не самого высокого качества. К примеру, в состав смол, используемых недобросовестными производителями, входит формальдегид, который испаряется в помещении и наносит вред здоровью.
+                </p>
+            </div>
+        </section>
+        <section class="sectionFour_index">
+            <div class="wrapper">
+                <div class="costCalculator_index">
+                    <h2 class="sectionTitle_index">
+                        Расчитайте стоимость
+                    </h2>
+                    <div class="filedBlock_index" id="parent">
+                        <div class="plane_index" id="template">
+                            <p class="plane_Title_index">Плоскость <span class="fieldNumber_index">1</span></p>
+                            <form id="form " class="form">
+                                <div class="plane_InputFields_index">
+                                    <div class="field_index">
+                                        <input type="number" class='length_field lengthField_index' name="length_field" required placeholder="Длина плоскости*">
+                                    </div>
+                                    <div class="field_index">
+                                        <input type="number" class="form-control heightField_index" name="height_filed" required placeholder="Высота плоскости*">
+                                    </div>
+                                    <div class="field_index">
+                                        <select aria-placeholder="Размер плиты*" class="listGeometri_index form-select format_list" id="format_list" name="format">
+                                            <option value="null" selected disabled>Выберите размер плиты</option>
+                                        </select>
+                                    </div>
+                                    <div class="field_index">
+                                        <select aria-placeholder="Толщины*"  class="thicknessField_index form-select heigth_list" id="heigth_list" name="heigth">
+                                            <option value="null" selected disabled>Выберите толщину</option>
+                                        </select>
+                                    </div>
                                 </div>
-                                <div class="field_index">
-                                    <input type="number" class="form-control heightField_index" name="height_filed"
-                                           required placeholder="Высота плоскости*">
-                                </div>
-                                <div class="field_index">
-                                    <select aria-placeholder="Размер плиты*"
-                                            class="listGeometri_index form-select format_list" id="format_list"
-                                            name="format">
-                                        <option value="null" selected disabled>Выберите размер плиты</option>
-                                    </select>
-                                </div>
-                                <div class="field_index">
-                                    <select aria-placeholder="Толщины*"
-                                            class="thicknessField_index form-select heigth_list" id="heigth_list"
-                                            name="heigth">
-                                        <option value="null" selected disabled>Выберите толщину</option>
-                                    </select>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-                <div class="calcResult_index">
-                    <p class="totalCost_index">Итоговая стоимость:</p>
-                    <p class="totalCostValue_index"></p>
-                    <div id="result_parent" class="result_parent">
-                        <div id="result_template" style="display: none" class="result_template">
-                            <div class="totalSquare_index">
-                                <span class="totalSquareTitle_index">Плоскость №</span>
-                                <span class="requiredNumbersValue_index square_id"></span>
-                            </div>
-                            <div class="totalSquare_index">
-                                <span class="totalSquareTitle_index">Площадь плоскости</span>
-                                <span class="requiredNumbersValue_index square"></span>м<sup>2</sup>
-                            </div>
-                            <div class="totalSquare_index">
-                                <span class="totalSquareTitle_index">Необходимое количество плит</span>
-                                <span class="requiredNumbersValue_index panel_count"></span>Шт
-                            </div>
-                            <div class="totalSquare_index">
-                                <span class="totalSquareTitle_index">Стоимость:</span>
-                                <span class="requiredNumbersValue_index panel_count total_price"></span>руб.
-                            </div>
-                            <button type="button" class="orderBtn_index">заказать</button>
-                            <hr style="color: #333333; border: none">
+                            </form>
                         </div>
                     </div>
-                </div>
-                <div class="add_calculate_index">
-                    <div class="addButton_index">
-                        <button type="button" class="addNewPlane_index">+</button>
-                        <div class="addButtonText_index">Добавить плоскость <span class="filedsValue_index">2</span>
+                    <div class="calcResult_index">
+                        <p class="totalCost_index">Итоговая стоимость:</p>
+                        <p class="totalCostValue_index"></p>
+                        <div id="result_parent" class="result_parent">
+                            <div id="result_template" style="display: none" class="result_template" >
+                                <div class="totalSquare_index">
+                                    <span class="totalSquareTitle_index">Плоскость №</span>
+                                    <span class="requiredNumbersValue_index square_id"></span>
+                                </div>
+                                <div class="totalSquare_index">
+                                    <span class="totalSquareTitle_index">Площадь плоскости</span>
+                                    <span class="requiredNumbersValue_index square"></span>м<sup>2</sup>
+                                </div>
+                                <div class="totalSquare_index">
+                                    <span class="totalSquareTitle_index">Необходимое количество плит</span>
+                                    <span class="requiredNumbersValue_index panel_count"></span>Шт
+                                </div>
+                                <div class="totalSquare_index">
+                                    <span class="totalSquareTitle_index">Стоимость:</span>
+                                    <span class="requiredNumbersValue_index panel_count total_price"></span>руб.
+                                </div>
+                                <button type="button" class="orderBtn_index">заказать</button>
+                                <hr style="color: #333333; border: none">
+                            </div>
                         </div>
                     </div>
-                    <button type="submit" id="calc_button" class="calculateIt_index">расчитать</button>
+                    <div class="add_calculate_index">
+                        <div class="addButton_index">
+                            <button type="button" class="addNewPlane_index">+</button>
+                            <div class="addButtonText_index">Добавить плоскость <span class="filedsValue_index">2</span></div>
+                        </div>
+                        <button type="submit" id="calc_button" class="calculateIt_index">расчитать</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <section class="fifthSection_index">
-        <div class="track_index">
-            <img src="./img/png/fifthSection_page1/track_page1.png">
-        </div>
-        <div class="wrapper">
-            <h2 class="sectionTitle_index sectionPadding">Кто мы?</h2>
-            <p class="whoAreWeText">ОСП плита - это один из самых распространенных строительных материалов на территории
-                России. Если Вы хотите купить ОСБ (ОСП) в Челябинске по низкой цене и высокого качества, можете смело
-                обращаться в нашу компанию. Мы работаем уже более 10 лет и продали более 4755400 м2.<br><br> Первый раз
-                слышите о нас? Давайте знакомиться!</p>
-        </div>
-    </section>
-    <div class="learnMoreBtn_index">
-        <div class="wrapper">
-            <a href="#" class="learnMoreAboutUs_index">Узнать больше о нас</a>
-        </div>
-    </div>
-    <section class="customerReviews_index">
-        <div class="wrapper">
-            <h2 class="sectionTitle_index">Реальные отзывы клиентов</h2>
-            <p class="customersReviewsText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша
-                команда эффективно подходит к вопросу выбора OSB плит при поставке на наш склад, для решения проблем
-                строительства. В связи с этим мы сформировали каталог так, чтобы он решил конкретно вашу задачу.</p>
-            <div class="tabs_index secondTabsFilter_index slider-reviews-nav" id="slider-reviews-nav">
-                <button type="button" class="slider-reviews-nav__item button_reviews secondTabs_index"
-                        data-category-id="1" data-category="1">частные клиенты
-                </button>
-                <button type="button" class="slider-reviews-nav__item button_reviews secondTabs_index"
-                        data-category-id="2" data-category="2">организации
-                </button>
+        </section>
+        <section class="fifthSection_index">
+            <div class="track_index">
+                <img src="./img/png/fifthSection_page1/track_page1.png">
+            </div>
+            <div class="wrapper">
+                <h2 class="sectionTitle_index sectionPadding">Кто мы?</h2>
+                <p class="whoAreWeText">ОСП плита - это один из самых распространенных строительных материалов на территории России. Если Вы хотите купить ОСБ (ОСП) в Челябинске по низкой цене и высокого качества, можете смело обращаться в нашу компанию. Мы работаем уже более 10 лет и продали более 4755400 м2.<br><br> Первый раз слышите о нас? Давайте знакомиться!</p>
+            </div>
+        </section>
+        <div class="learnMoreBtn_index">
+            <div class="wrapper">
+                <a href="#" class="learnMoreAboutUs_index">Узнать больше о нас</a>
             </div>
         </div>
-    </section>
-    <div class="customersReviewsTabs_index">
-        <div class="slider3_index">
-            <div class="slider3ControlPanel_index">
-                <div class="slider3Buttons_index">
-                    <button class="s3_left2Index" type="button"></button>
-                    <button class="s3_right2Index" type="button"></button>
+        <section class="customerReviews_index">
+            <div class="wrapper">
+                <h2 class="sectionTitle_index">Реальные отзывы клиентов</h2>
+                <p class="customersReviewsText_index">Мы занимаемся оптовой и розничной продажей OSB (ОСП плит). Наша команда эффективно подходит к вопросу выбора OSB плит при поставке на наш склад, для решения проблем строительства. В связи с этим мы сформировали каталог так, чтобы он решил конкретно вашу задачу.</p>
+                <div class="tabs_index secondTabsFilter_index slider-reviews-nav" id="slider-reviews-nav">
+                    <button type="button" class="slider-reviews-nav__item button_reviews secondTabs_index" data-category-id="1" data-category="1">частные клиенты</button>
+                    <button type="button" class="slider-reviews-nav__item button_reviews secondTabs_index" data-category-id="2" data-category="2">организации</button>
                 </div>
-                <a href="#" class="slider3LinkShowAll_index">
-                    <span class="slider3LinkText_index">Смотреть все отзывы</span>
-                    <span class="slider3LinkArrow_index"></span>
-                </a>
             </div>
-            <section class="content_catalog" id="slider2">
-                <div class="swiper-container">
-                    <div class="slider3Content_index swiper-wrapper">
-                        <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
-                            <div class="s3_slideContent_index">
-                                <div class="s3_slide1Review_index">
-                                    <div class="s3_slide1PositiveComment">
-                                        <div class="s3_slide1PositiveReview_index">
-                                            <span class="s3_plusIcon_index"></span>
-                                            <span class="s3_positiveText_index">
+        </section>
+        <div class="customersReviewsTabs_index">
+            <div class="slider3_index">
+                <div class="slider3ControlPanel_index">
+                    <div class="slider3Buttons_index">
+                        <button class="s3_left2Index" type="button"></button>
+                        <button class="s3_right2Index" type="button"></button>
+                    </div>
+                    <a href="#" class="slider3LinkShowAll_index">
+                        <span class="slider3LinkText_index">Смотреть все отзывы</span>
+                        <span class="slider3LinkArrow_index"></span>
+                    </a>
+                </div>
+                <section class="content_catalog" id="slider2">
+                    <div class="swiper-container">
+                        <div class="slider3Content_index swiper-wrapper">
+                            <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <div class="s3_slideContent_index">
+                                    <div class="s3_slide1Review_index">
+                                        <div class="s3_slide1PositiveComment">
+                                            <div class="s3_slide1PositiveReview_index">
+                                                <span class="s3_plusIcon_index"></span>
+                                                <span class="s3_positiveText_index">
                                                     Достоинства:
                                                 </span>
+                                            </div>
+                                            <div class="s3_positiveText_index">
+                                                Удобство и доступность в строительстве, дешевле фанеры, прочность, влагостойкость.
+                                            </div>
                                         </div>
-                                        <div class="s3_positiveText_index">
-                                            Удобство и доступность в строительстве, дешевле фанеры, прочность,
-                                            влагостойкость.
-                                        </div>
-                                    </div>
-                                    <div class="s3_slide1NegativeComment">
-                                        <div class="s3_slide1NegativeReview_index">
-                                            <span class="s3_minusIcon_index"></span>
-                                            <span class="s3_negativeText_index">
+                                        <div class="s3_slide1NegativeComment">
+                                            <div class="s3_slide1NegativeReview_index">
+                                                <span class="s3_minusIcon_index"></span>
+                                                <span class="s3_negativeText_index">
                                                     Недостатки:
                                                 </span>
+                                            </div>
+                                            <div class="s3_negativeText_index">
+                                                Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
+                                            </div>
                                         </div>
-                                        <div class="s3_negativeText_index">
-                                            Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
-                                        </div>
-                                    </div>
-                                    <div class="s3_reviewComment_index">
-                                        <div class="s3_reviewCommentText1_index">
-                                            Текст отзыва:
-                                        </div>
-                                        <div class="scrollbar-macosx">
-                                            В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала
-                                            решили последовать советам родителей и знакомых и не мазать глиной стены
-                                            изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен,
-                                            ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит
-                                            ОСБ и сделали эту работу на 50 процентов.
+                                        <div class="s3_reviewComment_index">
+                                            <div class="s3_reviewCommentText1_index">
+                                                Текст отзыва:
+                                            </div>
+                                            <div class="scrollbar-macosx">
+                                                В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="s3_slide1WhoWrote_index">
-                                    <div class="s3_slide1Person_index">
-                                        <span class="s3_slide1Avatar_index"><img
-                                                src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
-                                        <div class="s3_slide1PersonData_index">
-                                            <span class="s3_slide1Name_index">Егор Смирнов</span>
-                                            <span class="s3_slide1Who_index">Частный клиент</span>
+                                    <div class="s3_slide1WhoWrote_index">
+                                        <div class="s3_slide1Person_index">
+                                            <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                            <div class="s3_slide1PersonData_index">
+                                                <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                                <span class="s3_slide1Who_index">Частный клиент</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="s3_slide1ReviewLinks_index">
-                                        <a class="s3_slide1Attachment_index" href="#">
-                                            <span class="s3_slide1AttachmentIcon_index"></span>
-                                            <span class="s3_slide1AttachmentText_index">
+                                        <div class="s3_slide1ReviewLinks_index">
+                                            <a class="s3_slide1Attachment_index" href="#">
+                                                <span class="s3_slide1AttachmentIcon_index"></span>
+                                                <span class="s3_slide1AttachmentText_index">
                                                     3 вложения
                                                 </span>
-                                        </a>
-                                        <a class="s3_slide1ReviewLink_index">
-                                            <span class="s3_slide1ReviewLinkIcon_index"></span>
-                                            <span class="s3_slide1ReviewLinkText_index" href="#">
+                                            </a>
+                                            <a class="s3_slide1ReviewLink_index">
+                                                <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                                <span class="s3_slide1ReviewLinkText_index" href="#">
                                                     Читать полностью
                                                 </span>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
-                            <div class="s3_slideContent_index">
-                                <div class="s3_slide1Review_index">
-                                    <div class="s3_slide1PositiveComment">
-                                        <div class="s3_slide1PositiveReview_index">
-                                            <span class="s3_plusIcon_index"></span>
-                                            <span class="s3_positiveText_index">
+                            <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                <div class="s3_slideContent_index">
+                                    <div class="s3_slide1Review_index">
+                                        <div class="s3_slide1PositiveComment">
+                                            <div class="s3_slide1PositiveReview_index">
+                                                <span class="s3_plusIcon_index"></span>
+                                                <span class="s3_positiveText_index">
                                                     Достоинства:
                                                 </span>
+                                            </div>
+                                            <div class="s3_positiveText_index">
+                                                Удобство и доступность в строительстве, дешевле фанеры,<br> прочность, влагостойкость.
+                                            </div>
                                         </div>
-                                        <div class="s3_positiveText_index">
-                                            Удобство и доступность в строительстве, дешевле фанеры,<br> прочность,
-                                            влагостойкость.
-                                        </div>
-                                    </div>
-                                    <div class="s3_slide1NegativeComment">
-                                        <div class="s3_slide1NegativeReview_index">
-                                            <span class="s3_minusIcon_index"></span>
-                                            <span class="s3_negativeText_index">
+                                        <div class="s3_slide1NegativeComment">
+                                            <div class="s3_slide1NegativeReview_index">
+                                                <span class="s3_minusIcon_index"></span>
+                                                <span class="s3_negativeText_index">
                                                     Недостатки:
                                                 </span>
+                                            </div>
+                                            <div class="s3_negativeText_index">
+                                                Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
+                                            </div>
                                         </div>
-                                        <div class="s3_negativeText_index">
-                                            Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
-                                        </div>
-                                    </div>
-                                    <div class="s3_reviewComment_index">
-                                        <div class="s3_reviewCommentText1_index">
-                                            Текст отзыва:
-                                        </div>
-                                        <div class="scrollbar-macosx">
-                                            В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала
-                                            решили последовать советам родителей и знакомых и не мазать глиной стены
-                                            изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен,
-                                            ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит
-                                            ОСБ и сделали эту работу на 50 процентов.
+                                        <div class="s3_reviewComment_index">
+                                            <div class="s3_reviewCommentText1_index">
+                                                Текст отзыва:
+                                            </div>
+                                            <div class="scrollbar-macosx">
+                                                В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="s3_slide1WhoWrote_index">
-                                    <div class="s3_slide1Person_index">
-                                        <span class="s3_slide1Avatar_index"><img
-                                                src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
-                                        <div class="s3_slide1PersonData_index">
-                                            <span class="s3_slide1Name_index">Егор Смирнов</span>
-                                            <span class="s3_slide1Who_index">Частный клиент</span>
+                                    <div class="s3_slide1WhoWrote_index">
+                                        <div class="s3_slide1Person_index">
+                                            <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                            <div class="s3_slide1PersonData_index">
+                                                <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                                <span class="s3_slide1Who_index">Частный клиент</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="s3_slide1ReviewLinks_index">
-                                        <a class="s3_slide1Attachment_index" href="#">
-                                            <span class="s3_slide1AttachmentIcon_index"></span>
-                                            <span class="s3_slide1AttachmentText_index">
+                                        <div class="s3_slide1ReviewLinks_index">
+                                            <a class="s3_slide1Attachment_index" href="#">
+                                                <span class="s3_slide1AttachmentIcon_index"></span>
+                                                <span class="s3_slide1AttachmentText_index">
                                                     3 вложения
                                                 </span>
-                                        </a>
-                                        <a class="s3_slide1ReviewLink_index">
-                                            <span class="s3_slide1ReviewLinkIcon_index"></span>
-                                            <span class="s3_slide1ReviewLinkText_index" href="#">
+                                            </a>
+                                            <a class="s3_slide1ReviewLink_index">
+                                                <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                                <span class="s3_slide1ReviewLinkText_index" href="#">
                                                     Читать полностью
                                                 </span>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
-                            <div class="s3_slideContent_index">
-                                <div class="s3_slide1Review_index">
-                                    <div class="s3_slide1PositiveComment">
-                                        <div class="s3_slide1PositiveReview_index">
-                                            <span class="s3_plusIcon_index"></span>
-                                            <span class="s3_positiveText_index">
+                            <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <div class="s3_slideContent_index">
+                                    <div class="s3_slide1Review_index">
+                                        <div class="s3_slide1PositiveComment">
+                                            <div class="s3_slide1PositiveReview_index">
+                                                <span class="s3_plusIcon_index"></span>
+                                                <span class="s3_positiveText_index">
                                                     Достоинства:
                                                 </span>
+                                            </div>
+                                            <div class="s3_positiveText_index">
+                                                Удобство и доступность в строительстве, дешевле фанеры,<br> прочность, влагостойкость.
+                                            </div>
                                         </div>
-                                        <div class="s3_positiveText_index">
-                                            Удобство и доступность в строительстве, дешевле фанеры,<br> прочность,
-                                            влагостойкость.
-                                        </div>
-                                    </div>
-                                    <div class="s3_slide1NegativeComment">
-                                        <div class="s3_slide1NegativeReview_index">
-                                            <span class="s3_minusIcon_index"></span>
-                                            <span class="s3_negativeText_index">
+                                        <div class="s3_slide1NegativeComment">
+                                            <div class="s3_slide1NegativeReview_index">
+                                                <span class="s3_minusIcon_index"></span>
+                                                <span class="s3_negativeText_index">
                                                     Недостатки:
                                                 </span>
+                                            </div>
+                                            <div class="s3_negativeText_index">
+                                                Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
+                                            </div>
                                         </div>
-                                        <div class="s3_negativeText_index">
-                                            Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
-                                        </div>
-                                    </div>
-                                    <div class="s3_reviewComment_index">
-                                        <div class="s3_reviewCommentText1_index">
-                                            Текст отзыва:
-                                        </div>
-                                        <div class="ss-container">
-                                            <div class="ss-wrapper">
-                                                <div class="ss-content">
-                                                    <p>
-                                                        В 2013 году мы купили недостроенный деревянный дом саманного
-                                                        типа. Сначала решили последовать советам родителей и знакомых и
-                                                        не мазать глиной стены изнутри по-старинке, а обшить все изнутри
-                                                        плитами ОСБ для выравнивания стен, ведь стены, сделанные из
-                                                        досок, были очень неровными. Мы закупили много плит ОСБ и
-                                                        сделали эту работу на 50 процентов.
-                                                    </p>
+                                        <div class="s3_reviewComment_index">
+                                            <div class="s3_reviewCommentText1_index">
+                                                Текст отзыва:
+                                            </div>
+                                            <div class="ss-container">
+                                                <div class="ss-wrapper">
+                                                    <div class="ss-content">
+                                                        <p>
+                                                            В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
+                                                        </p>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="s3_slide1WhoWrote_index">
-                                    <div class="s3_slide1Person_index">
-                                        <span class="s3_slide1Avatar_index"><img
-                                                src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
-                                        <div class="s3_slide1PersonData_index">
-                                            <span class="s3_slide1Name_index">Егор Смирнов</span>
-                                            <span class="s3_slide1Who_index">Частный клиент</span>
+                                    <div class="s3_slide1WhoWrote_index">
+                                        <div class="s3_slide1Person_index">
+                                            <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                            <div class="s3_slide1PersonData_index">
+                                                <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                                <span class="s3_slide1Who_index">Частный клиент</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="s3_slide1ReviewLinks_index">
-                                        <a class="s3_slide1Attachment_index" href="#">
-                                            <span class="s3_slide1AttachmentIcon_index"></span>
-                                            <span class="s3_slide1AttachmentText_index">
+                                        <div class="s3_slide1ReviewLinks_index">
+                                            <a class="s3_slide1Attachment_index" href="#">
+                                                <span class="s3_slide1AttachmentIcon_index"></span>
+                                                <span class="s3_slide1AttachmentText_index">
                                                     3 вложения
                                                 </span>
-                                        </a>
-                                        <a class="s3_slide1ReviewLink_index">
-                                            <span class="s3_slide1ReviewLinkIcon_index"></span>
-                                            <span class="s3_slide1ReviewLinkText_index" href="#">
+                                            </a>
+                                            <a class="s3_slide1ReviewLink_index">
+                                                <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                                <span class="s3_slide1ReviewLinkText_index" href="#">
                                                     Читать полностью
                                                 </span>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
-                            <div class="s3_slideContent_index">
-                                <div class="s3_slide1Review_index">
-                                    <div class="s3_slide1PositiveComment">
-                                        <div class="s3_slide1PositiveReview_index">
-                                            <span class="s3_plusIcon_index"></span>
-                                            <span class="s3_positiveText_index">
+                            <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <div class="s3_slideContent_index">
+                                    <div class="s3_slide1Review_index">
+                                        <div class="s3_slide1PositiveComment">
+                                            <div class="s3_slide1PositiveReview_index">
+                                                <span class="s3_plusIcon_index"></span>
+                                                <span class="s3_positiveText_index">
                                                     Достоинства:
                                                 </span>
+                                            </div>
+                                            <div class="s3_positiveText_index">
+                                                Удобство и доступность в строительстве, дешевле фанеры,<br> прочность, влагостойкость.
+                                            </div>
                                         </div>
-                                        <div class="s3_positiveText_index">
-                                            Удобство и доступность в строительстве, дешевле фанеры,<br> прочность,
-                                            влагостойкость.
-                                        </div>
-                                    </div>
-                                    <div class="s3_slide1NegativeComment">
-                                        <div class="s3_slide1NegativeReview_index">
-                                            <span class="s3_minusIcon_index"></span>
-                                            <span class="s3_negativeText_index">
+                                        <div class="s3_slide1NegativeComment">
+                                            <div class="s3_slide1NegativeReview_index">
+                                                <span class="s3_minusIcon_index"></span>
+                                                <span class="s3_negativeText_index">
                                                     Недостатки:
                                                 </span>
+                                            </div>
+                                            <div class="s3_negativeText_index">
+                                                Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
+                                            </div>
                                         </div>
-                                        <div class="s3_negativeText_index">
-                                            Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
-                                        </div>
-                                    </div>
-                                    <div class="s3_reviewComment_index">
-                                        <div class="s3_reviewCommentText1_index">
-                                            Текст отзыва:
-                                        </div>
-                                        <div class="scrollbar-macosx">
-                                            В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала
-                                            решили последовать советам родителей и знакомых и не мазать глиной стены
-                                            изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен,
-                                            ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит
-                                            ОСБ и сделали эту работу на 50 процентов.
+                                        <div class="s3_reviewComment_index">
+                                            <div class="s3_reviewCommentText1_index">
+                                                Текст отзыва:
+                                            </div>
+                                            <div class="scrollbar-macosx">
+                                                В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="s3_slide1WhoWrote_index">
-                                    <div class="s3_slide1Person_index">
-                                        <span class="s3_slide1Avatar_index"><img
-                                                src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
-                                        <div class="s3_slide1PersonData_index">
-                                            <span class="s3_slide1Name_index">Егор Смирнов</span>
-                                            <span class="s3_slide1Who_index">Частный клиент</span>
+                                    <div class="s3_slide1WhoWrote_index">
+                                        <div class="s3_slide1Person_index">
+                                            <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                            <div class="s3_slide1PersonData_index">
+                                                <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                                <span class="s3_slide1Who_index">Частный клиент</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="s3_slide1ReviewLinks_index">
-                                        <a class="s3_slide1Attachment_index" href="#">
-                                            <span class="s3_slide1AttachmentIcon_index"></span>
-                                            <span class="s3_slide1AttachmentText_index">
+                                        <div class="s3_slide1ReviewLinks_index">
+                                            <a class="s3_slide1Attachment_index" href="#">
+                                                <span class="s3_slide1AttachmentIcon_index"></span>
+                                                <span class="s3_slide1AttachmentText_index">
                                                     3 вложения
                                                 </span>
-                                        </a>
-                                        <a class="s3_slide1ReviewLink_index">
-                                            <span class="s3_slide1ReviewLinkIcon_index"></span>
-                                            <span class="s3_slide1ReviewLinkText_index" href="#">
+                                            </a>
+                                            <a class="s3_slide1ReviewLink_index">
+                                                <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                                <span class="s3_slide1ReviewLinkText_index" href="#">
                                                     Читать полностью
                                                 </span>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
-                            <div class="s3_slideContent_index">
-                                <div class="s3_slide1Review_index">
-                                    <div class="s3_slide1PositiveComment">
-                                        <div class="s3_slide1PositiveReview_index">
-                                            <span class="s3_plusIcon_index"></span>
-                                            <span class="s3_positiveText_index">
+                            <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <div class="s3_slideContent_index">
+                                    <div class="s3_slide1Review_index">
+                                        <div class="s3_slide1PositiveComment">
+                                            <div class="s3_slide1PositiveReview_index">
+                                                <span class="s3_plusIcon_index"></span>
+                                                <span class="s3_positiveText_index">
                                                     Достоинства:
                                                 </span>
+                                            </div>
+                                            <div class="s3_positiveText_index">
+                                                Удобство и доступность в строительстве, дешевле фанеры,<br> прочность, влагостойкость.
+                                            </div>
                                         </div>
-                                        <div class="s3_positiveText_index">
-                                            Удобство и доступность в строительстве, дешевле фанеры,<br> прочность,
-                                            влагостойкость.
-                                        </div>
-                                    </div>
-                                    <div class="s3_slide1NegativeComment">
-                                        <div class="s3_slide1NegativeReview_index">
-                                            <span class="s3_minusIcon_index"></span>
-                                            <span class="s3_negativeText_index">
+                                        <div class="s3_slide1NegativeComment">
+                                            <div class="s3_slide1NegativeReview_index">
+                                                <span class="s3_minusIcon_index"></span>
+                                                <span class="s3_negativeText_index">
                                                     Недостатки:
                                                 </span>
+                                            </div>
+                                            <div class="s3_negativeText_index">
+                                                Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
+                                            </div>
                                         </div>
-                                        <div class="s3_negativeText_index">
-                                            Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
-                                        </div>
-                                    </div>
-                                    <div class="s3_reviewComment_index">
-                                        <div class="s3_reviewCommentText1_index">
-                                            Текст отзыва:
-                                        </div>
-                                        <div class="scrollbar-macosx">
-                                            В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала
-                                            решили последовать советам родителей и знакомых и не мазать глиной стены
-                                            изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен,
-                                            ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит
-                                            ОСБ и сделали эту работу на 50 процентов.
+                                        <div class="s3_reviewComment_index">
+                                            <div class="s3_reviewCommentText1_index">
+                                                Текст отзыва:
+                                            </div>
+                                            <div class="scrollbar-macosx">
+                                                В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="s3_slide1WhoWrote_index">
-                                    <div class="s3_slide1Person_index">
-                                        <span class="s3_slide1Avatar_index"><img
-                                                src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
-                                        <div class="s3_slide1PersonData_index">
-                                            <span class="s3_slide1Name_index">Егор Смирнов</span>
-                                            <span class="s3_slide1Who_index">Частный клиент</span>
+                                    <div class="s3_slide1WhoWrote_index">
+                                        <div class="s3_slide1Person_index">
+                                            <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                            <div class="s3_slide1PersonData_index">
+                                                <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                                <span class="s3_slide1Who_index">Частный клиент</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="s3_slide1ReviewLinks_index">
-                                        <a class="s3_slide1Attachment_index" href="#">
-                                            <span class="s3_slide1AttachmentIcon_index"></span>
-                                            <span class="s3_slide1AttachmentText_index">
+                                        <div class="s3_slide1ReviewLinks_index">
+                                            <a class="s3_slide1Attachment_index" href="#">
+                                                <span class="s3_slide1AttachmentIcon_index"></span>
+                                                <span class="s3_slide1AttachmentText_index">
                                                     3 вложения
                                                 </span>
-                                        </a>
-                                        <a class="s3_slide1ReviewLink_index">
-                                            <span class="s3_slide1ReviewLinkIcon_index"></span>
-                                            <span class="s3_slide1ReviewLinkText_index" href="#">
+                                            </a>
+                                            <a class="s3_slide1ReviewLink_index">
+                                                <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                                <span class="s3_slide1ReviewLinkText_index" href="#">
                                                     Читать полностью
                                                 </span>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
-                            <div class="s3_slideContent_index">
-                                <div class="s3_slide1Review_index">
-                                    <div class="s3_slide1PositiveComment">
-                                        <div class="s3_slide1PositiveReview_index">
-                                            <span class="s3_plusIcon_index"></span>
-                                            <span class="s3_positiveText_index">
+                            <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <div class="s3_slideContent_index">
+                                    <div class="s3_slide1Review_index">
+                                        <div class="s3_slide1PositiveComment">
+                                            <div class="s3_slide1PositiveReview_index">
+                                                <span class="s3_plusIcon_index"></span>
+                                                <span class="s3_positiveText_index">
                                                     Достоинства:
                                                 </span>
+                                            </div>
+                                            <div class="s3_positiveText_index">
+                                                Удобство и доступность в строительстве, дешевле фанеры,<br> прочность, влагостойкость.
+                                            </div>
                                         </div>
-                                        <div class="s3_positiveText_index">
-                                            Удобство и доступность в строительстве, дешевле фанеры,<br> прочность,
-                                            влагостойкость.
-                                        </div>
-                                    </div>
-                                    <div class="s3_slide1NegativeComment">
-                                        <div class="s3_slide1NegativeReview_index">
-                                            <span class="s3_minusIcon_index"></span>
-                                            <span class="s3_negativeText_index">
+                                        <div class="s3_slide1NegativeComment">
+                                            <div class="s3_slide1NegativeReview_index">
+                                                <span class="s3_minusIcon_index"></span>
+                                                <span class="s3_negativeText_index">
                                                     Недостатки:
                                                 </span>
+                                            </div>
+                                            <div class="s3_negativeText_index">
+                                                Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
+                                            </div>
                                         </div>
-                                        <div class="s3_negativeText_index">
-                                            Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
-                                        </div>
-                                    </div>
-                                    <div class="s3_reviewComment_index">
-                                        <div class="s3_reviewCommentText1_index">
-                                            Текст отзыва:
-                                        </div>
-                                        <div class="scrollbar-macosx">
-                                            В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала
-                                            решили последовать советам родителей и знакомых и не мазать глиной стены
-                                            изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен,
-                                            ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит
-                                            ОСБ и сделали эту работу на 50 процентов.
+                                        <div class="s3_reviewComment_index">
+                                            <div class="s3_reviewCommentText1_index">
+                                                Текст отзыва:
+                                            </div>
+                                            <div class="scrollbar-macosx">
+                                                В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="s3_slide1WhoWrote_index">
-                                    <div class="s3_slide1Person_index">
-                                        <span class="s3_slide1Avatar_index"><img
-                                                src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
-                                        <div class="s3_slide1PersonData_index">
-                                            <span class="s3_slide1Name_index">Егор Смирнов</span>
-                                            <span class="s3_slide1Who_index">Частный клиент</span>
+                                    <div class="s3_slide1WhoWrote_index">
+                                        <div class="s3_slide1Person_index">
+                                            <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                            <div class="s3_slide1PersonData_index">
+                                                <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                                <span class="s3_slide1Who_index">Частный клиент</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="s3_slide1ReviewLinks_index">
-                                        <a class="s3_slide1Attachment_index" href="#">
-                                            <span class="s3_slide1AttachmentIcon_index"></span>
-                                            <span class="s3_slide1AttachmentText_index">
+                                        <div class="s3_slide1ReviewLinks_index">
+                                            <a class="s3_slide1Attachment_index" href="#">
+                                                <span class="s3_slide1AttachmentIcon_index"></span>
+                                                <span class="s3_slide1AttachmentText_index">
                                                     3 вложения
                                                 </span>
-                                        </a>
-                                        <a class="s3_slide1ReviewLink_index">
-                                            <span class="s3_slide1ReviewLinkIcon_index"></span>
-                                            <span class="s3_slide1ReviewLinkText_index" href="#">
+                                            </a>
+                                            <a class="s3_slide1ReviewLink_index">
+                                                <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                                <span class="s3_slide1ReviewLinkText_index" href="#">
                                                     Читать полностью
                                                 </span>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
-                            <div class="s3_slideContent_index">
-                                <div class="s3_slide1Review_index">
-                                    <div class="s3_slide1PositiveComment">
-                                        <div class="s3_slide1PositiveReview_index">
-                                            <span class="s3_plusIcon_index"></span>
-                                            <span class="s3_positiveText_index">
+                            <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[1]" data-id="1">
+                                <div class="s3_slideContent_index">
+                                    <div class="s3_slide1Review_index">
+                                        <div class="s3_slide1PositiveComment">
+                                            <div class="s3_slide1PositiveReview_index">
+                                                <span class="s3_plusIcon_index"></span>
+                                                <span class="s3_positiveText_index">
                                                     Достоинства:
                                                 </span>
+                                            </div>
+                                            <div class="s3_positiveText_index">
+                                                Удобство и доступность в строительстве, дешевле фанеры,<br> прочность, влагостойкость.
+                                            </div>
                                         </div>
-                                        <div class="s3_positiveText_index">
-                                            Удобство и доступность в строительстве, дешевле фанеры,<br> прочность,
-                                            влагостойкость.
-                                        </div>
-                                    </div>
-                                    <div class="s3_slide1NegativeComment">
-                                        <div class="s3_slide1NegativeReview_index">
-                                            <span class="s3_minusIcon_index"></span>
-                                            <span class="s3_negativeText_index">
+                                        <div class="s3_slide1NegativeComment">
+                                            <div class="s3_slide1NegativeReview_index">
+                                                <span class="s3_minusIcon_index"></span>
+                                                <span class="s3_negativeText_index">
                                                     Недостатки:
                                                 </span>
+                                            </div>
+                                            <div class="s3_negativeText_index">
+                                                Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
+                                            </div>
                                         </div>
-                                        <div class="s3_negativeText_index">
-                                            Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
-                                        </div>
-                                    </div>
-                                    <div class="s3_reviewComment_index">
-                                        <div class="s3_reviewCommentText1_index">
-                                            Текст отзыва:
-                                        </div>
-                                        <div class="scrollbar-macosx">
-                                            В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала
-                                            решили последовать советам родителей и знакомых и не мазать глиной стены
-                                            изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен,
-                                            ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит
-                                            ОСБ и сделали эту работу на 50 процентов.
+                                        <div class="s3_reviewComment_index">
+                                            <div class="s3_reviewCommentText1_index">
+                                                Текст отзыва:
+                                            </div>
+                                            <div class="scrollbar-macosx">
+                                                В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="s3_slide1WhoWrote_index">
-                                    <div class="s3_slide1Person_index">
-                                        <span class="s3_slide1Avatar_index"><img
-                                                src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
-                                        <div class="s3_slide1PersonData_index">
-                                            <span class="s3_slide1Name_index">Егор Смирнов</span>
-                                            <span class="s3_slide1Who_index">Частный клиент</span>
+                                    <div class="s3_slide1WhoWrote_index">
+                                        <div class="s3_slide1Person_index">
+                                            <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                            <div class="s3_slide1PersonData_index">
+                                                <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                                <span class="s3_slide1Who_index">Частный клиент</span>
+                                            </div>
                                         </div>
-                                    </div>
-                                    <div class="s3_slide1ReviewLinks_index">
-                                        <a class="s3_slide1Attachment_index" href="#">
-                                            <span class="s3_slide1AttachmentIcon_index"></span>
-                                            <span class="s3_slide1AttachmentText_index">
+                                        <div class="s3_slide1ReviewLinks_index">
+                                            <a class="s3_slide1Attachment_index" href="#">
+                                                <span class="s3_slide1AttachmentIcon_index"></span>
+                                                <span class="s3_slide1AttachmentText_index">
                                                     3 вложения
                                                 </span>
-                                        </a>
-                                        <a class="s3_slide1ReviewLink_index">
-                                            <span class="s3_slide1ReviewLinkIcon_index"></span>
-                                            <span class="s3_slide1ReviewLinkText_index" href="#">
+                                            </a>
+                                            <a class="s3_slide1ReviewLink_index">
+                                                <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                                <span class="s3_slide1ReviewLinkText_index" href="#">
                                                     Читать полностью
                                                 </span>
-                                        </a>
+                                            </a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </section>
+                </section>
+            </div>
         </div>
-    </div>
-    <section class="sixthSection_index">
-        <div class="parallax-window" data-parallax="scroll"
-             data-image-src="img/jpg/fourthSection_page1/ourManufacturer_page1.jpg">
+        <section class="sixthSection_index">
+            <div class="parallax-window" data-parallax="scroll" data-image-src="img/jpg/fourthSection_page1/ourManufacturer_page1.jpg">
+                <div class="wrapper">
+                    <div class="manufacturer_index">
+                        <h2 class="sectionTitle_index white centerTitle">Наши производители <br>OSB плит</h2>
+                        <div class="manufacturerLogo_index">
+                            <a href="http://" class="manufacturerLink_index"><img src="img/svg/sixthSection_page1/kronospan_page1.svg" alt="Кроноспан"></a>
+                            <a href="http://" class="manufacturerLink_index"><img src="img/svg/sixthSection_page1/ultralam_page1.svg" alt="Ультралэм"></a>
+                            <a href="http://" class="manufacturerLink_index"><img src="img/svg/sixthSection_page1/kalevala_page1.svg" alt="Калевала"></a>
+                            <a href="http://" class="manufacturerLink_index"><img src="img/svg/sixthSection_page1/egger_page1.svg" alt="Еггер"></a>
+                        </div>
+                        <button class="buttonМanufacturer_index" type="button">osb по производителям</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="seventhSection_index">
             <div class="wrapper">
-                <div class="manufacturer_index">
-                    <h2 class="sectionTitle_index white centerTitle">Наши производители <br>OSB плит</h2>
-                    <div class="manufacturerLogo_index">
-                        <a href="http://" class="manufacturerLink_index"><img
-                                src="img/svg/sixthSection_page1/kronospan_page1.svg" alt="Кроноспан"></a>
-                        <a href="http://" class="manufacturerLink_index"><img
-                                src="img/svg/sixthSection_page1/ultralam_page1.svg" alt="Ультралэм"></a>
-                        <a href="http://" class="manufacturerLink_index"><img
-                                src="img/svg/sixthSection_page1/kalevala_page1.svg" alt="Калевала"></a>
-                        <a href="http://" class="manufacturerLink_index"><img
-                                src="img/svg/sixthSection_page1/egger_page1.svg" alt="Еггер"></a>
+                <div class="ourGroup_index">
+                    <div class="allAboutGroup_index">
+                        <h2 class="sectionTitle_index">Наша группа вконтакте</h2>
+                        <div class="groupText_index">Делимся опытом в соцсетях. Посмотрите, что происходит в vk.</div>
+                        <a href="http://www.vk.com/mottex" class="groupLink_index">vk.com/mottex</a>
                     </div>
-                    <button class="buttonМanufacturer_index" type="button">osb по производителям</button>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="seventhSection_index">
-        <div class="wrapper">
-            <div class="ourGroup_index">
-                <div class="allAboutGroup_index">
-                    <h2 class="sectionTitle_index">Наша группа вконтакте</h2>
-                    <div class="groupText_index">Делимся опытом в соцсетях. Посмотрите, что происходит в vk.</div>
-                    <a href="http://www.vk.com/mottex" class="groupLink_index">vk.com/mottex</a>
-                </div>
-                <div class="linksVK_index">
-                    <figure class="effect-milo">
-                        <a href="#">
-                            <img src="img/jpg/seventhSection_page1/linkGroup_1.jpg" alt="img11"/>
-                            <span class="vkIcon_index miloIcon_index"></span>
-                            <figcaption>
-                                <p><span class="vkGroupTitle_index">ВКонтакте</span><br><br>Здесь вы узнаете об
-                                    особенностях наших материалах. Сравнение с другими аналогами. И много разных
-                                    лайф-хаков.</p>
-                            </figcaption>
-                        </a>
-                    </figure>
-                    <figure class="effect-milo">
-                        <a href="#">
-                            <img src="img/jpg/seventhSection_page1/linkGroup_2.jpg" alt="img11"/>
-                            <span class="instaIcon_index miloIcon_index"></span>
-                            <figcaption>
-                                <p><span class="vkGroupTitle_index">Instagram</span><br><br>Здесь мы знакомим вас с
-                                    нашей компанией. А также записываем смешные видеоролики и показываем случаи из
-                                    жизни.</p>
-                            </figcaption>
-                        </a>
-                    </figure>
-                    <figure class="effect-milo">
-                        <a href="#">
-                            <img src="img/jpg/seventhSection_page1/linkGroup_3.jpg" alt="img11"/>
-                            <span class="youtubeIcon_index miloIcon_index"></span>
-                            <figcaption>
-                                <p><span class="vkGroupTitle_index">Youtube</span><br><br>Здесь мы выкладываем различные
-                                    эксперименты с нашими материалами, видеообзоры наших новинок и много всего другого.
-                                </p>
-                            </figcaption>
-                        </a>
-                    </figure>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="buisnessInformation">
-        <div class="wrapper">
-            <div class="buisnessInformationBlock">
-                <div class="buisnessBlockInf">
-                    <img src="img/svg/secondSection_page6/manufacturerIcon1_page6.svg"
-                         alt="Интернет витрина для ознакомпления с OSB плитами и удобным заказом товаров"
-                         class="buisnessBlockIcon">
-                    <div class="buisnessBlockHeadline">Интернет витрина для ознакомпления с OSB плитами и удобным
-                        заказом товаров
-                    </div>
-                    <div class="buisnessBlcokText">OSB-SKLAD является прямым поставщиком и гарантирует качество,
-                        подлинность, хранение и перевозку в соответствии с мировыми стандартами. Интернет-витрина
-                        магазина создана, чтобы комфортно выбирать и заказывать <a href="#" class="link1_index">качественные
-                            товары</a>.
-                    </div>
-                </div>
-                <div class="buisnessBlockInf">
-                    <img src="img/svg/secondSection_page6/manufacturerIcon2_page6.svg"
-                         alt="Подтвержденная сертификация продукции с 6 крупнейших заводов России"
-                         class="buisnessBlockIcon">
-                    <div class="buisnessBlockHeadline">Подтвержденная сертификация продукции с 6 крупнейших заводов
-                        России
-                    </div>
-                    <div class="buisnessBlcokText">Вся продукция, все товары, которые находятся на нашем складе имеют
-                        любые необходимые сертификаты качества. Наши специалисты всегда могут поделиться копией с Вами,
-                        а также Вы можете посомтреть их в разделе <a href="#" class="link2_index">сертификаты</a>.
-                    </div>
-                </div>
-                <div class="buisnessBlockInf">
-                    <img src="img/svg/secondSection_page6/manufacturerIcon3_page6.svg"
-                         alt="Индивидуальный подход, оплата и доставка продукции с нашего склада на ваш объект"
-                         class="buisnessBlockIcon">
-                    <div class="buisnessBlockHeadline">Индивидуальный подход, оплата и доставка продукции с нашего
-                        склада на ваш объект
-                    </div>
-                    <div class="buisnessBlcokText">Вы можете оплатить свой заказ и мы, при необходимости мы доставим его
-                        в этот же день. Если у Вас нет возможности приехать оплатить, выбрать продукцию самостоятельно,
-                        то Вы всегда можете сделать заказ у нашего менеджера, а оплатить водителю при <a href="#"
-                                                                                                         class="link3_index">получении</a>.
+                    <div class="linksVK_index">
+                        <figure class="effect-milo">
+                            <a href="#">
+                                <img src="img/jpg/seventhSection_page1/linkGroup_1.jpg" alt="img11"/>
+                                <span class="vkIcon_index miloIcon_index"></span>
+                                <figcaption>
+                                    <p><span class="vkGroupTitle_index">ВКонтакте</span><br><br>Здесь вы узнаете об особенностях наших материалах. Сравнение с другими аналогами. И много разных лайф-хаков.</p>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure class="effect-milo">
+                            <a href="#">
+                                <img src="img/jpg/seventhSection_page1/linkGroup_2.jpg" alt="img11"/>
+                                <span class="instaIcon_index miloIcon_index"></span>
+                                <figcaption>
+                                    <p><span class="vkGroupTitle_index">Instagram</span><br><br>Здесь мы знакомим вас с нашей компанией. А также записываем смешные видеоролики и показываем случаи из жизни.</p>
+                                </figcaption>
+                            </a>
+                        </figure>
+                        <figure class="effect-milo">
+                            <a href="#">
+                                <img src="img/jpg/seventhSection_page1/linkGroup_3.jpg" alt="img11"/>
+                                <span class="youtubeIcon_index miloIcon_index"></span>
+                                <figcaption>
+                                    <p><span class="vkGroupTitle_index">Youtube</span><br><br>Здесь мы выкладываем различные эксперименты с нашими материалами, видеообзоры наших новинок и много всего другого.</p>
+                                </figcaption>
+                            </a>
+                        </figure>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
-    <button class="up-button">↑</button>
-    <article class="feedback">
-        <div class="wrapper">
-            <div class="feedbackInterface">
-                <p class="message">Нужна OSB? Оставьте свой номер и мы оперативно перезвоним:)</p>
-                <div class="phoneNumber">
-                    <label class="placeholder" for="phone">Номер телефона*</label>
-                    <input type="tel" name="phoneNumber" id="phone">
-                    <input type="submit" value="" class="submitNumber">
-                </div>
-                <p class="FYI">Нажимая кнопку, принимаю условия<br><a href="#" class="politic">политики</a> и <a
-                        href="#" class="usersAgreement">пользовательского соглашения</a></p>
-            </div>
-        </div>
-    </article>
-    <footer class="footer">
-        <div class="wrapper">
-            <div class="footer_content">
-                <div class="contacts">
-                    <h3 class="footerMenuHeadline">Контакты</h3>
-                    <div class="contactsCity contactsElement"><span class="contactsTown">Город:</span> Челябинск</div>
-                    <a href="#" class="phoneBorder contactsElement">+7 (912) 72-00-00</a>
-                    <div class="contactsAddress contactsElement">Троицкий Тракт, 17</div>
-                    <a href="#" class="osbMail contactsElement">osb-sklad@mail.ru</a>
-                    <div class="contactsDate contactsElement">ПН-ПТ: 8:30-18:00, СБ-ВС: 9:30-15:00</div>
-                    <div class="contactsIcon">
-                        <a href="#" class="VK"></a>
-                        <a href="#" class="instagram"></a>
-                        <a href="#" class="youtube"></a>
+        </section>
+        <section class="buisnessInformation">
+            <div class="wrapper">
+                <div class="buisnessInformationBlock">
+                    <div class="buisnessBlockInf">
+                        <img src="img/svg/secondSection_page6/manufacturerIcon1_page6.svg" alt="Интернет витрина для ознакомпления с OSB плитами и удобным заказом товаров" class="buisnessBlockIcon">
+                        <div class="buisnessBlockHeadline">Интернет витрина для ознакомпления с OSB плитами и удобным заказом товаров</div>
+                        <div class="buisnessBlcokText">OSB-SKLAD является прямым поставщиком и гарантирует качество, подлинность, хранение и перевозку в соответствии с мировыми стандартами. Интернет-витрина магазина создана, чтобы комфортно выбирать и заказывать <a href="#" class="link1_index">качественные товары</a>.</div>
+                    </div>
+                    <div class="buisnessBlockInf">
+                        <img src="img/svg/secondSection_page6/manufacturerIcon2_page6.svg" alt="Подтвержденная сертификация продукции с 6 крупнейших заводов России" class="buisnessBlockIcon">
+                        <div class="buisnessBlockHeadline">Подтвержденная сертификация продукции с 6 крупнейших заводов России</div>
+                        <div class="buisnessBlcokText">Вся продукция, все товары, которые находятся на нашем складе имеют любые необходимые сертификаты качества. Наши специалисты всегда могут поделиться копией с Вами, а также Вы можете посомтреть их в разделе <a href="#" class="link2_index">сертификаты</a>.</div>
+                    </div>
+                    <div class="buisnessBlockInf">
+                        <img src="img/svg/secondSection_page6/manufacturerIcon3_page6.svg" alt="Индивидуальный подход, оплата и доставка продукции с нашего склада на ваш объект" class="buisnessBlockIcon">
+                        <div class="buisnessBlockHeadline">Индивидуальный подход, оплата и доставка продукции с нашего склада на ваш объект</div>
+                        <div class="buisnessBlcokText">Вы можете оплатить свой заказ и мы, при необходимости мы доставим его в этот же день. Если у Вас нет возможности приехать оплатить, выбрать продукцию самостоятельно, то Вы всегда можете сделать заказ у нашего менеджера, а оплатить водителю при <a href="#" class="link3_index">получении</a>.</div>
                     </div>
                 </div>
-                <div class="footerMenu">
-                    <h3 class="footerMenuHeadline">Меню</h3>
-                    <ul class="footerMenuList">
-                        <li class=""><a href="#">Кто мы?</a></li>
-                        <li><a href="#">Сертификаты на OSB</a></li>
-                        <li><a href="#">Реальные отзывы о нас</a></li>
-                        <li><a href="#">Контакты</a></li>
-                        <li><a href="#">Реквизиты</a></li>
-                    </ul>
-                </div>
-                <div class="footerMenuByApplication">
-                    <h3 class="footerMenuHeadline">OSb по сферам применгения</h3>
-                    <ul class="footerMenuByApplicationList">
-                        <li><a href="#">ОСП для стен</a></li>
-                        <li><a href="#">ОСП для пола</a></li>
-                        <li><a href="#">ОСП для кровли</a></li>
-                        <li><a href="#">ОСП для сип и панелей</a></li>
-                        <li><a href="#">ОСП для потолка</a></li>
-                        <li><a href="#">ОСП для тары и упаковки</a></li>
-                        <li><a href="#">ОСП для мебели</a></li>
-                        <li><a href="#">ОСП для помещения</a></li>
-                        <li><a href="#">ОСП для тары и упаковки</a></li>
-                        <li><a href="#">ОСП для мебели</a></li>
-                        <li><a href="#">ОСП для помещения</a></li>
-                        <li><a href="#">ОСП для тары и упаковки</a></li>
-                        <li><a href="#">ОСП для мебели</a></li>
-                        <li><a href="#">ОСП для тары и упаковки</a></li>
-                        <li><a href="#">ОСП для мебели</a></li>
-                        <li><a href="#">ОСП для помещения</a></li>
-                        <p href="#" class="moreEl">ещё +<span class="hiddenListElements"></span></p>
-                    </ul>
-                </div>
-                <div class="footerMenuByManufacturer">
-                    <h3 class="footerMenuHeadline">OSB по производитедям</h3>
-                    <ul class="footerMenuByManufacturerList">
-                        <li><a href="#">ОСП Кроношпан</a></li>
-                        <li><a href="#">ОСП Талеон</a></li>
-                        <li><a href="#">ОСП Калевала</a></li>
-                        <li><a href="#">ОСП Еггер</a></li>
-                        <li><a href="#">ОСП Нлк</a></li>
-                        <li><a href="#">ОСП некондиция</a></li>
-                    </ul>
+            </div>
+        </section>
+        <button class="up-button">↑</button>
+        <article class="feedback">
+            <div class="wrapper">
+                <div class="feedbackInterface">
+                    <p class="message">Нужна OSB? Оставьте свой номер и мы оперативно перезвоним:)</p>
+                    <div class="phoneNumber">
+                        <label class="placeholder" for="phone">Номер телефона*</label>
+                        <input type="tel" name="phoneNumber" id="phone">
+                        <input type="submit" value="" class="submitNumber">
+                    </div>
+                    <p class="FYI">Нажимая кнопку, принимаю условия<br><a href="#" class="politic">политики</a> и <a href="#" class="usersAgreement">пользовательского соглашения</a></p>
                 </div>
             </div>
-        </div>
-    </footer>
-</main>
-<script>
-    // class Panel {
-    //     constructor(obj) {
-    //         this.obj = obj
-    //     }
-    //
-    //     getData() {
-    //         return this.obj
-    //     }
-    // }
-    const panels = [
-        {
-            "id": "602b87a8fd4364785b7ea4bc",
-            "name": "OSB-3 Кроноспан - 4",
-            "length": 2400,
-            "width": 2400,
-            "heigth": 22,
-            "price": 1237
-        },
-        {
-            "id": "602b87a81be1ae0aee172eea",
-            "name": "OSB-3 Кроноспан - 13",
-            "length": 1200,
-            "width": 1200,
-            "heigth": 16,
-            "price": 2594
-        },
-        {
-            "id": "602b87a8c27f10ba83c39231",
-            "name": "OSB-3 Кроноспан - 5",
-            "length": 2400,
-            "width": 2200,
-            "heigth": 22,
-            "price": 2035
-        },
-        {
-            "id": "602b87a8cbabfcbe7f06d9d9",
-            "name": "OSB-3 Кроноспан - 15",
-            "length": 1600,
-            "width": 2400,
-            "heigth": 20,
-            "price": 2363
-        },
-        {
-            "id": "602b87a83c5d62cfa1fae118",
-            "name": "OSB-3 Кроноспан - 19",
-            "length": 2000,
-            "width": 1200,
-            "heigth": 22,
-            "price": 2926
-        },
-        {
-            "id": "602b87a8d1652e9e6c46ff67",
-            "name": "OSB-3 Кроноспан - 13",
-            "length": 400,
-            "width": 2200,
-            "heigth": 8,
-            "price": 3767
-        },
-        {
-            "id": "602b87a86ab6e79b6439ea1d",
-            "name": "OSB-3 Кроноспан - 7",
-            "length": 2400,
-            "width": 2200,
-            "heigth": 22,
-            "price": 3030
-        },
-        {
-            "id": "602b87a86b6de8674007237b",
-            "name": "OSB-3 Кроноспан - 16",
-            "length": 400,
-            "width": 2200,
-            "heigth": 8,
-            "price": 2123
-        },
-        {
-            "id": "602b87a8871e1af101e79b2b",
-            "name": "OSB-3 Кроноспан - 21",
-            "length": 800,
-            "width": 2200,
-            "heigth": 16,
-            "price": 1784
-        },
-        {
-            "id": "602b87a83e545647de4f22fa",
-            "name": "OSB-3 Кроноспан - 12",
-            "length": 400,
-            "width": 2400,
-            "heigth": 22,
-            "price": 2001
-        },
-        {
-            "id": "602b87a894ad86671ded2ac5",
-            "name": "OSB-3 Кроноспан - 21",
-            "length": 2000,
-            "width": 2200,
-            "heigth": 8,
-            "price": 1850
-        },
-        {
-            "id": "602b87a80e1095744ef0508b",
-            "name": "OSB-3 Кроноспан - 6",
-            "length": 1200,
-            "width": 2200,
-            "heigth": 12,
-            "price": 2487
-        },
-        {
-            "id": "602b87a8215250bea0f5b621",
-            "name": "OSB-3 Кроноспан - 14",
-            "length": 1600,
-            "width": 2400,
-            "heigth": 16,
-            "price": 1419
-        },
-        {
-            "id": "602b87a83703548e76d8e532",
-            "name": "OSB-3 Кроноспан - 18",
-            "length": 2400,
-            "width": 1200,
-            "heigth": 12,
-            "price": 3310
-        },
-        {
-            "id": "602b87a88e65d981690b08b2",
-            "name": "OSB-3 Кроноспан - 13",
-            "length": 400,
-            "width": 2200,
-            "heigth": 10,
-            "price": 1723
-        },
-        {
-            "id": "602b87a80cd739c737d36850",
-            "name": "OSB-3 Кроноспан - 9",
-            "length": 1600,
-            "width": 2200,
-            "heigth": 22,
-            "price": 1600
-        },
-        {
-            "id": "602b87a842692bdca8731e51",
-            "name": "OSB-3 Кроноспан - 17",
-            "length": 400,
-            "width": 2200,
-            "heigth": 10,
-            "price": 3049
-        },
-        {
-            "id": "602b87a86f628c9f34cda9a7",
-            "name": "OSB-3 Кроноспан - 15",
-            "length": 1200,
-            "width": 2400,
-            "heigth": 16,
-            "price": 1778
-        },
-        {
-            "id": "602b87a80d1371d3aed50d47",
-            "name": "OSB-3 Кроноспан - 18",
-            "length": 800,
-            "width": 1200,
-            "heigth": 20,
-            "price": 1731
-        },
-        {
-            "id": "602b87a82e149b60dd841b9f",
-            "name": "OSB-3 Кроноспан - 12",
-            "length": 2000,
-            "width": 2200,
-            "heigth": 22,
-            "price": 3867
-        },
-        {
-            "id": "602b87a8deccda3d8897c2c8",
-            "name": "OSB-3 Кроноспан - 5",
-            "length": 400,
-            "width": 1200,
-            "heigth": 10,
-            "price": 2240
-        },
-        {
-            "id": "602b87a8e327c79df3a89ef6",
-            "name": "OSB-3 Кроноспан - 15",
-            "length": 800,
-            "width": 1200,
-            "heigth": 20,
-            "price": 1460
-        },
-        {
-            "id": "602b87a85867f394891b96d6",
-            "name": "OSB-3 Кроноспан - 6",
-            "length": 400,
-            "width": 2200,
-            "heigth": 20,
-            "price": 3571
-        },
-        {
-            "id": "602b87a8a51c838d7b05e1a0",
-            "name": "OSB-3 Кроноспан - 16",
-            "length": 2400,
-            "width": 1200,
-            "heigth": 8,
-            "price": 1618
-        },
-        {
-            "id": "602b87a8de1145aeb9053c1c",
-            "name": "OSB-3 Кроноспан - 7",
-            "length": 2400,
-            "width": 2400,
-            "heigth": 10,
-            "price": 3133
-        },
-        {
-            "id": "602b87a87fb3acb7bb612e4e",
-            "name": "OSB-3 Кроноспан - 22",
-            "length": 400,
-            "width": 2200,
-            "heigth": 12,
-            "price": 2549
-        },
-        {
-            "id": "602b87a8ed32245d8192dcde",
-            "name": "OSB-3 Кроноспан - 21",
-            "length": 800,
-            "width": 1200,
-            "heigth": 16,
-            "price": 2601
-        },
-        {
-            "id": "602b87a86c2331d47cdd5f05",
-            "name": "OSB-3 Кроноспан - 13",
-            "length": 2000,
-            "width": 1200,
-            "heigth": 12,
-            "price": 1679
-        },
-        {
-            "id": "602b87a8f116ff5c2628d228",
-            "name": "OSB-3 Кроноспан - 4",
-            "length": 2400,
-            "width": 1200,
-            "heigth": 16,
-            "price": 3319
-        },
-        {
-            "id": "602b87a8c76f7ea91b6da036",
-            "name": "OSB-3 Кроноспан - 14",
-            "length": 1200,
-            "width": 2400,
-            "heigth": 10,
-            "price": 2534
-        },
-        {
-            "id": "602b87a81a191b1bf94b457e",
-            "name": "OSB-3 Кроноспан - 6",
-            "length": 1200,
-            "width": 2200,
-            "heigth": 16,
-            "price": 3736
-        },
-        {
-            "id": "602b87a8b18f8512a1532067",
-            "name": "OSB-3 Кроноспан - 16",
-            "length": 400,
-            "width": 2400,
-            "heigth": 16,
-            "price": 1531
-        },
-        {
-            "id": "602b87a8f1d0ba9f9b66be40",
-            "name": "OSB-3 Кроноспан - 12",
-            "length": 2400,
-            "width": 2200,
-            "heigth": 10,
-            "price": 1888
-        },
-        {
-            "id": "602b87a8b427fb834e59bbc2",
-            "name": "OSB-3 Кроноспан - 5",
-            "length": 1200,
-            "width": 1200,
-            "heigth": 12,
-            "price": 2113
-        },
-        {
-            "id": "602b87a85f517f1c8ca17c63",
-            "name": "OSB-3 Кроноспан - 14",
-            "length": 800,
-            "width": 2400,
-            "heigth": 20,
-            "price": 1988
-        },
-        {
-            "id": "602b87a8d456a1087477f692",
-            "name": "OSB-3 Кроноспан - 21",
-            "length": 400,
-            "width": 2400,
-            "heigth": 22,
-            "price": 2217
-        },
-        {
-            "id": "602b87a86abd9c3da6a87d89",
-            "name": "OSB-3 Кроноспан - 17",
-            "length": 2000,
-            "width": 1200,
-            "heigth": 12,
-            "price": 1313
-        },
-        {
-            "id": "602b87a86d943ecb540a87ce",
-            "name": "OSB-3 Кроноспан - 5",
-            "length": 400,
-            "width": 2400,
-            "heigth": 20,
-            "price": 2851
-        },
-        {
-            "id": "602b87a8a194b44367bd591a",
-            "name": "OSB-3 Кроноспан - 5",
-            "length": 400,
-            "width": 2400,
-            "heigth": 22,
-            "price": 1955
-        },
-        {
-            "id": "602b87a8adb0095e33983258",
-            "name": "OSB-3 Кроноспан - 17",
-            "length": 2400,
-            "width": 2400,
-            "heigth": 8,
-            "price": 2540
-        },
-        {
-            "id": "602b87a87a5b675cd2c04690",
-            "name": "OSB-3 Кроноспан - 18",
-            "length": 1200,
-            "width": 2200,
-            "heigth": 12,
-            "price": 2283
-        },
-        {
-            "id": "602b87a8f206d55b6dd80484",
-            "name": "OSB-3 Кроноспан - 14",
-            "length": 1600,
-            "width": 2400,
-            "heigth": 16,
-            "price": 1391
-        },
-        {
-            "id": "602b87a841b99bd470fe120a",
-            "name": "OSB-3 Кроноспан - 7",
-            "length": 800,
-            "width": 2200,
-            "heigth": 16,
-            "price": 2115
-        },
-        {
-            "id": "602b87a89dfa2e0243b266f8",
-            "name": "OSB-3 Кроноспан - 8",
-            "length": 1200,
-            "width": 2200,
-            "heigth": 12,
-            "price": 1773
-        },
-        {
-            "id": "602b87a8a64d8e27d97b8737",
-            "name": "OSB-3 Кроноспан - 18",
-            "length": 800,
-            "width": 1200,
-            "heigth": 12,
-            "price": 1287
-        },
-        {
-            "id": "602b87a82ff6e4e05888a3fb",
-            "name": "OSB-3 Кроноспан - 10",
-            "length": 1200,
-            "width": 1200,
-            "heigth": 20,
-            "price": 2265
-        },
-        {
-            "id": "602b87a84bf7911726de4152",
-            "name": "OSB-3 Кроноспан - 13",
-            "length": 2400,
-            "width": 1200,
-            "heigth": 22,
-            "price": 2781
-        },
-        {
-            "id": "602b87a86c38d8f31ec19b82",
-            "name": "OSB-3 Кроноспан - 4",
-            "length": 800,
-            "width": 2200,
-            "heigth": 20,
-            "price": 3062
-        },
-        {
-            "id": "602b87a8e95e5bd69bc81d13",
-            "name": "OSB-3 Кроноспан - 5",
-            "length": 1600,
-            "width": 2400,
-            "heigth": 20,
-            "price": 3210
-        },
-        {
-            "id": "602b87a89e974a066904219b",
-            "name": "OSB-3 Кроноспан - 9",
-            "length": 400,
-            "width": 1200,
-            "heigth": 16,
-            "price": 2989
-        },
-        {
-            "id": "602b87a80929bfc248030fa1",
-            "name": "OSB-3 Кроноспан - 5",
-            "length": 2000,
-            "width": 2400,
-            "heigth": 20,
-            "price": 2069
-        },
-        {
-            "id": "602b87a825f58b5efdb702ca",
-            "name": "OSB-3 Кроноспан - 9",
-            "length": 2400,
-            "width": 1200,
-            "heigth": 22,
-            "price": 3123
-        },
-        {
-            "id": "602b87a8513a93cc497315db",
-            "name": "OSB-3 Кроноспан - 8",
-            "length": 2000,
-            "width": 2400,
-            "heigth": 8,
-            "price": 1884
-        },
-        {
-            "id": "602b87a85109329177ba61b9",
-            "name": "OSB-3 Кроноспан - 14",
-            "length": 2400,
-            "width": 2200,
-            "heigth": 20,
-            "price": 2381
-        },
-        {
-            "id": "602b87a899531efa3f623647",
-            "name": "OSB-3 Кроноспан - 4",
-            "length": 2000,
-            "width": 2200,
-            "heigth": 22,
-            "price": 1655
-        },
-        {
-            "id": "602b87a80ca1c466faa3f56e",
-            "name": "OSB-3 Кроноспан - 6",
-            "length": 400,
-            "width": 2200,
-            "heigth": 16,
-            "price": 1751
-        },
-        {
-            "id": "602b87a8134400e754b18f3e",
-            "name": "OSB-3 Кроноспан - 13",
-            "length": 1600,
-            "width": 2400,
-            "heigth": 12,
-            "price": 1509
-        },
-        {
-            "id": "602b87a838a80666388337ab",
-            "name": "OSB-3 Кроноспан - 11",
-            "length": 800,
-            "width": 2200,
-            "heigth": 12,
-            "price": 2025
-        },
-        {
-            "id": "602b87a83255c7d10dc2bac4",
-            "name": "OSB-3 Кроноспан - 18",
-            "length": 1600,
-            "width": 2200,
-            "heigth": 22,
-            "price": 2355
-        },
-        {
-            "id": "602b87a8192ef7f16a3459ad",
-            "name": "OSB-3 Кроноспан - 17",
-            "length": 400,
-            "width": 1200,
-            "heigth": 20,
-            "price": 1461
-        },
-        {
-            "id": "602b87a828723e3f351a6993",
-            "name": "OSB-3 Кроноспан - 7",
-            "length": 400,
-            "width": 2400,
-            "heigth": 20,
-            "price": 1483
-        },
-        {
-            "id": "602b87a851f9b75495df9066",
-            "name": "OSB-3 Кроноспан - 14",
-            "length": 400,
-            "width": 2200,
-            "heigth": 20,
-            "price": 1671
-        },
-        {
-            "id": "602b87a8b913ad2182250497",
-            "name": "OSB-3 Кроноспан - 4",
-            "length": 2000,
-            "width": 2200,
-            "heigth": 12,
-            "price": 3215
-        },
-        {
-            "id": "602b87a827170b651247b718",
-            "name": "OSB-3 Кроноспан - 8",
-            "length": 800,
-            "width": 1200,
-            "heigth": 20,
-            "price": 3797
-        },
-        {
-            "id": "602b87a82d665714d29618f2",
-            "name": "OSB-3 Кроноспан - 21",
-            "length": 400,
-            "width": 2200,
-            "heigth": 16,
-            "price": 3757
-        },
-        {
-            "id": "602b87a8df6e8d9cf5d41111",
-            "name": "OSB-3 Кроноспан - 4",
-            "length": 1200,
-            "width": 2400,
-            "heigth": 10,
-            "price": 2077
-        },
-        {
-            "id": "602b87a8146fc0dd1777a251",
-            "name": "OSB-3 Кроноспан - 21",
-            "length": 2000,
-            "width": 1200,
-            "heigth": 16,
-            "price": 2440
-        },
-        {
-            "id": "602b87a89e5e1aa47ded23eb",
-            "name": "OSB-3 Кроноспан - 11",
-            "length": 2400,
-            "width": 2400,
-            "heigth": 12,
-            "price": 1471
-        },
-        {
-            "id": "602b87a8b3e2c9afbada5266",
-            "name": "OSB-3 Кроноспан - 7",
-            "length": 1200,
-            "width": 1200,
-            "heigth": 20,
-            "price": 2699
-        },
-        {
-            "id": "602b87a8d615452d2a0f1b50",
-            "name": "OSB-3 Кроноспан - 19",
-            "length": 2000,
-            "width": 2200,
-            "heigth": 16,
-            "price": 2620
-        }
-    ]
-    // const obj = new Panel(items)
-</script>
+        </article>
+        <footer class="footer">
+            <div class="wrapper">
+                <div class="footer_content">
+                    <div class="contacts">
+                        <h3 class="footerMenuHeadline">Контакты</h3>
+                        <div class="contactsCity contactsElement"><span class="contactsTown">Город:</span> Челябинск</div>
+                        <a href="#" class="phoneBorder contactsElement">+7 (912) 72-00-00</a>
+                        <div class="contactsAddress contactsElement">Троицкий Тракт, 17</div>
+                        <a href="#" class="osbMail contactsElement">osb-sklad@mail.ru</a>
+                        <div class="contactsDate contactsElement">ПН-ПТ: 8:30-18:00, СБ-ВС: 9:30-15:00</div>
+                        <div class="contactsIcon">
+                            <a href="#" class="VK"></a>
+                            <a href="#" class="instagram"></a>
+                            <a href="#" class="youtube"></a>
+                        </div>
+                    </div>
+                    <div class="footerMenu">
+                        <h3 class="footerMenuHeadline">Меню</h3>
+                        <ul class="footerMenuList">
+                            <li class=""><a href="#">Кто мы?</a></li>
+                            <li><a href="#">Сертификаты на OSB</a></li>
+                            <li><a href="#">Реальные отзывы о нас</a></li>
+                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">Реквизиты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footerMenuByApplication">
+                        <h3 class="footerMenuHeadline">OSb по сферам применгения</h3>
+                        <ul class="footerMenuByApplicationList">
+                            <li><a href="#">ОСП для стен</a></li>
+                            <li><a href="#">ОСП для пола</a></li>
+                            <li><a href="#">ОСП для кровли</a></li>
+                            <li><a href="#">ОСП для сип и панелей</a></li>
+                            <li><a href="#">ОСП для потолка</a></li>
+                            <li><a href="#">ОСП для тары и упаковки</a></li>
+                            <li><a href="#">ОСП для мебели</a></li>
+                            <li><a href="#">ОСП для помещения</a></li>
+                            <li><a href="#">ОСП для тары и упаковки</a></li>
+                            <li><a href="#">ОСП для мебели</a></li>
+                            <li><a href="#">ОСП для помещения</a></li>
+                            <li><a href="#">ОСП для тары и упаковки</a></li>
+                            <li><a href="#">ОСП для мебели</a></li>
+                            <li><a href="#">ОСП для тары и упаковки</a></li>
+                            <li><a href="#">ОСП для мебели</a></li>
+                            <li><a href="#">ОСП для помещения</a></li>
+                            <p href="#" class="moreEl">ещё +<span class="hiddenListElements"></span></p>
+                        </ul>
+                    </div>
+                    <div class="footerMenuByManufacturer">
+                        <h3 class="footerMenuHeadline">OSB по производитедям</h3>
+                        <ul class="footerMenuByManufacturerList">
+                            <li><a href="#">ОСП Кроношпан</a></li>
+                            <li><a href="#">ОСП Талеон</a></li>
+                            <li><a href="#">ОСП Калевала</a></li>
+                            <li><a href="#">ОСП Еггер</a></li>
+                            <li><a href="#">ОСП Нлк</a></li>
+                            <li><a href="#">ОСП некондиция</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </main>
+    <script>
+        const panels = [
+                {
+                    "id": "602b87a8fd4364785b7ea4bc",
+                    "name": "OSB-3 Кроноспан - 4",
+                    "length": 2400,
+                    "width": 2400,
+                    "heigth": 22,
+                    "price": 1237
+                },
+                {
+                    "id": "602b87a81be1ae0aee172eea",
+                    "name": "OSB-3 Кроноспан - 13",
+                    "length": 1200,
+                    "width": 1200,
+                    "heigth": 16,
+                    "price": 2594
+                },
+                {
+                    "id": "602b87a8c27f10ba83c39231",
+                    "name": "OSB-3 Кроноспан - 5",
+                    "length": 2400,
+                    "width": 2200,
+                    "heigth": 22,
+                    "price": 2035
+                },
+                {
+                    "id": "602b87a8cbabfcbe7f06d9d9",
+                    "name": "OSB-3 Кроноспан - 15",
+                    "length": 1600,
+                    "width": 2400,
+                    "heigth": 20,
+                    "price": 2363
+                },
+                {
+                    "id": "602b87a83c5d62cfa1fae118",
+                    "name": "OSB-3 Кроноспан - 19",
+                    "length": 2000,
+                    "width": 1200,
+                    "heigth": 22,
+                    "price": 2926
+                },
+                {
+                    "id": "602b87a8d1652e9e6c46ff67",
+                    "name": "OSB-3 Кроноспан - 13",
+                    "length": 400,
+                    "width": 2200,
+                    "heigth": 8,
+                    "price": 3767
+                },
+                {
+                    "id": "602b87a86ab6e79b6439ea1d",
+                    "name": "OSB-3 Кроноспан - 7",
+                    "length": 2400,
+                    "width": 2200,
+                    "heigth": 22,
+                    "price": 3030
+                },
+                {
+                    "id": "602b87a86b6de8674007237b",
+                    "name": "OSB-3 Кроноспан - 16",
+                    "length": 400,
+                    "width": 2200,
+                    "heigth": 8,
+                    "price": 2123
+                },
+                {
+                    "id": "602b87a8871e1af101e79b2b",
+                    "name": "OSB-3 Кроноспан - 21",
+                    "length": 800,
+                    "width": 2200,
+                    "heigth": 16,
+                    "price": 1784
+                },
+                {
+                    "id": "602b87a83e545647de4f22fa",
+                    "name": "OSB-3 Кроноспан - 12",
+                    "length": 400,
+                    "width": 2400,
+                    "heigth": 22,
+                    "price": 2001
+                },
+                {
+                    "id": "602b87a894ad86671ded2ac5",
+                    "name": "OSB-3 Кроноспан - 21",
+                    "length": 2000,
+                    "width": 2200,
+                    "heigth": 8,
+                    "price": 1850
+                },
+                {
+                    "id": "602b87a80e1095744ef0508b",
+                    "name": "OSB-3 Кроноспан - 6",
+                    "length": 1200,
+                    "width": 2200,
+                    "heigth": 12,
+                    "price": 2487
+                },
+                {
+                    "id": "602b87a8215250bea0f5b621",
+                    "name": "OSB-3 Кроноспан - 14",
+                    "length": 1600,
+                    "width": 2400,
+                    "heigth": 16,
+                    "price": 1419
+                },
+                {
+                    "id": "602b87a83703548e76d8e532",
+                    "name": "OSB-3 Кроноспан - 18",
+                    "length": 2400,
+                    "width": 1200,
+                    "heigth": 12,
+                    "price": 3310
+                },
+                {
+                    "id": "602b87a88e65d981690b08b2",
+                    "name": "OSB-3 Кроноспан - 13",
+                    "length": 400,
+                    "width": 2200,
+                    "heigth": 10,
+                    "price": 1723
+                },
+                {
+                    "id": "602b87a80cd739c737d36850",
+                    "name": "OSB-3 Кроноспан - 9",
+                    "length": 1600,
+                    "width": 2200,
+                    "heigth": 22,
+                    "price": 1600
+                },
+                {
+                    "id": "602b87a842692bdca8731e51",
+                    "name": "OSB-3 Кроноспан - 17",
+                    "length": 400,
+                    "width": 2200,
+                    "heigth": 10,
+                    "price": 3049
+                },
+                {
+                    "id": "602b87a86f628c9f34cda9a7",
+                    "name": "OSB-3 Кроноспан - 15",
+                    "length": 1200,
+                    "width": 2400,
+                    "heigth": 16,
+                    "price": 1778
+                },
+                {
+                    "id": "602b87a80d1371d3aed50d47",
+                    "name": "OSB-3 Кроноспан - 18",
+                    "length": 800,
+                    "width": 1200,
+                    "heigth": 20,
+                    "price": 1731
+                },
+                {
+                    "id": "602b87a82e149b60dd841b9f",
+                    "name": "OSB-3 Кроноспан - 12",
+                    "length": 2000,
+                    "width": 2200,
+                    "heigth": 22,
+                    "price": 3867
+                },
+                {
+                    "id": "602b87a8deccda3d8897c2c8",
+                    "name": "OSB-3 Кроноспан - 5",
+                    "length": 400,
+                    "width": 1200,
+                    "heigth": 10,
+                    "price": 2240
+                },
+                {
+                    "id": "602b87a8e327c79df3a89ef6",
+                    "name": "OSB-3 Кроноспан - 15",
+                    "length": 800,
+                    "width": 1200,
+                    "heigth": 20,
+                    "price": 1460
+                },
+                {
+                    "id": "602b87a85867f394891b96d6",
+                    "name": "OSB-3 Кроноспан - 6",
+                    "length": 400,
+                    "width": 2200,
+                    "heigth": 20,
+                    "price": 3571
+                },
+                {
+                    "id": "602b87a8a51c838d7b05e1a0",
+                    "name": "OSB-3 Кроноспан - 16",
+                    "length": 2400,
+                    "width": 1200,
+                    "heigth": 8,
+                    "price": 1618
+                },
+                {
+                    "id": "602b87a8de1145aeb9053c1c",
+                    "name": "OSB-3 Кроноспан - 7",
+                    "length": 2400,
+                    "width": 2400,
+                    "heigth": 10,
+                    "price": 3133
+                },
+                {
+                    "id": "602b87a87fb3acb7bb612e4e",
+                    "name": "OSB-3 Кроноспан - 22",
+                    "length": 400,
+                    "width": 2200,
+                    "heigth": 12,
+                    "price": 2549
+                },
+                {
+                    "id": "602b87a8ed32245d8192dcde",
+                    "name": "OSB-3 Кроноспан - 21",
+                    "length": 800,
+                    "width": 1200,
+                    "heigth": 16,
+                    "price": 2601
+                },
+                {
+                    "id": "602b87a86c2331d47cdd5f05",
+                    "name": "OSB-3 Кроноспан - 13",
+                    "length": 2000,
+                    "width": 1200,
+                    "heigth": 12,
+                    "price": 1679
+                },
+                {
+                    "id": "602b87a8f116ff5c2628d228",
+                    "name": "OSB-3 Кроноспан - 4",
+                    "length": 2400,
+                    "width": 1200,
+                    "heigth": 16,
+                    "price": 3319
+                },
+                {
+                    "id": "602b87a8c76f7ea91b6da036",
+                    "name": "OSB-3 Кроноспан - 14",
+                    "length": 1200,
+                    "width": 2400,
+                    "heigth": 10,
+                    "price": 2534
+                },
+                {
+                    "id": "602b87a81a191b1bf94b457e",
+                    "name": "OSB-3 Кроноспан - 6",
+                    "length": 1200,
+                    "width": 2200,
+                    "heigth": 16,
+                    "price": 3736
+                },
+                {
+                    "id": "602b87a8b18f8512a1532067",
+                    "name": "OSB-3 Кроноспан - 16",
+                    "length": 400,
+                    "width": 2400,
+                    "heigth": 16,
+                    "price": 1531
+                },
+                {
+                    "id": "602b87a8f1d0ba9f9b66be40",
+                    "name": "OSB-3 Кроноспан - 12",
+                    "length": 2400,
+                    "width": 2200,
+                    "heigth": 10,
+                    "price": 1888
+                },
+                {
+                    "id": "602b87a8b427fb834e59bbc2",
+                    "name": "OSB-3 Кроноспан - 5",
+                    "length": 1200,
+                    "width": 1200,
+                    "heigth": 12,
+                    "price": 2113
+                },
+                {
+                    "id": "602b87a85f517f1c8ca17c63",
+                    "name": "OSB-3 Кроноспан - 14",
+                    "length": 800,
+                    "width": 2400,
+                    "heigth": 20,
+                    "price": 1988
+                },
+                {
+                    "id": "602b87a8d456a1087477f692",
+                    "name": "OSB-3 Кроноспан - 21",
+                    "length": 400,
+                    "width": 2400,
+                    "heigth": 22,
+                    "price": 2217
+                },
+                {
+                    "id": "602b87a86abd9c3da6a87d89",
+                    "name": "OSB-3 Кроноспан - 17",
+                    "length": 2000,
+                    "width": 1200,
+                    "heigth": 12,
+                    "price": 1313
+                },
+                {
+                    "id": "602b87a86d943ecb540a87ce",
+                    "name": "OSB-3 Кроноспан - 5",
+                    "length": 400,
+                    "width": 2400,
+                    "heigth": 20,
+                    "price": 2851
+                },
+                {
+                    "id": "602b87a8a194b44367bd591a",
+                    "name": "OSB-3 Кроноспан - 5",
+                    "length": 400,
+                    "width": 2400,
+                    "heigth": 22,
+                    "price": 1955
+                },
+                {
+                    "id": "602b87a8adb0095e33983258",
+                    "name": "OSB-3 Кроноспан - 17",
+                    "length": 2400,
+                    "width": 2400,
+                    "heigth": 8,
+                    "price": 2540
+                },
+                {
+                    "id": "602b87a87a5b675cd2c04690",
+                    "name": "OSB-3 Кроноспан - 18",
+                    "length": 1200,
+                    "width": 2200,
+                    "heigth": 12,
+                    "price": 2283
+                },
+                {
+                    "id": "602b87a8f206d55b6dd80484",
+                    "name": "OSB-3 Кроноспан - 14",
+                    "length": 1600,
+                    "width": 2400,
+                    "heigth": 16,
+                    "price": 1391
+                },
+                {
+                    "id": "602b87a841b99bd470fe120a",
+                    "name": "OSB-3 Кроноспан - 7",
+                    "length": 800,
+                    "width": 2200,
+                    "heigth": 16,
+                    "price": 2115
+                },
+                {
+                    "id": "602b87a89dfa2e0243b266f8",
+                    "name": "OSB-3 Кроноспан - 8",
+                    "length": 1200,
+                    "width": 2200,
+                    "heigth": 12,
+                    "price": 1773
+                },
+                {
+                    "id": "602b87a8a64d8e27d97b8737",
+                    "name": "OSB-3 Кроноспан - 18",
+                    "length": 800,
+                    "width": 1200,
+                    "heigth": 12,
+                    "price": 1287
+                },
+                {
+                    "id": "602b87a82ff6e4e05888a3fb",
+                    "name": "OSB-3 Кроноспан - 10",
+                    "length": 1200,
+                    "width": 1200,
+                    "heigth": 20,
+                    "price": 2265
+                },
+                {
+                    "id": "602b87a84bf7911726de4152",
+                    "name": "OSB-3 Кроноспан - 13",
+                    "length": 2400,
+                    "width": 1200,
+                    "heigth": 22,
+                    "price": 2781
+                },
+                {
+                    "id": "602b87a86c38d8f31ec19b82",
+                    "name": "OSB-3 Кроноспан - 4",
+                    "length": 800,
+                    "width": 2200,
+                    "heigth": 20,
+                    "price": 3062
+                },
+                {
+                    "id": "602b87a8e95e5bd69bc81d13",
+                    "name": "OSB-3 Кроноспан - 5",
+                    "length": 1600,
+                    "width": 2400,
+                    "heigth": 20,
+                    "price": 3210
+                },
+                {
+                    "id": "602b87a89e974a066904219b",
+                    "name": "OSB-3 Кроноспан - 9",
+                    "length": 400,
+                    "width": 1200,
+                    "heigth": 16,
+                    "price": 2989
+                },
+                {
+                    "id": "602b87a80929bfc248030fa1",
+                    "name": "OSB-3 Кроноспан - 5",
+                    "length": 2000,
+                    "width": 2400,
+                    "heigth": 20,
+                    "price": 2069
+                },
+                {
+                    "id": "602b87a825f58b5efdb702ca",
+                    "name": "OSB-3 Кроноспан - 9",
+                    "length": 2400,
+                    "width": 1200,
+                    "heigth": 22,
+                    "price": 3123
+                },
+                {
+                    "id": "602b87a8513a93cc497315db",
+                    "name": "OSB-3 Кроноспан - 8",
+                    "length": 2000,
+                    "width": 2400,
+                    "heigth": 8,
+                    "price": 1884
+                },
+                {
+                    "id": "602b87a85109329177ba61b9",
+                    "name": "OSB-3 Кроноспан - 14",
+                    "length": 2400,
+                    "width": 2200,
+                    "heigth": 20,
+                    "price": 2381
+                },
+                {
+                    "id": "602b87a899531efa3f623647",
+                    "name": "OSB-3 Кроноспан - 4",
+                    "length": 2000,
+                    "width": 2200,
+                    "heigth": 22,
+                    "price": 1655
+                },
+                {
+                    "id": "602b87a80ca1c466faa3f56e",
+                    "name": "OSB-3 Кроноспан - 6",
+                    "length": 400,
+                    "width": 2200,
+                    "heigth": 16,
+                    "price": 1751
+                },
+                {
+                    "id": "602b87a8134400e754b18f3e",
+                    "name": "OSB-3 Кроноспан - 13",
+                    "length": 1600,
+                    "width": 2400,
+                    "heigth": 12,
+                    "price": 1509
+                },
+                {
+                    "id": "602b87a838a80666388337ab",
+                    "name": "OSB-3 Кроноспан - 11",
+                    "length": 800,
+                    "width": 2200,
+                    "heigth": 12,
+                    "price": 2025
+                },
+                {
+                    "id": "602b87a83255c7d10dc2bac4",
+                    "name": "OSB-3 Кроноспан - 18",
+                    "length": 1600,
+                    "width": 2200,
+                    "heigth": 22,
+                    "price": 2355
+                },
+                {
+                    "id": "602b87a8192ef7f16a3459ad",
+                    "name": "OSB-3 Кроноспан - 17",
+                    "length": 400,
+                    "width": 1200,
+                    "heigth": 20,
+                    "price": 1461
+                },
+                {
+                    "id": "602b87a828723e3f351a6993",
+                    "name": "OSB-3 Кроноспан - 7",
+                    "length": 400,
+                    "width": 2400,
+                    "heigth": 20,
+                    "price": 1483
+                },
+                {
+                    "id": "602b87a851f9b75495df9066",
+                    "name": "OSB-3 Кроноспан - 14",
+                    "length": 400,
+                    "width": 2200,
+                    "heigth": 20,
+                    "price": 1671
+                },
+                {
+                    "id": "602b87a8b913ad2182250497",
+                    "name": "OSB-3 Кроноспан - 4",
+                    "length": 2000,
+                    "width": 2200,
+                    "heigth": 12,
+                    "price": 3215
+                },
+                {
+                    "id": "602b87a827170b651247b718",
+                    "name": "OSB-3 Кроноспан - 8",
+                    "length": 800,
+                    "width": 1200,
+                    "heigth": 20,
+                    "price": 3797
+                },
+                {
+                    "id": "602b87a82d665714d29618f2",
+                    "name": "OSB-3 Кроноспан - 21",
+                    "length": 400,
+                    "width": 2200,
+                    "heigth": 16,
+                    "price": 3757
+                },
+                {
+                    "id": "602b87a8df6e8d9cf5d41111",
+                    "name": "OSB-3 Кроноспан - 4",
+                    "length": 1200,
+                    "width": 2400,
+                    "heigth": 10,
+                    "price": 2077
+                },
+                {
+                    "id": "602b87a8146fc0dd1777a251",
+                    "name": "OSB-3 Кроноспан - 21",
+                    "length": 2000,
+                    "width": 1200,
+                    "heigth": 16,
+                    "price": 2440
+                },
+                {
+                    "id": "602b87a89e5e1aa47ded23eb",
+                    "name": "OSB-3 Кроноспан - 11",
+                    "length": 2400,
+                    "width": 2400,
+                    "heigth": 12,
+                    "price": 1471
+                },
+                {
+                    "id": "602b87a8b3e2c9afbada5266",
+                    "name": "OSB-3 Кроноспан - 7",
+                    "length": 1200,
+                    "width": 1200,
+                    "heigth": 20,
+                    "price": 2699
+                },
+                {
+                    "id": "602b87a8d615452d2a0f1b50",
+                    "name": "OSB-3 Кроноспан - 19",
+                    "length": 2000,
+                    "width": 2200,
+                    "heigth": 16,
+                    "price": 2620
+                }
+            ]
+    </script>
 
 
-<script src="./libs/jquery-3.5.1.min.js"></script>
-<script src="./libs/bootstrap.bundle.min.js"></script>
-<script src="./libs/parallax.min.js"></script>
-<script src="./libs/slick.min.js"></script>
-<script src="./libs/swiper-bundle.min.js"></script>
-<script src="./libs/swiper-bundle.esm.browser.min.js"></script>
-<script src="./js/main.js"></script>
-<script type="module" src="./libs/swiper.slider.js"></script>
+
+    <script src="./libs/jquery-3.5.1.min.js"></script>
+    <script src="./libs/bootstrap.bundle.min.js"></script>
+    <script src="./libs/parallax.min.js"></script>
+    <script src="./libs/slick.min.js"></script>
+    <script src="./libs/swiper-bundle.min.js"></script>
+    <script src="./libs/swiper-bundle.esm.browser.min.js"></script>
+    <script src="./js/main.js"></script>
+    <script type="module" src="./libs/swiper.slider.js"></script>
 </body>
 </html>
