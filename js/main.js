@@ -880,10 +880,12 @@ let moreListElements = footerList.querySelector('.moreEl');
 let counter = 0;
 let hiddenListElements = [];
 
+moreListElements.style.visibility = 'hidden';
 
 for (let i = 0; i <= elementsList.length - 1; i ++) {
     counter ++;
     if (counter > 8) {
+        moreListElements.style.visibility = 'visible';
         elementsList[i].style.display = "none";
         hiddenListElements.push(elementsList[i]);
         valueHiddenElements.textContent = hiddenListElements.length;
