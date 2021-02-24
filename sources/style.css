@@ -5684,19 +5684,20 @@ header {
   border: none;
 }
 
-.showPopup {
+.popup.showPopup {
   opacity: 1;
   visibility: visible;
-}
-
-.popup.showPopup {
-  /* Третья секция. 2 страница. OSB на пол */
 }
 
 .popup.showPopup .popupContent {
   -webkit-transform: translate(0%, 0px);
           transform: translate(0%, 0px);
   opacity: 1;
+}
+
+.lock {
+  overflow: hidden;
+  /* Третья секция. 2 страница. OSB на пол */
 }
 
 .sectionThree_osbOnFloor {
@@ -13897,9 +13898,5 @@ input::-webkit-inner-spin-button {
 .accordion-button.filterBtnSelect {
   color: #010101;
   background-color: #FFFFFF;
-}
-
-body.modal-open {
-  padding-right: 0px !important;
 }
 /*# sourceMappingURL=style.css.map */

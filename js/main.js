@@ -1069,18 +1069,42 @@ if (document.querySelector('.productCard')) {
     let popup = document.querySelector('.popup');
     let cards = document.querySelectorAll('.productCard');
     let closePopupBtn = popup.querySelector('.popupCloseBtn');
-    let body = document.querySelector('body');
     let popupProductName = popup.querySelector('.popupProductName');
     let hiddenFormField = popup.querySelector('.goodName');
+    let html = document.querySelector('html');
+
+    let popupOpen = function () {
+        popup.classList.add('showPopup');
+        popup.addEventListener('click', function(e) {
+            if (!e.target.closest('.popupContent')) {
+                popupClose();
+                bodyLock();
+            }
+        })
+        bodyLock();
+    };
+
+    let popupClose = function () {
+        popup.classList.remove('showPopup');
+    };
+
+    let bodyLock = function () {
+        let popupActive = document.querySelector('.popup.showPopup');
+        if (popupActive) {
+            html.classList.add('lock');
+        } else {
+            html.classList.remove('lock');
+            
+        }
+    };
 
     let cardClickHandler = function(item) {
         let productCardBtn = item.querySelector('.refineRemainder');
         productCardBtn.addEventListener('click', function(evt) {
-            popup.classList.add('showPopup');
+            popupOpen();
             let prodcutName = item.querySelector('.productDescription > a');
             popupProductName.textContent = prodcutName.textContent;
             hiddenFormField.value = prodcutName.textContent;
-            let popupActive = document.querySelector('.popup.showPopup');
         });
     }
 
@@ -1089,12 +1113,14 @@ if (document.querySelector('.productCard')) {
     };
 
     closePopupBtn.addEventListener('click', function() {
-        popup.classList.remove('showPopup');
+        popupClose();
+        bodyLock();
     });
 
     document.addEventListener('keydown', function(evt){
         if (evt.key === 'Escape') {
-            popup.classList.remove('showPopup');
+            popupClose();
+            bodyLock();
         }
     });
 }

@@ -3879,7 +3879,7 @@ header
           outline: none
           border: none
 
-.showPopup
+.popup.showPopup
   opacity: 1
   visibility: visible
  
@@ -3887,6 +3887,10 @@ header
   .popupContent
     transform: translate(0%, 0px)
     opacity: 1
+
+.lock
+  overflow: hidden 
+  // overflow-y: scroll 
 
   /* Третья секция. 2 страница. OSB на пол
 
@@ -9281,5 +9285,3 @@ input::-webkit-inner-spin-button
   color: #010101
   background-color: #FFFFFF
 
-body.modal-open
-  padding-right: 0px !important
