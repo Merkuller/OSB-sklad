@@ -1,6 +1,7 @@
 // Этот скрипт определяет количество дополнительных элементов списка и по нажатию на кнопку "ещё" показывает их.
+// footerListElements_index
 
-let footerList = document.querySelector('.footerMenuByApplicationList'); 
+let footerList = document.querySelector('.footerMenuByApplicationList');
 let elementsList = footerList.querySelectorAll('li');
 let valueHiddenElements = footerList.querySelector('.hiddenListElements');
 let moreListElements = footerList.querySelector('.moreEl');

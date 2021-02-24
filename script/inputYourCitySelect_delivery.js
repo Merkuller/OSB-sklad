@@ -1,4 +1,5 @@
 // Этот скрипт перемещает placeholder в поле ввода по нажатию на него
+//inputYourCitySelect_delivery
 if (document.querySelector('.deliveryMenu_delivery')) {
     var citySelect = document.querySelector('#city_delivery');
     var yourCity1 = document.querySelector('.placeholder1_delivery');

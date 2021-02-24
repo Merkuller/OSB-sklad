@@ -1,4 +1,5 @@
 // Этот скрипт отображает баннер страницы
+//slider_osbOnFloor
 if (document.querySelector('.slider_osbOnFloor')) {
     $('.slider_osbOnFloor').slick({
         infinite: true,

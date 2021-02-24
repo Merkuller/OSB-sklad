@@ -1,3 +1,5 @@
+//filterNameToggler_index
+
 if (document.querySelector('.slider2LinkShowAll_index')) {
     let tabsFirstFilter_index = document.querySelectorAll('.button_catalog');
     let filterLink_index = document.querySelector('.slider2LinkShowAll_index');

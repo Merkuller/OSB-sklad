@@ -1,3 +1,5 @@
+//filterNameToggler_index
+
 if (document.querySelector('.filterCollapse_osbOnFloor')) {
     let filterCheckbox_osbOnFloor = document.querySelector('.filterCollapse_osbOnFloor');
 
