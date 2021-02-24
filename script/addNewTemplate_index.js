@@ -3,9 +3,7 @@ let height_select = document.getElementById('heigth_list')
 let tmp = []
 let parent_container = document.getElementById('parent')
 
-
-// let panels = obj.getData()
-// console.log(panels)
+//panels  << index
 
 function changeSelects(event) {
     if (event.target.getAttribute('id') === 'format_list') {
