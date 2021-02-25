@@ -1,3 +1,6 @@
+//addNewTemplate.js
+//Калькулятор на главной
+
 let formats_select = document.getElementById('format_list')
 let height_select = document.getElementById('heigth_list')
 let tmp = []
@@ -94,13 +97,14 @@ let add_square = document.querySelector('.addNewPlane_index')
 
         })
     }
-panels.forEach(item => {
-    createOption(formats_select, item.length + 'x' + item.width, item)
-    createOption(height_select, item.heigth, item)
-})
+
 
 if (parent_container) {
     parent_container.addEventListener('change', e => changeSelects(e))
+    panels.forEach(item => {
+        createOption(formats_select, item.length + 'x' + item.width, item)
+        createOption(height_select, item.heigth, item)
+    })
 }
 
 let calc_button = document.getElementById('calc_button')

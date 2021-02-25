@@ -1,4 +1,5 @@
 // Этот скрипт отображает слайдер главного баннера страницы
+//mainSlider_index
 if (document.querySelector('.slider1_index')) {
     $('.slider1_index').slick({
         infinite: true,

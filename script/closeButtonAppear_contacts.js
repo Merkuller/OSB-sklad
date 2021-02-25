@@ -1,3 +1,7 @@
+//
+//closeButtonAppear_contacts
+
+
 if (document.querySelector('.placeholder1_contacts')) {
     let citySelect3_contacts = document.querySelector('#city_contacts');
     let resetButton3_contacts = document.querySelector('.resetCity_contacts');
