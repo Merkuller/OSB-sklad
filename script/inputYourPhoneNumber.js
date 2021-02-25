@@ -1,4 +1,6 @@
 // Перемещение placeholder'а в поле ввода телефона вверх
+//inputYourPhoneNumber
+
 if (document.querySelector('#phone') && document.querySelector('.placeholder')) {
     var phoneSelect_page1 = document.querySelector('#phone');
     var yourPhone_page1 = document.querySelector('.placeholder');

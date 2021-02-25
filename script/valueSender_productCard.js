@@ -10,6 +10,7 @@ if (document.querySelector('.thicknessButtons_productCard')) {
     let inStock_productCard = document.querySelector('.countInStock_productCard');
     let thicknessCharacteristic_productCard = document.querySelector('.thicknessValue_productCard');
     let weightCharacteristic_productCard = document.querySelector('.weigthValue_productCard');
+    let densityFilter = document.querySelector('.densityValue_productCard')
     let hiddenValue = document.querySelector('.hiddenValue_productCard');
 
     function renderProductParameters(obj) {
@@ -18,6 +19,7 @@ if (document.querySelector('.thicknessButtons_productCard')) {
         inStock_productCard.textContent = obj.count;
         thicknessCharacteristic_productCard.textContent = obj.thicknessFilter;
         weightCharacteristic_productCard.textContent = obj.weightFilter;
+        densityFilter.textContent = obj.densityFilter;
         hiddenValue.value = obj.id;
     }
 
@@ -31,6 +33,7 @@ if (document.querySelector('.thicknessButtons_productCard')) {
                 count: element.dataset.count,
                 thicknessFilter: element.dataset.thicknessFilter,
                 weightFilter: element.dataset.weightFilter,
+                densityFilter:element.dataset.densityFilter,
                 id: element.dataset.id
             }
         }
@@ -61,23 +64,3 @@ if (document.querySelector('.thicknessButtons_productCard')) {
         })
     })
 }
-
-
-//     for (let i = 0; i <= btnsArray_productCard.length - 1; i ++) {
-//         btnsArray_productCard[i].onclick = function () {
-//             price_productCard.textContent = btnsArray_productCard[i].dataset.price;
-//             priceForMeter.textContent = btnsArray_productCard[i].dataset.priceForMeter;
-//             inStock_productCard.textContent = btnsArray_productCard[i].dataset.count;
-//             hiddenValue.value = btnsArray_productCard[i].dataset.id;
-//             thicknessCharacteristic_productCard.textContent = btnsArray_productCard[i].dataset.thicknessFilter;
-//             weightCharacteristic_productCard.textContent = btnsArray_productCard[i].dataset.weightFilter;
-//             selectBtnArray[0] = btnsArray_productCard[i];
-//             btnsArray_productCard[i].classList.add('selectButton');
-//             for (let j = 0; j <= btnsArray_productCard.length - 1; j ++) {
-//                 if (selectBtnArray[0] !== btnsArray_productCard[j]) {
-//                     btnsArray_productCard[j].classList.remove('selectButton');
-//                 }
-//             }
-//         }
-//     }
-// }
