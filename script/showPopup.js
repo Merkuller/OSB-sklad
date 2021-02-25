@@ -25,20 +25,23 @@ if (document.querySelector('.productCard')) {
         let popupActive = document.querySelector('.popup.showPopup');
         if (popupActive) {
             html.classList.add('lock');
+            html.classList.add('bodyPaddingRight');
         } else {
             html.classList.remove('lock');
-            
+            html.classList.remove('bodyPaddingRight');
         }
     };
 
     let cardClickHandler = function(item) {
-        let productCardBtn = item.querySelector('.refineRemainder');
-        productCardBtn.addEventListener('click', function(evt) {
-            popupOpen();
-            let prodcutName = item.querySelector('.productDescription > a');
-            popupProductName.textContent = prodcutName.textContent;
-            hiddenFormField.value = prodcutName.textContent;
-        });
+        if (item.querySelector('.refineRemainder')) {
+            let productCardBtn = item.querySelector('.refineRemainder');
+            productCardBtn.addEventListener('click', function(evt) {
+                popupOpen();
+                let prodcutName = item.querySelector('.productDescription > a');
+                popupProductName.textContent = prodcutName.textContent;
+                hiddenFormField.value = prodcutName.textContent;
+            });
+        }
     }
 
     for (let i = 0; i < cards.length; i ++) {

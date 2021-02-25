@@ -1092,20 +1092,23 @@ if (document.querySelector('.productCard')) {
         let popupActive = document.querySelector('.popup.showPopup');
         if (popupActive) {
             html.classList.add('lock');
+            html.classList.add('bodyPaddingRight');
         } else {
             html.classList.remove('lock');
-            
+            html.classList.remove('bodyPaddingRight');
         }
     };
 
     let cardClickHandler = function(item) {
-        let productCardBtn = item.querySelector('.refineRemainder');
-        productCardBtn.addEventListener('click', function(evt) {
-            popupOpen();
-            let prodcutName = item.querySelector('.productDescription > a');
-            popupProductName.textContent = prodcutName.textContent;
-            hiddenFormField.value = prodcutName.textContent;
-        });
+        if (item.querySelector('.refineRemainder')) {
+            let productCardBtn = item.querySelector('.refineRemainder');
+            productCardBtn.addEventListener('click', function(evt) {
+                popupOpen();
+                let prodcutName = item.querySelector('.productDescription > a');
+                popupProductName.textContent = prodcutName.textContent;
+                hiddenFormField.value = prodcutName.textContent;
+            });
+        }
     }
 
     for (let i = 0; i < cards.length; i ++) {
@@ -1146,7 +1149,7 @@ if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
         var topPadding = 0,
         bottomPadding = 4905;
         $(window).scroll(function() {
-            if (window.innerWidth >= 1006) {
+            if (window.innerWidth >= 1007) {
                 if ($(window).scrollTop() > offset.top) {
                     if ($(document).height() - bottomPadding > $(window).scrollTop() + $("#fixed").height()) $("#fixed").stop().animate({
                     marginTop: $(window).scrollTop() - offset.top + topPadding
