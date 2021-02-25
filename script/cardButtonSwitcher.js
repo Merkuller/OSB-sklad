@@ -1,5 +1,4 @@
-// Этот скрипт переключает кнопки карточки товара и и пределяет цену за шт и метр кв в зависимости от выбранного значения толщины
-//cardButtonSwitcher
+// Этот скрипт переключает кнопки карточки товара и и пределяет цену за шт и метр кв в зависимости от выбранного значения толщины 
 if (document.querySelector('.productCard')) {
     let cardsProduct_productCard = document.querySelectorAll('.productCard');
     let selectBtn_productCard = [];
@@ -30,7 +29,7 @@ if (document.querySelector('.productCard')) {
                         list[j].classList.remove('selectButton');
                     }
                 }
-            })
+            }) 
         }
     }
 

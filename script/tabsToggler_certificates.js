@@ -1,6 +1,5 @@
-// Перключатель стилей у активных вкладок
-//tabsToggler_certificates
-if (document.querySelector('.button_certificates')) {
+// Перключатель стилей у активных вкладок 
+if (document.querySelector('.button_certificates')) {   
    let tabs_certificates = document.querySelectorAll('.button_certificates');
    let certificateName_certificates = document.querySelector('.serificateName_certificates');
    let selectTab;
@@ -13,7 +12,7 @@ if (document.querySelector('.button_certificates')) {
             tabs_certificates[i].classList.add('tabSelect');
             selectTab = tabs_certificates[i];
             console.log(certificateName_certificates.textContent);
-            certificateName_certificates.textContent = selectTab.textContent;
+            certificateName_certificates.textContent = selectTab.textContent;  
             for (let j = 0; j <= tabs_certificates.length - 1; j ++) {
                 if (tabs_certificates[j] !== selectTab) {
                     tabs_certificates[j].classList.remove('tabSelect');

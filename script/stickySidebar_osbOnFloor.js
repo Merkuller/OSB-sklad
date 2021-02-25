@@ -1,5 +1,3 @@
-//stickySidebar_osbOnFloor
-
 if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
     $(document).ready(function () {
         var offset = $('#fixed').offset();
@@ -16,6 +14,6 @@ if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
                     $('#fixed').stop().animate({marginTop: 0});
                 }
             }
-        });
+        });  
     });
 }

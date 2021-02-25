@@ -1,5 +1,4 @@
 // Этот скрипт перемещает грузовик и отображает кнопку прокрутки "в начало"
-//upButton_index
 if (document.querySelector('.up-button') && document.querySelector('.track_index')) {
     var upButton = document.querySelector('.up-button');
     var track = document.querySelector('.track_index');

@@ -1,6 +1,4 @@
 // Этот скрипт переключает стили у активных опций доставки и отображает соответсвующую ей картинку
-// buttonContent_delivery.js
-
 if (document.querySelector('.deliveryButton_delivery')) {
     let btns_delivery = document.querySelectorAll('.deliveryOption_delivery');
     let imgWindow_delivery = document.querySelector('.deliveryContent_delivery');

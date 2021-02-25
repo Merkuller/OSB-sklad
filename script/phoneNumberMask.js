@@ -1,5 +1,4 @@
 // Маска для поля ввода номера
-//phoneNumberMask
 if (document.querySelector('#phone')) {
     window.addEventListener("DOMContentLoaded", function() {
         [].forEach.call( document.querySelectorAll('#phone'), function(input) {

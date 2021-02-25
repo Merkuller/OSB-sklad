@@ -1,6 +1,4 @@
-// Этот скрипт отслеживает наличие текста в поле ввода. И отображает её при его наличии.
-//closeButtonAppear_delivery
-
+// Этот скрипт отслеживает наличие текста в поле ввода. И отображает её при его наличии. 
 if (document.querySelector('.resetCity_delivery')) {
     let citySelect_delivery = document.querySelector('#city_delivery');
     let resetButton_delivery = document.querySelector('.resetCity_delivery');

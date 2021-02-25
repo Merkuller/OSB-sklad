@@ -1,5 +1,4 @@
-// Этот скрипт отвечает за галлерею страницы.
-//gallerySwitcher_productCard
+// Этот скрипт отвечает за галлерею страницы. 
 if (document.querySelector('.page3ContentImg')) {
     let btns_productCard = document.querySelectorAll('.thicknessButton_productCard');
     let galleryImgContainer_productCard = document.querySelector('.page3ContentImg');
@@ -29,7 +28,7 @@ if (document.querySelector('.page3ContentImg')) {
                         if (selectedBtnsArray_productCard[0] !== galleryBtnsArray_productCard[j]) {
                             galleryBtnsArray_productCard[j].classList.remove('shownIcon_productCard');
                         }
-                    }
+                    } 
                 }
             }
         }

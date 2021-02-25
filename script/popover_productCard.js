@@ -1,4 +1,3 @@
-//popover_productCard
 if (document.querySelector('.popover_productCard')) {
     let popover_productCard = document.querySelector('.popover_productCard');
     let popoverText_productCard = document.querySelector('.popoverText_productCard');

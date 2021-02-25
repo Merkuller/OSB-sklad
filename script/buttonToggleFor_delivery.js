@@ -1,5 +1,4 @@
 // Этот скрипт фильтрует содержимое вкладок и переключает стиль активной вкладки
-//buttonToggleFor_delivery
 if (document.querySelector('.deliveryButton_delivery')) {
     let deliveryBtn_delivery = document.querySelectorAll('.deliveryButton_delivery');
     let btnDelivery_delivery = document.querySelectorAll('.deliveryOption_delivery');
@@ -45,6 +44,6 @@ if (document.querySelector('.deliveryButton_delivery')) {
                     deliveryBtnArray_delivery[j].classList.remove('buttonClick_delivery');
                 }
             }
-        }
+        }    
     }
 }
