@@ -153,7 +153,7 @@
                     <article class="note_articles">
                         <p>
                             Небольшое замечание, касающееся аббревиатур. ОСП по-русски расшифровывается, как ориентированно-стружечная плита. OSB по английски звучит как oriented strand board. Слово board переводится двояко: и плита, и доска. Поэтому написание ОСБ и тем более ОСВ – не вполне корректно. Хотя подобные аббревиатуры ориентированно-стружечного материала встречаются даже на строительных рынках и т.п.
-                            <span></span>
+                            <span class="bookIcon_articles"></span>
                         </p>
                     </article>
                     <b>Почему выбираем OSB-3</b>
@@ -196,6 +196,16 @@
                                 <div class="productDescription">
                                     <a href="#">OSB-3 Kronospan 2500x1250 мм (3.125 м2); 35,4 кг</a>
                                 </div>
+                                <p class="perSquareMeter"> р/м2</p>
+                                <form action="POST" class="productCardForm">
+                                    <button type="submit" class="productCardTotalPrice"> р./шт</button>
+                                    <div class="productCardCounter">
+                                        <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                        <input type="number" class="productCardCounterField">
+                                        <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                    </div>
+                                </form>
+                                <button type="button" class="refineRemainder">Уточнить остаток</button>
                             </div>
                         </div>
                     </section>
@@ -256,6 +266,19 @@
                 </div>
             </div>
         </article>
+        <div class="popup">
+            <div class="popupBody">
+                <form method="POST" class="popupContent">
+                    <button type="button" class="popupCloseBtn"></button>
+                    <div class="popupTitle">Товар: <span class="popupProductName"></span></div>
+                    <input type="tel" class="popupField" placeholder="Номер телефона">
+                    <input type="text" class="popupField" placeholder="ФИО">
+                    <input type="hidden" class="goodName">
+                    <textarea name="" class="popupCommentField" cols="30" rows="6" placeholder="Ваш комментарий"></textarea>
+                    <button type="submit" class="popupSubmitBtn">отправить</button>
+                </form>
+            </div>
+        </div>
         <footer class="footer">
             <div class="wrapper">
                 <div class="footer_content">

@@ -327,29 +327,16 @@
                             <div class="productDescription">
                                 <a href="#">OSB-3 Kronospan 2500x1250 мм (3.125 м2); 35,4 кг</a>
                             </div>
-                            <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                      <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="45">
-                                        18
-                                      </button>
-                                      <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="32">
-                                        22
-                                      </button>
-                                      <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="22">
-                                        24
-                                      </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div>
-                            <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div>
+                            <p class="perSquareMeter"><span>р/м2</span></p>
+                                <form action="POST" class="productCardForm">
+                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <div class="productCardCounter">
+                                        <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                        <input type="number" class="productCardCounterField">
+                                        <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                    </div>
+                                </form>
+                                <button type="button" class="refineRemainder">Уточнить остаток</button>
                         </div>
                         <div class="productCard">
                             <div class="productPic">
@@ -363,29 +350,16 @@
                             <div class="productDescription">
                                 <a href="#">OSB-3 Kronospan 2500x1250 мм (3.125 м2); 35,4 кг</a>
                             </div>
-                            <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                      <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="45">
-                                        18
-                                      </button>
-                                      <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="32">
-                                        22
-                                      </button>
-                                      <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="22">
-                                        24
-                                      </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div>
-                            <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div>
+                            <p class="perSquareMeter"><span>р/м2</span></p>
+                                <form action="POST" class="productCardForm">
+                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <div class="productCardCounter">
+                                        <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                        <input type="number" class="productCardCounterField">
+                                        <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                    </div>
+                                </form>
+                                <button type="button" class="refineRemainder">Уточнить остаток</button>
                         </div>
                         <div class="productCard">
                             <div class="productPic">
@@ -399,29 +373,16 @@
                             <div class="productDescription">
                                 <a href="#">OSB-3 Kronospan 2500x1250 мм (3.125 м2); 35,4 кг</a>
                             </div>
-                            <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                      <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="45">
-                                        18
-                                      </button>
-                                      <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="32">
-                                        22
-                                      </button>
-                                      <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="22">
-                                        24
-                                      </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div>
-                            <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div>
+                            <p class="perSquareMeter"><span>р/м2</span></p>
+                                <form action="POST" class="productCardForm">
+                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <div class="productCardCounter">
+                                        <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                        <input type="number" class="productCardCounterField">
+                                        <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                    </div>
+                                </form>
+                                <button type="button" class="refineRemainder">Уточнить остаток</button>
                         </div>
                     </div>
                 </div>
@@ -461,6 +422,19 @@
                 </div>
             </div>
         </article>
+        <div class="popup">
+            <div class="popupBody">
+                <form method="POST" class="popupContent">
+                    <button type="button" class="popupCloseBtn"></button>
+                    <div class="popupTitle">Товар: <span class="popupProductName"></span></div>
+                    <input type="tel" class="popupField" placeholder="Номер телефона">
+                    <input type="text" class="popupField" placeholder="ФИО">
+                    <input type="hidden" class="goodName">
+                    <textarea name="" class="popupCommentField" cols="30" rows="6" placeholder="Ваш комментарий"></textarea>
+                    <button type="submit" class="popupSubmitBtn">отправить</button>
+                </form>
+            </div>
+        </div>
         <footer class="footer">
             <div class="wrapper">
                 <div class="footer_content">

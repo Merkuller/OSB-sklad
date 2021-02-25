@@ -3421,6 +3421,15 @@ header
         .productCard
           width: 100%
           margin-bottom: 20px
+          .perSquareMeter
+            text-align: center
+          .productCardForm
+            max-width: 320px
+            margin: 0px auto
+            margin-bottom: 10px
+          .refineRemainder
+            max-width: 320px
+            margin: 0px auto
 
         &:last-of-type
           margin-bottom: 0px
@@ -5445,12 +5454,14 @@ input::-webkit-inner-spin-button
   .thirdSection_productCard
     .sectionTitle_index
       margin-bottom: 20px
+      @media screen and ( max-width: 674px)
+        text-align: center
   @media screen and ( max-width: 1024px)
     padding-top: 0px
     padding-bottom: 60px
-  @media screen and ( max-width: 768px)
+  
     .thirdSection_productCard
-      > .productCards
+      .productCards
         width: 100%
         @media screen and ( max-width: 674px)
           flex-direction: column
@@ -5465,6 +5476,15 @@ input::-webkit-inner-spin-button
               margin: 0px auto
             .productDescription
               text-align: center
+            .perSquareMeter
+              text-align: center
+            .productCardForm
+              max-width: 320px
+              margin: 0px auto
+              margin-bottom: 10px
+            .refineRemainder
+              max-width: 320px
+              margin: 0px auto
         
   @media screen and ( max-width: 425px)
     padding-bottom: 40px
@@ -6504,7 +6524,7 @@ input::-webkit-inner-spin-button
     display: block
 
 .firstSection_articles
-  p
+  > p
     width: 65.71%
     display: block
     font-style: normal
@@ -6648,7 +6668,7 @@ input::-webkit-inner-spin-button
   justify-content: space-between
   padding-top: 10px
 
-  span
+  .bookIcon_articles
     font-style: normal
     font-weight: bold
     font-size: 16px
@@ -6665,17 +6685,33 @@ input::-webkit-inner-spin-button
   width: 100%
   margin-top: 43px
   @media screen and ( max-width: 1441px)
-    > .productCards
+    .productCards
       width: 100%
 
       .productCard
         width: 100%
 
         .productPic
-          img
-            margin: 0px auto
+          .productLink
+            img
+              margin: 0px auto
         .productDescription
           text-align: center
+        .perSquareMeter
+          font-style: normal
+          font-weight: normal
+          font-size: 16px
+          line-height: 28px
+          color: #4E4E4E
+          @media screen and ( max-width: 1441px)
+            text-align: center
+        .productCardForm
+          max-width: 320px
+          margin: 0px auto
+          margin-bottom: 10px
+        .refineRemainder
+          max-width: 320px
+          margin: 0px auto
         
   @media screen and ( max-width: 1025px)
     margin-top: 40px
