@@ -1,4 +1,5 @@
 // Этот скрипт перемещает placeholder в поле ввода по нажатию на него
+//inputYourCitySelect_contacts
 if (document.querySelector('.mottexPhone_contacts')) {
     var citySelect = document.querySelector('#city_contacts');
     var yourCity1 = document.querySelector('.placeholder1_contacts');
