@@ -5690,8 +5690,34 @@ header {
   margin-bottom: 51px;
 }
 
+@media screen and (max-width: 1024px) {
+  .igorBlog .wrapper div h2 {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .igorBlog .wrapper div h2 {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .igorBlog .wrapper div h2 {
+    font-size: 38px;
+  }
+}
+
 .igorBlog .wrapper div table {
   width: 100%;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 425px) {
+  .igorBlog .wrapper div table {
+    margin-bottom: 20px;
+  }
 }
 
 .igorBlog .wrapper div table tr {
@@ -5724,6 +5750,28 @@ header {
           flex: 1 1 50%;
   font-size: 20px;
   line-height: 36px;
+  font-weight: normal;
+  font-style: normal;
+  color: #010101;
+}
+
+.igorBlog .wrapper p {
+  font-size: 20px;
+  line-height: 36px;
+  font-weight: normal;
+  font-style: normal;
+  color: #010101;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 425px) {
+  .igorBlog .wrapper p {
+    margin-bottom: 20px;
+  }
+}
+
+.igorBlog .wrapper .fifthSectionBtn_osbOnFloor {
+  max-width: 320px;
 }
 
 /* Модальное окно карты продукта */
@@ -11338,14 +11386,9 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 972px) {
   .mainContentPart2_shopBasketFirstStep {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     width: 100%;
     padding-left: 0px;
     margin-bottom: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 
@@ -11355,7 +11398,18 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.part2Title_shopBasketFirstStep {
+@media screen and (max-width: 972px) {
+  #fixed_2 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+#fixed_2 .part2Title_shopBasketFirstStep {
   width: 100%;
   font-style: normal;
   font-weight: bold;
@@ -11366,7 +11420,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .part2Title_shopBasketFirstStep {
+  #fixed_2 .part2Title_shopBasketFirstStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 55%;
             flex: 1 1 55%;
@@ -11376,7 +11430,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 376px) {
-  .part2Title_shopBasketFirstStep {
+  #fixed_2 .part2Title_shopBasketFirstStep {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding-right: 0px;
@@ -11384,7 +11438,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.part2Sum_shopBasketFirstStep {
+#fixed_2 .part2Sum_shopBasketFirstStep {
   width: 100%;
   font-style: normal;
   font-weight: bold;
@@ -11395,7 +11449,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .part2Sum_shopBasketFirstStep {
+  #fixed_2 .part2Sum_shopBasketFirstStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 45%;
             flex: 1 1 45%;
@@ -11404,20 +11458,20 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 426px) {
-  .part2Sum_shopBasketFirstStep {
+  #fixed_2 .part2Sum_shopBasketFirstStep {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
 }
 
 @media screen and (max-width: 376px) {
-  .part2Sum_shopBasketFirstStep {
+  #fixed_2 .part2Sum_shopBasketFirstStep {
     text-align: center;
   }
 }
 
 @media screen and (max-width: 972px) {
-  .additionalInformation_shopBasketFirstStep {
+  #fixed_2 .additionalInformation_shopBasketFirstStep {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     text-align: center;
@@ -11425,7 +11479,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.nextStageLink_shopBasketFirstStep {
+#fixed_2 .nextStageLink_shopBasketFirstStep {
   width: 100%;
   display: block;
   text-align: center;
@@ -11445,14 +11499,14 @@ input::-webkit-inner-spin-button {
   margin-top: 22px;
 }
 
-.nextStageLink_shopBasketFirstStep:hover {
+#fixed_2 .nextStageLink_shopBasketFirstStep:hover {
   color: #EC8B33;
   background-color: #010101;
   -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.nextStageLink_shopBasketFirstStep:active {
+#fixed_2 .nextStageLink_shopBasketFirstStep:active {
   color: #CA782E;
   background-color: #010101;
   -webkit-transition: color 0.1s ease-in-out;
@@ -11460,7 +11514,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .nextStageLink_shopBasketFirstStep {
+  #fixed_2 .nextStageLink_shopBasketFirstStep {
     width: 300px;
     margin: 0px auto;
   }
@@ -12031,14 +12085,9 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 972px) {
   .mainContentPart2_shopBasketSecondStep {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     width: 100%;
     padding-left: 0px;
     margin-bottom: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 
@@ -12048,7 +12097,22 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.part2Title_shopBasketSecondStep {
+#fixed_3 {
+  /* Кнопка далее */
+}
+
+@media screen and (max-width: 972px) {
+  #fixed_3 {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+
+#fixed_3 .part2Title_shopBasketSecondStep {
   width: 100%;
   font-style: normal;
   font-weight: bold;
@@ -12059,7 +12123,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .part2Title_shopBasketSecondStep {
+  #fixed_3 .part2Title_shopBasketSecondStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 55%;
             flex: 1 1 55%;
@@ -12069,7 +12133,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 376px) {
-  .part2Title_shopBasketSecondStep {
+  #fixed_3 .part2Title_shopBasketSecondStep {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding-right: 0px;
@@ -12077,7 +12141,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.part2Sum_shopBasketSecondStep {
+#fixed_3 .part2Sum_shopBasketSecondStep {
   width: 100%;
   font-style: normal;
   font-weight: bold;
@@ -12088,7 +12152,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .part2Sum_shopBasketSecondStep {
+  #fixed_3 .part2Sum_shopBasketSecondStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 45%;
             flex: 1 1 45%;
@@ -12097,31 +12161,31 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 426px) {
-  .part2Sum_shopBasketSecondStep {
+  #fixed_3 .part2Sum_shopBasketSecondStep {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
 }
 
 @media screen and (max-width: 376px) {
-  .part2Sum_shopBasketSecondStep {
+  #fixed_3 .part2Sum_shopBasketSecondStep {
     text-align: center;
   }
 }
 
-.additionalInformation_shopBasketSecondStep {
+#fixed_3 .additionalInformation_shopBasketSecondStep {
   display: block;
   width: 100%;
 }
 
 @media screen and (max-width: 972px) {
-  .additionalInformation_shopBasketSecondStep {
+  #fixed_3 .additionalInformation_shopBasketSecondStep {
     text-align: center;
     margin-bottom: 20px;
   }
 }
 
-.totalWeight_shopBasketSecondStep {
+#fixed_3 .totalWeight_shopBasketSecondStep {
   display: block;
   font-style: normal;
   font-weight: bold;
@@ -12132,7 +12196,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .totalWeight_shopBasketSecondStep {
+  #fixed_3 .totalWeight_shopBasketSecondStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 55%;
             flex: 1 1 55%;
@@ -12141,7 +12205,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.totalWeightQuantity_shopBasketSecondStep {
+#fixed_3 .totalWeightQuantity_shopBasketSecondStep {
   display: block;
   font-style: normal;
   font-weight: bold;
@@ -12152,7 +12216,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .totalWeightQuantity_shopBasketSecondStep {
+  #fixed_3 .totalWeightQuantity_shopBasketSecondStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 45%;
             flex: 1 1 45%;
@@ -12161,13 +12225,12 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 426px) {
-  .totalWeightQuantity_shopBasketSecondStep {
+  #fixed_3 .totalWeightQuantity_shopBasketSecondStep {
     margin-bottom: 20px;
   }
 }
 
-/* Кнопка далее */
-.btnNext_shopBasketSecondStep {
+#fixed_3 .btnNext_shopBasketSecondStep {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12193,14 +12256,14 @@ input::-webkit-inner-spin-button {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.btnNext_shopBasketSecondStep:hover {
+#fixed_3 .btnNext_shopBasketSecondStep:hover {
   color: #EC8B33;
   background-color: #010101;
   -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.btnNext_shopBasketSecondStep:active {
+#fixed_3 .btnNext_shopBasketSecondStep:active {
   color: #CA782E;
   background-color: #010101;
   -webkit-transition: color 0.1s ease-in-out;
@@ -12208,7 +12271,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .btnNext_shopBasketSecondStep {
+  #fixed_3 .btnNext_shopBasketSecondStep {
     width: 300px;
     margin: 0px auto;
   }
@@ -12829,6 +12892,169 @@ input::-webkit-inner-spin-button {
   }
 }
 
+.sectionForRadioBtn_shopBasketThirdStep {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  margin-bottom: 40px;
+}
+
+@media screen and (max-width: 426px) {
+  .sectionForRadioBtn_shopBasketThirdStep {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 376px) {
+  .sectionForRadioBtn_shopBasketThirdStep {
+    font-size: 38px;
+  }
+}
+
+.radioLabel_shopBasketThirdStep {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.radioLabel_shopBasketThirdStep:last-of-type {
+  margin-bottom: 40px;
+}
+
+.radioLabel_shopBasketThirdStep > #radioBtn1_shopBasketThirdStep {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radioLabel_shopBasketThirdStep > span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #010101;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.radioLabel_shopBasketThirdStep > span::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 2px solid #010101;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  position: relative;
+}
+
+.radioLabel_shopBasketThirdStep > #radioBtn1_shopBasketThirdStep:checked + span::before {
+  background-color: #010101;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 18 18'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.radioLabel_shopBasketThirdStep > #radioBtn1_shopBasketThirdStep:disabled + span::before {
+  background-color: #999999;
+}
+
+.radioLabel_shopBasketThirdStep {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.radioLabel_shopBasketThirdStep:last-of-type {
+  margin-bottom: 40px;
+}
+
+.radioLabel_shopBasketThirdStep > #radioBtn2_shopBasketThirdStep {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radioLabel_shopBasketThirdStep > span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #010101;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.radioLabel_shopBasketThirdStep > span::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 2px solid #010101;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  position: relative;
+}
+
+.radioLabel_shopBasketThirdStep > #radioBtn2_shopBasketThirdStep:checked + span::before {
+  background-color: #010101;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 18 18'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.radioLabel_shopBasketThirdStep > #radioBtn2_shopBasketThirdStep:disabled + span::before {
+  background-color: #999999;
+}
+
 .deliveryOption_shopBasketThirdStep {
   margin-bottom: 40px;
 }
@@ -12958,14 +13184,9 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 972px) {
   .mainContentPart2_shopBasketThirdStep {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
     width: 100%;
     padding-left: 0px;
     margin-bottom: 40px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
   }
 }
 
@@ -12975,7 +13196,22 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.part2Title_shopBasketThirdStep {
+#fixed_4 {
+  /* Кнопка далее */
+}
+
+@media screen and (max-width: 972px) {
+  #fixed_4 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    width: 100%;
+  }
+}
+
+#fixed_4 .part2Title_shopBasketThirdStep {
   width: 100%;
   font-style: normal;
   font-weight: bold;
@@ -12986,7 +13222,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .part2Title_shopBasketThirdStep {
+  #fixed_4 .part2Title_shopBasketThirdStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 55%;
             flex: 1 1 55%;
@@ -12996,7 +13232,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 376px) {
-  .part2Title_shopBasketThirdStep {
+  #fixed_4 .part2Title_shopBasketThirdStep {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     padding-right: 0px;
@@ -13004,7 +13240,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.part2Sum_shopBasketThirdStep {
+#fixed_4 .part2Sum_shopBasketThirdStep {
   width: 100%;
   font-style: normal;
   font-weight: bold;
@@ -13015,7 +13251,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .part2Sum_shopBasketThirdStep {
+  #fixed_4 .part2Sum_shopBasketThirdStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 45%;
             flex: 1 1 45%;
@@ -13024,31 +13260,31 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 426px) {
-  .part2Sum_shopBasketThirdStep {
+  #fixed_4 .part2Sum_shopBasketThirdStep {
     -ms-flex-preferred-size: 30%;
         flex-basis: 30%;
   }
 }
 
 @media screen and (max-width: 376px) {
-  .part2Sum_shopBasketThirdStep {
+  #fixed_4 .part2Sum_shopBasketThirdStep {
     text-align: center;
   }
 }
 
-.additionalInformation_shopBasketThirdStep {
+#fixed_4 .additionalInformation_shopBasketThirdStep {
   display: block;
   width: 100%;
 }
 
 @media screen and (max-width: 972px) {
-  .additionalInformation_shopBasketThirdStep {
+  #fixed_4 .additionalInformation_shopBasketThirdStep {
     text-align: center;
     margin-bottom: 20px;
   }
 }
 
-.totalWeight_shopBasketThirdStep {
+#fixed_4 .totalWeight_shopBasketThirdStep {
   display: block;
   font-style: normal;
   font-weight: bold;
@@ -13059,7 +13295,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .totalWeight_shopBasketThirdStep {
+  #fixed_4 .totalWeight_shopBasketThirdStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 55%;
             flex: 1 1 55%;
@@ -13068,7 +13304,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.totalWeightQuantity_shopBasketThirdStep {
+#fixed_4 .totalWeightQuantity_shopBasketThirdStep {
   display: block;
   font-style: normal;
   font-weight: bold;
@@ -13079,7 +13315,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .totalWeightQuantity_shopBasketThirdStep {
+  #fixed_4 .totalWeightQuantity_shopBasketThirdStep {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 45%;
             flex: 1 1 45%;
@@ -13088,13 +13324,12 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 426px) {
-  .totalWeightQuantity_shopBasketThirdStep {
+  #fixed_4 .totalWeightQuantity_shopBasketThirdStep {
     margin-bottom: 20px;
   }
 }
 
-/* Кнопка далее */
-.btnNext_shopBasketThirdStep {
+#fixed_4 .btnNext_shopBasketThirdStep {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13120,14 +13355,14 @@ input::-webkit-inner-spin-button {
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.btnNext_shopBasketThirdStep:hover {
+#fixed_4 .btnNext_shopBasketThirdStep:hover {
   color: #EC8B33;
   background-color: #010101;
   -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
   transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
 }
 
-.btnNext_shopBasketThirdStep:active {
+#fixed_4 .btnNext_shopBasketThirdStep:active {
   color: #CA782E;
   background-color: #010101;
   -webkit-transition: color 0.1s ease-in-out;
@@ -13135,7 +13370,7 @@ input::-webkit-inner-spin-button {
 }
 
 @media screen and (max-width: 972px) {
-  .btnNext_shopBasketThirdStep {
+  #fixed_4 .btnNext_shopBasketThirdStep {
     width: 300px;
     margin: 0px auto;
   }

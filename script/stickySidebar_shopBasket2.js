@@ -9,18 +9,18 @@ if (document.querySelector('.mainContentPart2_shopBasketSecondStep')) {
     
 
     $(document).ready(function () {
-        var offset = $('#fixed_4').offset();
+        var offset = $('#fixed_3').offset();
         var topPadding = 0,
         bottomPadding = pageHeight_shopBasket2.clientHeight - (shopPart1_shopBasket2.clientHeight + header.clientHeight + (breadcrums_shopBasket2.clientHeight + 80) + title_shopBasket2.clientHeight);
         $(window).scroll(function() {
             if (window.innerWidth >= 1007) {
                 if ($(window).scrollTop() > offset.top) {
-                    if ($(document).height() - bottomPadding > $(window).scrollTop() + $("#fixed_4").height()) $("#fixed_4").stop().animate({
+                    if ($(document).height() - bottomPadding > $(window).scrollTop() + $("#fixed_3").height()) $("#fixed_3").stop().animate({
                     marginTop: $(window).scrollTop() - offset.top + topPadding
                     });
                 }
                 else {
-                    $('#fixed_4').stop().animate({marginTop: 0});
+                    $('#fixed_3').stop().animate({marginTop: 0});
                 }
             }
         });

@@ -3852,8 +3852,18 @@ header
         line-height: 60px
         color: #010101
         margin-bottom: 51px
+        @media screen and ( max-width: 1024px)
+          margin-bottom: 40px
+        @media screen and ( max-width: 425px)
+          margin-bottom: 20px
+          text-align: center
+        @media screen and ( max-width: 375px)
+          font-size: 38px
       table
         width: 100%
+        margin-bottom: 40px
+        @media screen and ( max-width: 425px)
+          margin-bottom: 20px
         tr
           display: flex
           td
@@ -3870,6 +3880,21 @@ header
             flex: 1 1 50%
             font-size: 20px
             line-height: 36px
+            font-weight: normal
+            font-style: normal
+            color: #010101
+    p
+      font-size: 20px
+      line-height: 36px
+      font-weight: normal
+      font-style: normal
+      color: #010101
+      margin-bottom: 40px
+      @media screen and ( max-width: 425px)
+        margin-bottom: 20px
+
+    .fifthSectionBtn_osbOnFloor
+      max-width: 320px
           
 
 
