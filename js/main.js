@@ -305,15 +305,6 @@ if (document.querySelector('.productCard')) {
     }
 }
 
-if (document.querySelector('.firstNavMenu')) {
-    if (window.innerWidth <= 1199) {
-        $( init );
-        function init() {
-        $('#citySelectTopNav').append( $('#citySelectBottomNav>a') );
-
-        }
-    }
-}
 //
 //closeButtonAppear_contacts
 
@@ -902,6 +893,15 @@ if (document.querySelector('.button_certificates')) {
     }
 }
 
+if (document.querySelector('.firstNavMenu')) {
+    if (window.innerWidth <= 1199) {
+            $( init );
+            function init() {
+                $('#citySelectTopNav').append( $('#citySelectBottomNav>.test1') );
+
+            }
+        }
+    }
 // Этот скрипт перемещает грузовик и отображает кнопку прокрутки "в начало"
 //upButton_index
 if (document.querySelector('.up-button') && document.querySelector('.track_index')) {
