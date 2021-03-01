@@ -7805,12 +7805,6 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.showPopover {
-  opacity: 1;
-  -webkit-transition: all .2s ease-in-out;
-  transition: all .2s ease-in-out;
-}
-
 .popoverText_productCard {
   display: block;
   text-align: center;
