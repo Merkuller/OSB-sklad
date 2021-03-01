@@ -7,7 +7,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./sources/style.css">
-    <link rel="stylesheet" href="./CSS/jquery.scrollbar.css">
     <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
 </head>
@@ -131,6 +130,10 @@
             <div class="wrapper">
                 <h1 class="headline_catalog">Каталог OSB по сферам применения</h1>
                 <section class="content_catalog" id="slider">
+                    <div class="tabs_index slider-osb-nav" id="slider-osb-nav">
+                        <button type="button" class="slider-osb-nav__item button_catalog firstTabs_index" data-category-id="1" data-category="1">по применению</button>
+                        <button type="button" class="slider-osb-nav__item button_catalog firstTabs_index" data-category-id="2" data-category="2">по производителю</button>
+                    </div>
                     <div class="catalogSlider_catalog swiper-container">
                         <div class="sliderContent_catalog swiper-wrapper">
                             <div class="s2_slide_catalog catalog-slider-slide" data-categories="[1]" data-id="1"> 
@@ -427,29 +430,39 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Kronospan 2500x1250 мм (3.125 м2); 35,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button type="button" class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="45">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="45">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="32">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="32">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="22">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="22">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -463,29 +476,39 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Kronospan 2800x1250 мм (3.325 м2); 37,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="11">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="11">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="65">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="65">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="87">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="87">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -499,29 +522,39 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Kronospan 2440x1220 мм (3.125 м2); 35,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="98">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="98">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="85">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="85">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="23">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="23">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -535,29 +568,39 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Kronospan  <span class="shipPaz_osbOnFloor">шип-паз</span><br> 2440x1220 мм (3.125 м2); 35,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="40">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="40">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="39">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="39">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="86">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="86">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -571,29 +614,39 @@
                                     <div class="productDescription">
                                         <a href="#">Плита OSB-3 Taleon 2500x1250 мм (3.325 м2); 37,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="8">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="8">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="1">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="1">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="90">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="90">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -607,29 +660,39 @@
                                     <div class="productDescription">
                                         <a href="#">Плита OSB-3 Taleon 2800x1250 мм (3.325 м2); 37,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="66">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="66">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="93">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="93">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="2">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="2">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -643,29 +706,39 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Калевала 2500x1250 мм (3.125 м2); 35,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="5">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="5">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="4">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="4">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="3">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="3">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -679,29 +752,39 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Калевала 2800x1250 мм (3.125 м2); 35,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="103">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="103">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="243">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="243">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="222">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="222">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -715,29 +798,39 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Egger 2500x1250 мм (3.125 м2); 35,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="245">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="245">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="453">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="453">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="999">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="999">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -751,29 +844,39 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Калевала 2800x1250 мм (3.125 м2); 35,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="222">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="222">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="111">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="111">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="333">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="333">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -787,29 +890,39 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Некондиция/брак<br> 2500x1250 мм (3.125 м2); 35,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="777">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="777">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="46764">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="46764">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="1212">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="1212">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                                 <div class="productCard">
                                     <div class="productPic">
@@ -823,34 +936,57 @@
                                     <div class="productDescription">
                                         <a href="#">OSB-3 Некондиция/брак<br> 2800x1250 мм (3.125 м2); 35,4 кг</a>
                                     </div>
-                                    <div class="materialSizeVariation">
+                                    <p class="perSquareMeter"><span>р/м2</span></p>
+                                    <form action="POST" class="productCardForm">
+                                        <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                        <div class="productCardCounter">
+                                            <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
+                                            <input type="number" class="productCardCounterField">
+                                            <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
+                                        </div>
+                                    </form>
+                                    <button class="refineRemainder">Уточнить остаток</button>
+                                    <!-- <div class="materialSizeVariation">
                                         <div class="sizeVariationText">
                                             Толщины,мм:
                                         </div>
                                         <div class="sizeVarioationButtons">
-                                                <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="945">
+                                              <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="945">
                                                 18
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="0">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="0">
                                                 22
-                                                </button>
-                                                <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="2135">
+                                              </button>
+                                              <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="2135">
                                                 24
-                                                </button>
+                                              </button>
                                         </div>
                                         <div class="moreSizes">+ 4</div>
-                                    </div>
-                                    <div class="materialInStock">
+                                    </div> -->
+                                    <!-- <div class="materialInStock">
                                         <span class="materialPriceValue"></span>
                                         <span class="materialPrice">р/шт.</span>
                                         <span class="materialValueNumber"></span>
                                         <span class="materialValue">р/м2.</span>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>
                     </div>
                 </section>
+                <div class="popup">
+                    <div class="popupBody">
+                        <form method="POST" class="popupContent">
+                            <button type="button" class="popupCloseBtn"></button>
+                            <div class="popupTitle">Товар: <span class="popupProductName"></span></div>
+                            <input type="tel" class="popupField" id="popupPhoneNumber" placeholder="Номер телефона">
+                            <input type="text" class="popupField" placeholder="ФИО">
+                            <input type="hidden" class="goodName">
+                            <textarea name="" class="popupCommentField" cols="30" rows="6" placeholder="Ваш комментарий"></textarea>
+                            <button type="submit" class="popupSubmitBtn">отправить</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </section>
         <section class="buisnessInformation">

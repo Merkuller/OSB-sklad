@@ -149,13 +149,14 @@ if (document.querySelector('.deliveryButton_delivery')) {
     }
 
     imgWindow_delivery.style.backgroundImage = 'url(' + btnsArray_delivery[0].getAttribute("data-src") + ')';
-
+    imgWindow_delivery.style.backgroundSize = 'cover';
 
     for (let i = 0; i <= btnsArray_delivery.length - 1; i ++) {
         btnsArray_delivery[i].onclick = function () {
             btnsArray_delivery[i].classList.add('shownButton_delivery');
             selectBtnArray_delivery[0] = btnsArray_delivery[i];
             imgWindow_delivery.style.backgroundImage = 'url(' + btnsArray_delivery[i].getAttribute("data-src") + ')';
+            imgWindow_delivery.style.backgroundSize = 'cover';
             for (let j = 0; j <= btnsArray_delivery.length - 1; j ++) {
                 if (selectBtnArray_delivery[0] !== btnsArray_delivery[j]) {
                     btnsArray_delivery[j].classList.remove('shownButton_delivery');
@@ -216,6 +217,51 @@ if (document.querySelector('.deliveryButton_delivery')) {
     }
 }
 
+// Этот скрипт выполняет сортировку контента на странице catalog
+// buttonTogglerFor_catalog
+
+if (document.querySelector('.mainContent_catalog')) {
+
+    let filterBtns_catalog = document.querySelectorAll('.firstTabs_index');
+    let cards_catalog = document.querySelectorAll('.s2_slide_catalog');
+    console.log(cards_catalog);
+
+    
+    // Состояние фильтра по-умолчанию
+    let defaultBtn_catalog = filterBtns_catalog[0];
+    for (let i = 0; i <= cards_catalog.length - 1; i ++) {
+        if (defaultBtn_catalog.dataset.category !== cards_catalog[i].dataset.id) {
+            cards_catalog[i].style.display = "none";
+        }
+    }
+
+
+    // Фильтрация
+    let btnsSorting = function (filterValue) {
+        for (let i = 0; i <= cards_catalog.length - 1; i ++) {
+            cards_catalog[i].style.display = "none";
+            if (cards_catalog[i].dataset.id === filterValue) {
+                cards_catalog[i].style.display = "block";
+            }
+        }
+    }
+
+    //Фильтр
+    for (let i = 0; i <= filterBtns_catalog.length - 1; i ++) {
+        filterBtns_catalog[0].classList.add('tabSelect');
+        filterBtns_catalog[i].onclick = function () {
+            filterBtns_catalog[i].classList.add('tabSelect');
+            let x = filterBtns_catalog[i];
+            for (let j = 0; j <= filterBtns_catalog.length - 1; j ++) {
+                if (x !== filterBtns_catalog[j]) {
+                    filterBtns_catalog[j].classList.remove('tabSelect');
+                }
+            }
+            let filterValue = x.dataset.category;
+            btnsSorting(filterValue);
+        }
+    }
+}
 // Этот скрипт переключает кнопки карточки товара и и пределяет цену за шт и метр кв в зависимости от выбранного значения толщины
 //cardButtonSwitcher
 if (document.querySelector('.productCard')) {
