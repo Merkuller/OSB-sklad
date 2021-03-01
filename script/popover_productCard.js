@@ -5,16 +5,16 @@ if (document.querySelector('.popover_productCard')) {
     
 
     let fadePopup_productCard = function () {
-        popover_productCard.style.opacity = "0";
-        popover_productCard.style.display = "none";
+        // popover_productCard.style.opacity = "0";
+        popover_productCard.classList.remove('showPopover');
         popoverText_productCard.textContent = '';
         popover_productCard.style.borderColor = "none";
         popoverText_productCard.style.color = "none";
     }
 
     function openPopup (text, type) {
-        popover_productCard.style.opacity = "1";
-        popover_productCard.style.display = "block";
+        // popover_productCard.style.opacity = "1";
+        popover_productCard.classList.add('showPopover');
         popoverText_productCard.textContent = text;
         if (type === 'danger') {
             popover_productCard.style.borderColor = "#e84d4d";

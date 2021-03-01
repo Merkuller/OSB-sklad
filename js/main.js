@@ -384,11 +384,13 @@ if (document.querySelector('.page3ContentImg')) {
         }
         if (galleryImgsArray_productCard.length > 0) {
             galleryImgContainer_productCard.style.backgroundImage = 'url(' + galleryImgsArray_productCard[0].getAttribute("src") + ')';
+            galleryImgContainer_productCard.style.backgroundSize = 'cover';
 
             for (let i = 0; i <= galleryBtnsArray_productCard.length - 1; i ++) {
                 galleryBtnsArray_productCard[i].onclick = function () {
                     galleryBtnsArray_productCard[i].classList.add('shownIcon_productCard');
                     galleryImgContainer_productCard.style.backgroundImage = 'url(' + galleryImgsArray_productCard[i].getAttribute("src") + ')';
+                    galleryImgContainer_productCard.style.backgroundSize = 'cover';
                     selectedBtnsArray_productCard[0] = galleryBtnsArray_productCard[i];
                     for (let j = 0; j <= galleryBtnsArray_productCard.length - 1; j ++) {
                         if (selectedBtnsArray_productCard[0] !== galleryBtnsArray_productCard[j]) {
@@ -559,16 +561,16 @@ if (document.querySelector('.popover_productCard')) {
     
 
     let fadePopup_productCard = function () {
-        popover_productCard.style.opacity = "0";
-        popover_productCard.style.display = "none";
+        // popover_productCard.style.opacity = "0";
+        popover_productCard.classList.remove('showPopover');
         popoverText_productCard.textContent = '';
         popover_productCard.style.borderColor = "none";
         popoverText_productCard.style.color = "none";
     }
 
     function openPopup (text, type) {
-        popover_productCard.style.opacity = "1";
-        popover_productCard.style.display = "block";
+        // popover_productCard.style.opacity = "1";
+        popover_productCard.classList.add('showPopover');
         popoverText_productCard.textContent = text;
         if (type === 'danger') {
             popover_productCard.style.borderColor = "#e84d4d";
