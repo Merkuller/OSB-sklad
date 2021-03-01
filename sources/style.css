@@ -5466,6 +5466,7 @@ header {
 }
 
 .productCardForm .productCardTotalPrice {
+  position: relative;
   -webkit-box-flex: 1;
       -ms-flex: 1 1 58%;
           flex: 1 1 58%;
@@ -5473,6 +5474,7 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  overflow: hidden;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -5523,10 +5525,20 @@ header {
 }
 
 .productCardForm .productCardTotalPrice:hover {
-  background-color: #010101;
-  color: #EC8B33;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+
+.productCardForm .productCardTotalPrice:hover .productCardTotalPriceIcon {
+  -webkit-transform: scale(10);
+          transform: scale(10);
+  opacity: 0;
+}
+
+.productCardForm .productCardTotalPrice:hover .productValuePrice {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
 }
 
 .productCardForm .productCardTotalPrice:active {
@@ -5537,6 +5549,35 @@ header {
 
 .productCardForm .productCardTotalPrice:focus {
   outline: none;
+}
+
+.productCardForm .productCardTotalPrice .productCardTotalPriceIcon {
+  position: absolute;
+  width: 28px;
+  height: 28px;
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+}
+
+.productCardForm .productCardTotalPrice .productValuePrice {
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  -webkit-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+}
+
+.productCardForm .productCardTotalPrice .productValuePrice span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
 }
 
 .productCardForm .productCardCounter {
