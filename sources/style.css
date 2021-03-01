@@ -1491,6 +1491,13 @@ header {
   }
 }
 
+@media screen and (max-width: 770px) {
+  .content_catalog .catalogSlider_catalog .sliderContent_catalog .s2_slide_catalog {
+    -ms-flex-preferred-size: 40%;
+        flex-basis: 40%;
+  }
+}
+
 @media screen and (max-width: 476px) {
   .content_catalog .catalogSlider_catalog .sliderContent_catalog .s2_slide_catalog {
     -ms-flex-preferred-size: 100%;
@@ -4766,6 +4773,8 @@ header {
 @media screen and (max-width: 1024px) {
   .secondSectionContent_osbOnFloor .productCard {
     padding-bottom: 40px;
+    -ms-flex-preferred-size: 45%;
+        flex-basis: 45%;
   }
 }
 
@@ -12926,6 +12935,7 @@ input::-webkit-inner-spin-button {
   }
 }
 
+/* Радиокнопка 1 */
 .radioLabel_shopBasketThirdStep {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12990,13 +13000,14 @@ input::-webkit-inner-spin-button {
 
 .radioLabel_shopBasketThirdStep > #radioBtn1_shopBasketThirdStep:checked + span::before {
   background-color: #010101;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 18 18'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 16 16'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 .radioLabel_shopBasketThirdStep > #radioBtn1_shopBasketThirdStep:disabled + span::before {
   background-color: #999999;
 }
 
+/* Радиокнопка 2 */
 .radioLabel_shopBasketThirdStep {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -13061,10 +13072,82 @@ input::-webkit-inner-spin-button {
 
 .radioLabel_shopBasketThirdStep > #radioBtn2_shopBasketThirdStep:checked + span::before {
   background-color: #010101;
-  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 18 18'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e");
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 16 16'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e");
 }
 
 .radioLabel_shopBasketThirdStep > #radioBtn2_shopBasketThirdStep:disabled + span::before {
+  background-color: #999999;
+}
+
+/* Радиокнопка 3 */
+.radioLabel_shopBasketThirdStep {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.radioLabel_shopBasketThirdStep:last-of-type {
+  margin-bottom: 40px;
+}
+
+.radioLabel_shopBasketThirdStep > #radioBtn3_shopBasketThirdStep {
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+
+.radioLabel_shopBasketThirdStep > span {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #010101;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+.radioLabel_shopBasketThirdStep > span::before {
+  content: '';
+  display: inline-block;
+  width: 28px;
+  height: 28px;
+  -ms-flex-negative: 0;
+      flex-shrink: 0;
+  -webkit-box-flex: 0;
+      -ms-flex-positive: 0;
+          flex-grow: 0;
+  border: 2px solid #010101;
+  border-radius: 50%;
+  margin-right: 0.5em;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: 50% 50%;
+  position: relative;
+}
+
+.radioLabel_shopBasketThirdStep > #radioBtn3_shopBasketThirdStep:checked + span::before {
+  background-color: #010101;
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 16 16'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e");
+}
+
+.radioLabel_shopBasketThirdStep > #radioBtn3_shopBasketThirdStep:disabled + span::before {
   background-color: #999999;
 }
 

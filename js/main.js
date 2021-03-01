@@ -742,14 +742,14 @@ if (document.querySelector('.mainContentPart2_shopBasketFirstStep')) {
     let pageHeight_shopBasket1 = document.querySelector('body');
     let shopPart1_shopBasket1 = document.querySelector('.mainContent_shopBasketFirstStep');
     let header = document.querySelector('header');
-    let breadcrums_shopBasket1 = document.querySelector('.firstSection_shopBasketFirstStep > .breadcrumbsOSB');
+    // let breadcrums_shopBasket1 = document.querySelector('.firstSection_shopBasketFirstStep > .breadcrumbsOSB');
     let title_shopBasket1 = document.querySelector('.firstSection_shopBasketFirstStep > .sectionTitle_index');   
     
 
     $(document).ready(function () {
         var offset = $('#fixed_2').offset();
         var topPadding = 0,
-        bottomPadding = pageHeight_shopBasket1.clientHeight - (shopPart1_shopBasket1.clientHeight + header.clientHeight + (breadcrums_shopBasket1.clientHeight + 80) + title_shopBasket1.clientHeight);
+        bottomPadding = pageHeight_shopBasket1.clientHeight - (shopPart1_shopBasket1.clientHeight + header.clientHeight + (120) + title_shopBasket1.clientHeight);
         $(window).scroll(function() {
             if (window.innerWidth >= 1007) {
                 if ($(window).scrollTop() > offset.top) {
@@ -770,14 +770,14 @@ if (document.querySelector('.mainContentPart2_shopBasketSecondStep')) {
     let pageHeight_shopBasket2 = document.querySelector('body');
     let shopPart1_shopBasket2 = document.querySelector('.mainContent_shopBasketSecondStep');
     let header = document.querySelector('header');
-    let breadcrums_shopBasket2 = document.querySelector('.firstSection_shopBasketSecondStep > .breadcrumbsOSB');
+    // let breadcrums_shopBasket2 = document.querySelector('.firstSection_shopBasketSecondStep > .breadcrumbsOSB');
     let title_shopBasket2 = document.querySelector('.firstSection_shopBasketSecondStep > .sectionTitle_index');   
     
 
     $(document).ready(function () {
         var offset = $('#fixed_3').offset();
         var topPadding = 0,
-        bottomPadding = pageHeight_shopBasket2.clientHeight - (shopPart1_shopBasket2.clientHeight + header.clientHeight + (breadcrums_shopBasket2.clientHeight + 80) + title_shopBasket2.clientHeight);
+        bottomPadding = pageHeight_shopBasket2.clientHeight - (shopPart1_shopBasket2.clientHeight + header.clientHeight + (120) + title_shopBasket2.clientHeight);
         $(window).scroll(function() {
             if (window.innerWidth >= 1007) {
                 if ($(window).scrollTop() > offset.top) {
@@ -798,14 +798,14 @@ if (document.querySelector('.mainContentPart2_shopBasketThirdStep')) {
     let pageHeight_shopBasket1 = document.querySelector('body');
     let shopPart1_shopBasket1 = document.querySelector('.mainContent_shopBasketThirdStep');
     let header = document.querySelector('header');
-    let breadcrums_shopBasket1 = document.querySelector('.firstSection_shopBasketThirdStep > .breadcrumbsOSB');
+    // let breadcrums_shopBasket1 = document.querySelector('.firstSection_shopBasketThirdStep > .breadcrumbsOSB');
     let title_shopBasket1 = document.querySelector('.firstSection_shopBasketThirdStep > .sectionTitle_index');   
     
 
     $(document).ready(function () {
         var offset = $('#fixed_4').offset();
         var topPadding = 0,
-        bottomPadding = pageHeight_shopBasket1.clientHeight - (shopPart1_shopBasket1.clientHeight + header.clientHeight + (breadcrums_shopBasket1.clientHeight + 80) + title_shopBasket1.clientHeight);
+        bottomPadding = pageHeight_shopBasket1.clientHeight - (shopPart1_shopBasket1.clientHeight + header.clientHeight + (120) + title_shopBasket1.clientHeight);
         $(window).scroll(function() {
             if (window.innerWidth >= 1007) {
                 if ($(window).scrollTop() > offset.top) {
@@ -872,15 +872,16 @@ if (document.querySelector('.up-button') && document.querySelector('.track_index
 
 if (document.querySelector('.thicknessButtons_productCard')) {
     let btns_productCard = document.querySelectorAll('.thicknessButton_productCard');
-    let price_productCard = document.querySelector('.priceForPieceValue_productCard');
-    let priceForMeter = document.querySelector('.priceForMeterValue_productCard');
-    let inStock_productCard = document.querySelector('.countInStock_productCard');
-    let thicknessCharacteristic_productCard = document.querySelector('.thicknessValue_productCard');
-    let weightCharacteristic_productCard = document.querySelector('.weigthValue_productCard');
-    let densityFilter = document.querySelector('.densityValue_productCard')
-    let hiddenValue = document.querySelector('.hiddenValue_productCard');
+    
 
     function renderProductParameters(obj) {
+        let price_productCard = document.querySelector('.priceForPieceValue_productCard');
+        let priceForMeter = document.querySelector('.priceForMeterValue_productCard');
+        let inStock_productCard = document.querySelector('.countInStock_productCard');
+        let thicknessCharacteristic_productCard = document.querySelector('.thicknessValue_productCard');
+        let weightCharacteristic_productCard = document.querySelector('.weigthValue_productCard');
+        let densityFilter = document.querySelector('.densityValue_productCard')
+        let hiddenValue = document.querySelector('.hiddenValue_productCard');
         price_productCard.textContent = obj.price;
         priceForMeter.textContent = obj.priceForMeter;
         inStock_productCard.textContent = obj.count;
