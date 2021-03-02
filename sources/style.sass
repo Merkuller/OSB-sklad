@@ -55,7 +55,7 @@ header
   position: relative
 
   > .wrapper
-      justify-content: space-between
+    justify-content: space-between
   
   .brandLogo
     display: none
@@ -72,12 +72,10 @@ header
 
   @media screen and ( max-width: 1199px)
     display: flex
+    align-items: center
     padding: 10px 0px
 
     .nav-item
-      &:first-of-type
-        .youCityPosition
-          display: none
       
       &:nth-of-type(4)
         .nav-link
@@ -104,13 +102,11 @@ header
             display: flex
             align-items: center 
 
-          .markerIconNav
-            display: block
+            .headerCityName2
+              height: 16px
 
-            // .youCityPosition
-            //   display: inline-block
-            //   height: 16px
-            //   width: 16px
+              .markerIconNav
+                display: inline-block
         
       @media screen and ( max-width: 768px)
         &:nth-of-type(4)
@@ -170,6 +166,7 @@ header
   padding-right: 0px
   @media screen and ( max-width: 576px)
     flex-direction: row-reverse
+  @media screen and ( max-width: 633px)
     .headerLogo
       display: none
 
@@ -274,6 +271,41 @@ header
   .bottom 
     stroke-dashoffset: -138px
 
+.shopBasket
+  display: none
+  @media screen and ( max-width: 1199px)
+    display: flex
+    align-items: center
+    margin-left: 10px
+    text-decoration: none
+    @media screen and ( max-width: 576px)
+      position: absolute
+      top: -32px
+      right: 40px
+      
+  .shopBasketValue
+    width: 40px
+    height: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-style: normal
+    font-weight: 550
+    background-color: #EC8B33
+    border-radius: 12px 12px 0px 12px
+    font-size: 16px
+    line-height: 20px
+    color: #010101
+    margin-right: 4px
+      
+  .shopBasketIcon
+    background-image: url('../img/svg/header_page1/deliveryIcon.svg')
+    width: 28px 
+    height: 24px
+    background-position: bottom
+    background-repeat: no-repeat
+    
+
 .headerMenu
   display: flex
   flex-direction: column
@@ -282,7 +314,6 @@ header
   @media screen and ( max-width: 1199px)
     flex-direction: column-reverse
     width: 100%
-    // margin-top: 20px
 
 .firstNavMenu
   display: flex
@@ -483,6 +514,291 @@ header
         display: flex
         align-items: center
         position: relative
+/* Пункт с выбором города */
+.select-city-wrap
+  position: relative
+
+.select-city__block__text
+  color: #919294
+  font-family: 'NotoSans'
+  font-size: 12px
+  line-height: 30px
+
+.select-city__block__text-city
+  color: #ffffff
+  font-family: 'NotoSans'
+  font-size: 14px
+  line-height: 30px
+
+  /*text-decoration: underline;
+  text-decoration-style: dotted
+  cursor: pointer
+
+.select-city__dropdown__title
+  color: #414141
+  font-size: 13px
+  line-height: 30px
+  font-family: "NotoSans"
+  display: block
+  margin-bottom: 10px
+
+.select-city__dropdown
+  background-color: #ffffff
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.22)
+  width: 211px
+  text-align: center
+  padding: 11px 5px 17px 5px
+
+.select-city__dropdown-wrap
+  z-index: 99
+  position: absolute
+
+.select-city__dropdown__choose
+  display: inline-block
+  height: 32px
+  width: 82px
+  font-size: 12px
+  line-height: 32px
+  text-transform: uppercase
+  font-family: 'ProximaNova'
+  text-align: center
+  cursor: pointer
+
+  &:hover, &:active, &:focus
+    opacity: .7
+
+.select-city__dropdown__choose__yes
+  color: #919294
+  border: 1px solid #d3d3d3
+  margin-right: 15px
+
+.select-city__dropdown__choose__no
+  color: #ffffff
+  background: #333333
+
+.select-city__dropdown__choose-wrap
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.select-city__modal
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 3000
+  display: none
+
+.modal__overlay
+  display: none
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  z-index: 2500
+
+.select-city__modal-wrap
+  background-color: #ffffff
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.22)
+  width: 684px
+  padding: 0px
+  position: relative
+  margin: 30vh auto
+  transition: width .2s
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15)
+
+.select-city__modal__title
+  color: #000000 !important
+  font-family: 'ProximaNova' !important
+  font-style: normal
+  font-weight: bold
+  line-height: 36px
+  font-size: 20px !important
+  margin-bottom: 20px !important
+  padding: 25px 0px 19px 40px
+  background-color: #F0EFEE
+
+.select-city__modal__list
+  columns: 3
+  margin-bottom: 23px
+  padding: 0px 40px 0px 40px
+
+.select-city__modal__list__title
+  color: #010101
+  font-family: 'ProximaNovaBold'
+  line-height: 28px
+  font-size: 16px
+  display: block
+  margin-bottom: 20px
+  padding: 0px 0px 40px 40px
+
+.select-city__modal__list__item
+  color: #000000 !important
+  font-family: 'ProximaNova' !important
+  width: 180px
+  line-height: 28px
+  font-size: 16px
+  margin-bottom: 0 !important
+  margin-top: 0px
+  cursor: pointer
+
+  &:hover, &:focus, &:active
+    color: #0978c6 !important
+    text-decoration: underline
+    text-decoration-color: #c1ddf1
+
+.select-city__modal__submit__block-wrap
+  background: #FFFFFF
+  padding: 0px 40px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: relative
+  margin-bottom: 22px
+
+.select-city__modal__submit__title
+  color: #000000
+  font-family: 'ProximaNovaBold'
+  line-height: 30px
+  font-size: 14px
+  display: block
+  margin-bottom: 0px
+
+.select-city__modal__submit__input
+  border: 1px solid #010101
+  border-radius: 4px
+  background: #ffffff
+  box-shadow: none
+  height: 60px
+  width: 100%
+  color: #414141
+  font-family: 'ProximaNova'
+  font-size: 20px
+  line-height: 36px
+  margin-right: 0px
+  padding: 13px 0px 11px 20px
+
+.select-city__modal__submit__btn
+  background: inherit
+  border: none !important
+  box-shadow: none !important
+  width: 20px
+  height: 20px
+  position: absolute
+  right: 70px
+  top: 20px
+  border: none
+  outline: none
+
+  &:hover, &:active, &:focus
+    opacity: .7
+    outline: none
+
+.select-city__close
+  background: url("img/select-city__close.png") no-repeat
+  background-position: center
+  width: 20px
+  height: 20px
+  position: absolute
+  top: 30px
+  right: 40px
+  z-index: 10
+  cursor: pointer
+
+  &:hover
+    opacity: .7
+
+@media (max-width: 768px)
+  .select-city__modal-wrap
+    width: 484px
+    padding: 37px 25px 40px 25px
+
+  .select-city__modal__list
+    columns: 2
+
+@media (max-width: 575px)
+  .select-city__modal-wrap
+    width: 80%
+    padding: 27px 20px 30px 20px
+    margin: 20vh auto
+
+  .select-city__modal__title
+    font-size: 20px !important
+    margin-bottom: 10px !important
+
+  .select-city__close
+    top: 15px
+    right: 15px
+
+  .select-city__modal__list__item
+    font-size: 13px !important
+
+@media (max-width: 400px)
+  .select-city__modal__list
+    columns: unset
+    max-height: 100px
+    overflow: auto
+
+  .select-city__modal-wrap
+    margin: 5vh auto
+
+  .select-city__modal__list__title
+    line-height: 20px
+
+  .select-city__modal__submit__block-wrap
+    display: block
+
+  .select-city__modal__submit__input
+    margin-right: 0px
+    margin-bottom: 10px
+
+  .select-city__modal-wrap
+    padding: 15px 20px
+
+  .select-city__modal__submit__btn
+    width: 100%
+
+.select-city__modal__submit__block-wrap__input_wrap
+  position: relative
+  width: 100%
+
+  .sey-container
+    position: absolute
+    width: 100%
+
+  .sey-list
+    padding-left: 0
+    margin: 0
+
+    li
+      list-style: none
+
+    .sey-item
+      border-bottom: 1px solid #d3d3d3
+      border-right: 1px solid #d3d3d3
+      border-left: 1px solid #d3d3d3
+      background: #ffffff
+      height: 32px
+      width: 100%
+      max-width: 517px
+      color: #414141
+      font-family: 'ProximaNova'
+      font-size: 14px
+      padding: 0 15px
+      line-height: 32px
+      margin: 0 !important
+
+    .sey-hide
+      display: none
+
+.select-city__modal__submit__block-wrap__input_wrap_error
+  color: red
+  position: absolute
+  top: -20px
 
 /* ГЛАВНАЯ СТРАНИЦА
 /* Первая секция. 1 страница. Главная
@@ -3636,11 +3952,11 @@ header
       // color: #EC8B33
       transition: all .2s ease-in-out
       .productCardTotalPriceIcon
-        transform: scale(10)
-        opacity: 0
-      .productValuePrice
-        opacity: 1
         transform: scale(1)
+        opacity: 1
+      .productValuePrice
+        opacity: 0
+        transform: scale(0)
 
     &:active
       background-color: #CA782E
@@ -3650,14 +3966,16 @@ header
       outline: none
 
     .productCardTotalPriceIcon
+      transform: scale(10)
+      opacity: 0
       position: absolute
       width: 28px
       height: 28px
       transition: all .4s ease-in-out
 
     .productValuePrice
-      opacity: 0
-      transform: scale(0)
+      opacity: 1
+      // transform: scale(1)
       transition: all .4s ease-in-out
       font-style: normal
       font-weight: bold

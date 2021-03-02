@@ -13,9 +13,9 @@
 <body>
     <header>
         <ul class="topNav firstNavMenu">
-            <div class="wrapper"> 
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span> Челябинск<img src="img/svg/header_page1/mapMarkerIcon_header.svg" class="youCityPosition"></a>
+            <div class="wrapper">
+                <li class="nav-item" id="citySelectTopNav">
+                    
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Троицкий Тракт, 17</a>
@@ -30,7 +30,7 @@
                     <a class="nav-link" href="#"><img src="img/svg/header_page1/phoneIcon.svg"></a>
                 </li>
             </div>
-            <a class="brandLogo" href="#"><img src="./img/svg/header_page1/ShortOsbLOGO.svg" alt="#"></a>   
+            <a class="brandLogo" href="#"><img src="./img/svg/header_page1/ShortOsbLOGO.svg" alt="#"></a>
         </ul>
         <div class="wrapper">
             <nav class="navbar navbar-expand-xl navbar-light">
@@ -55,10 +55,69 @@
                                   d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
                         </svg>
                     </button>
+                    <a href="/personal/cart/" class="shopBasket">
+                        <span class="shopBasketValue"></span>
+                        <span class="shopBasketIcon"></span>
+                    </a>
                     <div class="collapse navbar-collapse headerMenu" id="navbarNav">
                         <ul class="navbar-nav firstNavMenu">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span> Челябинск</a>
+                            <li class="nav-item" id="citySelectBottomNav">
+                                <div class="test1">
+                                    <!--'start_frame_cache_W3XK6f'-->    
+                                    <div class="select-city-wrap">
+                                        <div class="select-city__block">
+                                        <a class="nav-link" aria-current="page"><span class="headerCityName">Город: </span> <span class="headerCityName2"><img src="./img/svg/header_page1/mapMarkerIcon_header.svg" class="markerIconNav">Челябинск</span></a>
+                                        <!-- <span class="headerCityName">--><!--: </span>-->
+                                        <!-- <span class="select-city__block__text-city"></span>-->
+                                        </div>
+                                        <div class="select-city__dropdown-wrap" style="display:none;">
+                                            <div class="select-city__dropdown">
+                                                <div class="select-city__dropdown__title-wrap">
+                                                    <span class="select-city__dropdown__title">город                    Челябинск?</span>
+                                                </div>
+                                                <div class="select-city__dropdown__choose-wrap">
+                                                    <span class="select-city__dropdown__choose__yes select-city__dropdown__choose" data-id="1">Да</span>
+                                                    <span class="select-city__dropdown__choose__no select-city__dropdown__choose">Нет</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select-city__modal">
+                                        <div class="select-city__modal-wrap">
+                                            <div class="select-city__close"></div>
+                                            <div class="select-city__modal__title-wrap">
+                                                <p class="select-city__modal__title">город:
+                                                <span id="select-city__js">Челябинск</span></p>
+                                            </div>
+                                            <div class="select-city__modal__submit-wrap">
+                                                <div class="select-city__modal__submit__block-wrap">
+                                                    <div class="select-city__modal__submit__block-wrap__input_wrap">
+                                                        <div class="select-city__modal__submit__block-wrap__input_wrap_error" style="display:none;">Указанный регион не найден</div>
+                                                        <input value="" type="text" class="select-city__modal__submit__input" placeholder="Ваш город" autocomplete="off">
+                                                        <div class="sey-container">
+                                                            <div class="sey-categories"></div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="select-city__modal__submit__btn"><img style="max-width: none;" src="/local/templates/osb-site-1/components/sotbit/regions.choose/sotbit-osb/svg/search_icon.svg"></button>
+                                            <!-- <input type="submit" name="submit"-->
+                                            <!-- value="--><!--"-->
+                                            <!-- class="select-city__modal__submit__btn">-->
+                                                </div>
+                                            </div>
+                                            <div class="select-city__modal__list">
+                                                <p class="select-city__modal__list__item" data-index="0">Челябинск</p>
+                                                <p class="select-city__modal__list__item" data-index="1">Екатеринбург</p>
+                                                <p class="select-city__modal__list__item" data-index="2">Сатка</p>
+                                                <p class="select-city__modal__list__item" data-index="3">Москва</p>
+                                            </div>
+                                            <div class="select-city__modal__list-wrap">
+                                                <span class="select-city__modal__list__title">Не нашли свой город?  У нас есть <a href="/transport" style="color: #EC8B33;">доставка по России</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal__overlay"></div>
+                                    <!--'end_frame_cache_W3XK6f'-->
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Троицкий Тракт, 17</a>
@@ -96,7 +155,7 @@
                             </div>
                             <div class="secondNavbarIcons">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><span class="quantityPurchase">0</span></a>
+                                    <a class="nav-link" href="/personal/cart/"><span class="quantityPurchase">0</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#"><img src="img/svg/header_page1/deliveryIcon.svg" alt="#"></a>

@@ -674,6 +674,17 @@ if (document.querySelector('.popup')) {
         });
     });
 }
+// Этот скрипт передаёт значение карзины из одного элемента в дублирующийся
+// shopBasketValueSender
+
+if (document.querySelector('.shopBasket')) {
+    let shopBasketValueMobileScreen = document.querySelector('.shopBasketValue');
+    let shopBasketValueFullScreen = document.querySelector('.quantityPurchase');
+    
+    if (window.innerWidth <= 1199) {
+        shopBasketValueMobileScreen.textContent = shopBasketValueFullScreen.textContent;
+    }
+}
 if (document.querySelector('.productCard')) {
     let popup = document.querySelector('.popup');
     let cards = document.querySelectorAll('.productCard');
@@ -893,15 +904,18 @@ if (document.querySelector('.button_certificates')) {
     }
 }
 
+// Этот скрипт копирует содержимое первого элемента списка при десктопной версии и в первый элемент списка мобильной версии
+// transferCitySelect
+
 if (document.querySelector('.firstNavMenu')) {
     if (window.innerWidth <= 1199) {
-            $( init );
-            function init() {
-                $('#citySelectTopNav').append( $('#citySelectBottomNav>.test1') );
+        $( init );
+        function init() {
+            $('#citySelectTopNav').append( $('#citySelectBottomNav>.test1') );
 
-            }
         }
     }
+}
 // Этот скрипт перемещает грузовик и отображает кнопку прокрутки "в начало"
 //upButton_index
 if (document.querySelector('.up-button') && document.querySelector('.track_index')) {
