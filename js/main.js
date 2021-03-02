@@ -65,12 +65,15 @@ function renderResults(array) {
     let i=1
     array.forEach(result => {
         let clone = result_template.cloneNode()
+        console.log(result)
         let id = Date.now()
         clone.id = id
         clone.classList.add ('result_child')
         clone.style.display = "block"
         clone.innerHTML = result_template.innerHTML
-        clone.querySelector('.square_id').innerHTML     = i++
+        clone.querySelector('.square_id').innerHTML = i++
+        clone.querySelector('#basketId').value = result.id
+        clone.querySelector('#basketQuantity').value = result.count
         // clone.querySelector('.panel_name').innerHTML     = result.name
         clone.querySelector('.square').innerHTML        = result.s_user
         clone.querySelector('.panel_count').innerHTML   = result.count
@@ -121,6 +124,7 @@ let calc_button = document.getElementById('calc_button')
                     let count = Math.ceil(s_user / s_panel)
                     let total_cost = count * Number(item.price)
                     obj = {
+                        id:item.id,
                         name: item.name,
                         count: count,
                         s_user: parseFloat(s_user).toFixed(2),
