@@ -12,8 +12,8 @@
     <header>
         <ul class="topNav firstNavMenu">
             <div class="wrapper">
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span> Челябинск<img src="img/svg/header_page1/mapMarkerIcon_header.svg" class="youCityPosition"></a>
+                <li class="nav-item" id="citySelectTopNav">
+                    
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Троицкий Тракт, 17</a>
@@ -28,14 +28,13 @@
                     <a class="nav-link" href="#"><img src="img/svg/header_page1/phoneIcon.svg"></a>
                 </li>
             </div>
-            <a class="brandLogo" href="#"><img src="img/svg/header_page1/brand_icon_page1.svg" alt="#"></a>
+            <a class="brandLogo" href="#"><img src="./img/svg/header_page1/ShortOsbLOGO.svg" alt="#"></a>
         </ul>
         <div class="wrapper">
             <nav class="navbar navbar-expand-xl navbar-light">
                 <div class="container-fluid">
                     <div class="headerLogo">
-                        <a class="navbar-brand" href="#"><img src="img/svg/header_page1/brand_icon_page1.svg" alt="#"></a>
-                        <span class="logoText">склад/магазин</span>
+                        <a class="navbar-brand" href="#"><img src="./img/svg/header_page1/OsbLOGO.svg" alt="#"></a>
                     </div>
                     <form class="searchField">
                         <input type="search" class="navSearch" placeholder="Найти своё OSB">
@@ -54,10 +53,69 @@
                                   d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
                         </svg>
                     </button>
+                    <a href="/personal/cart/" class="shopBasket">
+                        <span class="shopBasketValue"></span>
+                        <span class="shopBasketIcon"></span>
+                    </a>
                     <div class="collapse navbar-collapse headerMenu" id="navbarNav">
                         <ul class="navbar-nav firstNavMenu">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span> Челябинск</a>
+                            <li class="nav-item" id="citySelectBottomNav">
+                                <div class="test1">
+                                    <!--'start_frame_cache_W3XK6f'-->    
+                                    <div class="select-city-wrap">
+                                        <div class="select-city__block">
+                                        <a class="nav-link" aria-current="page"><span class="headerCityName">Город: </span> <span class="headerCityName2"><img src="./img/svg/header_page1/mapMarkerIcon_header.svg" class="markerIconNav">Челябинск</span></a>
+                                        <!-- <span class="headerCityName">--><!--: </span>-->
+                                        <!-- <span class="select-city__block__text-city"></span>-->
+                                        </div>
+                                        <div class="select-city__dropdown-wrap" style="display:none;">
+                                            <div class="select-city__dropdown">
+                                                <div class="select-city__dropdown__title-wrap">
+                                                    <span class="select-city__dropdown__title">город                    Челябинск?</span>
+                                                </div>
+                                                <div class="select-city__dropdown__choose-wrap">
+                                                    <span class="select-city__dropdown__choose__yes select-city__dropdown__choose" data-id="1">Да</span>
+                                                    <span class="select-city__dropdown__choose__no select-city__dropdown__choose">Нет</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select-city__modal">
+                                        <div class="select-city__modal-wrap">
+                                            <div class="select-city__close"></div>
+                                            <div class="select-city__modal__title-wrap">
+                                                <p class="select-city__modal__title">город:
+                                                <span id="select-city__js">Челябинск</span></p>
+                                            </div>
+                                            <div class="select-city__modal__submit-wrap">
+                                                <div class="select-city__modal__submit__block-wrap">
+                                                    <div class="select-city__modal__submit__block-wrap__input_wrap">
+                                                        <div class="select-city__modal__submit__block-wrap__input_wrap_error" style="display:none;">Указанный регион не найден</div>
+                                                        <input value="" type="text" class="select-city__modal__submit__input" placeholder="Ваш город" autocomplete="off">
+                                                        <div class="sey-container">
+                                                            <div class="sey-categories"></div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="select-city__modal__submit__btn"><img style="max-width: none;" src="/local/templates/osb-site-1/components/sotbit/regions.choose/sotbit-osb/svg/search_icon.svg"></button>
+                                            <!-- <input type="submit" name="submit"-->
+                                            <!-- value="--><!--"-->
+                                            <!-- class="select-city__modal__submit__btn">-->
+                                                </div>
+                                            </div>
+                                            <div class="select-city__modal__list">
+                                                <p class="select-city__modal__list__item" data-index="0">Челябинск</p>
+                                                <p class="select-city__modal__list__item" data-index="1">Екатеринбург</p>
+                                                <p class="select-city__modal__list__item" data-index="2">Сатка</p>
+                                                <p class="select-city__modal__list__item" data-index="3">Москва</p>
+                                            </div>
+                                            <div class="select-city__modal__list-wrap">
+                                                <span class="select-city__modal__list__title">Не нашли свой город?  У нас есть <a href="/transport" style="color: #EC8B33;">доставка по России</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal__overlay"></div>
+                                    <!--'end_frame_cache_W3XK6f'-->
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Троицкий Тракт, 17</a>
@@ -95,7 +153,7 @@
                             </div>
                             <div class="secondNavbarIcons">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><span class="quantityPurchase">0</span></a>
+                                    <a class="nav-link" href="/personal/cart/"><span class="quantityPurchase">0</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#"><img src="img/svg/header_page1/deliveryIcon.svg" alt="#"></a>
@@ -130,7 +188,7 @@
                     <input type="text" class="searchField_search">
                     <button type="submit" class="searchFormBtn_search"></button>
                 </form>
-                <section>
+                <section class="searchResults_search">
                     <div class="productCards">
                         <div class="productCard">
                             <div class="productPic">
@@ -362,328 +420,6 @@
                                 <span class="materialValue">р/м2.</span>
                             </div> -->
                         </div>
-                        <div class="productCard">
-                            <div class="productPic">
-                                <a href="#" class="productLink">
-                                    <img src="img/jpg/secondSection_page2/pic4_page2.jpg" alt="Плита OSB-3 Taleon 2800x1250 мм (3.325 м2); 37,4 кг" class="materialImg">
-                                    <button class="buttonPic" type="button">
-                                        Подробнее
-                                    </button>
-                                </a>
-                            </div>
-                            <div class="productDescription">
-                                <a href="#">Плита OSB-3 Taleon 2800x1250 мм (3.325 м2); 37,4 кг</a>
-                            </div>
-                            <p class="perSquareMeter"><span>р/м2</span></p>
-                            <form action="POST" class="productCardForm">
-                                <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
-                                <div class="productCardCounter">
-                                    <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
-                                    <input type="number" class="productCardCounterField">
-                                    <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
-                                </div>
-                            </form>
-                            <button class="refineRemainder">Уточнить остаток</button>
-                            <!-- <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                    <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="66">
-                                        18
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="93">
-                                        22
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="2">
-                                        24
-                                    </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div> -->
-                            <!-- <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div> -->
-                        </div>
-                        <div class="productCard">
-                            <div class="productPic">
-                                <a href="#" class="productLink">
-                                    <img src="img/jpg/secondSection_page2/pic4_page2.jpg" alt="OSB-3 Калевала 2500x1250 мм (3.125 м2); 35,4 кг" class="materialImg">
-                                    <button class="buttonPic" type="button">
-                                        Подробнее
-                                    </button>
-                                </a>
-                            </div>
-                            <div class="productDescription">
-                                <a href="#">OSB-3 Калевала 2500x1250 мм (3.125 м2); 35,4 кг</a>
-                            </div>
-                            <p class="perSquareMeter"><span>р/м2</span></p>
-                            <form action="POST" class="productCardForm">
-                                <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
-                                <div class="productCardCounter">
-                                    <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
-                                    <input type="number" class="productCardCounterField">
-                                    <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
-                                </div>
-                            </form>
-                            <button class="refineRemainder">Уточнить остаток</button>
-                            <!-- <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                    <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="5">
-                                        18
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="4">
-                                        22
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="3">
-                                        24
-                                    </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div> -->
-                            <!-- <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div> -->
-                        </div>
-                        <div class="productCard">
-                            <div class="productPic">
-                                <a href="#" class="productLink">
-                                    <img src="img/jpg/secondSection_page2/pic5_page2.jpg" alt="OSB-3 Калевала 2800x1250 мм (3.125 м2); 35,4 кг" class="materialImg">
-                                    <button class="buttonPic" type="button">
-                                        Подробнее
-                                    </button>
-                                </a>
-                            </div>
-                            <div class="productDescription">
-                                <a href="#">OSB-3 Калевала 2800x1250 мм (3.125 м2); 35,4 кг</a>
-                            </div>
-                            <p class="perSquareMeter"><span>р/м2</span></p>
-                            <form action="POST" class="productCardForm">
-                                <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
-                                <div class="productCardCounter">
-                                    <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
-                                    <input type="number" class="productCardCounterField">
-                                    <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
-                                </div>
-                            </form>
-                            <button class="refineRemainder">Уточнить остаток</button>
-                            <!-- <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                    <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="103">
-                                        18
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="243">
-                                        22
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="222">
-                                        24
-                                    </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div> -->
-                            <!-- <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div> -->
-                        </div>
-                        <div class="productCard">
-                            <div class="productPic">
-                                <a href="#" class="productLink">
-                                    <img src="img/jpg/secondSection_page2/pic5_page2.jpg" alt="OSB-3 Egger 2500x1250 мм (3.125 м2); 35,4 кг" class="materialImg">
-                                    <button class="buttonPic" type="button">
-                                        Подробнее
-                                    </button>
-                                </a>
-                            </div>
-                            <div class="productDescription">
-                                <a href="#">OSB-3 Egger 2500x1250 мм (3.125 м2); 35,4 кг</a>
-                            </div>
-                            <p class="perSquareMeter"><span>р/м2</span></p>
-                            <form action="POST" class="productCardForm">
-                                <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
-                                <div class="productCardCounter">
-                                    <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
-                                    <input type="number" class="productCardCounterField">
-                                    <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
-                                </div>
-                            </form>
-                            <button class="refineRemainder">Уточнить остаток</button>
-                            <!-- <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                    <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="245">
-                                        18
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="453">
-                                        22
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="999">
-                                        24
-                                    </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div> -->
-                            <!-- <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div> -->
-                        </div>
-                        <div class="productCard">
-                            <div class="productPic">
-                                <a href="#" class="productLink">
-                                    <img src="img/jpg/secondSection_page2/pic5_page2.jpg" alt="OSB-3 Калевала 2800x1250 мм (3.125 м2); 35,4 кг" class="materialImg">
-                                    <button class="buttonPic" type="button">
-                                        Подробнее
-                                    </button>
-                                </a>
-                            </div>
-                            <div class="productDescription">
-                                <a href="#">OSB-3 Калевала 2800x1250 мм (3.125 м2); 35,4 кг</a>
-                            </div>
-                            <p class="perSquareMeter"><span>р/м2</span></p>
-                            <form action="POST" class="productCardForm">
-                                <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
-                                <div class="productCardCounter">
-                                    <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
-                                    <input type="number" class="productCardCounterField">
-                                    <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
-                                </div>
-                            </form>
-                            <button class="refineRemainder">Уточнить остаток</button>
-                            <!-- <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                    <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="222">
-                                        18
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="111">
-                                        22
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="333">
-                                        24
-                                    </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div> -->
-                            <!-- <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div> -->
-                        </div>
-                        <div class="productCard">
-                            <div class="productPic">
-                                <a href="#" class="productLink">
-                                    <img src="img/jpg/secondSection_page2/pic6_page2.jpg" alt="OSB-3 Некондиция/брак 2500x1250 мм (3.125 м2); 35,4 кг" class="materialImg">
-                                    <button class="buttonPic" type="button">
-                                        Подробнее
-                                    </button>
-                                </a>
-                            </div>
-                            <div class="productDescription">
-                                <a href="#">OSB-3 Некондиция/брак<br> 2500x1250 мм (3.125 м2); 35,4 кг</a>
-                            </div>
-                            <p class="perSquareMeter"><span>р/м2</span></p>
-                            <form action="POST" class="productCardForm">
-                                <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
-                                <div class="productCardCounter">
-                                    <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
-                                    <input type="number" class="productCardCounterField">
-                                    <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
-                                </div>
-                            </form>
-                            <button class="refineRemainder">Уточнить остаток</button>
-                            <!-- <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                    <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="777">
-                                        18
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="46764">
-                                        22
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="1212">
-                                        24
-                                    </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div> -->
-                            <!-- <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div> -->
-                        </div>
-                        <div class="productCard">
-                            <div class="productPic">
-                                <a href="#" class="productLink">
-                                    <img src="img/jpg/secondSection_page2/pic7_page2.jpg" alt="OSB-3 Некондиция/брак 2800x1250 мм (3.125 м2); 35,4 кг" class="materialImg">
-                                    <button class="buttonPic" type="button">
-                                        Подробнее
-                                    </button>
-                                </a>
-                            </div>
-                            <div class="productDescription">
-                                <a href="#">OSB-3 Некондиция/брак<br> 2800x1250 мм (3.125 м2); 35,4 кг</a>
-                            </div>
-                            <p class="perSquareMeter"><span>р/м2</span></p>
-                            <form action="POST" class="productCardForm">
-                                <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
-                                <div class="productCardCounter">
-                                    <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
-                                    <input type="number" class="productCardCounterField">
-                                    <a href="#" class="productCardCounterBtn productCounterPlusBtn">+</a>
-                                </div>
-                            </form>
-                            <button class="refineRemainder">Уточнить остаток</button>
-                            <!-- <div class="materialSizeVariation">
-                                <div class="sizeVariationText">
-                                    Толщины,мм:
-                                </div>
-                                <div class="sizeVarioationButtons">
-                                    <button class="productBtn" type="button" data-price-filter="Цена1" data-value-filter="945">
-                                        18
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена2" data-value-filter="0">
-                                        22
-                                    </button>
-                                    <button class="productBtn" type="button" data-price-filter="Цена3" data-value-filter="2135">
-                                        24
-                                    </button>
-                                </div>
-                                <div class="moreSizes">+ 4</div>
-                            </div> -->
-                            <!-- <div class="materialInStock">
-                                <span class="materialPriceValue"></span>
-                                <span class="materialPrice">р/шт.</span>
-                                <span class="materialValueNumber"></span>
-                                <span class="materialValue">р/м2.</span>
-                            </div> -->
-                        </div>
                     </div>
                 </section>
             </div>
@@ -693,7 +429,7 @@
                 <form method="POST" class="popupContent">
                     <button type="button" class="popupCloseBtn"></button>
                     <div class="popupTitle">Товар: <span class="popupProductName"></span></div>
-                    <input type="tel" class="popupField" placeholder="Номер телефона">
+                    <input type="tel" class="popupField" placeholder="Номер телефона" id="popupPhoneNumber">
                     <input type="text" class="popupField" placeholder="ФИО">
                     <input type="hidden" class="goodName">
                     <textarea name="" class="popupCommentField" cols="30" rows="6" placeholder="Ваш комментарий"></textarea>

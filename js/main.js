@@ -149,13 +149,14 @@ if (document.querySelector('.deliveryButton_delivery')) {
     }
 
     imgWindow_delivery.style.backgroundImage = 'url(' + btnsArray_delivery[0].getAttribute("data-src") + ')';
-
+    imgWindow_delivery.style.backgroundSize = 'cover';
 
     for (let i = 0; i <= btnsArray_delivery.length - 1; i ++) {
         btnsArray_delivery[i].onclick = function () {
             btnsArray_delivery[i].classList.add('shownButton_delivery');
             selectBtnArray_delivery[0] = btnsArray_delivery[i];
             imgWindow_delivery.style.backgroundImage = 'url(' + btnsArray_delivery[i].getAttribute("data-src") + ')';
+            imgWindow_delivery.style.backgroundSize = 'cover';
             for (let j = 0; j <= btnsArray_delivery.length - 1; j ++) {
                 if (selectBtnArray_delivery[0] !== btnsArray_delivery[j]) {
                     btnsArray_delivery[j].classList.remove('shownButton_delivery');
@@ -216,6 +217,51 @@ if (document.querySelector('.deliveryButton_delivery')) {
     }
 }
 
+// Этот скрипт выполняет сортировку контента на странице catalog
+// buttonTogglerFor_catalog
+
+if (document.querySelector('.mainContent_catalog')) {
+
+    let filterBtns_catalog = document.querySelectorAll('.firstTabs_index');
+    let cards_catalog = document.querySelectorAll('.s2_slide_catalog');
+    console.log(cards_catalog);
+
+    
+    // Состояние фильтра по-умолчанию
+    let defaultBtn_catalog = filterBtns_catalog[0];
+    for (let i = 0; i <= cards_catalog.length - 1; i ++) {
+        if (defaultBtn_catalog.dataset.category !== cards_catalog[i].dataset.id) {
+            cards_catalog[i].style.display = "none";
+        }
+    }
+
+
+    // Фильтрация
+    let btnsSorting = function (filterValue) {
+        for (let i = 0; i <= cards_catalog.length - 1; i ++) {
+            cards_catalog[i].style.display = "none";
+            if (cards_catalog[i].dataset.id === filterValue) {
+                cards_catalog[i].style.display = "block";
+            }
+        }
+    }
+
+    //Фильтр
+    for (let i = 0; i <= filterBtns_catalog.length - 1; i ++) {
+        filterBtns_catalog[0].classList.add('tabSelect');
+        filterBtns_catalog[i].onclick = function () {
+            filterBtns_catalog[i].classList.add('tabSelect');
+            let x = filterBtns_catalog[i];
+            for (let j = 0; j <= filterBtns_catalog.length - 1; j ++) {
+                if (x !== filterBtns_catalog[j]) {
+                    filterBtns_catalog[j].classList.remove('tabSelect');
+                }
+            }
+            let filterValue = x.dataset.category;
+            btnsSorting(filterValue);
+        }
+    }
+}
 // Этот скрипт переключает кнопки карточки товара и и пределяет цену за шт и метр кв в зависимости от выбранного значения толщины
 //cardButtonSwitcher
 if (document.querySelector('.productCard')) {
@@ -384,11 +430,13 @@ if (document.querySelector('.page3ContentImg')) {
         }
         if (galleryImgsArray_productCard.length > 0) {
             galleryImgContainer_productCard.style.backgroundImage = 'url(' + galleryImgsArray_productCard[0].getAttribute("src") + ')';
+            galleryImgContainer_productCard.style.backgroundSize = 'cover';
 
             for (let i = 0; i <= galleryBtnsArray_productCard.length - 1; i ++) {
                 galleryBtnsArray_productCard[i].onclick = function () {
                     galleryBtnsArray_productCard[i].classList.add('shownIcon_productCard');
                     galleryImgContainer_productCard.style.backgroundImage = 'url(' + galleryImgsArray_productCard[i].getAttribute("src") + ')';
+                    galleryImgContainer_productCard.style.backgroundSize = 'cover';
                     selectedBtnsArray_productCard[0] = galleryBtnsArray_productCard[i];
                     for (let j = 0; j <= galleryBtnsArray_productCard.length - 1; j ++) {
                         if (selectedBtnsArray_productCard[0] !== galleryBtnsArray_productCard[j]) {
@@ -475,6 +523,45 @@ if (document.querySelector('.slider1_index')) {
 
 // Маска для поля ввода номера
 //phoneNumberMask
+if (document.querySelector('.dataField_shopBasketThirdStep')) {
+    window.addEventListener("DOMContentLoaded", function() {
+        [].forEach.call( document.querySelectorAll('.dataField_shopBasketThirdStep'), function(input) {
+            var keyCode;
+            function mask(event) {
+                event.keyCode && (keyCode = event.keyCode);
+                var pos = this.selectionStart;
+                if (pos < 3) event.preventDefault();
+                var matrix = "+7 (___)-___-__-__",
+                    i = 0,
+                    def = matrix.replace(/\D/g, ""),
+                    val = this.value.replace(/\D/g, ""),
+                    new_value = matrix.replace(/[_\d]/g, function(a) {
+                        return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+                    });
+                i = new_value.indexOf("_");
+                if (i != -1) {
+                    i < 5 && (i = 3);
+                    new_value = new_value.slice(0, i)
+                }
+                var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+                    function(a) {
+                        return "\\d{1," + a.length + "}"
+                    }).replace(/[+()]/g, "\\$&");
+                reg = new RegExp("^" + reg + "$");
+                if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+                if (event.type == "blur" && this.value.length < 5)  this.value = ""
+            }
+
+            input.addEventListener("input", mask, false);
+            input.addEventListener("focus", mask, false);
+            input.addEventListener("blur", mask, false);
+            input.addEventListener("keydown", mask, false)
+
+        });
+    });
+}
+// Маска для поля ввода номера
+//phoneNumberMask
 if (document.querySelector('#phone')) {
     window.addEventListener("DOMContentLoaded", function() {
         [].forEach.call( document.querySelectorAll('#phone'), function(input) {
@@ -517,14 +604,19 @@ if (document.querySelector('#phone')) {
 if (document.querySelector('.popover_productCard')) {
     let popover_productCard = document.querySelector('.popover_productCard');
     let popoverText_productCard = document.querySelector('.popoverText_productCard');
+    
 
     let fadePopup_productCard = function () {
         popover_productCard.style.opacity = "0";
         popover_productCard.style.display = "none";
+        popoverText_productCard.textContent = '';
+        popover_productCard.style.borderColor = "none";
+        popoverText_productCard.style.color = "none";
     }
 
     function openPopup (text, type) {
         popover_productCard.style.opacity = "1";
+        popover_productCard.style.display = "block";
         popoverText_productCard.textContent = text;
         if (type === 'danger') {
             popover_productCard.style.borderColor = "#e84d4d";
@@ -540,8 +632,59 @@ if (document.querySelector('.popover_productCard')) {
         }
         setTimeout(fadePopup_productCard, 3000);
     }
+
 }
 
+// Маска для поля ввода номера
+//popupPhoneNumberMask
+if (document.querySelector('.popup')) {
+    window.addEventListener("DOMContentLoaded", function() {
+        [].forEach.call( document.querySelectorAll('#popupPhoneNumber'), function(input) {
+            var keyCode;
+            function mask(event) {
+                event.keyCode && (keyCode = event.keyCode);
+                var pos = this.selectionStart;
+                if (pos < 3) event.preventDefault();
+                var matrix = "+7 (___)-___-__-__",
+                    i = 0,
+                    def = matrix.replace(/\D/g, ""),
+                    val = this.value.replace(/\D/g, ""),
+                    new_value = matrix.replace(/[_\d]/g, function(a) {
+                        return i < val.length ? val.charAt(i++) || def.charAt(i) : a
+                    });
+                i = new_value.indexOf("_");
+                if (i != -1) {
+                    i < 5 && (i = 3);
+                    new_value = new_value.slice(0, i)
+                }
+                var reg = matrix.substr(0, this.value.length).replace(/_+/g,
+                    function(a) {
+                        return "\\d{1," + a.length + "}"
+                    }).replace(/[+()]/g, "\\$&");
+                reg = new RegExp("^" + reg + "$");
+                if (!reg.test(this.value) || this.value.length < 5 || keyCode > 47 && keyCode < 58) this.value = new_value;
+                if (event.type == "blur" && this.value.length < 5)  this.value = ""
+            }
+
+            input.addEventListener("input", mask, false);
+            input.addEventListener("focus", mask, false);
+            input.addEventListener("blur", mask, false);
+            input.addEventListener("keydown", mask, false)
+
+        });
+    });
+}
+// Этот скрипт передаёт значение карзины из одного элемента в дублирующийся
+// shopBasketValueSender
+
+if (document.querySelector('.shopBasket')) {
+    let shopBasketValueMobileScreen = document.querySelector('.shopBasketValue');
+    let shopBasketValueFullScreen = document.querySelector('.quantityPurchase');
+    
+    if (window.innerWidth <= 1199) {
+        shopBasketValueMobileScreen.textContent = shopBasketValueFullScreen.textContent;
+    }
+}
 if (document.querySelector('.productCard')) {
     let popup = document.querySelector('.popup');
     let cards = document.querySelectorAll('.productCard');
@@ -625,10 +768,18 @@ if (document.querySelector('.slider_osbOnFloor')) {
 //stickySidebar_osbOnFloor
 
 if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
+    let pageHeight_osbOnFloor = document.querySelector('body');
+    let productCard_osbOnFloor = document.querySelector('.productCards');
+    let header = document.querySelector('header');
+    let slider_sobOnFloor = document.querySelector('.sectionOne_osbOnFloor');
+    let breadcrums_osbOnFloor = document.querySelector('main > .wrapper');
+    let secondSectionMenuTitle_osbOnFloor = document.querySelector('.secondSectionMenu_osbOnFloor');   
+    
+
     $(document).ready(function () {
         var offset = $('#fixed').offset();
         var topPadding = 0,
-        bottomPadding = 4905;
+        bottomPadding = pageHeight_osbOnFloor.clientHeight - (productCard_osbOnFloor.clientHeight + header.clientHeight + slider_sobOnFloor.clientHeight + breadcrums_osbOnFloor.clientHeight + secondSectionMenuTitle_osbOnFloor.clientHeight);
         $(window).scroll(function() {
             if (window.innerWidth >= 1007) {
                 if ($(window).scrollTop() > offset.top) {
@@ -644,6 +795,90 @@ if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
     });
 }
 
+//stickySidebar_shopBasket1
+
+if (document.querySelector('.mainContentPart2_shopBasketFirstStep')) {
+    let pageHeight_shopBasket1 = document.querySelector('body');
+    let shopPart1_shopBasket1 = document.querySelector('.mainContent_shopBasketFirstStep');
+    let header = document.querySelector('header');
+    // let breadcrums_shopBasket1 = document.querySelector('.firstSection_shopBasketFirstStep > .breadcrumbsOSB');
+    let title_shopBasket1 = document.querySelector('.firstSection_shopBasketFirstStep > .sectionTitle_index');   
+    
+
+    $(document).ready(function () {
+        var offset = $('#fixed_2').offset();
+        var topPadding = 0,
+        bottomPadding = pageHeight_shopBasket1.clientHeight - (shopPart1_shopBasket1.clientHeight + header.clientHeight + (120) + title_shopBasket1.clientHeight);
+        $(window).scroll(function() {
+            if (window.innerWidth >= 1007) {
+                if ($(window).scrollTop() > offset.top) {
+                    if ($(document).height() - bottomPadding > $(window).scrollTop() + $("#fixed_2").height()) $("#fixed_2").stop().animate({
+                    marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });
+                }
+                else {
+                    $('#fixed_2').stop().animate({marginTop: 0});
+                }
+            }
+        });
+    });
+}
+//stickySidebar_shopBasket2
+
+if (document.querySelector('.mainContentPart2_shopBasketSecondStep')) {
+    let pageHeight_shopBasket2 = document.querySelector('body');
+    let shopPart1_shopBasket2 = document.querySelector('.mainContent_shopBasketSecondStep');
+    let header = document.querySelector('header');
+    // let breadcrums_shopBasket2 = document.querySelector('.firstSection_shopBasketSecondStep > .breadcrumbsOSB');
+    let title_shopBasket2 = document.querySelector('.firstSection_shopBasketSecondStep > .sectionTitle_index');   
+    
+
+    $(document).ready(function () {
+        var offset = $('#fixed_3').offset();
+        var topPadding = 0,
+        bottomPadding = pageHeight_shopBasket2.clientHeight - (shopPart1_shopBasket2.clientHeight + header.clientHeight + (120) + title_shopBasket2.clientHeight);
+        $(window).scroll(function() {
+            if (window.innerWidth >= 1007) {
+                if ($(window).scrollTop() > offset.top) {
+                    if ($(document).height() - bottomPadding > $(window).scrollTop() + $("#fixed_3").height()) $("#fixed_3").stop().animate({
+                    marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });
+                }
+                else {
+                    $('#fixed_3').stop().animate({marginTop: 0});
+                }
+            }
+        });
+    });
+}
+//stickySidebar_shopBasket3
+
+if (document.querySelector('.mainContentPart2_shopBasketThirdStep')) {
+    let pageHeight_shopBasket1 = document.querySelector('body');
+    let shopPart1_shopBasket1 = document.querySelector('.mainContent_shopBasketThirdStep');
+    let header = document.querySelector('header');
+    // let breadcrums_shopBasket1 = document.querySelector('.firstSection_shopBasketThirdStep > .breadcrumbsOSB');
+    let title_shopBasket1 = document.querySelector('.firstSection_shopBasketThirdStep > .sectionTitle_index');   
+    
+
+    $(document).ready(function () {
+        var offset = $('#fixed_4').offset();
+        var topPadding = 0,
+        bottomPadding = pageHeight_shopBasket1.clientHeight - (shopPart1_shopBasket1.clientHeight + header.clientHeight + (120) + title_shopBasket1.clientHeight);
+        $(window).scroll(function() {
+            if (window.innerWidth >= 1007) {
+                if ($(window).scrollTop() > offset.top) {
+                    if ($(document).height() - bottomPadding > $(window).scrollTop() + $("#fixed_4").height()) $("#fixed_4").stop().animate({
+                    marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });
+                }
+                else {
+                    $('#fixed_4').stop().animate({marginTop: 0});
+                }
+            }
+        });
+    });
+}
 // Перключатель стилей у активных вкладок
 //tabsToggler_certificates
 if (document.querySelector('.button_certificates')) {
@@ -669,6 +904,18 @@ if (document.querySelector('.button_certificates')) {
     }
 }
 
+// Этот скрипт копирует содержимое первого элемента списка при десктопной версии и в первый элемент списка мобильной версии
+// transferCitySelect
+
+if (document.querySelector('.firstNavMenu')) {
+    if (window.innerWidth <= 1199) {
+        $( init );
+        function init() {
+            $('#citySelectTopNav').append( $('#citySelectBottomNav>.test1') );
+
+        }
+    }
+}
 // Этот скрипт перемещает грузовик и отображает кнопку прокрутки "в начало"
 //upButton_index
 if (document.querySelector('.up-button') && document.querySelector('.track_index')) {
@@ -696,6 +943,7 @@ if (document.querySelector('.up-button') && document.querySelector('.track_index
 
 if (document.querySelector('.thicknessButtons_productCard')) {
     let btns_productCard = document.querySelectorAll('.thicknessButton_productCard');
+    
 
     function renderProductParameters(obj) {
         let price_productCard = document.querySelector('.priceForPieceValue_productCard');

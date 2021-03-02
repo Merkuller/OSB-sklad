@@ -55,7 +55,7 @@ header
   position: relative
 
   > .wrapper
-      justify-content: space-between
+    justify-content: space-between
   
   .brandLogo
     display: none
@@ -66,17 +66,16 @@ header
       top: 55%
       left: 50%
       transform: translate(-50%, -50%)
-      width: 80px  
+      width: 30px  
+      object-fit: cover
 
 
   @media screen and ( max-width: 1199px)
     display: flex
+    align-items: center
     padding: 10px 0px
 
     .nav-item
-      &:first-of-type
-        .youCityPosition
-          display: none
       
       &:nth-of-type(4)
         .nav-link
@@ -93,7 +92,7 @@ header
           padding-left: 0px
           padding-right: 0px
           display: flex
-          align-s: center
+          align-items: center
           &::before
             display: none
           &::after
@@ -103,10 +102,11 @@ header
             display: flex
             align-items: center 
 
-            .youCityPosition
-              display: inline-block
+            .headerCityName2
               height: 16px
-              width: 16px
+
+              .markerIconNav
+                display: inline-block
         
       @media screen and ( max-width: 768px)
         &:nth-of-type(4)
@@ -166,18 +166,21 @@ header
   padding-right: 0px
   @media screen and ( max-width: 576px)
     flex-direction: row-reverse
+  @media screen and ( max-width: 633px)
     .headerLogo
       display: none
 
 .navbar-brand
   display: block
-  height: 67px
   margin-left: 0px
+  img
+    height: 80px
+    @media screen and ( max-width: 1400px)
+      height: 60px
+      
   @media screen and ( max-width: 1199px)
-    height: 30px
-
     img
-      height: 30px  
+      height: 50px  
 
 .searchField
   display: none
@@ -268,18 +271,40 @@ header
   .bottom 
     stroke-dashoffset: -138px
 
-
-.logoText
-  display: block
-  text-align: right
-  font-style: normal
-  font-weight: normal
-  font-size: 16px
-  line-height: 28px
-  color: #999999
-  margin-right: 16px
+.shopBasket
+  display: none
   @media screen and ( max-width: 1199px)
-    font-size: 12px
+    display: flex
+    align-items: center
+    margin-left: 10px
+    text-decoration: none
+    @media screen and ( max-width: 576px)
+      position: absolute
+      top: -32px
+      right: 40px
+      
+  .shopBasketValue
+    width: 40px
+    height: 24px
+    display: flex
+    justify-content: center
+    align-items: center
+    font-style: normal
+    font-weight: 550
+    background-color: #EC8B33
+    border-radius: 12px 12px 0px 12px
+    font-size: 16px
+    line-height: 20px
+    color: #010101
+    margin-right: 4px
+      
+  .shopBasketIcon
+    background-image: url('../img/svg/header_page1/deliveryIcon.svg')
+    width: 28px 
+    height: 24px
+    background-position: bottom
+    background-repeat: no-repeat
+    
 
 .headerMenu
   display: flex
@@ -289,7 +314,6 @@ header
   @media screen and ( max-width: 1199px)
     flex-direction: column-reverse
     width: 100%
-    // margin-top: 20px
 
 .firstNavMenu
   display: flex
@@ -332,6 +356,9 @@ header
       position: absolute
       right: 0
       top: 3px
+
+    .markerIconNav
+      display: none
 
   &:nth-of-type(2)
     display: flex
@@ -487,6 +514,291 @@ header
         display: flex
         align-items: center
         position: relative
+/* Пункт с выбором города */
+.select-city-wrap
+  position: relative
+
+.select-city__block__text
+  color: #919294
+  font-family: 'NotoSans'
+  font-size: 12px
+  line-height: 30px
+
+.select-city__block__text-city
+  color: #ffffff
+  font-family: 'NotoSans'
+  font-size: 14px
+  line-height: 30px
+
+  /*text-decoration: underline;
+  text-decoration-style: dotted
+  cursor: pointer
+
+.select-city__dropdown__title
+  color: #414141
+  font-size: 13px
+  line-height: 30px
+  font-family: "NotoSans"
+  display: block
+  margin-bottom: 10px
+
+.select-city__dropdown
+  background-color: #ffffff
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.22)
+  width: 211px
+  text-align: center
+  padding: 11px 5px 17px 5px
+
+.select-city__dropdown-wrap
+  z-index: 99
+  position: absolute
+
+.select-city__dropdown__choose
+  display: inline-block
+  height: 32px
+  width: 82px
+  font-size: 12px
+  line-height: 32px
+  text-transform: uppercase
+  font-family: 'ProximaNova'
+  text-align: center
+  cursor: pointer
+
+  &:hover, &:active, &:focus
+    opacity: .7
+
+.select-city__dropdown__choose__yes
+  color: #919294
+  border: 1px solid #d3d3d3
+  margin-right: 15px
+
+.select-city__dropdown__choose__no
+  color: #ffffff
+  background: #333333
+
+.select-city__dropdown__choose-wrap
+  width: 100%
+  display: flex
+  align-items: center
+  justify-content: center
+
+.select-city__modal
+  position: fixed
+  top: 0
+  right: 0
+  bottom: 0
+  left: 0
+  z-index: 3000
+  display: none
+
+.modal__overlay
+  display: none
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  height: 100%
+  background-color: rgba(0, 0, 0, 0.5)
+  z-index: 2500
+
+.select-city__modal-wrap
+  background-color: #ffffff
+  box-shadow: 0px 5px 5px 0px rgba(0, 0, 0, 0.22)
+  width: 684px
+  padding: 0px
+  position: relative
+  margin: 30vh auto
+  transition: width .2s
+  box-shadow: 0px 0px 24px rgba(0, 0, 0, 0.15)
+
+.select-city__modal__title
+  color: #000000 !important
+  font-family: 'ProximaNova' !important
+  font-style: normal
+  font-weight: bold
+  line-height: 36px
+  font-size: 20px !important
+  margin-bottom: 20px !important
+  padding: 25px 0px 19px 40px
+  background-color: #F0EFEE
+
+.select-city__modal__list
+  columns: 3
+  margin-bottom: 23px
+  padding: 0px 40px 0px 40px
+
+.select-city__modal__list__title
+  color: #010101
+  font-family: 'ProximaNovaBold'
+  line-height: 28px
+  font-size: 16px
+  display: block
+  margin-bottom: 20px
+  padding: 0px 0px 40px 40px
+
+.select-city__modal__list__item
+  color: #000000 !important
+  font-family: 'ProximaNova' !important
+  width: 180px
+  line-height: 28px
+  font-size: 16px
+  margin-bottom: 0 !important
+  margin-top: 0px
+  cursor: pointer
+
+  &:hover, &:focus, &:active
+    color: #0978c6 !important
+    text-decoration: underline
+    text-decoration-color: #c1ddf1
+
+.select-city__modal__submit__block-wrap
+  background: #FFFFFF
+  padding: 0px 40px
+  display: flex
+  align-items: center
+  justify-content: space-between
+  position: relative
+  margin-bottom: 22px
+
+.select-city__modal__submit__title
+  color: #000000
+  font-family: 'ProximaNovaBold'
+  line-height: 30px
+  font-size: 14px
+  display: block
+  margin-bottom: 0px
+
+.select-city__modal__submit__input
+  border: 1px solid #010101
+  border-radius: 4px
+  background: #ffffff
+  box-shadow: none
+  height: 60px
+  width: 100%
+  color: #414141
+  font-family: 'ProximaNova'
+  font-size: 20px
+  line-height: 36px
+  margin-right: 0px
+  padding: 13px 0px 11px 20px
+
+.select-city__modal__submit__btn
+  background: inherit
+  border: none !important
+  box-shadow: none !important
+  width: 20px
+  height: 20px
+  position: absolute
+  right: 70px
+  top: 20px
+  border: none
+  outline: none
+
+  &:hover, &:active, &:focus
+    opacity: .7
+    outline: none
+
+.select-city__close
+  background: url("img/select-city__close.png") no-repeat
+  background-position: center
+  width: 20px
+  height: 20px
+  position: absolute
+  top: 30px
+  right: 40px
+  z-index: 10
+  cursor: pointer
+
+  &:hover
+    opacity: .7
+
+@media (max-width: 768px)
+  .select-city__modal-wrap
+    width: 484px
+    padding: 37px 25px 40px 25px
+
+  .select-city__modal__list
+    columns: 2
+
+@media (max-width: 575px)
+  .select-city__modal-wrap
+    width: 80%
+    padding: 27px 20px 30px 20px
+    margin: 20vh auto
+
+  .select-city__modal__title
+    font-size: 20px !important
+    margin-bottom: 10px !important
+
+  .select-city__close
+    top: 15px
+    right: 15px
+
+  .select-city__modal__list__item
+    font-size: 13px !important
+
+@media (max-width: 400px)
+  .select-city__modal__list
+    columns: unset
+    max-height: 100px
+    overflow: auto
+
+  .select-city__modal-wrap
+    margin: 5vh auto
+
+  .select-city__modal__list__title
+    line-height: 20px
+
+  .select-city__modal__submit__block-wrap
+    display: block
+
+  .select-city__modal__submit__input
+    margin-right: 0px
+    margin-bottom: 10px
+
+  .select-city__modal-wrap
+    padding: 15px 20px
+
+  .select-city__modal__submit__btn
+    width: 100%
+
+.select-city__modal__submit__block-wrap__input_wrap
+  position: relative
+  width: 100%
+
+  .sey-container
+    position: absolute
+    width: 100%
+
+  .sey-list
+    padding-left: 0
+    margin: 0
+
+    li
+      list-style: none
+
+    .sey-item
+      border-bottom: 1px solid #d3d3d3
+      border-right: 1px solid #d3d3d3
+      border-left: 1px solid #d3d3d3
+      background: #ffffff
+      height: 32px
+      width: 100%
+      max-width: 517px
+      color: #414141
+      font-family: 'ProximaNova'
+      font-size: 14px
+      padding: 0 15px
+      line-height: 32px
+      margin: 0 !important
+
+    .sey-hide
+      display: none
+
+.select-city__modal__submit__block-wrap__input_wrap_error
+  color: red
+  position: absolute
+  top: -20px
 
 /* ГЛАВНАЯ СТРАНИЦА
 /* Первая секция. 1 страница. Главная
@@ -814,8 +1126,8 @@ header
     padding-left: 70px
   @media screen and ( max-width: 1024px)
     padding-left: 40px
-  @media screen and ( max-width: 425px)
-    flex-direction: column-reverse
+  @media screen and ( max-width: 615px)
+    flex-direction: column
     padding-left: 0px
     width: 100%
     
@@ -824,6 +1136,10 @@ header
   align-items: center
   margin-top: 20px
   margin-right: 20px
+  @media screen and ( max-width: 615px)
+    margin-top: 0px
+    margin-right: 0px
+    margin-bottom: 20px
   @media screen and ( max-width: 320px)
     margin-top: 30px
 
@@ -899,6 +1215,9 @@ header
   align-items: center
   text-decoration: none
   transition: all .10s ease-in-out
+  @media screen and ( max-width: 615px)
+    display: flex
+    flex-direction: column
 
   .tabTitle_index
     font-weight: bold
@@ -937,9 +1256,12 @@ header
     background-image: url('../img/svg/firstSection_page1/Arrow_link_right_default_page1.svg')
     background-repeat: no-repeat
     background-position: center
+    @media screen and ( max-width: 615px)
+      top: 50%
+      transform: translateY(-50%)
     @media screen and ( max-width: 320px)
       right: 46%
-      bottom: -15px
+      top: 110%
       transform: rotate(90deg)
 
   &:hover::after
@@ -966,6 +1288,34 @@ header
 
 .content_catalog
   padding-left: 0px
+  .tabs_index
+    margin: 0px
+    padding-top: 0px
+    margin-bottom: 40px
+    @media screen and ( max-width: 425px)
+      margin-bottom: 20px
+  .catalogSlider_catalog
+    .sliderContent_catalog
+      display: flex
+      flex-wrap: wrap
+      @media screen and ( max-width: 872px)
+        justify-content: space-between
+      .s2_slide_catalog
+        flex: 1 1 30%
+        max-width: 320px
+        @media screen and ( max-width: 872px)
+          flex-basis: 40%
+        @media screen and ( max-width: 780px)
+          margin: 1%
+        @media screen and ( max-width: 648px)
+          flex-basis: 100%
+          margin: 0px auto
+          margin-bottom: 20px
+  .secondSection_osbOnFloor
+    @media screen and ( max-width: 1400px)
+      padding-bottom: 60px
+    @media screen and ( max-width: 425px)
+      padding-bottom: 40px
 
 /* Обёртка карточек
 
@@ -1004,7 +1354,7 @@ header
     width: 100%
     object-fit: cover
     object-position: center
-    height: 100%
+    height: 400px
 
 .effect-ruby
   figcaption
@@ -1322,6 +1672,8 @@ header
   margin-top: 80px
   @media screen and ( max-width: 768px)
     margin-top: 20px
+  @media screen and ( max-width: 682px)
+    width: 100%
 
   .totalCost_index
     font-style: normal
@@ -1329,6 +1681,8 @@ header
     font-size: 20px
     line-height: 36px
     color: #000000
+    @media screen and ( max-width: 682px)
+      text-align: center
   
   .totalCostValue_index
     font-style: normal
@@ -1391,6 +1745,9 @@ header
     color: #CA782E
     outline: none
     background-color: #010101
+    @media screen and ( max-width: 682px)
+      display: block
+      margin: 0px auto
 
 .add_calculate_index
   margin-top: 80px
@@ -2983,7 +3340,10 @@ header
   height: 44px
   background-color: #EC8B33
   border-radius: 4px
-  text-align: center
+  display: flex
+  align-items: center
+  justify-content: center
+  text-decoration: none
   font-style: normal
   font-weight: bold
   font-size: 16px
@@ -3100,15 +3460,15 @@ header
   width: 100%
   justify-content: space-between
   align-items: center
-  margin-bottom: 49px
+  padding-bottom: 49px
   @media screen and ( max-width: 1024px)
-    margin-bottom: 40px
+    padding-bottom: 40px
 
   @media screen and ( max-width: 619px)
     flex-direction: column
 
   @media screen and ( max-width: 425px)
-    margin-bottom: 20px
+    padding-bottom: 20px
 
 /* Контент второй секции. 2 страница. OSB на пол
 
@@ -3124,10 +3484,13 @@ header
   @media screen and ( max-width: 1024px)
     .productCard
       padding-bottom: 40px
+      flex-basis: 45%
   @media screen and ( max-width: 1000px)
     > .productCards
       width: 100%
       margin-top: 20px
+      @media screen and ( max-width: 768px)
+        justify-content: space-between
       .productCard
         @media screen and ( max-width: 704px)
           flex: 1 1 40%
@@ -3476,9 +3839,12 @@ header
 
 .materialImg
   position: relative
+  width: 100%
+  height: 400px
   z-index: 1
   border-radius: 4px
   display: block
+  object-fit: cover
   @media screen and ( max-width: 455px)
     margin: 0px auto
 
@@ -3556,9 +3922,11 @@ header
   flex-wrap: wrap
 
   .productCardTotalPrice
+    position: relative
     flex: 1 1 58%
     padding: 13px 0px
     display: flex
+    overflow: hidden
     justify-content: center
     align-items: center
     font-style: normal
@@ -3587,9 +3955,15 @@ header
       margin-bottom: 10px
       
     &:hover
-      background-color: #010101
-      color: #EC8B33
+      // background-color: #010101
+      // color: #EC8B33
       transition: all .2s ease-in-out
+      .productCardTotalPriceIcon
+        transform: scale(1)
+        opacity: 1
+      .productValuePrice
+        opacity: 0
+        transform: scale(0)
 
     &:active
       background-color: #CA782E
@@ -3597,6 +3971,30 @@ header
 
     &:focus
       outline: none
+
+    .productCardTotalPriceIcon
+      transform: scale(10)
+      opacity: 0
+      position: absolute
+      width: 28px
+      height: 28px
+      transition: all .4s ease-in-out
+
+    .productValuePrice
+      opacity: 1
+      // transform: scale(1)
+      transition: all .4s ease-in-out
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 36px
+      color: #010101
+      span
+        font-style: normal
+        font-weight: bold
+        font-size: 20px
+        line-height: 36px
+        color: #010101
 
   .productCardCounter
     flex: 1 1 37%
@@ -3820,6 +4218,66 @@ header
       color: #EC8B33
       text-decoration: underline
       transition: all 0.2s ease-in-out
+// Блок контент менеджер
+.igorBlog
+  margin-top: 50px
+  .wrapper
+    flex-direction: column
+    div
+      width: 100%
+      h2
+        font-style: normal
+        display: block
+        font-weight: bold
+        font-size: 48px
+        line-height: 60px
+        color: #010101
+        margin-bottom: 51px
+        @media screen and ( max-width: 1024px)
+          margin-bottom: 40px
+        @media screen and ( max-width: 425px)
+          margin-bottom: 20px
+          text-align: center
+        @media screen and ( max-width: 375px)
+          font-size: 38px
+      table
+        width: 100%
+        margin-bottom: 40px
+        @media screen and ( max-width: 425px)
+          margin-bottom: 20px
+        tr
+          display: flex
+          td
+            img
+              object-fit: cover
+              width: 100%
+              height: 100%
+              display: block
+          td
+            display: flex
+            align-items: center
+            justify-content: center
+            padding: 10px
+            flex: 1 1 50%
+            font-size: 20px
+            line-height: 36px
+            font-weight: normal
+            font-style: normal
+            color: #010101
+    p
+      font-size: 20px
+      line-height: 36px
+      font-weight: normal
+      font-style: normal
+      color: #010101
+      margin-bottom: 40px
+      @media screen and ( max-width: 425px)
+        margin-bottom: 20px
+
+    .fifthSectionBtn_osbOnFloor
+      max-width: 320px
+          
+
 
 /* Модальное окно карты продукта */
 
@@ -5204,13 +5662,28 @@ input::-webkit-inner-spin-button
     outline: none
 
 .popover_productCard
+  position: fixed
+  top: 20%
+  right: 2%
   text-align: center
   opacity: 0
+  background-color: #FFFFFF
   transition: all .2s ease-in-out
   padding: 5px 0px
   border: 2px solid #4E4E4E
   color: #4E4E4E
   width: auto
+  z-index: 10
+  box-shadow: 2px 2px 15px 0 #34495e
+  @media screen and ( max-width: 768px)
+    top: 93%
+    right: 35%
+  @media screen and ( max-width: 425px)
+    right: 23%
+  @media screen and ( max-width:  375px)
+    right: 20%
+  @media screen and ( max-width: 320px)
+    right: 15%
 
 .popoverText_productCard
   display: block
@@ -7084,9 +7557,9 @@ input::-webkit-inner-spin-button
 
 .mainContent_shopBasketFirstStep
   width: 100%
-  margin-top: 50px
+  padding-top: 50px
   @media screen and ( max-width: 1025px)
-    margin-top: 40px
+    padding-top: 40px
 
 /* Этапы покупки
 
@@ -7599,83 +8072,86 @@ input::-webkit-inner-spin-button
   @media screen and ( max-width: 1237px)
     width: 20%
   @media screen and ( max-width: 972px)
-    flex-wrap: wrap
     width: 100%
     padding-left: 0px
     margin-bottom: 40px
+  @media screen and ( max-width: 426px)
+    margin-bottom: 20px
+#fixed_2
+  @media screen and ( max-width: 972px)
+    width: 100%
     display: flex
-  @media screen and ( max-width: 426px)
-    margin-bottom: 20px
+    flex-wrap: wrap
+    
+  .part2Title_shopBasketFirstStep
+    width: 100%
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #010101
+    margin-bottom: 4px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 55%
+      text-align: right
+      padding-right: 20px
+    @media screen and ( max-width: 376px)
+      flex-basis: 100%
+      padding-right: 0px
+      text-align: center
 
-.part2Title_shopBasketFirstStep
-  width: 100%
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #010101
-  margin-bottom: 4px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 55%
-    text-align: right
-    padding-right: 20px
-  @media screen and ( max-width: 376px)
-    flex-basis: 100%
-    padding-right: 0px
+  .part2Sum_shopBasketFirstStep
+    width: 100%
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #010101
+    margin-bottom: 5px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 45%
+      text-align: left
+    @media screen and ( max-width: 426px)
+      flex-basis: 30%
+    @media screen and ( max-width: 376px)
+      text-align: center
+
+  .additionalInformation_shopBasketFirstStep
+    @media screen and ( max-width: 972px)
+      flex-basis: 100%
+      text-align: center
+      margin-bottom: 20px
+
+  .nextStageLink_shopBasketFirstStep
+    width: 100%
+    display: block
     text-align: center
-
-.part2Sum_shopBasketFirstStep
-  width: 100%
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #010101
-  margin-bottom: 5px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 45%
-    text-align: left
-  @media screen and ( max-width: 426px)
-    flex-basis: 30%
-  @media screen and ( max-width: 376px)
-    text-align: center
-
-.additionalInformation_shopBasketFirstStep
-  @media screen and ( max-width: 972px)
-    flex-basis: 100%
-    text-align: center
-    margin-bottom: 20px
-
-.nextStageLink_shopBasketFirstStep
-  width: 100%
-  display: block
-  text-align: center
-  border-radius: 4px
-  padding-top: 13px
-  padding-bottom: 13px
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  text-decoration: none
-  color: #010101
-  background-color: #EC8B33
-  border-radius: 4px
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
-  margin-top: 22px
-
-  &:hover
-    color: #EC8B33
-    background-color: #010101
+    border-radius: 4px
+    padding-top: 13px
+    padding-bottom: 13px
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    text-decoration: none
+    color: #010101
+    background-color: #EC8B33
+    border-radius: 4px
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+    margin-top: 22px
 
-  &:active
-    color: #CA782E
-    background-color: #010101
-    transition: color 0.1s ease-in-out
-  @media screen and ( max-width: 972px)
-    width: 300px
-    margin: 0px auto
+    &:hover
+      color: #EC8B33
+      background-color: #010101
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+    &:active
+      color: #CA782E
+      background-color: #010101
+      transition: color 0.1s ease-in-out
+    @media screen and ( max-width: 972px)
+      width: 300px
+      margin: 0px auto
 
 /* Кнопка обновления корзины
 
@@ -8017,113 +8493,117 @@ input::-webkit-inner-spin-button
   @media screen and ( max-width: 1237px)
     width: 20%
   @media screen and ( max-width: 972px)
-    flex-wrap: wrap
     width: 100%
     padding-left: 0px
     margin-bottom: 40px
+  @media screen and ( max-width: 426px)
+    margin-bottom: 20px
+
+#fixed_3
+  @media screen and ( max-width: 972px)
+    width: 100%
     display: flex
-  @media screen and ( max-width: 426px)
-    margin-bottom: 20px
+    flex-wrap: wrap
 
-.part2Title_shopBasketSecondStep
-  width: 100%
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #010101
-  margin-bottom: 4px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 55%
-    text-align: right
-    padding-right: 20px
-  @media screen and ( max-width: 376px)
-    flex-basis: 100%
-    padding-right: 0px
-    text-align: center
+  .part2Title_shopBasketSecondStep
+    width: 100%
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #010101
+    margin-bottom: 4px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 55%
+      text-align: right
+      padding-right: 20px
+    @media screen and ( max-width: 376px)
+      flex-basis: 100%
+      padding-right: 0px
+      text-align: center
 
-.part2Sum_shopBasketSecondStep
-  width: 100%
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #010101
-  margin-bottom: 5px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 45%
-    text-align: left
-  @media screen and ( max-width: 426px)
-    flex-basis: 30%
-  @media screen and ( max-width: 376px)
-    text-align: center
+  .part2Sum_shopBasketSecondStep
+    width: 100%
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #010101
+    margin-bottom: 5px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 45%
+      text-align: left
+    @media screen and ( max-width: 426px)
+      flex-basis: 30%
+    @media screen and ( max-width: 376px)
+      text-align: center
 
-.additionalInformation_shopBasketSecondStep
-  display: block
-  width: 100%
-  @media screen and ( max-width: 972px)
-    text-align: center
-    margin-bottom: 20px
+  .additionalInformation_shopBasketSecondStep
+    display: block
+    width: 100%
+    @media screen and ( max-width: 972px)
+      text-align: center
+      margin-bottom: 20px
 
-.totalWeight_shopBasketSecondStep
-  display: block
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #999999
-  margin-bottom: 4px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 55%
-    text-align: right
-    padding-right: 20px
+  .totalWeight_shopBasketSecondStep
+    display: block
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #999999
+    margin-bottom: 4px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 55%
+      text-align: right
+      padding-right: 20px
 
-.totalWeightQuantity_shopBasketSecondStep
-  display: block
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #999999
-  margin-bottom: 39px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 45%
-    text-align: left
-  @media screen and ( max-width: 426px)
-    margin-bottom: 20px
+  .totalWeightQuantity_shopBasketSecondStep
+    display: block
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #999999
+    margin-bottom: 39px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 45%
+      text-align: left
+    @media screen and ( max-width: 426px)
+      margin-bottom: 20px
 
-/* Кнопка далее
+  /* Кнопка далее
 
-.btnNext_shopBasketSecondStep
-  width: 100%
-  display: flex
-  justify-content: center
-  align-items: center
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  padding-top: 13px
-  padding-bottom: 13px
-  line-height: 36px
-  color: #010101
-  outline: none
-  border: none
-  border-radius: 4px
-  background-color: #EC8B33
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
-
-  &:hover
-    color: #EC8B33
-    background-color: #010101
+  .btnNext_shopBasketSecondStep
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    padding-top: 13px
+    padding-bottom: 13px
+    line-height: 36px
+    color: #010101
+    outline: none
+    border: none
+    border-radius: 4px
+    background-color: #EC8B33
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
 
-  &:active
-    color: #CA782E
-    background-color: #010101
-    transition: color 0.1s ease-in-out
-  @media screen and ( max-width: 972px)
-    width: 300px
-    margin: 0px auto
+    &:hover
+      color: #EC8B33
+      background-color: #010101
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+    &:active
+      color: #CA782E
+      background-color: #010101
+      transition: color 0.1s ease-in-out
+    @media screen and ( max-width: 972px)
+      width: 300px
+      margin: 0px auto
 
 /* Кнопка обновления корзины
 
@@ -8513,6 +8993,174 @@ input::-webkit-inner-spin-button
   @media screen and ( max-width: 426px)
     margin-bottom: 20px
 
+.sectionForRadioBtn_shopBasketThirdStep
+  font-style: normal
+  font-weight: bold
+  font-size: 48px
+  line-height: 60px
+  margin-bottom: 40px
+  @media screen and ( max-width: 426px)
+    text-align: center
+    margin-bottom: 20px
+  @media screen and ( max-width: 376px)
+    font-size: 38px
+
+/* Радиокнопка 1 */
+
+.radioLabel_shopBasketThirdStep
+  display: flex
+  align-items: center
+  width: 100%
+  margin-bottom: 10px
+  user-select: none
+  &:last-of-type
+    margin-bottom: 40px
+  > #radioBtn1_shopBasketThirdStep
+    position: absolute
+    z-index: -1
+    opacity: 0
+    
+  > span
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 28px
+    color: #010101
+    display: inline-flex
+    align-items: center
+    user-select: none
+    &::before
+      content: ''
+      display: inline-block
+      width: 28px
+      height: 28px
+      flex-shrink: 0
+      flex-grow: 0
+      border: 2px solid #010101
+      border-radius: 50%
+      margin-right: 0.5em
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 50% 50%
+      position: relative        
+
+.radioLabel_shopBasketThirdStep
+  > #radioBtn1_shopBasketThirdStep
+    &:checked+span
+      &::before
+        background-color: #010101
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 16 16'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e")
+
+.radioLabel_shopBasketThirdStep
+  > #radioBtn1_shopBasketThirdStep
+    &:disabled+span
+      &::before
+        background-color: #999999
+
+/* Радиокнопка 2 */      
+
+.radioLabel_shopBasketThirdStep
+  display: flex
+  align-items: center
+  width: 100%
+  margin-bottom: 10px
+  user-select: none
+  &:last-of-type
+    margin-bottom: 40px
+  > #radioBtn2_shopBasketThirdStep
+    position: absolute
+    z-index: -1
+    opacity: 0
+    
+  > span
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 28px
+    color: #010101
+    display: inline-flex
+    align-items: center
+    user-select: none
+    &::before
+      content: ''
+      display: inline-block
+      width: 28px
+      height: 28px
+      flex-shrink: 0
+      flex-grow: 0
+      border: 2px solid #010101
+      border-radius: 50%
+      margin-right: 0.5em
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 50% 50%
+      position: relative        
+
+.radioLabel_shopBasketThirdStep
+  > #radioBtn2_shopBasketThirdStep
+    &:checked+span
+      &::before
+        background-color: #010101
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 16 16'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e")
+
+.radioLabel_shopBasketThirdStep
+  > #radioBtn2_shopBasketThirdStep
+    &:disabled+span
+      &::before
+        background-color: #999999
+
+/* Радиокнопка 3 */      
+
+.radioLabel_shopBasketThirdStep
+  display: flex
+  align-items: center
+  width: 100%
+  margin-bottom: 10px
+  user-select: none
+  &:last-of-type
+    margin-bottom: 40px
+  > #radioBtn3_shopBasketThirdStep
+    position: absolute
+    z-index: -1
+    opacity: 0
+    
+  > span
+    font-style: normal
+    font-weight: normal
+    font-size: 16px
+    line-height: 28px
+    color: #010101
+    display: inline-flex
+    align-items: center
+    user-select: none
+    &::before
+      content: ''
+      display: inline-block
+      width: 28px
+      height: 28px
+      flex-shrink: 0
+      flex-grow: 0
+      border: 2px solid #010101
+      border-radius: 50%
+      margin-right: 0.5em
+      background-repeat: no-repeat
+      background-position: center center
+      background-size: 50% 50%
+      position: relative        
+
+.radioLabel_shopBasketThirdStep
+  > #radioBtn3_shopBasketThirdStep
+    &:checked+span
+      &::before
+        background-color: #010101
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-8 -8 16 16'%3e%3ccircle r='8' fill='%23fff'/%3e%3c/svg%3e")
+
+.radioLabel_shopBasketThirdStep
+  > #radioBtn3_shopBasketThirdStep
+    &:disabled+span
+      &::before
+        background-color: #999999
+
 .deliveryOption_shopBasketThirdStep
   margin-bottom: 40px
   @media screen and ( max-width: 426px)
@@ -8600,113 +9248,117 @@ input::-webkit-inner-spin-button
   @media screen and ( max-width: 1237px)
     width: 20%
   @media screen and ( max-width: 972px)
-    flex-wrap: wrap
     width: 100%
     padding-left: 0px
     margin-bottom: 40px
+  @media screen and ( max-width: 426px)
+    margin-bottom: 20px
+
+#fixed_4
+  @media screen and ( max-width: 972px)
     display: flex
-  @media screen and ( max-width: 426px)
-    margin-bottom: 20px
+    flex-wrap: wrap
+    width: 100%
 
-.part2Title_shopBasketThirdStep
-  width: 100%
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #010101
-  margin-bottom: 4px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 55%
-    text-align: right
-    padding-right: 20px
-  @media screen and ( max-width: 376px)
-    flex-basis: 100%
-    padding-right: 0px
-    text-align: center
+  .part2Title_shopBasketThirdStep
+    width: 100%
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #010101
+    margin-bottom: 4px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 55%
+      text-align: right
+      padding-right: 20px
+    @media screen and ( max-width: 376px)
+      flex-basis: 100%
+      padding-right: 0px
+      text-align: center
 
-.part2Sum_shopBasketThirdStep
-  width: 100%
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #010101
-  margin-bottom: 5px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 45%
-    text-align: left
-  @media screen and ( max-width: 426px)
-    flex-basis: 30%
-  @media screen and ( max-width: 376px)
-    text-align: center
+  .part2Sum_shopBasketThirdStep
+    width: 100%
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #010101
+    margin-bottom: 5px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 45%
+      text-align: left
+    @media screen and ( max-width: 426px)
+      flex-basis: 30%
+    @media screen and ( max-width: 376px)
+      text-align: center
 
-.additionalInformation_shopBasketThirdStep
-  display: block
-  width: 100%
-  @media screen and ( max-width: 972px)
-    text-align: center
-    margin-bottom: 20px
+  .additionalInformation_shopBasketThirdStep
+    display: block
+    width: 100%
+    @media screen and ( max-width: 972px)
+      text-align: center
+      margin-bottom: 20px
 
-.totalWeight_shopBasketThirdStep
-  display: block
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #999999
-  margin-bottom: 4px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 55%
-    text-align: right
-    padding-right: 20px
+  .totalWeight_shopBasketThirdStep
+    display: block
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #999999
+    margin-bottom: 4px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 55%
+      text-align: right
+      padding-right: 20px
 
-.totalWeightQuantity_shopBasketThirdStep
-  display: block
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  line-height: 36px
-  color: #999999
-  margin-bottom: 39px
-  @media screen and ( max-width: 972px)
-    flex: 1 1 45%
-    text-align: left
-  @media screen and ( max-width: 426px)
-    margin-bottom: 20px
+  .totalWeightQuantity_shopBasketThirdStep
+    display: block
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #999999
+    margin-bottom: 39px
+    @media screen and ( max-width: 972px)
+      flex: 1 1 45%
+      text-align: left
+    @media screen and ( max-width: 426px)
+      margin-bottom: 20px
 
-/* Кнопка далее
+  /* Кнопка далее
 
-.btnNext_shopBasketThirdStep
-  width: 100%
-  display: flex
-  justify-content: center
-  align-items: center
-  font-style: normal
-  font-weight: bold
-  font-size: 20px
-  padding-top: 13px
-  padding-bottom: 13px
-  line-height: 36px
-  color: #010101
-  outline: none
-  border: none
-  border-radius: 4px
-  background-color: #EC8B33
-  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
-
-  &:hover
-    color: #EC8B33
-    background-color: #010101
+  .btnNext_shopBasketThirdStep
+    width: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    font-style: normal
+    font-weight: bold
+    font-size: 20px
+    padding-top: 13px
+    padding-bottom: 13px
+    line-height: 36px
+    color: #010101
+    outline: none
+    border: none
+    border-radius: 4px
+    background-color: #EC8B33
     transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
 
-  &:active
-    color: #CA782E
-    background-color: #010101
-    transition: color 0.1s ease-in-out
-  @media screen and ( max-width: 972px)
-    width: 300px
-    margin: 0px auto
+    &:hover
+      color: #EC8B33
+      background-color: #010101
+      transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out
+
+    &:active
+      color: #CA782E
+      background-color: #010101
+      transition: color 0.1s ease-in-out
+    @media screen and ( max-width: 972px)
+      width: 300px
+      margin: 0px auto
 
 /* Вторая секция. 11 страница. Корзина 2 этап
 
@@ -9302,44 +9954,44 @@ input::-webkit-inner-spin-button
         outline: none
         &:focus
           outline: none
-
-    .productCards
-      width: 100%
-      .productCard
-        flex: 1 1 20%
+          
+    .searchResults_search
+      .productCards
+        width: 100%
         @media screen and ( max-width: 1024px)
-          padding-bottom: 40px
-        @media screen and ( max-width: 1022px)
-          flex-basis: 30%
-        @media screen and ( max-width: 743px)
-          flex: 1 1 40%
-        @media screen and ( max-width: 455px)
-          flex: 1 1 100%
-          
-        .productPic
-          .productLink
-            img
-              width: 100%
-        .productCardForm
-          // @media screen and ( max-width: 1001px)
+          justify-content: space-around
+        .productCard
+          max-width: 320px
+          flex: 1 1 20%
+          @media screen and ( max-width: 1440px)
+            flex-basis: 40%
+          @media screen and ( max-width: 1024px)
+            padding-bottom: 40px
+          @media screen and ( max-width: 743px)
+            flex: 1 1 40%
+          @media screen and ( max-width: 589px)
+            flex-basis: 100%
             
-          @media screen and ( max-width: 455px)
-            flex-direction: row
-          .productCardTotalPrice
-            margin-right: 10px
-            @media screen and ( max-width: 1560px)
-              margin-right: 0px
-            @media screen and ( max-width: 1006px)
-              margin-right: 10px
-            @media screen and ( max-width: 807px)
-              margin-right: 0px
+          .productPic
+            .productLink
+              img
+                width: 100%
+          .productCardForm
+            // @media screen and ( max-width: 1001px)
+              
             @media screen and ( max-width: 455px)
-              margin-bottom: 10px
+              flex-direction: row
+            .productCardTotalPrice
+              margin-right: 10px
+              @media screen and ( max-width: 1560px)
+                margin-right: 0px
+              @media screen and ( max-width: 1006px)
+                margin-right: 10px
+              @media screen and ( max-width: 807px)
+                margin-right: 0px
+              @media screen and ( max-width: 455px)
+                margin-bottom: 10px
           
-            
-              
-              
-
 .shown
   opacity: 0.8
   transform: translateY(0px)

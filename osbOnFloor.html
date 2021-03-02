@@ -11,9 +11,9 @@
 <body>
     <header>
         <ul class="topNav firstNavMenu">
-            <div class="wrapper"> 
-                <li class="nav-item">
-                    <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span> Челябинск<img src="img/svg/header_page1/mapMarkerIcon_header.svg" class="youCityPosition"></a>
+            <div class="wrapper">
+                <li class="nav-item" id="citySelectTopNav">
+                    
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Троицкий Тракт, 17</a>
@@ -28,14 +28,13 @@
                     <a class="nav-link" href="#"><img src="img/svg/header_page1/phoneIcon.svg"></a>
                 </li>
             </div>
-            <a class="brandLogo" href="#"><img src="img/svg/header_page1/brand_icon_page1.svg" alt="#"></a>   
+            <a class="brandLogo" href="#"><img src="./img/svg/header_page1/ShortOsbLOGO.svg" alt="#"></a>
         </ul>
         <div class="wrapper">
             <nav class="navbar navbar-expand-xl navbar-light">
                 <div class="container-fluid">
                     <div class="headerLogo">
-                        <a class="navbar-brand" href="#"><img src="img/svg/header_page1/brand_icon_page1.svg" alt="#"></a>
-                        <span class="logoText">склад/магазин</span>
+                        <a class="navbar-brand" href="#"><img src="./img/svg/header_page1/OsbLOGO.svg" alt="#"></a>
                     </div>
                     <form class="searchField">
                         <input type="search" class="navSearch" placeholder="Найти своё OSB">
@@ -54,10 +53,69 @@
                                   d="m 30,67 h 40 c 12.796276,0 15.357889,-11.717785 15.357889,-26.851538 0,-15.133752 -4.786586,-27.274118 -16.667516,-27.274118 -11.88093,0 -18.499247,6.994427 -18.435284,17.125656 l 0.252538,40" />
                         </svg>
                     </button>
+                    <a href="/personal/cart/" class="shopBasket">
+                        <span class="shopBasketValue"></span>
+                        <span class="shopBasketIcon"></span>
+                    </a>
                     <div class="collapse navbar-collapse headerMenu" id="navbarNav">
                         <ul class="navbar-nav firstNavMenu">
-                            <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="#"><span class="headerCityName">Город:</span> Челябинск</a>
+                            <li class="nav-item" id="citySelectBottomNav">
+                                <div class="test1">
+                                    <!--'start_frame_cache_W3XK6f'-->    
+                                    <div class="select-city-wrap">
+                                        <div class="select-city__block">
+                                        <a class="nav-link" aria-current="page"><span class="headerCityName">Город: </span> <span class="headerCityName2"><img src="./img/svg/header_page1/mapMarkerIcon_header.svg" class="markerIconNav">Челябинск</span></a>
+                                        <!-- <span class="headerCityName">--><!--: </span>-->
+                                        <!-- <span class="select-city__block__text-city"></span>-->
+                                        </div>
+                                        <div class="select-city__dropdown-wrap" style="display:none;">
+                                            <div class="select-city__dropdown">
+                                                <div class="select-city__dropdown__title-wrap">
+                                                    <span class="select-city__dropdown__title">город                    Челябинск?</span>
+                                                </div>
+                                                <div class="select-city__dropdown__choose-wrap">
+                                                    <span class="select-city__dropdown__choose__yes select-city__dropdown__choose" data-id="1">Да</span>
+                                                    <span class="select-city__dropdown__choose__no select-city__dropdown__choose">Нет</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="select-city__modal">
+                                        <div class="select-city__modal-wrap">
+                                            <div class="select-city__close"></div>
+                                            <div class="select-city__modal__title-wrap">
+                                                <p class="select-city__modal__title">город:
+                                                <span id="select-city__js">Челябинск</span></p>
+                                            </div>
+                                            <div class="select-city__modal__submit-wrap">
+                                                <div class="select-city__modal__submit__block-wrap">
+                                                    <div class="select-city__modal__submit__block-wrap__input_wrap">
+                                                        <div class="select-city__modal__submit__block-wrap__input_wrap_error" style="display:none;">Указанный регион не найден</div>
+                                                        <input value="" type="text" class="select-city__modal__submit__input" placeholder="Ваш город" autocomplete="off">
+                                                        <div class="sey-container">
+                                                            <div class="sey-categories"></div>
+                                                        </div>
+                                                    </div>
+                                                    <button type="submit" class="select-city__modal__submit__btn"><img style="max-width: none;" src="/local/templates/osb-site-1/components/sotbit/regions.choose/sotbit-osb/svg/search_icon.svg"></button>
+                                            <!-- <input type="submit" name="submit"-->
+                                            <!-- value="--><!--"-->
+                                            <!-- class="select-city__modal__submit__btn">-->
+                                                </div>
+                                            </div>
+                                            <div class="select-city__modal__list">
+                                                <p class="select-city__modal__list__item" data-index="0">Челябинск</p>
+                                                <p class="select-city__modal__list__item" data-index="1">Екатеринбург</p>
+                                                <p class="select-city__modal__list__item" data-index="2">Сатка</p>
+                                                <p class="select-city__modal__list__item" data-index="3">Москва</p>
+                                            </div>
+                                            <div class="select-city__modal__list-wrap">
+                                                <span class="select-city__modal__list__title">Не нашли свой город?  У нас есть <a href="/transport" style="color: #EC8B33;">доставка по России</a></span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="modal__overlay"></div>
+                                    <!--'end_frame_cache_W3XK6f'-->
+                                </div>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="#">Троицкий Тракт, 17</a>
@@ -95,7 +153,7 @@
                             </div>
                             <div class="secondNavbarIcons">
                                 <li class="nav-item">
-                                    <a class="nav-link" href="#"><span class="quantityPurchase">0</span></a>
+                                    <a class="nav-link" href="/personal/cart/"><span class="quantityPurchase">0</span></a>
                                 </li>
                                 <li class="nav-item">
                                     <a class="nav-link" href="#"><img src="img/svg/header_page1/deliveryIcon.svg" alt="#"></a>
@@ -128,25 +186,25 @@
                             <img src="img/jpg/firstSection_page2/slider_page2/Slide1_page2.jpg" alt="">
                             <div class="slideBunnerName_osbOnFloor">Дополнительная скидка</div>
                             <div class="slideBunnerDiscount_osbOnFloor">до -10% на osb KRONOSPAN</div>
-                            <button type="button" class="slideBtn_osbOnFloor">К покупкам</button>
+                            <a href="#" type="button" class="slideBtn_osbOnFloor">К покупкам</a>
                         </div>
                         <div class="slide_osbOnFloor">
                             <img src="img/jpg/firstSection_page2/slider_page2/Slide1_page2.jpg" alt="">
                             <div class="slideBunnerName_osbOnFloor">Второй баннер</div>
                             <div class="slideBunnerDiscount_osbOnFloor">Второй баннер</div>
-                            <button type="button" class="slideBtn_osbOnFloor">Кнопка</button>
+                            <a href="#" type="button" class="slideBtn_osbOnFloor">Кнопка</a>
                         </div>
                         <div class="slide_osbOnFloor">
                             <img src="img/jpg/firstSection_page2/slider_page2/Slide1_page2.jpg" alt="">
                             <div class="slideBunnerName_osbOnFloor">Третий баннер</div>
                             <div class="slideBunnerDiscount_osbOnFloor">Третий баннер</div>
-                            <button type="button" class="slideBtn_osbOnFloor">Кнопка</button>
+                            <a href="#" type="button" class="slideBtn_osbOnFloor">Кнопка</a>
                         </div>
                         <div class="slide_osbOnFloor">
                             <img src="img/jpg/firstSection_page2/slider_page2/Slide1_page2.jpg" alt="">
                             <div class="slideBunnerName_osbOnFloor">Четвертый баннер</div>
                             <div class="slideBunnerDiscount_osbOnFloor">Четвертый баннер</div>
-                            <button type="button" class="slideBtn_osbOnFloor">Кнопка</button>
+                            <a href="#" type="button" class="slideBtn_osbOnFloor">Кнопка</a>
                         </div>
                     </div>
                 </div>
@@ -338,7 +396,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -384,7 +445,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -430,7 +494,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -476,7 +543,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -522,7 +592,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -568,7 +641,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -614,7 +690,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -660,7 +739,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -706,7 +788,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -752,7 +837,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -798,7 +886,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -844,7 +935,10 @@
                                 </div>
                                 <p class="perSquareMeter"><span>р/м2</span></p>
                                 <form action="POST" class="productCardForm">
-                                    <button type="submit" class="productCardTotalPrice"><span></span> р./шт</button>
+                                    <button type="submit" class="productCardTotalPrice">
+                                        <img src="./img/svg/secondSection_page2/shopBasketIcon.svg" class="productCardTotalPriceIcon">
+                                        <span class="productValuePrice"><span class="priceValue"></span> р./шт</span>
+                                    </button>
                                     <div class="productCardCounter">
                                         <a href="#" class="productCardCounterBtn productCounterMinusBtn">-</a>
                                         <input type="number" class="productCardCounterField">
@@ -882,6 +976,31 @@
             </div>
         </section>
         <!-- вставить блок для контент менеджера -->
+        <section class="igorBlog">
+            <div class="wrapper">
+                <div>
+                    <h2>Заголовок</h2>
+                    <table>
+                        <tr>
+                            <td><img src="./img/jpg/fifthSection_page1/mapPage1.jpg"></td>
+                            <td>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi quas consequuntur fugit esse neque? Commodi maiores voluptatibus inventore hic quas, deserunt, voluptate minima veniam corrupti reprehenderit suscipit, officia quibusdam similique.
+                            Quos delectus molestiae minus labore corporis, rerum nobis est ipsam, voluptatem asperiores laudantium harum distinctio inventore animi magnam, eaque vitae maxime explicabo dolorem! Aspernatur voluptas debitis nam iure velit vitae?
+                            Beatae ullam ducimus iusto quasi enim quae, obcaecati, eveniet facilis totam, cum sit autem quisquam? Perferendis, assumenda voluptatum voluptate cum asperiores nostrum eos delectus debitis aspernatur veniam quaerat enim distinctio.
+                            Nobis nesciunt quibusdam, sequi sit quae recusandae adipisci magni. Quae eligendi amet repellendus culpa ad suscipit! Sunt quisquam hic molestias cumque beatae corrupti. Facere deleniti quo earum vel accusamus omnis!
+                            Culpa maiores vitae, officiis libero iusto est maxime dolorem pariatur. Pariatur, saepe debitis quos repellat necessitatibus repellendus. Voluptatem nemo ad, necessitatibus nam repudiandae cupiditate explicabo modi quas, magni, officia quaerat!</td>
+                        </tr>
+                    </table>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sequi cum assumenda velit, accusamus, tempora iusto dignissimos, ipsum repellendus harum in sed nisi esse nobis nemo unde eveniet deleniti nulla corrupti?
+                        Excepturi saepe numquam accusamus amet delectus consectetur dolor ratione quo illo nemo temporibus blanditiis quidem placeat dolorem similique et nobis adipisci reprehenderit cum ea, animi rerum eos? Voluptatem, corporis sunt.
+                        Porro et aperiam dolore consectetur fugiat praesentium sed libero, veniam facere nostrum, at dolores consequatur necessitatibus deserunt molestias vero assumenda. Culpa obcaecati nisi iusto ex, cumque similique pariatur consequatur reprehenderit?
+                    </p>
+                    <button class="fifthSectionBtn_osbOnFloor" type="button">
+                        Узнать больше о доставке
+                    </button>
+                </div>
+            </div>
+        </section>
         <section class="sectionThree_osbOnFloor">
             <div class="wrapper">
                 <div class="thirdSection_osbOnFloor">
@@ -1073,7 +1192,7 @@
                 <form method="POST" class="popupContent">
                     <button type="button" class="popupCloseBtn"></button>
                     <div class="popupTitle">Товар: <span class="popupProductName"></span></div>
-                    <input type="tel" class="popupField" placeholder="Номер телефона">
+                    <input type="tel" class="popupField" id="popupPhoneNumber" placeholder="Номер телефона">
                     <input type="text" class="popupField" placeholder="ФИО">
                     <input type="hidden" class="goodName">
                     <textarea name="" class="popupCommentField" cols="30" rows="6" placeholder="Ваш комментарий"></textarea>

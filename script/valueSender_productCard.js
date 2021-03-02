@@ -5,6 +5,7 @@
 
 if (document.querySelector('.thicknessButtons_productCard')) {
     let btns_productCard = document.querySelectorAll('.thicknessButton_productCard');
+    
 
     function renderProductParameters(obj) {
         let price_productCard = document.querySelector('.priceForPieceValue_productCard');
