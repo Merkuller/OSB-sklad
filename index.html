@@ -15,7 +15,7 @@
         <ul class="topNav firstNavMenu">
             <div class="wrapper">
                 <li class="nav-item" id="citySelectTopNav">
-                    
+
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Троицкий Тракт, 17</a>
@@ -63,7 +63,7 @@
                         <ul class="navbar-nav firstNavMenu">
                             <li class="nav-item" id="citySelectBottomNav">
                                 <div class="test1">
-                                    <!--'start_frame_cache_W3XK6f'-->    
+                                    <!--'start_frame_cache_W3XK6f'-->
                                     <div class="select-city-wrap">
                                         <div class="select-city__block">
                                         <a class="nav-link" aria-current="page"><span class="headerCityName">Город: </span> <span class="headerCityName2"><img src="./img/svg/header_page1/mapMarkerIcon_header.svg" class="markerIconNav">Челябинск</span></a>
@@ -584,7 +584,13 @@
                                     <span class="totalSquareTitle_index">Стоимость:</span>
                                     <span class="requiredNumbersValueBlock_index"><span class="requiredNumbersValue_index panel_count total_price"></span>руб.</span>
                                 </div>
-                                <button type="button" class="orderBtn_index">заказать</button>
+                                <form action="#" method="post" class="productForm_productCard" enctype="multipart/form-data">
+                                    <input type="hidden" name="action" value="ADD2BASKET">
+                                    <input id="basketId" type="hidden" name="id" value="683">
+                                    <input id="basketQuantity" type="hidden" name="QUANTITY" value="1">
+                                    <button type="button" class="orderBtn_index">Заказать</button>
+                                </form>
+
                                 <!-- <hr style="color: #333333; border: none"> -->
                             </div>
                         </div>
