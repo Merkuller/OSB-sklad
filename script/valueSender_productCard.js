@@ -5,15 +5,15 @@
 
 if (document.querySelector('.thicknessButtons_productCard')) {
     let btns_productCard = document.querySelectorAll('.thicknessButton_productCard');
-    let price_productCard = document.querySelector('.priceForPieceValue_productCard');
-    let priceForMeter = document.querySelector('.priceForMeterValue_productCard');
-    let inStock_productCard = document.querySelector('.countInStock_productCard');
-    let thicknessCharacteristic_productCard = document.querySelector('.thicknessValue_productCard');
-    let weightCharacteristic_productCard = document.querySelector('.weigthValue_productCard');
-    let densityFilter = document.querySelector('.densityValue_productCard')
-    let hiddenValue = document.querySelector('.hiddenValue_productCard');
 
     function renderProductParameters(obj) {
+        let price_productCard = document.querySelector('.priceForPieceValue_productCard');
+        let priceForMeter = document.querySelector('.priceForMeterValue_productCard');
+        let inStock_productCard = document.querySelector('.countInStock_productCard');
+        let thicknessCharacteristic_productCard = document.querySelector('.thicknessValue_productCard');
+        let weightCharacteristic_productCard = document.querySelector('.weigthValue_productCard');
+        let densityFilter = document.querySelector('.densityValue_productCard')
+        let hiddenValue = document.querySelector('.hiddenValue_productCard');
         price_productCard.textContent = obj.price;
         priceForMeter.textContent = obj.priceForMeter;
         inStock_productCard.textContent = obj.count;
