@@ -3918,9 +3918,10 @@ header {
 
 .allAboutGroup_index {
   position: relative;
-  width: 23%;
-  margin-top: 22px;
-  margin-bottom: 40px;
+  width: 33%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-right: 20px;
 }
 
 @media screen and (max-width: 1440px) {
@@ -3946,6 +3947,13 @@ header {
 @media screen and (max-width: 425px) {
   .allAboutGroup_index {
     margin-bottom: 0px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .allAboutGroup_index .sectionTitle_index {
+    font-size: 34px;
+    line-height: 46px;
   }
 }
 
@@ -4094,6 +4102,8 @@ header {
   width: calc(100% + 60px);
   height: 100%;
   opacity: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
