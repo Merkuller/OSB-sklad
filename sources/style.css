@@ -2468,12 +2468,24 @@ header {
   }
 }
 
+@media screen and (max-width: 682px) {
+  .calcResult_index {
+    width: 100%;
+  }
+}
+
 .calcResult_index .totalCost_index {
   font-style: normal;
   font-weight: normal;
   font-size: 20px;
   line-height: 36px;
   color: #000000;
+}
+
+@media screen and (max-width: 682px) {
+  .calcResult_index .totalCost_index {
+    text-align: center;
+  }
 }
 
 .calcResult_index .totalCostValue_index {
@@ -2556,6 +2568,13 @@ header {
   color: #CA782E;
   outline: none;
   background-color: #010101;
+}
+
+@media screen and (max-width: 682px) {
+  .calcResult_index .orderBtn_index {
+    display: block;
+    margin: 0px auto;
+  }
 }
 
 .add_calculate_index {
