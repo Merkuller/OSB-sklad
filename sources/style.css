@@ -2216,6 +2216,7 @@ header {
   font-size: 16px;
   line-height: 28px;
   color: #010101;
+  padding-right: 5px;
 }
 
 .calcResult_index .orderBtn_index {
@@ -5980,8 +5981,9 @@ header {
   }
 }
 
-.igorBlog .wrapper .fifthSectionBtn_osbOnFloor {
+.igorBlog .wrapper .fifthSectionButton_osbOnFloor .fifthSectionBtn_osbOnFloor {
   max-width: 320px;
+  padding: 0px 15px;
 }
 
 /* Модальное окно карты продукта */
