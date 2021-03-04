@@ -4,8 +4,12 @@
 if (document.querySelector('.shopBasket')) {
     let shopBasketValueMobileScreen = document.querySelector('.shopBasketValue');
     let shopBasketValueFullScreen = document.querySelector('.quantityPurchase');
-    
+
     if (window.innerWidth <= 1199) {
         shopBasketValueMobileScreen.textContent = shopBasketValueFullScreen.textContent;
     }
+
+    shopBasketValueFullScreen.addEventListener('DOMSubtreeModified', ()=> {
+        shopBasketValueMobileScreen.textContent = shopBasketValueFullScreen.textContent;
+    })
 }
