@@ -84,18 +84,31 @@ function renderResults(array) {
     } )
 }
 
+function del_square(event){
+    let square = event.target.closest('.child_element')
+    square.innerHTML = null
+    document.querySelector('.addNewPlane_index').disabled = false
+    square.remove()
+}
+
 let add_square = document.querySelector('.addNewPlane_index')
     if(add_square) {
         add_square.addEventListener('click', (e) => {
         let template = document.getElementById('template')
         if (document.querySelectorAll('.child_element').length >= 4) {
-            e.target.classList.add('disabled')
+            e.target.disabled = true
+        }
+        else {
+            e.target.disabled = false
         }
         let clone = template.cloneNode()
         let id = Date.now()
         clone.id = id
         clone.classList.add('child_element')
         clone.innerHTML = template.innerHTML
+        let closeButton = clone.querySelector('.btn-close')
+        closeButton.style.display = "block"
+            closeButton.addEventListener('click', (e)=>{del_square(e)})
         parent_container.appendChild(clone)
 
         })

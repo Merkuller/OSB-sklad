@@ -858,14 +858,14 @@ header {
 
 @media screen and (max-width: 425px) {
   .slider1_index .slideContentText_index {
-    font-size: 50px;
-    line-height: 50px;
+    font-size: 30px;
+    line-height: 30px;
   }
 }
 
 @media screen and (max-width: 375px) {
   .slider1_index .slideContentText_index {
-    font-size: 38px;
+    font-size: 20px;
   }
 }
 
@@ -968,17 +968,21 @@ header {
   transition: all 0.2s ease-in-out;
   text-decoration: none;
   padding-top: 31px;
-  color: #ffffff;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 20px;
-  line-height: 36px;
   margin-left: 3px;
+}
+
+@media screen and (max-width: 425px) {
+  .meetCatalog_index {
+    padding-top: 60px;
+  }
 }
 
 @media screen and (max-width: 375px) {
   .meetCatalog_index {
-    display: block;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     text-align: center;
   }
 }
@@ -991,6 +995,15 @@ header {
 
 .meetCatalog_index:focus {
   outline: none;
+}
+
+.meetCatalog_index .meetCatalogText_index {
+  color: #ffffff;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  display: inline-block;
 }
 
 .meetCatalog_index .scrollDown {
@@ -1009,7 +1022,7 @@ header {
   margin-left: 8px;
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 375px) {
   .meetCatalog_index .scrollDown {
     -webkit-transform: rotate(0deg);
             transform: rotate(0deg);
@@ -3358,6 +3371,7 @@ header {
   width: 100%;
   display: block;
   background-size: contain;
+  position: relative;
   height: 500px;
 }
 
@@ -3381,7 +3395,11 @@ header {
 
 .parallax-window {
   height: 100%;
+  width: 100%;
   background: transparent;
+  position: absolute;
+  top: 0px;
+  left: 0px;
 }
 
 .manufacturer_index {
@@ -3689,9 +3707,6 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
 }
 
 @media screen and (max-width: 1440px) {
@@ -3722,6 +3737,11 @@ header {
   min-height: 420px;
   border-radius: 4px;
   cursor: pointer;
+  margin-right: 40px;
+}
+
+.effect-milo:last-of-type {
+  margin-right: 0px;
 }
 
 @media screen and (max-width: 768px) {
@@ -5101,7 +5121,7 @@ header {
           align-items: center;
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 422px) {
   .DropDownList_osbOnFloor {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -5938,10 +5958,10 @@ header {
 }
 
 .igorBlog .wrapper div table tr td img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
+  background-position: 0 0;
   width: 100%;
-  height: 100%;
   display: block;
 }
 
@@ -5949,9 +5969,9 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -7620,10 +7640,17 @@ header {
 }
 
 .thicknessButton_productCard {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 40px;
   height: 40px;
-  text-align: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 2px solid #010101;
   font-style: normal;
   font-weight: normal;
@@ -9706,12 +9733,13 @@ input::-webkit-inner-spin-button {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  position: relative;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1386px) {
   .newsContent {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -9726,10 +9754,12 @@ input::-webkit-inner-spin-button {
   background-color: #F0EFEE;
   position: relative;
   padding-top: 37px;
+  padding-bottom: 50px;
   padding-left: 20px;
+  padding-right: 20px;
 }
 
-@media screen and (max-width: 769px) {
+@media screen and (max-width: 1386px) {
   .newsDescription {
     width: 100%;
     padding-top: 20px;
@@ -9769,14 +9799,9 @@ input::-webkit-inner-spin-button {
   font-size: 16px;
   line-height: 28px;
   color: #999999;
-  margin-top: 183px;
-}
-
-@media screen and (max-width: 769px) {
-  .usersView {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
+  position: absolute;
+  bottom: 22px;
+  left: 20px;
 }
 
 .usersView::before {
@@ -9788,17 +9813,23 @@ input::-webkit-inner-spin-button {
 }
 
 /* Картинка */
-.newsImg {
+.newsLinkImg {
   width: 68.60%;
+  display: block;
+  height: 100%;
+}
+
+@media screen and (max-width: 1386px) {
+  .newsLinkImg {
+    width: 100%;
+  }
+}
+
+.newsImg {
+  width: 100%;
   display: block;
   -o-object-fit: cover;
      object-fit: cover;
-}
-
-@media screen and (max-width: 769px) {
-  .newsImg {
-    width: 100%;
-  }
 }
 
 /* Ссылка первой части */
@@ -11820,6 +11851,8 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 1025px) {
   .sectionOne_shopBasketSecondStep {
     padding-bottom: 60px;
+  }
+  .sectionOne_shopBasketSecondStep .wrapper {
     width: 90%;
   }
 }
@@ -12683,6 +12716,8 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 1025px) {
   .sectionOne_shopBasketThirdStep {
     padding-bottom: 60px;
+  }
+  .sectionOne_shopBasketThirdStep .wrapper {
     width: 90%;
   }
 }
@@ -13077,6 +13112,54 @@ input::-webkit-inner-spin-button {
     width: 100%;
     padding-right: 0px;
     border-right: none;
+  }
+}
+
+.mainContentPart1_shopBasketThirdStep .btnNext_shopBasketThirdStep {
+  width: 300px;
+  display: none;
+  margin: 0px auto;
+  margin-top: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  padding-top: 13px;
+  padding-bottom: 13px;
+  line-height: 36px;
+  color: #010101;
+  outline: none;
+  border: none;
+  border-radius: 4px;
+  background-color: #EC8B33;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.mainContentPart1_shopBasketThirdStep .btnNext_shopBasketThirdStep:hover {
+  color: #EC8B33;
+  background-color: #010101;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.mainContentPart1_shopBasketThirdStep .btnNext_shopBasketThirdStep:active {
+  color: #CA782E;
+  background-color: #010101;
+  -webkit-transition: color 0.1s ease-in-out;
+  transition: color 0.1s ease-in-out;
+}
+
+@media screen and (max-width: 972px) {
+  .mainContentPart1_shopBasketThirdStep .btnNext_shopBasketThirdStep {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
   }
 }
 
@@ -13638,6 +13721,7 @@ input::-webkit-inner-spin-button {
         -ms-flex: 1 1 45%;
             flex: 1 1 45%;
     text-align: left;
+    margin-bottom: 0px;
   }
 }
 
@@ -13689,8 +13773,7 @@ input::-webkit-inner-spin-button {
 
 @media screen and (max-width: 972px) {
   #fixed_4 .btnNext_shopBasketThirdStep {
-    width: 300px;
-    margin: 0px auto;
+    display: none;
   }
 }
 
@@ -14405,6 +14488,10 @@ input::-webkit-inner-spin-button {
 
 /* СТРАНИЦА КТО МЫ */
 .sixthSection_whoAreWe .parallax-window {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background: transparent;
   height: 800px;
   display: -webkit-box;
   display: -ms-flexbox;
