@@ -64,6 +64,8 @@
                     slidesPerView: 5,
                     spaceBetween: 20,
                     preloadImages: false,
+                    freeMode: true,
+                    loop: true,
                     breakpoints: {
                         2560: {
                             slidesPerView: 5,

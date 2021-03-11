@@ -3408,9 +3408,6 @@ header {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  pointer-events: none;
-  top: 0px;
-  pointer-events: none;
   z-index: -1;
 }
 
