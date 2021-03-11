@@ -15,5 +15,4 @@ if (document.querySelector('.slider2LinkShowAll_index')) {
             })
         }
     }
-
 }
