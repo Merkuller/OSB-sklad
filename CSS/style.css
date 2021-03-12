@@ -13786,6 +13786,187 @@ input::-webkit-inner-spin-button {
   }
 }
 
+/* 14 страница. Спасибо за заказ */
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder {
+  width: 100%;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .thanxgivinText_thanxForOrder {
+  margin-top: 20px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #000000;
+  padding-bottom: 20px;
+  border-bottom: 2px solid #F0EFEE;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .thanxgivinText_thanxForOrder .orderNumber_thanxForOrder {
+  color: #EC8B33;
+  font-weight: bold;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .orderComposition_thanxForOrder {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 28px;
+  color: #010101;
+  padding-top: 20px;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .orderComposition_thanxForOrder .orderNumber_thanxForOrder {
+  color: #EC8B33;
+  font-weight: bold;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart1_shopBasketFirstStep {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart1_shopBasketFirstStep .materialDescription_shopBasketFirstStep {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart1_shopBasketFirstStep .materialDescription_shopBasketFirstStep .tableDescriptionCell_shopBasketFirstStep .descriptionText1Cell_shopBasketFirstStep {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #EC8B33;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart2_shopBasketFirstStep .materialPrice1_shopBasketFirstStep {
+  padding-top: 0px;
+  font-weight: normal;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart2_shopBasketFirstStep .materialPrice1_shopBasketFirstStep .materialPrice1Number_shopBasketFirstStep {
+  font-size: 20px;
+  line-height: 36px;
+  color: #999999;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart2_shopBasketFirstStep .productCounter_shopBasketFirstStep {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-top: 0px;
+  border: none;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #999999;
+  background-color: #ffffff;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart2_shopBasketFirstStep .productCounter_shopBasketFirstStep .calculatorMinus_shopBasketFirstStep {
+  display: none;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart2_shopBasketFirstStep .productCounter_shopBasketFirstStep .calculatorPlus_shopBasketFirstStep {
+  display: none;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart2_shopBasketFirstStep .productCounter_shopBasketFirstStep .calculatorNumber_shopBasketFirstStep {
+  width: 50%;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #999999;
+  background-color: #ffffff;
+  display: none;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart2_shopBasketFirstStep .productCounter_shopBasketFirstStep .youQuantityGoods {
+  margin-right: 5px;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart2_shopBasketFirstStep .materialSum_shopBasketFirstStep {
+  padding-top: 0px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+}
+
+.sectionOne_thanxForOrder .wrapper .firstSection_thanxForOrder .OSBShoppingBasket_shopBasketSecondStep .purchase_shopBasketFirstStep .purchasePart2_shopBasketFirstStep .materialSum_shopBasketFirstStep .materialSumNumber_shopBasketFirstStep {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+}
+
+.totalPrice_thanxForOrder {
+  width: 100%;
+  text-align: right;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+  margin-top: 40px;
+}
+
+.totalPrice_thanxForOrder .totalPriceNumber_thanxForOrder {
+  margin-left: 5px;
+  margin-right: 5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+}
+
+.buttons_thanxForOrder {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+}
+
+.buttons_thanxForOrder .btn_thanxForOrder {
+  text-decoration: none;
+  text-align: center;
+  width: 220px;
+  padding: 13px 0px;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+  background-color: #EC8B33;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.buttons_thanxForOrder .btn_thanxForOrder:hover {
+  background-color: #CA782E;
+}
+
+.buttons_thanxForOrder .btn_thanxForOrder:active {
+  background-color: #EC8B33;
+}
+
+.buttons_thanxForOrder .btn_thanxForOrder:focus {
+  outline: none;
+}
+
 /* Вторая секция. 11 страница. Корзина 2 этап */
 .link1_page1 {
   color: #EC8B33;
