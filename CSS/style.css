@@ -13919,6 +13919,12 @@ input::-webkit-inner-spin-button {
   margin-top: 40px;
 }
 
+@media screen and (max-width: 425px) {
+  .totalPrice_thanxForOrder {
+    text-align: center;
+  }
+}
+
 .totalPrice_thanxForOrder .totalPriceNumber_thanxForOrder {
   margin-left: 5px;
   margin-right: 5px;
@@ -13953,6 +13959,12 @@ input::-webkit-inner-spin-button {
   background-color: #EC8B33;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
+}
+
+@media screen and (max-width: 425px) {
+  .buttons_thanxForOrder .btn_thanxForOrder {
+    margin: 0px auto;
+  }
 }
 
 .buttons_thanxForOrder .btn_thanxForOrder:hover {
