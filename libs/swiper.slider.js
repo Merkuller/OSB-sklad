@@ -83,10 +83,12 @@
                         },
                         608: {
                             slidesPerView: 2,
+
                         },
                         200: {
                             slidesPerView: 1,
-                            centeredSlides: true
+                            centeredSlides: true,
+                            freeMode: false
                         }
                     }
                 };
