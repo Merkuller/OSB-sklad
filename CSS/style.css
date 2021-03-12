@@ -14747,6 +14747,96 @@ input::-webkit-inner-spin-button {
   }
 }
 
+/* 404 ошибка */
+.error_404error {
+  margin-top: 8px;
+}
+
+.errorBlock_404error {
+  width: 100%;
+  padding: 40px 91px 40px 160px;
+  background-color: #F0EFEE;
+  position: relative;
+}
+
+@media screen and (max-width: 767px) {
+  .errorBlock_404error {
+    padding: 120px 40px 20px 40px;
+    margin-bottom: 40px;
+  }
+}
+
+.errorBlock_404error::before {
+  content: '404';
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background-color: #EC8B33;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  color: #010101;
+  left: 40px;
+  top: 40px;
+}
+
+@media screen and (max-width: 767px) {
+  .errorBlock_404error::before {
+    top: 20px;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+.errorBlock_404error .errorBlockTitle_404error {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  color: #010101;
+  margin-bottom: 9px;
+}
+
+@media screen and (max-width: 767px) {
+  .errorBlock_404error .errorBlockTitle_404error {
+    text-align: center;
+  }
+}
+
+.errorBlock_404error .errorBlockText_404error {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+}
+
+.errorBlock_404error .errorBlockText_404error .errorBlockLink_404error {
+  color: #EC8B33;
+  text-decoration: none;
+}
+
+.errorSlider2Title_404error {
+  margin-bottom: 28px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 48px;
+  line-height: 60px;
+  color: #010101;
+}
+
 .shown {
   opacity: 0.8;
   -webkit-transform: translateY(0px);
