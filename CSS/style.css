@@ -3430,6 +3430,12 @@ header {
   margin: 0px auto;
 }
 
+@media screen and (max-width: 1540px) {
+  .manufacturer_index {
+    width: 90%;
+  }
+}
+
 @media screen and (max-width: 1024px) {
   .manufacturer_index {
     width: 100%;
@@ -3592,7 +3598,7 @@ header {
           justify-content: space-between;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1540px) {
   .ourGroup_index {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -3609,7 +3615,7 @@ header {
   margin-right: 20px;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1540px) {
   .allAboutGroup_index {
     width: 100%;
   }
@@ -3677,7 +3683,7 @@ header {
   transition: all .1s ease-in-out;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1540px) {
   .groupLink_index {
     width: 320px;
   }
@@ -3718,7 +3724,7 @@ header {
   display: flex;
 }
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1540px) {
   .linksVK_index {
     width: 100%;
   }
