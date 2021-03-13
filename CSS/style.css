@@ -3797,10 +3797,10 @@ header {
   opacity: 1;
   -o-object-fit: cover;
      object-fit: cover;
-  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, -webkit-transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s;
-  transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
+  -webkit-transition: opacity 0.35s, -webkit-transform 0.35s, -webkit-filter 0.35s;
+  transition: opacity 0.35s, -webkit-transform 0.35s, -webkit-filter 0.35s;
+  transition: opacity 0.35s, transform 0.35s, filter 0.35s;
+  transition: opacity 0.35s, transform 0.35s, filter 0.35s, -webkit-transform 0.35s, -webkit-filter 0.35s;
   -webkit-transform: translate3d(-30px, 0, 0) scale(1.12);
           transform: translate3d(-30px, 0, 0) scale(1.12);
   -webkit-backface-visibility: hidden;
@@ -3810,6 +3810,8 @@ header {
 
 .effect-milo:hover img {
   opacity: 0.5;
+  -webkit-filter: blur(3px);
+          filter: blur(3px);
   -webkit-transform: translate3d(0, 0, 0) scale(1);
           transform: translate3d(0, 0, 0) scale(1);
 }
@@ -3828,13 +3830,13 @@ header {
   border-right: 1px solid #fff;
   text-align: right;
   color: #FFFFFF;
-  opacity: 0;
+  opacity: 0.8;
   -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, -webkit-transform 0.35s;
   transition: opacity 0.35s, transform 0.35s;
   transition: opacity 0.35s, transform 0.35s, -webkit-transform 0.35s;
-  -webkit-transform: translate3d(-40px, 0, 0);
-          transform: translate3d(-40px, 0, 0);
+  -webkit-transform: translate3d(-10px, 0, 0);
+          transform: translate3d(-10px, 0, 0);
   z-index: 1;
 }
 
@@ -3846,8 +3848,8 @@ header {
 
 .effect-milo:hover p {
   opacity: 1;
-  -webkit-transform: translate3d(0, 0, 0);
-          transform: translate3d(0, 0, 0);
+  -webkit-transform: translate3d(0, 30px, 0) scale(1.1);
+          transform: translate3d(0, 30px, 0) scale(1.1);
 }
 
 /* Шаблон бизнес-информации */
@@ -9563,10 +9565,6 @@ input::-webkit-inner-spin-button {
 .thirdSection_certificates {
   display: block;
   width: 100%;
-}
-
-.thirdSection_certificates .sectionTitle_index {
-  text-align: center;
 }
 
 @media screen and (max-width: 376px) {

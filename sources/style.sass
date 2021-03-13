@@ -2458,7 +2458,7 @@ header
     height: 100%
     opacity: 1
     object-fit: cover
-    transition: opacity 0.35s, transform 0.35s
+    transition: opacity 0.35s, transform 0.35s, filter 0.35s
     transform: translate3d(-30px,0,0) scale(1.12)
     backface-visibility: hidden
     position: absolute
@@ -2466,6 +2466,7 @@ header
   &:hover
     img
       opacity: 0.5
+      filter: blur(3px)
       transform: translate3d(0,0,0) scale(1)
 
   figcaption
@@ -2480,9 +2481,9 @@ header
       border-right: 1px solid #fff
       text-align: right
       color: #FFFFFF
-      opacity: 0
+      opacity: 0.8
       transition: opacity 0.35s, transform 0.35s
-      transform: translate3d(-40px,0,0)
+      transform: translate3d(-10px,0,0)
       z-index: 1
 
       .vkGroupTitle_index
@@ -2493,7 +2494,7 @@ header
   &:hover 
     p
       opacity: 1
-      transform: translate3d(0,0,0)
+      transform: translate3d(0,30px,0) scale(1.1)
 
 /* Шаблон бизнес-информации
 
@@ -6463,7 +6464,6 @@ input::-webkit-inner-spin-button
   width: 100%
 
   .sectionTitle_index
-    text-align: center
     @media screen and ( max-width: 376px)
       font-size: 38px
 
