@@ -279,6 +279,23 @@ if (document.querySelector('.mainContent_catalog')) {
         }
     }
 }
+if (document.querySelector('.fieldBlock_productCard')) {
+    let fieldBlock_productCard = document.querySelector('.fieldBlock_productCard');
+    let widthValue = 0;
+    let heightValue = 0;
+    let result = fieldBlock_productCard.querySelector('.result');
+
+    fieldBlock_productCard.addEventListener('input', (evt) => {
+        if (evt.target.classList.contains('productCardCalcField_productCard')) {
+            if (evt.target.getAttribute('name') === 'Ширина') {
+                widthValue = evt.target.value;
+            } else if (evt.target.getAttribute('name') === 'Высота') {
+                heightValue = evt.target.value;
+            }
+            result.textContent = Number(widthValue) + Number(heightValue); 
+        }
+    });
+}
 // Этот скрипт переключает кнопки карточки товара и и пределяет цену за шт и метр кв в зависимости от выбранного значения толщины
 //cardButtonSwitcher
 if (document.querySelector('.productCard')) {
@@ -778,6 +795,35 @@ if (document.querySelector('.slider_osbOnFloor')) {
         pauseOnDotsHover: false,
         prevArrow: $('#next_osbOnFloor'),
         nextArrow: $('#previous_osbOnFloor')
+    });
+}
+
+//stickySidebar_catalog
+
+if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
+    let pageHeight_catalog = document.querySelector('body');
+    let productCard_catalog = document.querySelector('.sectionTwo_osbOnFloor');
+    let header = document.querySelector('header');
+    let breadcrums_catalog = document.querySelector('main > .wrapper');
+    let catalogContent_catalog = document.querySelector('main > .mainContent_catalog > .wrapper');
+    
+
+    $(document).ready(function () {
+        var offset = $('#fixed').offset();
+        var topPadding = 0,
+        bottomPadding = pageHeight_catalog.clientHeight - (productCard_catalog.clientHeight + header.clientHeight + breadcrums_catalog.clientHeight + catalogContent_catalog.clientHeight);
+        $(window).scroll(function() {
+            if (window.innerWidth >= 1007) {
+                if ($(window).scrollTop() > offset.top) {
+                    if ($(document).height() - bottomPadding > $(window).scrollTop() + $("#fixed").height()) $("#fixed").stop().animate({
+                    marginTop: $(window).scrollTop() - offset.top + topPadding
+                    });
+                }
+                else {
+                    $('#fixed').stop().animate({marginTop: 0});
+                }
+            }
+        });
     });
 }
 

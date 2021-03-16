@@ -203,9 +203,26 @@
                                         </div>
                                     </form>
                                 </div>
-                                <button class="quantityCalculation_productCard" type="button">
-                                    Расчитать количество OSB
-                                </button>
+                                <a class="quantityCalculation_productCard" data-bs-toggle="collapse" type="button" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1">Расчитать количество OSB</a>
+                                <div class="row">
+                                    <div class="col">
+                                      <div class="collapse multi-collapse" id="multiCollapseExample1">
+                                        <div class="card card-body">
+                                            <div class="fieldBlock_productCard">
+                                                <label for="widthField_productCard" class="calcField_productCard">
+                                                    Ширина
+                                                    <input type="number" class="productCardCalcField_productCard" name="Ширина" id="widthField_productCard">
+                                                </label>
+                                                <label for="heightField_productCard" class="calcField_productCard">
+                                                    Высота
+                                                    <input type="number" class="productCardCalcField_productCard" name="Высота" id="heightField_productCard">
+                                                </label>
+                                                <div class="result"></div>
+                                            </div>
+                                        </div>
+                                      </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="inStock_productCard">
                                 В наличи: <span class="countInStock_productCard">589</span> шт.

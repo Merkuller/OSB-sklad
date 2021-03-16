@@ -64,9 +64,9 @@ header
     @media screen and ( max-width: 576px)
       display: block
       top: 55%
-      left: 50%
-      transform: translate(-50%, -50%)
-      width: 30px  
+      left: 20%
+      transform: translate(-40%, -50%)
+      width: 60px  
       object-fit: cover
 
 
@@ -4024,7 +4024,8 @@ header
       .fifthSectionBtn_osbOnFloor
         max-width: 320px
         padding: 0px 15px
-          
+        &:focus
+          outline: none
 
 
 /* Модальное окно карты продукта */
@@ -4080,6 +4081,13 @@ header
         margin: 0px 0px 0.5em 0px
         .popupProductName
           color: #4E4E4E
+      .feedBackText
+        font-style: normal
+        font-weight: normal
+        font-size: 14px
+        line-height: 20px
+        color: #010101
+        padding-bottom: 10px
       .popupField
         display: block
         width: 100%
@@ -4820,6 +4828,8 @@ header
     background-color: #CA782E
     border-color: #CA782E
     transition: background 0.1s ease-in-out, border-color 0.2s ease-in-out
+  &:focus
+    outline: none
 
 /* ТРЕТЬЯ СТРАНИЦА.  КАРТОЧКА ТОВАРА
 /* Первая секция. 3 страница. Карточка товара
@@ -4882,12 +4892,13 @@ header
   outline: none
   border: none
   margin-right: 20px
+  overflow: hidden
 
   &:last-of-type
     margin-right: 0px
 
   img
-    border-radius: 50%
+    object-fit: cover
 
   &:hover
     border: 2px solid #EC8B33
@@ -5482,6 +5493,37 @@ input::-webkit-inner-spin-button
   &:active
     color: #CA782E
     transition: color 0.1s ease-in-out
+
+/* Выпадающее меню */
+.row
+  .col
+    padding: 0px
+    .multi-collapse
+      .card-body
+        border: none
+        .calcField_productCard
+          font-style: normal
+          font-weight: normal
+          font-size: 20px
+          line-height: 36px
+          color: #999999
+          display: flex
+          flex-direction: column
+          margin-bottom: 5px
+          .productCardCalcField_productCard
+            padding-left: 20px
+            width: 320px
+            height: 60px
+            border: 2px solid #F0EFEE
+            border-radius: 4px
+            font-style: normal
+            font-weight: normal
+            font-size: 20px
+            line-height: 36px
+            color: #010101
+            &:focus
+              outline: none
+        
 
 /* В наличии на складе
 
@@ -7610,6 +7652,7 @@ input::-webkit-inner-spin-button
   align-self: flex-end
 
 .descriptionText1Cell_shopBasketFirstStep
+  text-decoration: none
   display: block
   width: 100%
   font-style: normal
@@ -7618,6 +7661,9 @@ input::-webkit-inner-spin-button
   line-height: 36px
   color: #010101
   margin-bottom: 17px
+  transition: color .2s ease-in-out
+  &:hover
+    color: #EC8B33
   @media screen and ( max-width: 687px)
     margin-bottom: 0px
   @media screen and ( max-width: 426px)
@@ -9390,7 +9436,6 @@ input::-webkit-inner-spin-button
 
 .mainContent_catalog
   width: 100%
-  border-bottom: 2px solid #F0EFEE
 
 .content_catalog
   width: 100%
