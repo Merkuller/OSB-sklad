@@ -14828,7 +14828,6 @@ input::-webkit-inner-spin-button {
   font-weight: normal;
   font-size: 20px;
   line-height: 36px;
-  text-align: center;
   margin-bottom: 49px;
 }
 
@@ -14848,16 +14847,63 @@ input::-webkit-inner-spin-button {
   }
 }
 
-.content_whoAreWe .catalog_whoAreWe {
+.content_whoAreWe .whoAreWeBtns_whoAreWe {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   width: 100%;
-  display: block;
-  text-align: center;
-  text-transform: uppercase;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+@media screen and (max-width: 755px) {
+  .content_whoAreWe .whoAreWeBtns_whoAreWe {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+.content_whoAreWe .whoAreWeBtns_whoAreWe .btn_whoAreWe {
+  width: 320px;
+  height: 60px;
+  -ms-flex-negative: 1;
+      flex-shrink: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-decoration: none;
+  background-color: #EC8B33;
+  border-radius: 4px;
+  color: #010101;
   font-style: normal;
   font-weight: bold;
   font-size: 20px;
   line-height: 36px;
-  color: #999999;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.content_whoAreWe .whoAreWeBtns_whoAreWe .btn_whoAreWe:first-of-type {
+  margin-right: 40px;
+  background-color: #F2AE71;
+}
+
+@media screen and (max-width: 755px) {
+  .content_whoAreWe .whoAreWeBtns_whoAreWe .btn_whoAreWe:first-of-type {
+    margin-right: 0px;
+    margin-bottom: 30px;
+  }
+}
+
+.content_whoAreWe .whoAreWeBtns_whoAreWe .btn_whoAreWe:hover {
+  background-color: #CA782E;
 }
 
 /* СТРАНИЦА ПОИСКА */

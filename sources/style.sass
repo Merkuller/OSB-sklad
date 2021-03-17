@@ -9859,7 +9859,6 @@ input::-webkit-inner-spin-button
     font-weight: normal
     font-size: 20px
     line-height: 36px
-    text-align: center
     margin-bottom: 49px
     @media screen and ( max-width: 1024px)
       text-align: left
@@ -9869,16 +9868,39 @@ input::-webkit-inner-spin-button
     @media screen and ( max-width: 426px)
       margin-bottom: 20px
 
-  .catalog_whoAreWe
+  .whoAreWeBtns_whoAreWe
+    display: flex
     width: 100%
-    display: block
-    text-align: center
-    text-transform: uppercase
-    font-style: normal
-    font-weight: bold
-    font-size: 20px
-    line-height: 36px
-    color: #999999
+    flex-wrap: wrap
+    @media screen and ( max-width: 755px)
+      justify-content: center
+    .btn_whoAreWe
+      width: 320px
+      height: 60px
+      flex-shrink: 1
+      display: flex
+      align-items: center
+      justify-content: center
+      text-decoration: none
+      background-color: #EC8B33
+      border-radius: 4px
+      color: #010101
+      font-style: normal
+      font-weight: bold
+      font-size: 20px
+      line-height: 36px
+      transition: all .2s ease-in-out
+      &:first-of-type
+        margin-right: 40px
+        background-color: #F2AE71
+        @media screen and ( max-width: 755px)
+          margin-right: 0px
+          margin-bottom: 30px
+      &:hover
+        background-color: #CA782E
+
+        
+
 
 /* СТРАНИЦА ПОИСКА */
 
