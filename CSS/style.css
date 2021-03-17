@@ -14809,6 +14809,7 @@ input::-webkit-inner-spin-button {
 
 .content_whoAreWe {
   padding: 49px 0px 119px 0px;
+  border-bottom: 2px solid #F0EFEE;
 }
 
 @media screen and (max-width: 1024px) {
