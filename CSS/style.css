@@ -8137,6 +8137,10 @@ input::-webkit-inner-spin-button {
   margin-bottom: 5px;
 }
 
+.row .col .multi-collapse .card-body .calcField_productCard:last-of-type {
+  margin-bottom: 17px;
+}
+
 .row .col .multi-collapse .card-body .calcField_productCard .productCardCalcField_productCard {
   padding-left: 20px;
   width: 320px;
@@ -8152,6 +8156,18 @@ input::-webkit-inner-spin-button {
 
 .row .col .multi-collapse .card-body .calcField_productCard .productCardCalcField_productCard:focus {
   outline: none;
+}
+
+.row .col .multi-collapse .card-body .youNeedIs_productCard {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #999999;
+}
+
+.row .col .multi-collapse .card-body .youNeedIs_productCard .goodsQuantity_productCard {
+  color: #010101;
 }
 
 /* В наличии на складе */
