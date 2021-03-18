@@ -5501,6 +5501,7 @@ input::-webkit-inner-spin-button
     .multi-collapse
       .card-body
         border: none
+        position: relative
         .calcField_productCard
           font-style: normal
           font-weight: normal
@@ -5526,13 +5527,20 @@ input::-webkit-inner-spin-button
             &:focus
               outline: none
         .youNeedIs_productCard
+          position: absolute
+          opacity: 0
           font-style: normal
           font-weight: normal
           font-size: 20px
           line-height: 36px
           color: #999999
+          transition: all .2s ease-in-out
+          top: 198px
+          // transform: translateY(45px)
           .goodsQuantity_productCard
             color: #010101
+            text-decoration: none
+            border-bottom: 1px dotted #010101
 
 
 /* В наличии на складе
