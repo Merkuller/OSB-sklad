@@ -4481,6 +4481,10 @@ header {
   transition: background-color 0.2s ease-in-out;
 }
 
+.controls_osbOnFloor:focus {
+  outline: none;
+}
+
 @media screen and (max-width: 425px) {
   .slick-arrow {
     visibility: hidden;

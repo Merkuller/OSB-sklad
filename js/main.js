@@ -329,9 +329,7 @@ if (document.querySelector('.fieldBlock_productCard')) {
                 makeCalcBlock.style.transform = 'translateY(25px)';
                 makeCalcBlock.style.opacity = '1';
                 result.textContent = (Math.ceil((Number(widthValue))/unitWidth)) * (Math.ceil((Number(heightValue))/unitLength)); 
-                let thisNum = Number(result.textContent);
-                wordDecline(thisNum, wordArr);
-                
+                wordDecline(result.textContent, wordArr);
             } else {
                 makeCalcBlock.style.transform = 'translateY(0px)';
                 makeCalcBlock.style.opacity = '0';
