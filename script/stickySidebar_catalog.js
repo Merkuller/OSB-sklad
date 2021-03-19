@@ -7,9 +7,11 @@ if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
     let breadcrums_catalog = document.querySelector('main > .wrapper');
     let catalogContent_catalog = document.querySelector('main > .mainContent_catalog > .wrapper');
     let showGoods_catalog = document.querySelector('.filterBtn_osbOnFloor');
+    let goodsBlock = document.querySelector('.mainContent_catalog');
     
+
     showGoods_catalog.addEventListener('click', () => {
-        productCard_catalog.scrollTo(0);
+        window.scrollTo(0, header.clientHeight + goodsBlock.clientHeight + breadcrums_catalog.clientHeight);
     });
 
     $(document).ready(function () {

@@ -7,7 +7,14 @@ if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
     let slider_sobOnFloor = document.querySelector('.sectionOne_osbOnFloor');
     let breadcrums_osbOnFloor = document.querySelector('main > .wrapper');
     let secondSectionMenuTitle_osbOnFloor = document.querySelector('.secondSectionMenu_osbOnFloor');   
+    let banner_osbOnFloor = document.querySelector('.sectionOne_osbOnFloor');
+    let showGoods_osbOnFloor = document.querySelector('.filterBtn_osbOnFloor');
+
     
+
+    showGoods_osbOnFloor.addEventListener('click', () => {
+        window.scrollTo(0, header.clientHeight + breadcrums_osbOnFloor.clientHeight + banner_osbOnFloor.clientHeight);
+    });
 
     $(document).ready(function () {
         var offset = $('#fixed').offset();
