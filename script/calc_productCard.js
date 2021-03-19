@@ -55,7 +55,7 @@ if (document.querySelector('.fieldBlock_productCard')) {
             }
         }
     });
-
+  
     quantityLink.addEventListener('click', (evt) => {
         evt.preventDefault();
         quantityField.value = result.textContent;
