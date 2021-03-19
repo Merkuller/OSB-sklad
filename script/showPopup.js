@@ -1,4 +1,4 @@
-if (document.querySelector('.productCard')) {
+if (document.querySelector('.productCards')) {
     let popup = document.querySelector('.popup');
     let cards = document.querySelectorAll('.productCard');
     let closePopupBtn = popup.querySelector('.popupCloseBtn');
@@ -6,12 +6,7 @@ if (document.querySelector('.productCard')) {
     let hiddenFormField = popup.querySelector('.goodName');
     let html = document.querySelector('html');
 
-    let showCardsBtn = document.querySelector('.filterBtn_osbOnFloor');
-
-    showCardsBtn.addEventListener('click', () => {
-        cards = document.querySelectorAll('.productCard');
-    });
-
+    let productCards = document.querySelector('.productCards');
 
     let popupOpen = function () {
         popup.classList.add('showPopup');
@@ -39,21 +34,23 @@ if (document.querySelector('.productCard')) {
         }
     };
 
-    let cardClickHandler = function(item) {
-        if (item.querySelector('.refineRemainder')) {
-            let productCardBtn = item.querySelector('.refineRemainder');
-            productCardBtn.addEventListener('click', function(evt) {
-                popupOpen();
-                let prodcutName = item.querySelector('.productDescription > a');
-                popupProductName.textContent = prodcutName.textContent;
-                hiddenFormField.value = prodcutName.textContent;
-            });
-        }
-    }
+    // let cardClickHandler = function(item) {
+        productCards.addEventListener('click', (evt) => {
+            if (evt.target.classList.contains('refineRemainder')) {
+                // let productCardBtn = item.querySelector('.refineRemainder');
+                // productCardBtn.addEventListener('click', function(evt) {
+                    popupOpen();
+                    let prodcutName = evt.target.querySelector('.productDescription > a');
+                    popupProductName.textContent = prodcutName.textContent;
+                    hiddenFormField.value = prodcutName.textContent;
+                // });
+            }
+        })
+    // }
 
-    for (let i = 0; i < cards.length; i ++) {
-        cardClickHandler(cards[i]);
-    };
+    // for (let i = 0; i < cards.length; i ++) {
+    //     cardClickHandler(cards[i]);
+    // };
 
     closePopupBtn.addEventListener('click', function() {
         popupClose();
