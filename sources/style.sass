@@ -2981,7 +2981,7 @@ header
   .slick-dots
     display: flex
     align-items: center
-    justify-content: space-between
+    justify-content: center
     width: 72px
     height: 12px
     position: absolute
@@ -3002,6 +3002,10 @@ header
       width: 12px
       list-style: none
       border: none
+      margin-right: 5px
+
+      &:last-of-type
+        margin-right: 0px
 
       &.slick-active button
         background-color: #FFFFFF
