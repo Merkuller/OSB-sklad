@@ -6,6 +6,13 @@ if (document.querySelector('.productCard')) {
     let hiddenFormField = popup.querySelector('.goodName');
     let html = document.querySelector('html');
 
+    let showCardsBtn = document.querySelector('.filterBtn_osbOnFloor');
+
+    showCardsBtn.addEventListener('click', () => {
+        cards = document.querySelectorAll('.productCard');
+    });
+
+
     let popupOpen = function () {
         popup.classList.add('showPopup');
         popup.addEventListener('click', function(e) {
