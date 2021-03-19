@@ -1,11 +1,9 @@
 if (document.querySelector('.productCards')) {
     let popup = document.querySelector('.popup');
-    let cards = document.querySelectorAll('.productCard');
     let closePopupBtn = popup.querySelector('.popupCloseBtn');
     let popupProductName = popup.querySelector('.popupProductName');
     let hiddenFormField = popup.querySelector('.goodName');
     let html = document.querySelector('html');
-
     let productCards = document.querySelector('.productCards');
 
     let popupOpen = function () {
@@ -34,23 +32,14 @@ if (document.querySelector('.productCards')) {
         }
     };
 
-    // let cardClickHandler = function(item) {
-        productCards.addEventListener('click', (evt) => {
-            if (evt.target.classList.contains('refineRemainder')) {
-                // let productCardBtn = item.querySelector('.refineRemainder');
-                // productCardBtn.addEventListener('click', function(evt) {
-                    popupOpen();
-                    let prodcutName = evt.target.querySelector('.productDescription > a');
-                    popupProductName.textContent = prodcutName.textContent;
-                    hiddenFormField.value = prodcutName.textContent;
-                // });
-            }
-        })
-    // }
-
-    // for (let i = 0; i < cards.length; i ++) {
-    //     cardClickHandler(cards[i]);
-    // };
+    productCards.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('refineRemainder')) {
+            popupOpen();
+            let prodcutName = evt.target.parentElement.querySelector('.productDescription > a');
+            popupProductName.textContent = prodcutName.textContent;
+            hiddenFormField.value = prodcutName.textContent;
+        }
+    });
 
     closePopupBtn.addEventListener('click', function() {
         popupClose();
