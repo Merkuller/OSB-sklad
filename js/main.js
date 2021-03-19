@@ -336,7 +336,7 @@ if (document.querySelector('.fieldBlock_productCard')) {
             }
         }
     });
-
+  
     quantityLink.addEventListener('click', (evt) => {
         evt.preventDefault();
         quantityField.value = result.textContent;
@@ -852,7 +852,11 @@ if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
     let header = document.querySelector('header');
     let breadcrums_catalog = document.querySelector('main > .wrapper');
     let catalogContent_catalog = document.querySelector('main > .mainContent_catalog > .wrapper');
+    let showGoods_catalog = document.querySelector('.filterBtn_osbOnFloor');
     
+    showGoods_catalog.addEventListener('click', () => {
+        productCard_catalog.scrollTo(0);
+    });
 
     $(document).ready(function () {
         var offset = $('#fixed').offset();
