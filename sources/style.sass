@@ -3236,9 +3236,10 @@ header
     .productCard
       padding-bottom: 40px
       flex-basis: 45%
-  @media screen and ( max-width: 1000px)
+  @media screen and ( max-width: 1006px)
     > .productCards
       width: 100%
+      justify-content: space-around
       margin-top: 20px
       @media screen and ( max-width: 768px)
         justify-content: space-between
@@ -3307,18 +3308,13 @@ header
     margin: 0px auto
   @media screen and ( max-width: 425px)
     width: 100%
-  .card
-    padding: 0px
-    border: none
-    @media screen and ( max-width: 1006px)
-      padding-top: 1rem
 
     .secondSectionOptions_osbOnFloor
       display: block
       width: 100%
       margin: 0px auto
       text-align: center
-      @media screen and ( max-width: 768px)
+      @media screen and ( max-width: 1006px)
         width: 100%
 
 .secondSestionHeadline_osbOnFloor
@@ -3360,9 +3356,8 @@ header
   width: 320px
   @media screen and ( max-width: 1440px)
     width: 220px
-  @media screen and ( max-width: 1000px)
-    display: none
-
+  @media screen and ( max-width: 1006px)
+    width: 100%
   
 .filterHeadline_osbOnFloor
   width: 100%
@@ -3415,14 +3410,28 @@ header
   border-top: 1px solid #BFBFBF
   border-bottom: 1px solid #BFBFBF
 
-.accordion-button.criterionHeadline_osbOnFloor
+.criterion_osbOnFloor
+  border-top: 2px solid #BFBFBF
+  &:last-of-type
+    border-bottom: 2px solid #BFBFBF
+  .collapse
+    padding: 0px
+
+.btnBlock_osbOnFloor
+  display: flex
+  align-items: center
+  position: relative
+
+.btn.criterionHeadline_osbOnFloor
+  width: 100%
+  text-align: left
   outline: none
+  border: none
   padding: 20px 0px
   font-weight: bold
-  border-color: #BFBFBF
-  border-bottom: none
   background-color: #FFFFFF
   color: #010101
+  position: relative
 
   &:active
     background-color: #FFFFFF
@@ -3432,16 +3441,17 @@ header
     background-color: #FFFFFF
     outline: none
     box-shadow: none
-    border-color: #BFBFBF    
+    border-color: #BFBFBF   
 
-.accordion-collapse
-  border-bottom: none
+.filterBtnArrow_osbOnFloor
+  width: 16px
+  height: 16px
+  display: block
+  transform: rotate(0deg)
+  transition: all .2s ease-in-out
 
-.accordion-button:not(.collapsed)::after
-  background-image: url('../img/svg/secondSection_page2/filerArrow_osbOnFloor.svg')
-
-.checkboxArea_osbOnFloor
-  padding: 0px 0px 24px 0px
+.turnOfArrow
+  transform: rotate(-180deg)
 
 .checboxLabel_osbOnFloor
   font-style: normal
@@ -3449,6 +3459,9 @@ header
   font-size: 16px
   line-height: 28px
   color: #010101
+  padding-bottom: 12px
+  &:last-of-type
+    padding-bottom: 0px
 
 .inStock
   color: #BFBFBF
@@ -3460,7 +3473,9 @@ header
 
 .formCheckElement_osbOnFloor
   margin-bottom: 12px
-  padding-left: 0px
+  padding: 0px
+  border: none
+  padding-bottom: 24px
 
   &:last-of-type
     margin-bottom: 0px
@@ -3508,6 +3523,10 @@ header
   transition: all .2s ease-in-out
   margin-top: 30px
   padding: 10px 0px
+  @media screen and ( max-width: 1006px)
+    display: block
+    margin: 0px auto
+    margin-top: 20px
 
   &:hover
     background-color: #010101

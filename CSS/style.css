@@ -4961,14 +4961,16 @@ header {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1006px) {
   .secondSectionContent_osbOnFloor > .productCards {
     width: 100%;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
     margin-top: 20px;
   }
 }
 
-@media screen and (max-width: 1000px) and (max-width: 768px) {
+@media screen and (max-width: 1006px) and (max-width: 768px) {
   .secondSectionContent_osbOnFloor > .productCards {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -4976,7 +4978,7 @@ header {
   }
 }
 
-@media screen and (max-width: 1000px) and (max-width: 704px) {
+@media screen and (max-width: 1006px) and (max-width: 704px) {
   .secondSectionContent_osbOnFloor > .productCards .productCard {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 40%;
@@ -4984,7 +4986,7 @@ header {
   }
 }
 
-@media screen and (max-width: 1000px) and (max-width: 455px) {
+@media screen and (max-width: 1006px) and (max-width: 455px) {
   .secondSectionContent_osbOnFloor > .productCards .productCard {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
@@ -5091,28 +5093,16 @@ header {
   .filterCollapse_osbOnFloor {
     width: 100%;
   }
-}
-
-.filterCollapse_osbOnFloor .card {
-  padding: 0px;
-  border: none;
-}
-
-@media screen and (max-width: 1006px) {
-  .filterCollapse_osbOnFloor .card {
-    padding-top: 1rem;
+  .filterCollapse_osbOnFloor .secondSectionOptions_osbOnFloor {
+    display: block;
+    width: 100%;
+    margin: 0px auto;
+    text-align: center;
   }
 }
 
-.filterCollapse_osbOnFloor .card .secondSectionOptions_osbOnFloor {
-  display: block;
-  width: 100%;
-  margin: 0px auto;
-  text-align: center;
-}
-
-@media screen and (max-width: 768px) {
-  .filterCollapse_osbOnFloor .card .secondSectionOptions_osbOnFloor {
+@media screen and (max-width: 425px) and (max-width: 1006px) {
+  .filterCollapse_osbOnFloor .secondSectionOptions_osbOnFloor {
     width: 100%;
   }
 }
@@ -5183,9 +5173,9 @@ header {
   }
 }
 
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1006px) {
   .secondSectionOptions_osbOnFloor {
-    display: none;
+    width: 100%;
   }
 }
 
@@ -5251,21 +5241,45 @@ header {
   border-bottom: 1px solid #BFBFBF;
 }
 
-.accordion-button.criterionHeadline_osbOnFloor {
+.criterion_osbOnFloor {
+  border-top: 2px solid #BFBFBF;
+}
+
+.criterion_osbOnFloor:last-of-type {
+  border-bottom: 2px solid #BFBFBF;
+}
+
+.criterion_osbOnFloor .collapse {
+  padding: 0px;
+}
+
+.btnBlock_osbOnFloor {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.btn.criterionHeadline_osbOnFloor {
+  width: 100%;
+  text-align: left;
   outline: none;
+  border: none;
   padding: 20px 0px;
   font-weight: bold;
-  border-color: #BFBFBF;
-  border-bottom: none;
   background-color: #FFFFFF;
   color: #010101;
+  position: relative;
 }
 
-.accordion-button.criterionHeadline_osbOnFloor:active {
+.btn.criterionHeadline_osbOnFloor:active {
   background-color: #FFFFFF;
 }
 
-.accordion-button.criterionHeadline_osbOnFloor:focus {
+.btn.criterionHeadline_osbOnFloor:focus {
   color: #010101;
   background-color: #FFFFFF;
   outline: none;
@@ -5274,16 +5288,19 @@ header {
   border-color: #BFBFBF;
 }
 
-.accordion-collapse {
-  border-bottom: none;
+.filterBtnArrow_osbOnFloor {
+  width: 16px;
+  height: 16px;
+  display: block;
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
-.accordion-button:not(.collapsed)::after {
-  background-image: url("../img/svg/secondSection_page2/filerArrow_osbOnFloor.svg");
-}
-
-.checkboxArea_osbOnFloor {
-  padding: 0px 0px 24px 0px;
+.turnOfArrow {
+  -webkit-transform: rotate(-180deg);
+          transform: rotate(-180deg);
 }
 
 .checboxLabel_osbOnFloor {
@@ -5292,6 +5309,11 @@ header {
   font-size: 16px;
   line-height: 28px;
   color: #010101;
+  padding-bottom: 12px;
+}
+
+.checboxLabel_osbOnFloor:last-of-type {
+  padding-bottom: 0px;
 }
 
 .inStock {
@@ -5305,7 +5327,9 @@ header {
 
 .formCheckElement_osbOnFloor {
   margin-bottom: 12px;
-  padding-left: 0px;
+  padding: 0px;
+  border: none;
+  padding-bottom: 24px;
 }
 
 .formCheckElement_osbOnFloor:last-of-type {
@@ -5369,6 +5393,14 @@ header {
   transition: all .2s ease-in-out;
   margin-top: 30px;
   padding: 10px 0px;
+}
+
+@media screen and (max-width: 1006px) {
+  .filterBtn_osbOnFloor {
+    display: block;
+    margin: 0px auto;
+    margin-top: 20px;
+  }
 }
 
 .filterBtn_osbOnFloor:hover {

@@ -152,6 +152,18 @@ let calc_button = document.getElementById('calc_button')
         })
     }
 
+// Turn of arrow
+if (document.querySelector('.criterion_osbOnFloor')) {
+    let filterBlock = document.querySelector('.secondSectionOptions_osbOnFloor');
+
+    filterBlock.addEventListener('click', (e) => {
+        if (e.target.classList.contains('criterionHeadline_osbOnFloor')) {
+            let btnFilter = e.target.parentElement;
+            let btnArrow = btnFilter.querySelector('.filterBtnArrow_osbOnFloor');
+            btnArrow.classList.toggle('turnOfArrow');
+        }
+    })
+}
 // Этот скрипт переключает стили у активных опций доставки и отображает соответсвующую ей картинку
 // buttonContent_delivery.js
 
@@ -834,77 +846,6 @@ if (document.querySelector('.slider_osbOnFloor')) {
         pauseOnDotsHover: false,
         prevArrow: $('#next_osbOnFloor'),
         nextArrow: $('#previous_osbOnFloor')
-    });
-}
-
-//stickySidebar_catalog
-
-if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
-    let pageHeight_catalog = document.querySelector('body');
-    let productCard_catalog = document.querySelector('.sectionTwo_osbOnFloor');
-    let header = document.querySelector('header');
-    let breadcrums_catalog = document.querySelector('main > .wrapper');
-    let catalogContent_catalog = document.querySelector('main > .mainContent_catalog > .wrapper');
-    let showGoods_catalog = document.querySelector('.filterBtn_osbOnFloor');
-    let goodsBlock = document.querySelector('.mainContent_catalog');
-    
-
-    showGoods_catalog.addEventListener('click', () => {
-        window.scrollTo(0, header.clientHeight + goodsBlock.clientHeight + breadcrums_catalog.clientHeight);
-    });
-
-    $(document).ready(function () {
-        var offset = $('#fixed').offset();
-        var topPadding = 0,
-        bottomPadding = pageHeight_catalog.clientHeight - (productCard_catalog.clientHeight + header.clientHeight + breadcrums_catalog.clientHeight + catalogContent_catalog.clientHeight);
-        $(window).scroll(function() {
-            if (window.innerWidth >= 1007) {
-                if ($(window).scrollTop() > offset.top) {
-                    if ($(document).height() - bottomPadding > $(window).scrollTop() + $("#fixed").height()) $("#fixed").stop().animate({
-                    marginTop: $(window).scrollTop() - offset.top + topPadding
-                    });
-                }
-                else {
-                    $('#fixed').stop().animate({marginTop: 0});
-                }
-            }
-        });
-    });
-}
-
-//stickySidebar_osbOnFloor
-
-if (document.querySelector('.secondSectionMenu_osbOnFloor')) {
-    let pageHeight_osbOnFloor = document.querySelector('body');
-    let productCard_osbOnFloor = document.querySelector('.productCards');
-    let header = document.querySelector('header');
-    let slider_sobOnFloor = document.querySelector('.sectionOne_osbOnFloor');
-    let breadcrums_osbOnFloor = document.querySelector('main > .wrapper');
-    let secondSectionMenuTitle_osbOnFloor = document.querySelector('.secondSectionMenu_osbOnFloor');   
-    let showGoods_osbOnFloor = document.querySelector('.filterBtn_osbOnFloor');
-
-    
-
-    showGoods_osbOnFloor.addEventListener('click', () => {
-        window.scrollTo(0, header.clientHeight + breadcrums_osbOnFloor.clientHeight + slider_sobOnFloor.clientHeight);
-    });
-
-    $(document).ready(function () {
-        var offset = $('#fixed').offset();
-        var topPadding = 0,
-        bottomPadding = pageHeight_osbOnFloor.clientHeight - (productCard_osbOnFloor.clientHeight + header.clientHeight + slider_sobOnFloor.clientHeight + breadcrums_osbOnFloor.clientHeight + secondSectionMenuTitle_osbOnFloor.clientHeight);
-        $(window).scroll(function() {
-            if (window.innerWidth >= 1007) {
-                if ($(window).scrollTop() > offset.top) {
-                    if ($(document).height() - bottomPadding > $(window).scrollTop() + $("#fixed").height()) $("#fixed").stop().animate({
-                    marginTop: $(window).scrollTop() - offset.top + topPadding
-                    });
-                }
-                else {
-                    $('#fixed').stop().animate({marginTop: 0});
-                }
-            }
-        });
     });
 }
 
