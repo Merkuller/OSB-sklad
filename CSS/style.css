@@ -2066,6 +2066,7 @@ header {
 }
 
 .plane_InputFields_index {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -2463,8 +2464,7 @@ header {
 /* Блок с кнопкой узнать больше */
 .learnMoreBtn_index {
   width: 100%;
-  display: block;
-  background-image: url("../img/svg/learnMore_page1/inNumbers_page1.svg");
+  position: relative;
   background-repeat: no-repeat;
   background-position: right 0px;
 }
@@ -2473,6 +2473,74 @@ header {
   .learnMoreBtn_index {
     background-image: none;
   }
+}
+
+.learnMoreBtn_index .counterBlock_index {
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  width: 940px;
+}
+
+@media screen and (max-width: 1440px) {
+  .learnMoreBtn_index .counterBlock_index {
+    width: 700px;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .learnMoreBtn_index .counterBlock_index {
+    top: 130px;
+  }
+}
+
+@media screen and (max-width: 727px) {
+  .learnMoreBtn_index .counterBlock_index {
+    display: none;
+  }
+}
+
+.learnMoreBtn_index .counterBlock_index .supNumber_index {
+  border-bottom: 2px solid #010101;
+  padding-bottom: 27px;
+  padding-left: 80px;
+}
+
+.learnMoreBtn_index .counterBlock_index .supNumber_index .supNumberValue_index {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 90px;
+  line-height: 80px;
+  color: #EC8B33;
+}
+
+.learnMoreBtn_index .counterBlock_index .supNumber_index .supNumberText_index {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+}
+
+.learnMoreBtn_index .counterBlock_index .subNumber_index {
+  padding-top: 35px;
+  padding-left: 80px;
+}
+
+.learnMoreBtn_index .counterBlock_index .subNumber_index .subNumberValue_index {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 90px;
+  line-height: 80px;
+  color: #EC8B33;
+}
+
+.learnMoreBtn_index .counterBlock_index .subNumber_index .subNumberText_index {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
 }
 
 .learnMoreAboutUs_index {
@@ -2491,19 +2559,13 @@ header {
   transition: all .1s ease-in-out;
 }
 
-@media screen and (max-width: 1400px) {
-  .learnMoreAboutUs_index {
-    margin-bottom: 120px;
-  }
-}
-
 @media screen and (max-width: 1024px) {
   .learnMoreAboutUs_index {
-    margin-bottom: 0px;
+    margin-bottom: 370px;
   }
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 727px) {
   .learnMoreAboutUs_index {
     margin-bottom: 0px;
   }

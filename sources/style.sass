@@ -1347,6 +1347,7 @@ header
     padding-bottom: 10px
 
 .plane_InputFields_index
+  position: relative
   display: flex
   justify-content: space-between
   @media screen and ( max-width: 768px)
@@ -1604,13 +1605,53 @@ header
 
 .learnMoreBtn_index
   width: 100%
-  display: block
-  background-image: url('../img/svg/learnMore_page1/inNumbers_page1.svg')
+  position: relative
   background-repeat: no-repeat
   background-position: right 0px
   @media screen and ( max-width: 1400px)
     background-image: none
-    
+  .counterBlock_index
+    position: absolute
+    right: 0px
+    top: 0px
+    width: 940px
+    @media screen and ( max-width: 1440px)
+      width: 700px
+    @media screen and ( max-width: 1400px)
+      top: 130px
+    @media screen and ( max-width: 727px)
+      display: none
+    .supNumber_index
+      border-bottom: 2px solid #010101
+      padding-bottom: 27px
+      padding-left: 80px
+      .supNumberValue_index
+        font-style: normal
+        font-weight: normal
+        font-size: 90px
+        line-height: 80px
+        color: #EC8B33
+      .supNumberText_index
+        font-style: normal
+        font-weight: normal
+        font-size: 20px
+        line-height: 36px
+        color: #010101
+    .subNumber_index
+      padding-top: 35px
+      padding-left: 80px
+      .subNumberValue_index
+        font-style: normal
+        font-weight: normal
+        font-size: 90px
+        line-height: 80px
+        color: #EC8B33
+      .subNumberText_index
+        font-style: normal
+        font-weight: normal
+        font-size: 20px
+        line-height: 36px
+        color: #010101
 
 .learnMoreAboutUs_index
   padding: 18px 60px
@@ -1625,11 +1666,9 @@ header
   margin-bottom: 418px
   overflow: hidden
   transition: all .1s ease-in-out
-  @media screen and ( max-width: 1400px)
-    margin-bottom: 120px
   @media screen and ( max-width: 1024px)
-    margin-bottom: 0px
-  @media screen and ( max-width: 768px)
+    margin-bottom: 370px
+  @media screen and ( max-width: 727px)
     margin-bottom: 0px
   @media screen and ( max-width: 425px)
     padding: 10px 30px
