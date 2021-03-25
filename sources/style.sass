@@ -9410,6 +9410,9 @@ input::-webkit-inner-spin-button
       .s3_slide_index
         min-height: auto
         cursor: auto
+        &:not(:first-of-type)
+          padding-top: 60px
+          border-top: 2px solid #F0EFEE
         .s3_slideContent_index
           display: flex
           flex-direction: column-reverse
@@ -9418,6 +9421,9 @@ input::-webkit-inner-spin-button
             background-color: #FFFFFF
             overflow: visible
             height: auto
+            margin-bottom: 0px
+            padding-bottom: 58px
+        
             .s3_reviewComment_index
               .reviewText_index
                 user-select: none
@@ -9469,6 +9475,7 @@ input::-webkit-inner-spin-button
         color: #999999
 
 .readAllBtn_reviews
+  display: none
   border-radius: 4px
   padding: 4px 8px
   color: #999999
@@ -9484,9 +9491,23 @@ input::-webkit-inner-spin-button
     outline: none
     border: 
 
-// .commentAppear
-//   display: block
-//   -webkit-line-clamp: none
+.commentApplication_index
+  display: none
+  width: 100%
+  padding-top: 19px
+  .commentAppTitle_index
+    width: 100%
+    font-weight: bold
+    font-size: 20px
+    line-height: 36px
+    color: #4E4E4E
+    margin-bottom: 19px
+  .commentAppContent_index
+    width: 100%
+    margin-bottom: 26px
+  .commentAppData_index
+    color: #999999
+    width: 100%
 
 /* ТРИНАДЦАТАЯ СТРАНИЦА. КАТАЛОГ
 

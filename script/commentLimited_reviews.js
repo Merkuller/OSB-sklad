@@ -1,14 +1,10 @@
 if (document.querySelector('.contentReviews_reviews')) {
+    let commentBtns = document.querySelectorAll('.readAllBtn_reviews');
+        commentBlock = document.querySelector('.contentReviews_reviews');
+        commentApplications = document.querySelectorAll('.commentApplication_index');
 
-    let slideList_reviews = document.querySelectorAll('.s3_slide1Review_index');
-    let commentBlock = document.querySelector('.contentReviews_reviews');
-    
-    const renderBtn = (element) => {
-        let btn = `<button type="button" class="readAllBtn_reviews">читать полностью</button>`;
-        element.insertAdjacentHTML('beforeend', btn);
-    }
-
-    slideList_reviews.forEach(comment => renderBtn(comment));
+    commentApplications.forEach(app => app.style.display = 'block');
+    commentBtns.forEach(comment => comment.style.display = 'block');
 
     commentBlock.addEventListener('click', function (e) {
         if (e.target.classList.contains('readAllBtn_reviews')) {
