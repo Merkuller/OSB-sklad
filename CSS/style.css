@@ -14192,6 +14192,11 @@ input::-webkit-inner-spin-button {
   transition: all .2s ease-in-out;
 }
 
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .s3_reviewComment_index .commentAppear {
+  display: block;
+  -webkit-line-clamp: none;
+}
+
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index {
   margin-bottom: 39px;
 }
