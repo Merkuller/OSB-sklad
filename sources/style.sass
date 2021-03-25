@@ -9403,16 +9403,32 @@ input::-webkit-inner-spin-button
   display: block
   border-bottom: 2px solid #F0EFEE
   .wrapper
+    .sectionTitle_index
+      margin-bottom: 46px
+      @media screen and ( max-width: 1024px)
+        padding-top: 0px
+      @media screen and ( max-width: 425px)
+        margin-bottom: 40px
+  .wrapper
     flex-wrap: nowrap
+    @media screen and ( max-width: 768px)
+      flex-direction: column-reverse
     .contentReviews_reviews
       width: 67%
       margin-right: 20px
+      @media screen and ( max-width: 768px)
+        width: 100%
+        margin-right: 0px
       .s3_slide_index
         min-height: auto
         cursor: auto
+        @media screen and ( max-width: 700px)
+          width: 100%
         &:not(:first-of-type)
           padding-top: 60px
           border-top: 2px solid #F0EFEE
+          @media screen and ( max-width: 1024px)
+            padding-top: 40px
         .s3_slideContent_index
           display: flex
           flex-direction: column-reverse
@@ -9423,8 +9439,21 @@ input::-webkit-inner-spin-button
             height: auto
             margin-bottom: 0px
             padding-bottom: 58px
-        
+            @media screen and ( max-width: 1024px)
+              padding-bottom: 40px
+            .s3_slide1PositiveComment
+              .s3_slide1PositiveReview_index
+                @media screen and ( max-width: 375px)
+                  justify-content: center
+            .s3_slide1NegativeComment
+              .s3_slide1NegativeReview_index
+                @media screen and ( max-width: 375px)
+                  justify-content: center
             .s3_reviewComment_index
+              .s3_reviewCommentText1_index
+                @media screen and ( max-width: 375px)
+                  width: 100%
+                  text-align: center
               .reviewText_index
                 user-select: none
                 overflow: hidden
@@ -9437,18 +9466,35 @@ input::-webkit-inner-spin-button
                 -webkit-line-clamp: none
           .s3_slide1WhoWrote_index
             margin-bottom: 39px
+            @media screen and ( max-width: 1024px)
+              margin-bottom: 20px
+              
             .s3_slide1Person_index
+              @media screen and ( max-width: 375px)
+                justify-content: center
+              .s3_slide1Avatar_index
+                @media screen and ( max-width: 375px)
+                  margin-right: 0px
               .s3_slide1PersonData_index
                 width: 100%
+                @media screen and ( max-width: 375px)
+                  flex-basis: 50%
                 .s3_slide1Name_index
                   width: 100%
+                  @media screen and ( max-width: 375px)
+                    text-align: center
                 .s3_slide1Who_index
                   width: 100%
+                  @media screen and ( max-width: 375px)
+                    text-align: center
             .s3_slide1ReviewLinks_index
               display: none
 
     .sidebar_reviews
       width: 32%
+      @media screen and ( max-width: 768px)
+        width: 100%
+        margin-bottom: 40px
       .makeReview_reviews
         width: 100%
         padding: 13px 0px
@@ -9489,7 +9535,10 @@ input::-webkit-inner-spin-button
     color: #999999
   &:focus
     outline: none
-    border: 
+  @media screen and ( max-width: 375px)
+    margin: 0px auto
+    margin-top: 20px
+     
 
 .commentApplication_index
   display: none
@@ -9502,12 +9551,16 @@ input::-webkit-inner-spin-button
     line-height: 36px
     color: #4E4E4E
     margin-bottom: 19px
+    @media screen and ( max-width: 375px)
+      text-align: center
   .commentAppContent_index
     width: 100%
     margin-bottom: 26px
   .commentAppData_index
     color: #999999
     width: 100%
+    @media screen and ( max-width: 375px)
+      text-align: center
 
 /* ТРИНАДЦАТАЯ СТРАНИЦА. КАТАЛОГ
 

@@ -14147,9 +14147,34 @@ input::-webkit-inner-spin-button {
   border-bottom: 2px solid #F0EFEE;
 }
 
+.content_reviews .wrapper .sectionTitle_index {
+  margin-bottom: 46px;
+}
+
+@media screen and (max-width: 1024px) {
+  .content_reviews .wrapper .sectionTitle_index {
+    padding-top: 0px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .content_reviews .wrapper .sectionTitle_index {
+    margin-bottom: 40px;
+  }
+}
+
 .content_reviews .wrapper {
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+}
+
+@media screen and (max-width: 768px) {
+  .content_reviews .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
 }
 
 .content_reviews .wrapper .contentReviews_reviews {
@@ -14157,14 +14182,33 @@ input::-webkit-inner-spin-button {
   margin-right: 20px;
 }
 
+@media screen and (max-width: 768px) {
+  .content_reviews .wrapper .contentReviews_reviews {
+    width: 100%;
+    margin-right: 0px;
+  }
+}
+
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index {
   min-height: auto;
   cursor: auto;
 }
 
+@media screen and (max-width: 700px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index {
+    width: 100%;
+  }
+}
+
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index:not(:first-of-type) {
   padding-top: 60px;
   border-top: 2px solid #F0EFEE;
+}
+
+@media screen and (max-width: 1024px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index:not(:first-of-type) {
+    padding-top: 40px;
+  }
 }
 
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index {
@@ -14184,6 +14228,35 @@ input::-webkit-inner-spin-button {
   height: auto;
   margin-bottom: 0px;
   padding-bottom: 58px;
+}
+
+@media screen and (max-width: 1024px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index {
+    padding-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .s3_slide1PositiveComment .s3_slide1PositiveReview_index {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .s3_slide1NegativeComment .s3_slide1NegativeReview_index {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .s3_reviewComment_index .s3_reviewCommentText1_index {
+    width: 100%;
+    text-align: center;
+  }
 }
 
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .s3_reviewComment_index .reviewText_index {
@@ -14208,16 +14281,55 @@ input::-webkit-inner-spin-button {
   margin-bottom: 39px;
 }
 
+@media screen and (max-width: 1024px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index {
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1Avatar_index {
+    margin-right: 0px;
+  }
+}
+
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1PersonData_index {
   width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1PersonData_index {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+  }
 }
 
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1PersonData_index .s3_slide1Name_index {
   width: 100%;
 }
 
+@media screen and (max-width: 375px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1PersonData_index .s3_slide1Name_index {
+    text-align: center;
+  }
+}
+
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1PersonData_index .s3_slide1Who_index {
   width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1PersonData_index .s3_slide1Who_index {
+    text-align: center;
+  }
 }
 
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1ReviewLinks_index {
@@ -14226,6 +14338,13 @@ input::-webkit-inner-spin-button {
 
 .content_reviews .wrapper .sidebar_reviews {
   width: 32%;
+}
+
+@media screen and (max-width: 768px) {
+  .content_reviews .wrapper .sidebar_reviews {
+    width: 100%;
+    margin-bottom: 40px;
+  }
 }
 
 .content_reviews .wrapper .sidebar_reviews .makeReview_reviews {
@@ -14283,6 +14402,13 @@ input::-webkit-inner-spin-button {
   outline: none;
 }
 
+@media screen and (max-width: 375px) {
+  .readAllBtn_reviews {
+    margin: 0px auto;
+    margin-top: 20px;
+  }
+}
+
 .commentApplication_index {
   display: none;
   width: 100%;
@@ -14298,6 +14424,12 @@ input::-webkit-inner-spin-button {
   margin-bottom: 19px;
 }
 
+@media screen and (max-width: 375px) {
+  .commentApplication_index .commentAppTitle_index {
+    text-align: center;
+  }
+}
+
 .commentApplication_index .commentAppContent_index {
   width: 100%;
   margin-bottom: 26px;
@@ -14306,6 +14438,12 @@ input::-webkit-inner-spin-button {
 .commentApplication_index .commentAppData_index {
   color: #999999;
   width: 100%;
+}
+
+@media screen and (max-width: 375px) {
+  .commentApplication_index .commentAppData_index {
+    text-align: center;
+  }
 }
 
 /* ТРИНАДЦАТАЯ СТРАНИЦА. КАТАЛОГ */
