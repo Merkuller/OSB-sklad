@@ -9,4 +9,5 @@ if (document.querySelector('.shippedQuantity_index')) {
     }
        
     summ()
+
 }

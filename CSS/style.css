@@ -14141,26 +14141,136 @@ input::-webkit-inner-spin-button {
 
 /* ДВЕНАДЦАТАЯ СТРАНИЦА. ОТЗЫВЫ */
 /* Первая секция. 11 страница. Отзывы */
-.sectionOne_review {
+.content_reviews {
   width: 100%;
   display: block;
   border-bottom: 2px solid #F0EFEE;
 }
 
-.firstSection_review {
-  position: relative;
-  width: inherit;
-  min-height: 1176px;
+.content_reviews .wrapper {
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.content_reviews .wrapper .contentReviews_reviews {
+  width: 67%;
+  margin-right: 20px;
+}
+
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index {
+  min-height: auto;
+  cursor: auto;
+}
+
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
 }
 
-/* ТРИНАЛЦАТАЯ СТРАНИЦА. КАТАЛОГ */
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index {
+  padding: 0px;
+  background-color: #FFFFFF;
+  overflow: visible;
+  height: auto;
+}
+
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .s3_reviewComment_index .reviewText_index {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index {
+  margin-bottom: 39px;
+}
+
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1PersonData_index {
+  width: 100%;
+}
+
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1PersonData_index .s3_slide1Name_index {
+  width: 100%;
+}
+
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1Person_index .s3_slide1PersonData_index .s3_slide1Who_index {
+  width: 100%;
+}
+
+.content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index .s3_slide1ReviewLinks_index {
+  display: none;
+}
+
+.content_reviews .wrapper .sidebar_reviews {
+  width: 32%;
+}
+
+.content_reviews .wrapper .sidebar_reviews .makeReview_reviews {
+  width: 100%;
+  padding: 13px 0px;
+  background-color: #EC8B33;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+  margin-bottom: 18px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.content_reviews .wrapper .sidebar_reviews .makeReview_reviews:hover {
+  background-color: #CA782E;
+}
+
+.content_reviews .wrapper .sidebar_reviews .makeReview_reviews:active {
+  background-color: #EC8B33;
+}
+
+.content_reviews .wrapper .sidebar_reviews .sidebarText_reviews {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #999999;
+}
+
+.readAllBtn_reviews {
+  border-radius: 4px;
+  padding: 4px 8px;
+  color: #999999;
+  text-align: center;
+  background-color: #FFFFFF;
+  border: 1px solid #BFBFBF;
+  margin-top: 10px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.readAllBtn_reviews:hover {
+  border-color: #999999;
+  color: #999999;
+}
+
+.readAllBtn_reviews:focus {
+  outline: none;
+}
+
+/* ТРИНАДЦАТАЯ СТРАНИЦА. КАТАЛОГ */
 .mainContent_catalog {
   width: 100%;
 }
