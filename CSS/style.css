@@ -14264,17 +14264,13 @@ input::-webkit-inner-spin-button {
      -moz-user-select: none;
       -ms-user-select: none;
           user-select: none;
-  overflow: hidden;
-  display: -webkit-box;
-  -webkit-line-clamp: 5;
-  -webkit-box-orient: vertical;
   -webkit-transition: all .2s ease-in-out;
   transition: all .2s ease-in-out;
 }
 
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .s3_reviewComment_index .commentAppear {
-  display: block;
-  -webkit-line-clamp: none;
+  display: block !important;
+  -webkit-line-clamp: none !important;
 }
 
 .content_reviews .wrapper .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1WhoWrote_index {
