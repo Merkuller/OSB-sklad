@@ -188,6 +188,24 @@ if (document.querySelector('.shippedQuantity_index')) {
     summ()
 
 }
+if (document.querySelector('.makeReview_reviews')) {
+
+    let btns = document.querySelectorAll('.popupIdentificationBtn');
+    
+    btns[0].classList.add('select');
+
+    btns.forEach((btn) => {
+        btn.addEventListener('click', () => {
+            btn.classList.add('select');
+            for (let i = 0; i < btns.length; i ++) {
+                if (btn !== btns[i]) {
+                    btns[i].classList.remove('select');
+                }
+            }
+        })
+    })
+}
+
 // Этот скрипт переключает стили у активных опций доставки и отображает соответсвующую ей картинку
 // buttonContent_delivery.js
 
@@ -468,8 +486,9 @@ if (document.querySelector('.contentReviews_reviews')) {
     let commentBtns = document.querySelectorAll('.readAllBtn_reviews');
         commentBlock = document.querySelector('.contentReviews_reviews');
         commentApplications = document.querySelectorAll('.commentApplication_index');
+        lineNumbers = 5;
         parseNumber = x => Number(x.replace(/[^0-9\.-]+/g,""));
-        calcHeight = commentBlock => {
+        function calcHeight (commentBlock) {
             let height = window.getComputedStyle(commentBlock,null).getPropertyValue("height");
             let heightValue = parseNumber(height);
             return heightValue;
@@ -485,12 +504,9 @@ if (document.querySelector('.contentReviews_reviews')) {
     commentBtns.forEach(btn => {
         let commentBlock = btn.parentElement;
         let commentText = commentBlock.querySelector('.reviewText_index');
-        if (calcHeight(commentText) / calcLineHeight(commentText) > 5) {
+        if (calcHeight(commentText) / calcLineHeight(commentText) > lineNumbers) {
             btn.style.display = 'block';
-            commentText.style.overflow = 'hidden';
-            commentText.style.display = '-webkit-box';
-            commentText.style.webkitLineClamp = '5';
-            commentText.style.webkitBoxOrient = 'vertical';
+            commentText.classList.toggle('commentHight');
         }
     });
 
@@ -888,6 +904,56 @@ if (document.querySelector('.productCards')) {
 
     document.addEventListener('keydown', function(evt){
         if (evt.key === 'Escape') {
+            popupClose();
+            bodyLock();
+        }
+    });
+}
+if (document.querySelector('.makeReview_reviews')) {
+    let popup = document.querySelector('.popup');
+    let closePopupBtn = popup.querySelector('.popupCloseBtn');
+    
+
+    let html = document.querySelector('html');
+    let makeReview = document.querySelector('.makeReview_reviews');
+
+    let popupOpen = function () {
+        popup.classList.add('showModal');
+        popup.addEventListener('click', function(e) {
+            if (!e.target.closest('.popupContent')) {
+                popupClose();
+                bodyLock();
+            }
+        })
+        bodyLock();
+    };
+
+    let popupClose = function () {
+        popup.classList.remove('showModal');
+    };
+
+    let bodyLock = function () {
+        let popupActive = document.querySelector('.popup.showModal');
+        if (popupActive) {
+            html.classList.add('lock');
+            html.classList.add('bodyPaddingRight');
+        } else {
+            html.classList.remove('lock');
+            html.classList.remove('bodyPaddingRight');
+        }
+    };
+
+    makeReview.addEventListener('click', () => {
+        popupOpen();
+    });
+
+    closePopupBtn.addEventListener('click', function() {
+        popupClose();
+        bodyLock();
+    });
+
+    document.addEventListener('keydown', function(e){
+        if (e.key === 'Escape') {
             popupClose();
             bodyLock();
         }

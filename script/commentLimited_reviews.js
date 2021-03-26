@@ -2,8 +2,9 @@ if (document.querySelector('.contentReviews_reviews')) {
     let commentBtns = document.querySelectorAll('.readAllBtn_reviews');
         commentBlock = document.querySelector('.contentReviews_reviews');
         commentApplications = document.querySelectorAll('.commentApplication_index');
+        lineNumbers = 5;
         parseNumber = x => Number(x.replace(/[^0-9\.-]+/g,""));
-        calcHeight = commentBlock => {
+        function calcHeight (commentBlock) {
             let height = window.getComputedStyle(commentBlock,null).getPropertyValue("height");
             let heightValue = parseNumber(height);
             return heightValue;
@@ -19,12 +20,9 @@ if (document.querySelector('.contentReviews_reviews')) {
     commentBtns.forEach(btn => {
         let commentBlock = btn.parentElement;
         let commentText = commentBlock.querySelector('.reviewText_index');
-        if (calcHeight(commentText) / calcLineHeight(commentText) > 5) {
+        if (calcHeight(commentText) / calcLineHeight(commentText) > lineNumbers) {
             btn.style.display = 'block';
-            commentText.style.overflow = 'hidden';
-            commentText.style.display = '-webkit-box';
-            commentText.style.webkitLineClamp = '5';
-            commentText.style.webkitBoxOrient = 'vertical';
+            commentText.classList.toggle('commentHight');
         }
     });
 
