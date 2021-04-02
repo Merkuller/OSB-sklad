@@ -483,7 +483,7 @@ if (document.querySelector('.resetCity_delivery')) {
 if (document.querySelector('.contentReviews_reviews')) {
     let commentBtns = document.querySelectorAll('.readAllBtn_reviews');
         commentBlock = document.querySelector('.contentReviews_reviews');
-        commentApplications = document.querySelectorAll('.commentApplication_index');
+        // commentApplications = document.querySelectorAll('.commentApplication_index');
         lineNumbers = 5;
         parseNumber = x => Number(x.replace(/[^0-9\.-]+/g,""));
         function calcHeight (commentBlock) {
@@ -497,7 +497,7 @@ if (document.querySelector('.contentReviews_reviews')) {
             return lineHeightValue;
         };
 
-    commentApplications.forEach(app => app.style.display = 'block');
+    // commentApplications.forEach(app => app.style.display = 'block');
 
     commentBtns.forEach(btn => {
         let commentBlock = btn.parentElement;

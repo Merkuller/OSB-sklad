@@ -7848,6 +7848,18 @@ header {
   cursor: auto;
 }
 
+.tab-content #reviews .reviews-text .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .s3_reviewComment_index .commentHight {
+  overflow: hidden;
+  display: -webkit-box;
+  -webkit-line-clamp: 5;
+  -webkit-box-orient: vertical;
+}
+
+.tab-content #reviews .reviews-text .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .s3_reviewComment_index .commentAppear {
+  display: block;
+  -webkit-line-clamp: none;
+}
+
 .tab-content #reviews .reviews-text .contentReviews_reviews .s3_slide_index .s3_slideContent_index .s3_slide1Review_index .readAllBtn_reviews {
   display: none;
   border-radius: 4px;
