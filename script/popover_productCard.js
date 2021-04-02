@@ -1,8 +1,5 @@
 //popover_productCard
 if (document.querySelector('.popover_productCard')) {
-    let popover_productCard = document.querySelector('.popover_productCard');
-    let popoverText_productCard = document.querySelector('.popoverText_productCard');
-    
 
     let fadePopup_productCard = function () {
         popover_productCard.style.opacity = "0";
@@ -13,6 +10,9 @@ if (document.querySelector('.popover_productCard')) {
     }
 
     function openPopup (text, type, time) {
+        let popover_productCard = document.querySelector('.popover_productCard');
+            popoverText_productCard = document.querySelector('.popoverText_productCard');
+
         popover_productCard.style.opacity = "1";
         popover_productCard.style.display = "block";
         popoverText_productCard.textContent = text;

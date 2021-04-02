@@ -625,7 +625,6 @@ if (document.querySelector('.filedBlock_index')) {
     fiedlBlock.addEventListener('input', (e) => {
         if (e.target.classList.contains('calcField_index')) {
             let field = e.target.parentElement;
-            console.log(field);
             let word = field.querySelector('.valueFiled');
             e.target.value <= 0 ? word.style.opacity = '0' : word.style.opacity = '1';
         }
@@ -784,9 +783,6 @@ if (document.querySelector('#phone')) {
 
 //popover_productCard
 if (document.querySelector('.popover_productCard')) {
-    let popover_productCard = document.querySelector('.popover_productCard');
-    let popoverText_productCard = document.querySelector('.popoverText_productCard');
-    
 
     let fadePopup_productCard = function () {
         popover_productCard.style.opacity = "0";
@@ -797,6 +793,9 @@ if (document.querySelector('.popover_productCard')) {
     }
 
     function openPopup (text, type, time) {
+        let popover_productCard = document.querySelector('.popover_productCard');
+            popoverText_productCard = document.querySelector('.popoverText_productCard');
+
         popover_productCard.style.opacity = "1";
         popover_productCard.style.display = "block";
         popoverText_productCard.textContent = text;
