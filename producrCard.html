@@ -249,6 +249,32 @@
             </div>
         </section>
         <section class="sectionTwo_productCard">
+            <div class="popup">
+                <div class="popupBody">
+                    <form method="POST" class="popupContent">
+                        <button type="button" class="popupCloseBtn"></button>
+                        <div class="popupTitle">Мой комментарий</div>
+                        <p class="popupText">Поделитесь опытом сотрудничества с нами. Обратите внеимание на скорость отгрузки, доставки и наличии товара.<br><br> Мы не публикуем отзывы, которые содержат ненормативную лексику написанные заглавными буквами.</p>
+                        <div class="popupFields">
+                            <input type="text" class="popupField" placeholder="Имя">
+                            <input type="hidden" class="goodName">
+                            <textarea name="" class="popupCommentField" cols="30" rows="4" placeholder="Ваш комментарий"></textarea>
+                        </div>
+                        <div class="checBoxContainer">
+                            <div class="popupCheckBtn">
+                                <input class="checkBtn" type="checkbox" value="" id="flag">
+                                <label class="checkBtnLabel" for="flag">
+                                    оставить отзыв анонимно
+                                </label>
+                            </div>
+                        </div>
+                        <button type="submit" class="popupSubmitBtn">Отправить отзыв</button>
+                        <p class="popupAgreement">
+                            Нажимая кнопку, принимаю условия <a href="#">политики</a> и <a href="#">пользовательского соглашения</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
             <div class="wrapper">
                 <div class="secondSection_productCard">
                     <h1 class="sectionTitle_index">
@@ -333,15 +359,85 @@
                             </div>
                             <div class="tab-pane fade" id="reviews" role="tabpanel" aria-labelledby="reviews-tab">
                                 <div class="reviews-text">
-                                    Текст-заглушка2 Текст-заглушка2 Текст-заглушка2 Текст-заглушка2
-                                    Текст-заглушка2 Текст-заглушка2 Текст-заглушка2 Текст-заглушка2
-                                    Текст-заглушка2 Текст-заглушка2 Текст-заглушка2 Текст-заглушка2
-                                    Текст-заглушка2 Текст-заглушка2 Текст-заглушка2 Текст-заглушка2
-                                    Текст-заглушка2 Текст-заглушка2 Текст-заглушка2 Текст-заглушка2
-                                    Текст-заглушка2 Текст-заглушка2 Текст-заглушка2 Текст-заглушка2
-                                    Текст-заглушка2 Текст-заглушка2 Текст-заглушка2 Текст-заглушка2
-                                    Текст-заглушка2 Текст-заглушка2 Текст-заглушка2 Текст-заглушка2
-                                    Текст-заглушка2 Текст-заглушка2 Текст-заглушка2 Текст-заглушка2
+                                    <div class="contentReviews_reviews">
+                                        <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                            <div class="s3_slideContent_index">
+                                                <div class="s3_slide1Review_index">
+                                                    <div class="s3_reviewComment_index">
+                                                        <div class="s3_reviewCommentText1_index">
+                                                            Комментарий:
+                                                        </div>
+                                                        <div class="reviewText_index">
+                                                            В 2013 году мы купили недостроенный  В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный  В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенныйВ 2013 году мы купили недостроенный В 2013 году мы купили недостроенныйВ 2013 году мы купили недостроенный В 2013 году мы купили недостроенныйВ 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенныйВ 2013 году мы купили недостроенный
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="readAllBtn_reviews">читать полностью</button>
+                                                </div>
+                                                <div class="s3_slide1WhoWrote_index">
+                                                    <div class="s3_slide1Person_index">
+                                                        <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                                        <div class="s3_slide1PersonData_index">
+                                                            <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                                            <span class="s3_slide1Who_index">Частный клиент</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="s3_slide1ReviewLinks_index">
+                                                        <a class="s3_slide1Attachment_index" href="#">
+                                                            <span class="s3_slide1AttachmentIcon_index"></span>
+                                                            <span class="s3_slide1AttachmentText_index">
+                                                                3 вложения
+                                                            </span>
+                                                        </a>
+                                                        <a class="s3_slide1ReviewLink_index">
+                                                            <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                                            <span class="s3_slide1ReviewLinkText_index" href="#">
+                                                                Читать полностью
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                                            <div class="s3_slideContent_index">
+                                                <div class="s3_slide1Review_index">
+                                                    <div class="s3_reviewComment_index">
+                                                        <div class="s3_reviewCommentText1_index">
+                                                            Комментарий:
+                                                        </div>
+                                                        <div class="reviewText_index">
+                                                            В 2013 году мы купили недостроенный  В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный  В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенныйВ 2013 году мы купили недостроенный В 2013 году мы купили недостроенныйВ 2013 году мы купили недостроенный В 2013 году мы купили недостроенныйВ 2013 году мы купили недостроенный В 2013 году мы купили недостроенный В 2013 году мы купили недостроенныйВ 2013 году мы купили недостроенный
+                                                        </div>
+                                                    </div>
+                                                    <button type="button" class="readAllBtn_reviews">читать полностью</button>
+                                                </div>
+                                                <div class="s3_slide1WhoWrote_index">
+                                                    <div class="s3_slide1Person_index">
+                                                        <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                                        <div class="s3_slide1PersonData_index">
+                                                            <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                                            <span class="s3_slide1Who_index">Частный клиент</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="s3_slide1ReviewLinks_index">
+                                                        <a class="s3_slide1Attachment_index" href="#">
+                                                            <span class="s3_slide1AttachmentIcon_index"></span>
+                                                            <span class="s3_slide1AttachmentText_index">
+                                                                3 вложения
+                                                            </span>
+                                                        </a>
+                                                        <a class="s3_slide1ReviewLink_index">
+                                                            <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                                            <span class="s3_slide1ReviewLinkText_index" href="#">
+                                                                Читать полностью
+                                                            </span>
+                                                        </a>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <button type="button" class="makeReview_reviews">Оставить комментарий</button>
                                 </div>
                             </div>
                         </div>

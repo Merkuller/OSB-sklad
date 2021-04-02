@@ -188,7 +188,7 @@ if (document.querySelector('.shippedQuantity_index')) {
     summ()
 
 }
-if (document.querySelector('.makeReview_reviews')) {
+if (document.querySelector('.popupIdentificationBtn')) {
 
     let btns = document.querySelectorAll('.popupIdentificationBtn');
     
