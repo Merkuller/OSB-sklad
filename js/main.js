@@ -370,8 +370,10 @@ if (document.querySelector('.fieldBlock_productCard')) {
 
     fieldBlock_productCard.addEventListener('input', (evt) => {
         if (evt.target.classList.contains('productCardCalcField_productCard')) {
+            // evt.target.value += 'мм';
             // widthValue = getValue('Ширина');
             // heightValue = getValue('Высота');
+            
             if (evt.target.getAttribute('name') === 'Ширина') {
                 widthValue = evt.target.value;
             } else if (evt.target.getAttribute('name') === 'Высота') {
@@ -483,7 +485,7 @@ if (document.querySelector('.resetCity_delivery')) {
 if (document.querySelector('.contentReviews_reviews')) {
     let commentBtns = document.querySelectorAll('.readAllBtn_reviews');
         commentBlock = document.querySelector('.contentReviews_reviews');
-        // commentApplications = document.querySelectorAll('.commentApplication_index');
+        commentApplications = document.querySelectorAll('.commentApplication_index');
         lineNumbers = 5;
         parseNumber = x => Number(x.replace(/[^0-9\.-]+/g,""));
         function calcHeight (commentBlock) {
@@ -497,7 +499,7 @@ if (document.querySelector('.contentReviews_reviews')) {
             return lineHeightValue;
         };
 
-    // commentApplications.forEach(app => app.style.display = 'block');
+    commentApplications.forEach(app => app.style.display = 'block');
 
     commentBtns.forEach(btn => {
         let commentBlock = btn.parentElement;
@@ -781,7 +783,7 @@ if (document.querySelector('.popover_productCard')) {
         popoverText_productCard.style.color = "none";
     }
 
-    function openPopup (text, type) {
+    function openPopup (text, type, time) {
         popover_productCard.style.opacity = "1";
         popover_productCard.style.display = "block";
         popoverText_productCard.textContent = text;
@@ -797,7 +799,7 @@ if (document.querySelector('.popover_productCard')) {
             popover_productCard.style.borderColor = "#d9c836";
             popoverText_productCard.style.color = "#d9c836";
         }
-        setTimeout(fadePopup_productCard, 3000);
+        setTimeout(fadePopup_productCard, time);
     }
 
 }

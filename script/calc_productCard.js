@@ -35,8 +35,10 @@ if (document.querySelector('.fieldBlock_productCard')) {
 
     fieldBlock_productCard.addEventListener('input', (evt) => {
         if (evt.target.classList.contains('productCardCalcField_productCard')) {
+            // evt.target.value += 'мм';
             // widthValue = getValue('Ширина');
             // heightValue = getValue('Высота');
+            
             if (evt.target.getAttribute('name') === 'Ширина') {
                 widthValue = evt.target.value;
             } else if (evt.target.getAttribute('name') === 'Высота') {

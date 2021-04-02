@@ -12,7 +12,7 @@ if (document.querySelector('.popover_productCard')) {
         popoverText_productCard.style.color = "none";
     }
 
-    function openPopup (text, type) {
+    function openPopup (text, type, time) {
         popover_productCard.style.opacity = "1";
         popover_productCard.style.display = "block";
         popoverText_productCard.textContent = text;
@@ -28,7 +28,7 @@ if (document.querySelector('.popover_productCard')) {
             popover_productCard.style.borderColor = "#d9c836";
             popoverText_productCard.style.color = "#d9c836";
         }
-        setTimeout(fadePopup_productCard, 3000);
+        setTimeout(fadePopup_productCard, time);
     }
 
 }
