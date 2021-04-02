@@ -335,23 +335,21 @@ if (document.querySelector('.mainContent_catalog')) {
 }
 if (document.querySelector('.fieldBlock_productCard')) {
     let fieldBlock_productCard = document.querySelector('.fieldBlock_productCard');
-    let widthValue = 0;
-    let heightValue = 0;
-    let result = fieldBlock_productCard.querySelector('.result_productCard');
-    let unitWidth = document.querySelector('.page3ContentHeadline').getAttribute('data-width');
-    let unitLength = document.querySelector('.page3ContentHeadline').getAttribute('data-length');
-    let quantityField = document.querySelector('.calculatorNumber_productCard');
-    let quantityLink = document.querySelector('.goodsQuantity_productCard');
-    let makeCalcBlock = document.querySelector('.youNeedIs_productCard');
-    let thisWord = document.querySelector('.wordToDecline_productCard');
-
+        widthValue = 0;
+        heightValue = 0;
+        result = fieldBlock_productCard.querySelector('.result_productCard');
+        unitWidth = document.querySelector('.page3ContentHeadline').getAttribute('data-width');
+        unitLength = document.querySelector('.page3ContentHeadline').getAttribute('data-length');
+        quantityField = document.querySelector('.calculatorNumber_productCard');
+        quantityLink = document.querySelector('.goodsQuantity_productCard');
+        makeCalcBlock = document.querySelector('.youNeedIs_productCard');
+        thisWord = document.querySelector('.wordToDecline_productCard');
+        wordArr = ['лист', 'листа', 'листов'];
     // function getValue(attr) {
     //     if (evt.target.getAttribute('name') === attr) {
     //         return evt.target.value;
     //     }
     // }
-
-    let wordArr = ['лист', 'листа', 'листов'];
 
     function wordDecline(num, words) {
         let count = num % 100;
