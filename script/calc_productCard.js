@@ -47,7 +47,8 @@ if (document.querySelector('.fieldBlock_productCard')) {
             if (widthValue.length > 0 && heightValue.length > 0) {
                 makeCalcBlock.style.transform = 'translateY(25px)';
                 makeCalcBlock.style.opacity = '1';
-                result.textContent = (Math.ceil((Number(widthValue))/unitWidth)) * (Math.ceil((Number(heightValue))/unitLength)); 
+                // result.textContent = (Math.ceil((Number(widthValue))/unitWidth)) * (Math.ceil((Number(heightValue))/unitLength));
+                result.textContent = Math.ceil(((Number(widthValue) * Number(heightValue)) / 1000000) / ((unitWidth * unitLength) / 1000000)); 
                 wordDecline(result.textContent, wordArr);
             } else {
                 makeCalcBlock.style.transform = 'translateY(0px)';

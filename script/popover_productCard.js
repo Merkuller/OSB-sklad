@@ -1,14 +1,6 @@
 //popover_productCard
 if (document.querySelector('.popover_productCard')) {
 
-    // function fadePopup_productCard () {
-    //     popover_productCard.style.opacity = "0";
-    //     popover_productCard.style.display = "none";
-    //     popoverText_productCard.textContent = '';
-    //     popover_productCard.style.borderColor = "none";
-    //     popoverText_productCard.style.color = "none";
-    // }
-
     function openPopup (text, type, time) {
         let popover_productCard = document.querySelector('.popover_productCard');
             popoverText_productCard = document.querySelector('.popoverText_productCard');

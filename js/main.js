@@ -382,7 +382,8 @@ if (document.querySelector('.fieldBlock_productCard')) {
             if (widthValue.length > 0 && heightValue.length > 0) {
                 makeCalcBlock.style.transform = 'translateY(25px)';
                 makeCalcBlock.style.opacity = '1';
-                result.textContent = (Math.ceil((Number(widthValue))/unitWidth)) * (Math.ceil((Number(heightValue))/unitLength)); 
+                // result.textContent = (Math.ceil((Number(widthValue))/unitWidth)) * (Math.ceil((Number(heightValue))/unitLength));
+                result.textContent = Math.ceil(((Number(widthValue) * Number(heightValue)) / 1000000) / ((unitWidth * unitLength) / 1000000)); 
                 wordDecline(result.textContent, wordArr);
             } else {
                 makeCalcBlock.style.transform = 'translateY(0px)';
@@ -783,14 +784,6 @@ if (document.querySelector('#phone')) {
 
 //popover_productCard
 if (document.querySelector('.popover_productCard')) {
-
-    // function fadePopup_productCard () {
-    //     popover_productCard.style.opacity = "0";
-    //     popover_productCard.style.display = "none";
-    //     popoverText_productCard.textContent = '';
-    //     popover_productCard.style.borderColor = "none";
-    //     popoverText_productCard.style.color = "none";
-    // }
 
     function openPopup (text, type, time) {
         let popover_productCard = document.querySelector('.popover_productCard');
