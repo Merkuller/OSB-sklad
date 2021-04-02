@@ -2084,6 +2084,7 @@ header {
 
 .field_index {
   width: 22.85714%;
+  position: relative;
 }
 
 @media screen and (max-width: 768px) {
@@ -2097,6 +2098,20 @@ header {
   .field_index {
     width: 100%;
   }
+}
+
+.field_index .valueFiled {
+  position: absolute;
+  right: 30px;
+  top: 10px;
+  opacity: 1;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
 }
 
 .field_index input {
