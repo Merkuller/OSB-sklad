@@ -1,13 +1,13 @@
 //popover_productCard
 if (document.querySelector('.popover_productCard')) {
 
-    let fadePopup_productCard = function () {
-        popover_productCard.style.opacity = "0";
-        popover_productCard.style.display = "none";
-        popoverText_productCard.textContent = '';
-        popover_productCard.style.borderColor = "none";
-        popoverText_productCard.style.color = "none";
-    }
+    // function fadePopup_productCard () {
+    //     popover_productCard.style.opacity = "0";
+    //     popover_productCard.style.display = "none";
+    //     popoverText_productCard.textContent = '';
+    //     popover_productCard.style.borderColor = "none";
+    //     popoverText_productCard.style.color = "none";
+    // }
 
     function openPopup (text, type, time) {
         let popover_productCard = document.querySelector('.popover_productCard');
@@ -28,7 +28,13 @@ if (document.querySelector('.popover_productCard')) {
             popover_productCard.style.borderColor = "#d9c836";
             popoverText_productCard.style.color = "#d9c836";
         }
-        setTimeout(fadePopup_productCard, time);
+        setTimeout(function () {
+            popover_productCard.style.opacity = "0";
+            popover_productCard.style.display = "none";
+            popoverText_productCard.textContent = '';
+            popover_productCard.style.borderColor = "none";
+            popoverText_productCard.style.color = "none";
+        }, time);
     }
 
 }
