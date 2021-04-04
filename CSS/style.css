@@ -16743,6 +16743,7 @@ input::-webkit-inner-spin-button {
 }
 
 .unavailable_productCard {
+  border-color: #010101;
   background-color: dimgrey;
   text-decoration: line-through;
   color: #FFFFFF;
