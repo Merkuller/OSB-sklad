@@ -1199,6 +1199,11 @@ if (document.querySelector('.thicknessButtons_productCard')) {
 
     document.addEventListener('DOMContentLoaded',() => {
         let active_btn = getProductParameters(document.querySelector('.selectButton'))
+        let selectBtn = document.querySelector('.selectButton');
+        if (selectBtn.classList.contains('unavailable_productCard')) {
+            interface_productCard.style.display = "none"
+            refineRemainderBtn.style.display = "flex"
+        }
         renderProductParameters(active_btn)
         changeProductName(active_btn)
     })
