@@ -6292,19 +6292,14 @@ header {
   visibility: visible;
 }
 
+.popup.showPopup {
+  /* Третья секция. 2 страница. OSB на пол */
+}
+
 .popup.showPopup .popupContent {
   -webkit-transform: translate(0%, 0px);
           transform: translate(0%, 0px);
   opacity: 1;
-}
-
-.lock {
-  overflow: hidden;
-}
-
-.bodyPaddingRight {
-  padding-right: 17px;
-  /* Третья секция. 2 страница. OSB на пол */
 }
 
 .sectionThree_osbOnFloor {
@@ -16765,5 +16760,13 @@ input::-webkit-inner-spin-button {
 .unavailable_productCard:focus {
   background-color: dimgrey;
   border: 2px solid #010101;
+}
+
+.lock {
+  overflow: hidden;
+}
+
+.bodyPaddingRight {
+  padding-right: 17px;
 }
 /*# sourceMappingURL=style.css.map */

@@ -915,7 +915,7 @@ if (document.querySelector('.makeReview_reviews')) {
         }
     });
 }
-if (document.querySelector('.firstSectionPage3Content') || document.querySelector('.productCards') || document.querySelector('.makeReview_reviews')) {
+if (document.querySelector('.firstSectionPage3Content') || document.querySelector('.productCards')) {
     let popup = document.querySelector('.sectionThree_productCard .popup');
         modalForComment = document.querySelector('.sectionTwo_productCard .popup');
         closePopupBtn = document.querySelectorAll('.popupCloseBtn');
@@ -981,7 +981,8 @@ if (document.querySelector('.firstSectionPage3Content') || document.querySelecto
     document.addEventListener('keydown', function(evt){
         if (evt.key === 'Escape') {
             popupClose(popup);
-            popupClose(modalForComment);
+            if (document.querySelector('.firstSectionPage3Content')) popupClose(modalForComment);
+            // popupClose(modalForComment);
             bodyLock();
         }
     });
