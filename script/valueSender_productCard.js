@@ -5,6 +5,9 @@
 
 if (document.querySelector('.thicknessButtons_productCard')) {
     let btns_productCard = document.querySelectorAll('.thicknessButton_productCard');
+        interface_productCard = document.querySelector('.cardInterface_productCard');
+        refineRemainderBtn = document.querySelector('.refineRemainderOnInterface'); 
+        
     
 
     function renderProductParameters(obj) {
@@ -60,8 +63,15 @@ if (document.querySelector('.thicknessButtons_productCard')) {
             let productParameter = getProductParameters(e.target)
             renderProductParameters(productParameter)
             changeProductName(productParameter)
-            document.querySelector('.selectButton').classList.remove('selectButton')
-            e.target.classList.add('selectButton')
+            if (!e.target.classList.contains('unavailable_productCard')) {
+                document.querySelector('.selectButton').classList.remove('selectButton')
+                e.target.classList.add('selectButton')
+                interface_productCard.style.display = "block"
+                refineRemainderBtn.style.display = "none"
+            } else {
+                interface_productCard.style.display = "none"
+                refineRemainderBtn.style.display = "flex"
+            }
         })
     })
 }

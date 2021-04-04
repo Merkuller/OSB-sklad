@@ -865,61 +865,6 @@ if (document.querySelector('.shopBasket')) {
         shopBasketValueMobileScreen.textContent = shopBasketValueFullScreen.textContent;
     }
 }
-if (document.querySelector('.productCards')) {
-    let popup = document.querySelector('.popup');
-    let closePopupBtn = popup.querySelector('.popupCloseBtn');
-    let popupProductName = popup.querySelector('.popupProductName');
-    let hiddenFormField = popup.querySelector('.goodName');
-    let html = document.querySelector('html');
-    let productCards = document.querySelector('.productCards');
-
-    let popupOpen = function () {
-        popup.classList.add('showPopup');
-        popup.addEventListener('click', function(e) {
-            if (!e.target.closest('.popupContent')) {
-                popupClose();
-                bodyLock();
-            }
-        })
-        bodyLock();
-    };
-
-    let popupClose = function () {
-        popup.classList.remove('showPopup');
-    };
-
-    let bodyLock = function () {
-        let popupActive = document.querySelector('.popup.showPopup');
-        if (popupActive) {
-            html.classList.add('lock');
-            html.classList.add('bodyPaddingRight');
-        } else {
-            html.classList.remove('lock');
-            html.classList.remove('bodyPaddingRight');
-        }
-    };
-
-    productCards.addEventListener('click', (evt) => {
-        if (evt.target.classList.contains('refineRemainder')) {
-            popupOpen();
-            let prodcutName = evt.target.parentElement.querySelector('.productDescription > a');
-            popupProductName.textContent = prodcutName.textContent;
-            hiddenFormField.value = prodcutName.textContent;
-        }
-    });
-
-    closePopupBtn.addEventListener('click', function() {
-        popupClose();
-        bodyLock();
-    });
-
-    document.addEventListener('keydown', function(evt){
-        if (evt.key === 'Escape') {
-            popupClose();
-            bodyLock();
-        }
-    });
-}
 if (document.querySelector('.makeReview_reviews')) {
     let popup = document.querySelector('.popup');
     let closePopupBtn = popup.querySelector('.popupCloseBtn');
@@ -966,6 +911,77 @@ if (document.querySelector('.makeReview_reviews')) {
     document.addEventListener('keydown', function(e){
         if (e.key === 'Escape') {
             popupClose();
+            bodyLock();
+        }
+    });
+}
+if (document.querySelector('.productCards')) {
+    let popup = document.querySelector('.sectionThree_productCard .popup');
+        modalForComment = document.querySelector('.sectionTwo_productCard .popup');
+        closePopupBtn = document.querySelectorAll('.popupCloseBtn');
+        popupProductName = popup.querySelector('.popupProductName');
+        hiddenFormField = popup.querySelector('.goodName');
+        html = document.querySelector('html');
+        modalForComment = document.querySelector('.sectionTwo_productCard .popup');
+        popups = document.querySelectorAll('.popup');
+
+    let popupOpen = function (el) {
+        el.classList.add('showPopup');
+        el.addEventListener('click', function(e) {
+            if (!e.target.closest('.popupContent')) {
+                popupClose(el);
+                bodyLock();
+            }
+        })
+        bodyLock();
+    };
+
+    let popupClose = function (el) {
+        el.classList.remove('showPopup');
+    };
+
+    let bodyLock = function () {
+        let popupActive = document.querySelector('.popup.showPopup');
+        if (popupActive) {
+            html.classList.add('lock');
+            html.classList.add('bodyPaddingRight');
+        } else {
+            html.classList.remove('lock');
+            html.classList.remove('bodyPaddingRight');
+        }
+    };
+
+    document.addEventListener('click', (evt) => {
+        if (evt.target.classList.contains('refineRemainder')) {
+            popupOpen(popup);
+            let productName = evt.target.parentElement.querySelector('.productDescription > a');
+            popupProductName.textContent = productName.textContent;
+            hiddenFormField.value = productName.textContent;
+        } 
+        if (evt.target.classList.contains('makeReview_reviews')) {
+            popupOpen(modalForComment); 
+        }
+        if (evt.target.classList.contains('refineRemainderOnInterface')) {
+            popupOpen(popup);
+            let productName = evt.target.parentElement.querySelector('.page3ContentHeadline');
+            popupProductName.textContent = productName.textContent;
+            hiddenFormField.value = productName.textContent;
+        }
+    });
+
+
+    popups.forEach((el) => {
+        let closeBtn = el.querySelector('.popupCloseBtn');
+        closeBtn.addEventListener('click', () => {
+            popupClose(el);
+            bodyLock();
+        });
+    })
+
+    document.addEventListener('keydown', function(evt){
+        if (evt.key === 'Escape') {
+            popupClose(popup);
+            popupClose(modalForComment);
             bodyLock();
         }
     });
@@ -1136,6 +1152,9 @@ if (document.querySelector('.up-button') && document.querySelector('.track_index
 
 if (document.querySelector('.thicknessButtons_productCard')) {
     let btns_productCard = document.querySelectorAll('.thicknessButton_productCard');
+        interface_productCard = document.querySelector('.cardInterface_productCard');
+        refineRemainderBtn = document.querySelector('.refineRemainderOnInterface'); 
+        
     
 
     function renderProductParameters(obj) {
@@ -1191,8 +1210,15 @@ if (document.querySelector('.thicknessButtons_productCard')) {
             let productParameter = getProductParameters(e.target)
             renderProductParameters(productParameter)
             changeProductName(productParameter)
-            document.querySelector('.selectButton').classList.remove('selectButton')
-            e.target.classList.add('selectButton')
+            if (!e.target.classList.contains('unavailable_productCard')) {
+                document.querySelector('.selectButton').classList.remove('selectButton')
+                e.target.classList.add('selectButton')
+                interface_productCard.style.display = "block"
+                refineRemainderBtn.style.display = "none"
+            } else {
+                interface_productCard.style.display = "none"
+                refineRemainderBtn.style.display = "flex"
+            }
         })
     })
 }
