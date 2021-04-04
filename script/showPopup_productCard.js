@@ -1,4 +1,4 @@
-if (document.querySelector('.productCards')) {
+if (document.querySelector('.firstSectionPage3Content') || document.querySelector('.productCards') || document.querySelector('.makeReview_reviews')) {
     let popup = document.querySelector('.sectionThree_productCard .popup');
         modalForComment = document.querySelector('.sectionTwo_productCard .popup');
         closePopupBtn = document.querySelectorAll('.popupCloseBtn');
