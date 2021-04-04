@@ -7,7 +7,7 @@ if (document.querySelector('.thicknessButtons_productCard')) {
     let btns_productCard = document.querySelectorAll('.thicknessButton_productCard');
         interface_productCard = document.querySelector('.cardInterface_productCard');
         refineRemainderBtn = document.querySelector('.refineRemainderOnInterface'); 
-        
+        str = document.querySelector('.page3ContentHeadline').textContent;
     
 
     function renderProductParameters(obj) {
@@ -46,10 +46,8 @@ if (document.querySelector('.thicknessButtons_productCard')) {
     }
 
     function changeProductName(obj){
-        document.querySelectorAll('.productHeight').forEach(element => {
-            element.innerHTML = obj.thicknessFilter
-        })
-
+        let newStr = str.replace(/\d+/, obj.thicknessFilter);
+        document.querySelector('.page3ContentHeadline').textContent = newStr;
     }
 
     document.addEventListener('DOMContentLoaded',() => {
