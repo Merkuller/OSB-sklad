@@ -5066,6 +5066,7 @@ header
             line-height: 36px
             padding: 0px 20px
             padding-top: 13px
+
         .checBoxContainer
           width: 88.2%
           padding-bottom: 40px
@@ -9751,40 +9752,79 @@ input::-webkit-inner-spin-button
             line-height: 36px
             padding: 0px 20px
             padding-top: 13px
-        .loadPhotoContainer
+        .upload-file_wrapper
           padding: 0px 40px
+          overflow: hidden
           margin-bottom: 16px
-          @media screen and ( max-width: 425px)
-            padding: 0px 23px
-          .popupLoadPhoto
+          position: relative
+          .upload-file__input
+            position: absolute
+            opacity: 0
+            z-index: -20
+          .uploader_reviews
+            position: relative
             padding: 25px 20px 23px 120px
             border-radius: 4px
             background-color: #F0EFEE
-            position: relative
-            cursor: pointer
-            @media screen and ( max-width: 425px)
-              padding-left: 20px
-              padding-top: 90px
-            .popupLoadPhotoText
-              font-size: 20px
-              line-height: 36px
-              color: #4E4E4E
-              a
-                color: #EC8B33
             &::before
               content: ''
               position: absolute
-              left: 40px
-              top: 30px
               width: 60px
               height: 60px
-              background-position: center
-              background-repeat: no-repeat
               background-image: url('../img/svg/reviews/drugNdrop.svg')
-              @media screen and ( max-width: 425px)
-                left: 50%
-                top: 20px
-                transform: translateX(-50%)
+              left: 40px
+              top: 30px
+            .upload-file__label
+              .upload-file__text
+                color: #EC8B33
+                font-style: normal
+                font-weight: normal
+                font-size: 20px
+                line-height: 36px
+            .upload-file_link_text
+              width: 100%
+              display: inline
+              color: #4E4E4E
+              font-style: normal
+              font-weight: normal
+              font-size: 20px
+              line-height: 36px
+        // .loadPhotoContainer
+        //   padding: 0px 40px
+        //   margin-bottom: 16px
+        //   @media screen and ( max-width: 425px)
+        //     padding: 0px 23px
+        //   .popupLoadPhoto
+        //     padding: 25px 20px 23px 120px
+        //     border-radius: 4px
+        //     background-color: #F0EFEE
+        //     position: relative
+        //     cursor: pointer
+        //     #file-upload-button
+        //       border: none
+        //     @media screen and ( max-width: 425px)
+        //       padding-left: 20px
+        //       padding-top: 90px
+        //     .popupLoadPhotoText
+        //       font-size: 20px
+        //       line-height: 36px
+        //       color: #4E4E4E
+        //       a
+        //         color: #EC8B33
+        //     &::before
+        //       content: ''
+        //       position: absolute
+        //       left: 40px
+        //       top: 30px
+        //       width: 60px
+        //       height: 60px
+        //       background-position: center
+        //       background-repeat: no-repeat
+        //       background-image: url('../img/svg/reviews/drugNdrop.svg')
+        //       @media screen and ( max-width: 425px)
+        //         left: 50%
+        //         top: 20px
+        //         transform: translateX(-50%)
         .checBoxContainer
           width: 88.2%
           padding-bottom: 40px
@@ -10011,7 +10051,16 @@ input::-webkit-inner-spin-button
       text-align: center
   .commentAppContent_index
     width: 100%
+    height: 160px
     margin-bottom: 26px
+    display: flex
+    overflow: hidden
+    img
+      object-fit: cover
+      display: block
+      background-position: center
+      height: 160px
+      margin: 0px 0.5%
   .commentAppData_index
     color: #999999
     width: 100%
