@@ -167,13 +167,28 @@
                             <input type="hidden" class="goodName">
                             <textarea name="" class="popupCommentField" cols="30" rows="4" placeholder="Ваш комментарий"></textarea>
                         </div>
-                        <div class="loadPhotoContainer">
+                        <div class="dragNdrop_reviews">
+                            <div class="box">
+                                <div class="box__input">
+                                    <input class="box__file" type="file" name="files[]" id="file" data-multiple-caption="{count} files selected" multiple />
+                                    <label for="file"><span class="dNdlink_reviews">Нажмите на ссылку</span><span class="box__dragndrop">, чтобы выбрать фотографии или перетащите их сюда</span>.</label>
+                                    <!-- <button class="box__button" type="submit">Upload</button> -->
+                                </div>
+                                <div class="box__uploading">Uploading…</div>
+                                <div class="box__success">Done!</div>
+                                <div class="box__error">Error! <span></span>.</div>
+                            </div>
+                        </div>
+                        <!-- <div class="input-group loadPhotoContainer">
+                            <input type="file" class="form-control popupLoadPhoto" multiple id="inputGroupFile04" aria-describedby="inputGroupFileAddon04" aria-label="Upload">
+                        </div> -->
+                        <!-- <div class="loadPhotoContainer">
                             <div class="popupLoadPhoto">
                                 <p class="popupLoadPhotoText">
                                     <a href="#">Нажмите на ссылу</a>, чтобы выбрать фотографии или перетащите их сюда
                                 </p>
                             </div>
-                        </div>
+                        </div> -->
                         <div class="checBoxContainer">
                             <div class="popupCheckBtn">
                                 <input class="checkBtn" type="checkbox" value="" id="flag">
@@ -230,7 +245,9 @@
                                 <button type="button" class="readAllBtn_reviews">читать полностью</button>
                                 <div class="commentApplication_index">
                                     <p class="commentAppTitle_index">Приложения:</p>
-                                    <div class="commentAppContent_index"></div>
+                                    <div class="commentAppContent_index">
+                                        <img src="/img/jpg/firstSection_page7/Content2Picture_page7.jpg">
+                                    </div>
                                     <p class="commentAppData_index">18 марта 2021</p>
                                 </div>
                             </div>

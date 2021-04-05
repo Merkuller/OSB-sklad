@@ -65,7 +65,6 @@ if (document.querySelector('.firstSectionPage3Content') || document.querySelecto
         if (evt.key === 'Escape') {
             popupClose(popup);
             if (document.querySelector('.firstSectionPage3Content')) popupClose(modalForComment);
-            // popupClose(modalForComment);
             bodyLock();
         }
     });

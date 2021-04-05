@@ -7603,6 +7603,71 @@ header {
   color: #4E4E4E;
 }
 
+.dragNdrop_reviews {
+  padding: 0px 40px;
+  margin-bottom: 16px;
+}
+
+.box.has-advanced-upload {
+  background-color: white;
+  padding: 25px 20px 23px 120px;
+  position: relative;
+  background-color: #F0EFEE;
+  border-radius: 4px;
+}
+
+.box.has-advanced-upload::before {
+  content: '';
+  height: 60px;
+  width: 60px;
+  position: absolute;
+  top: 30px;
+  left: 40px;
+  background-image: url("../img/svg/reviews/drugNdrop.svg");
+}
+
+.box.is-uploading .box__input {
+  visibility: none;
+}
+
+.box.is-uploading .box__uploading {
+  display: block;
+}
+
+.box__file {
+  opacity: 0;
+  position: absolute;
+  z-index: -20;
+}
+
+.dNdlink_reviews {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #EC8B33;
+}
+
+.box.has-advanced-upload .box__dragndrop {
+  display: inline;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #4E4E4E;
+}
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
+}
+
+.box.is-dragover {
+  background-color: grey;
+}
+
 .secondSection_productCard {
   width: 100%;
   display: block;
@@ -14716,63 +14781,6 @@ input::-webkit-inner-spin-button {
   padding-top: 13px;
 }
 
-.content_reviews .popup .popupBody .popupContent .loadPhotoContainer {
-  padding: 0px 40px;
-  margin-bottom: 16px;
-}
-
-@media screen and (max-width: 425px) {
-  .content_reviews .popup .popupBody .popupContent .loadPhotoContainer {
-    padding: 0px 23px;
-  }
-}
-
-.content_reviews .popup .popupBody .popupContent .loadPhotoContainer .popupLoadPhoto {
-  padding: 25px 20px 23px 120px;
-  border-radius: 4px;
-  background-color: #F0EFEE;
-  position: relative;
-  cursor: pointer;
-}
-
-@media screen and (max-width: 425px) {
-  .content_reviews .popup .popupBody .popupContent .loadPhotoContainer .popupLoadPhoto {
-    padding-left: 20px;
-    padding-top: 90px;
-  }
-}
-
-.content_reviews .popup .popupBody .popupContent .loadPhotoContainer .popupLoadPhoto .popupLoadPhotoText {
-  font-size: 20px;
-  line-height: 36px;
-  color: #4E4E4E;
-}
-
-.content_reviews .popup .popupBody .popupContent .loadPhotoContainer .popupLoadPhoto .popupLoadPhotoText a {
-  color: #EC8B33;
-}
-
-.content_reviews .popup .popupBody .popupContent .loadPhotoContainer .popupLoadPhoto::before {
-  content: '';
-  position: absolute;
-  left: 40px;
-  top: 30px;
-  width: 60px;
-  height: 60px;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-image: url("../img/svg/reviews/drugNdrop.svg");
-}
-
-@media screen and (max-width: 425px) {
-  .content_reviews .popup .popupBody .popupContent .loadPhotoContainer .popupLoadPhoto::before {
-    left: 50%;
-    top: 20px;
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-}
-
 .content_reviews .popup .popupBody .popupContent .checBoxContainer {
   width: 88.2%;
   padding-bottom: 40px;
@@ -15176,7 +15184,21 @@ input::-webkit-inner-spin-button {
 
 .commentApplication_index .commentAppContent_index {
   width: 100%;
+  height: 160px;
   margin-bottom: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  overflow: hidden;
+}
+
+.commentApplication_index .commentAppContent_index img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  display: block;
+  background-position: center;
+  height: 160px;
+  margin: 0px 0.5%;
 }
 
 .commentApplication_index .commentAppData_index {

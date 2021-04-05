@@ -5066,6 +5066,16 @@ header
             line-height: 36px
             padding: 0px 20px
             padding-top: 13px
+        // .box
+        //   .box__input
+        //     .box__dragndrop
+        //       display: none
+        //   .box__uploading
+        //     display: none
+        //   .box__success
+        //     display: none
+        //   .box__error
+        //     display: none
 
         .checBoxContainer
           width: 88.2%
@@ -5126,6 +5136,61 @@ header
           a
             text-decoration: underline
             color: #4E4E4E
+.dragNdrop_reviews
+  padding: 0px 40px
+  margin-bottom: 16px
+.box.has-advanced-upload 
+  background-color: white
+  padding: 25px 20px 23px 120px
+  position: relative
+  background-color: #F0EFEE
+  border-radius: 4px
+  &::before
+    content: ''
+    height: 60px
+    width: 60px
+    position: absolute
+    top: 30px
+    left: 40px
+    background-image: url('../img/svg/reviews/drugNdrop.svg')
+
+.box.is-uploading .box__input 
+  visibility: none
+
+.box.is-uploading .box__uploading 
+  display: block
+
+
+.box__file
+  opacity: 0
+  position: absolute
+  z-index: -20
+
+.dNdlink_reviews
+  font-style: normal
+  font-weight: normal
+  font-size: 20px
+  line-height: 36px
+  color: #EC8B33
+
+.box.has-advanced-upload 
+  .box__dragndrop 
+    display: inline
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 36px
+    color: #4E4E4E
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error 
+  display: none
+
+.box.is-dragover 
+  background-color: grey
+
 
 .secondSection_productCard
   width: 100%
@@ -9752,43 +9817,7 @@ input::-webkit-inner-spin-button
             line-height: 36px
             padding: 0px 20px
             padding-top: 13px
-        .upload-file_wrapper
-          padding: 0px 40px
-          overflow: hidden
-          margin-bottom: 16px
-          position: relative
-          .upload-file__input
-            position: absolute
-            opacity: 0
-            z-index: -20
-          .uploader_reviews
-            position: relative
-            padding: 25px 20px 23px 120px
-            border-radius: 4px
-            background-color: #F0EFEE
-            &::before
-              content: ''
-              position: absolute
-              width: 60px
-              height: 60px
-              background-image: url('../img/svg/reviews/drugNdrop.svg')
-              left: 40px
-              top: 30px
-            .upload-file__label
-              .upload-file__text
-                color: #EC8B33
-                font-style: normal
-                font-weight: normal
-                font-size: 20px
-                line-height: 36px
-            .upload-file_link_text
-              width: 100%
-              display: inline
-              color: #4E4E4E
-              font-style: normal
-              font-weight: normal
-              font-size: 20px
-              line-height: 36px
+        
         // .loadPhotoContainer
         //   padding: 0px 40px
         //   margin-bottom: 16px

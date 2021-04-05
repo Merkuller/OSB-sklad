@@ -519,6 +519,34 @@ if (document.querySelector('.contentReviews_reviews')) {
         }
     })
 }
+if (document.querySelector('.box')) {
+    var div = document.createElement('div');
+    var $form = $('.box');
+    var isAdvancedUpload = function() {
+        var div = document.createElement('div');
+        return (('draggable' in div) || ('ondragstart' in div && 'ondrop' in div)) && 'FormData' in window && 'FileReader' in window;
+    }();
+
+    if (isAdvancedUpload) {
+        $form.addClass('has-advanced-upload');
+
+        var droppedFiles = false;
+
+        $form.on('drag dragstart dragend dragover dragenter dragleave drop', function(e) {
+            e.preventDefault();
+            e.stopPropagation();
+        })
+        .on('dragover dragenter', function() {
+            $form.addClass('is-dragover');
+        })
+        .on('dragleave dragend drop', function() {
+            $form.removeClass('is-dragover');
+        })
+        .on('drop', function(e) {
+            droppedFiles = e.originalEvent.dataTransfer.files;
+        });
+    }
+}
 //filterNameToggler_index
 
 if (document.querySelector('.filterCollapse_osbOnFloor')) {
@@ -982,7 +1010,6 @@ if (document.querySelector('.firstSectionPage3Content') || document.querySelecto
         if (evt.key === 'Escape') {
             popupClose(popup);
             if (document.querySelector('.firstSectionPage3Content')) popupClose(modalForComment);
-            // popupClose(modalForComment);
             bodyLock();
         }
     });
