@@ -11,7 +11,7 @@ if (document.querySelector('.popupIdentificationBtn')) {
             document.querySelector('.popupIdentificationBtn.select').classList.remove('select');
             document.querySelector('.captureName.hidden').classList.remove('hidden');
             btn.classList.add('select');
-            let fieldNumber = Number(btn.getAttribute('for'));
+            let fieldNumber = Number(btn.getAttribute('for') - 1);
             fields[fieldNumber].classList.add('hidden');
         });
     })

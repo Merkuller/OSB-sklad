@@ -201,7 +201,7 @@ if (document.querySelector('.popupIdentificationBtn')) {
             document.querySelector('.popupIdentificationBtn.select').classList.remove('select');
             document.querySelector('.captureName.hidden').classList.remove('hidden');
             btn.classList.add('select');
-            let fieldNumber = Number(btn.getAttribute('for'));
+            let fieldNumber = Number(btn.getAttribute('for') - 1);
             fields[fieldNumber].classList.add('hidden');
         });
     })
@@ -551,7 +551,7 @@ if (document.querySelector('.dragNdrop_reviews')) {
     dropArea.addEventListener('dragover', e => {
         e.stopPropagation();                                                     
         e.preventDefault();                                                     
-        changeDropArea('add');                                                    
+        if (file.children.length < 5) changeDropArea('add');                                                    
     }, false);                                                     
 
     dropArea.addEventListener('dragleave', () => {

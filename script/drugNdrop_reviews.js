@@ -29,7 +29,7 @@ if (document.querySelector('.dragNdrop_reviews')) {
     dropArea.addEventListener('dragover', e => {
         e.stopPropagation();                                                     
         e.preventDefault();                                                     
-        changeDropArea('add');                                                    
+        if (file.children.length < 5) changeDropArea('add');                                                    
     }, false);                                                     
 
     dropArea.addEventListener('dragleave', () => {
