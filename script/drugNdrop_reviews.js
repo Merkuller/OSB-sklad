@@ -26,10 +26,11 @@ if (document.querySelector('.dragNdrop_reviews')) {
         makeFiles();
     });
 
-    dropArea.addEventListener('dragover', e => {                                                     
+    dropArea.addEventListener('dragover', e => {
+        e.stopPropagation();                                                     
         e.preventDefault();                                                     
         changeDropArea('add');                                                    
-    });                                                     
+    }, false);                                                     
 
     dropArea.addEventListener('dragleave', () => {
         changeDropArea('remove');

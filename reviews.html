@@ -7,6 +7,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.css" integrity="sha512-NVt7pmp5f+3eWRPO1h4A1gCf4opn4r5z2wS1mi7AaVcTzE9wDJ6RzMqSygjDzYHLp+mAJ2/qzXXDHar6IQwddQ==" crossorigin="anonymous" />
 </head>
 <body>
     <header>
@@ -157,11 +158,18 @@
                         <p class="popupText">Поделитесь опытом сотрудничества с нами. Обратите внеимание на скорость отгрузки, доставки и наличии товара.<br><br> Мы не публикуем отзывы, которые содержат ненормативную лексику написанные заглавными буквами.</p>
                         <div class="popupIdentification">
                             <span>Вы:</span>
-                            <button type="button" class="popupIdentificationBtn">Физическое лицо</button>
-                            <button type="button" class="popupIdentificationBtn">Компания</button>
+                            <div class="radioBtn">
+                                <input type="radio" name="individualOption" id="0" value="ind" checked hidden>
+                                <label class="popupIdentificationBtn" for="0">Физическое лицо</label>
+                            </div>
+                            <div class="radioBtn">
+                                <input type="radio" name="individualOption" id="1" value="comp" hidden>
+                                <label class="popupIdentificationBtn" for="1">Компания</label>
+                            </div>
                         </div>
                         <div class="popupFields">
-                            <input type="text" class="popupField" placeholder="Имя">
+                            <input type="text" class="popupField captureName" placeholder="Компания">
+                            <input type="text" class="popupField captureName" placeholder="Имя">
                             <input type="text" class="popupField" placeholder="Достоинства">
                             <input type="text" class="popupField" placeholder="Недостатки">
                             <input type="hidden" class="goodName">
@@ -174,8 +182,8 @@
                             <div class="drag-area">
                                 <div class="dragIcon"></div>
                                 <div class="dragAreaContent">
-                                    <a class="browseFile" href="#">Нажмите на ссылку</a>
-                                    <span class="browseFileText">, чтобы выбрать фотографии</span>
+                                    <a class="browseFile" href="#">Нажмите на ссылку,</a>
+                                    <span class="browseFileText">чтобы выбрать фотографии</span>
                                     <p class="headerDragText">или перетащите их сюда</p>
                                 </div>
                                 <p class="dropHereText">Перетащите сюда файл и отпустите</p>
@@ -241,10 +249,115 @@
                                 <div class="commentApplication_index">
                                     <p class="commentAppTitle_index">Приложения:</p>
                                     <div class="commentAppContent_index">
-                                        <img src="/img/jpg/firstSection_page7/Content2Picture_page7.jpg">
+                                        <div class="card">
+                                            <a href="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg">
+                                                <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="img/jpg/firstSection_page1/slider2_page1/sliderPic3_page1.jpg">
+                                                <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic3_page1.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="img/jpg/firstSection_page1/slider2_page1/sliderPic7_page1.jpg">
+                                                <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic7_page1.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg">
+                                                <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic8_page1.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="img/jpg/firstSection_page1/slider2_page1/sliderPic2_page1.jpg">
+                                                <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic2_page1.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
                                     </div>
-                                    <p class="commentAppData_index">18 марта 2021</p>
                                 </div>
+                                <p class="commentAppData_index">18 марта 2021</p>
+                            </div>
+                            <div class="s3_slide1WhoWrote_index">
+                                <div class="s3_slide1Person_index">
+                                    <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
+                                    <div class="s3_slide1PersonData_index">
+                                        <span class="s3_slide1Name_index">Егор Смирнов</span>
+                                        <span class="s3_slide1Who_index">Частный клиент</span>
+                                    </div>
+                                </div>
+                                <div class="s3_slide1ReviewLinks_index">
+                                    <a class="s3_slide1Attachment_index" href="#">
+                                        <span class="s3_slide1AttachmentIcon_index"></span>
+                                        <span class="s3_slide1AttachmentText_index">
+                                            3 вложения
+                                        </span>
+                                    </a>
+                                    <a class="s3_slide1ReviewLink_index">
+                                        <span class="s3_slide1ReviewLinkIcon_index"></span>
+                                        <span class="s3_slide1ReviewLinkText_index" href="#">
+                                            Читать полностью
+                                        </span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
+                        <div class="s3_slideContent_index">
+                            <div class="s3_slide1Review_index">
+                                <div class="s3_slide1PositiveComment">
+                                    <div class="s3_slide1PositiveReview_index">
+                                        <span class="s3_plusIcon_index"></span>
+                                        <span class="s3_positiveText_index">
+                                            Достоинства:
+                                        </span>
+                                    </div>
+                                    <div class="s3_positiveText_index">
+                                        Удобство и доступность в строительстве, дешевле фанеры,<br> прочность, влагостойкость.
+                                    </div>
+                                </div>
+                                <div class="s3_slide1NegativeComment">
+                                    <div class="s3_slide1NegativeReview_index">
+                                        <span class="s3_minusIcon_index"></span>
+                                        <span class="s3_negativeText_index">
+                                            Недостатки:
+                                        </span>
+                                    </div>
+                                    <div class="s3_negativeText_index">
+                                        Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
+                                    </div>
+                                </div>
+                                <div class="s3_reviewComment_index">
+                                    <div class="s3_reviewCommentText1_index">
+                                        Текст отзыва:
+                                    </div>
+                                    <div class="reviewText_index">
+                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
+                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
+                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2044 году мы купили недостроенный деревянный дом саманного типа.
+                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2044 году мы купили недостроенный деревянный дом саманного типа.
+                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2044 году мы купили недостроенный деревянный дом саманного типа.
+                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2044 году мы купили недостроенный деревянный дом саманного cтипа.
+                                    </div>
+                                </div>
+                                <button type="button" class="readAllBtn_reviews">читать полностью</button>
+                                <div class="commentApplication_index">
+                                    <p class="commentAppTitle_index">Приложения:</p>
+                                    <div class="commentAppContent_index">
+                                        <div class="card">
+                                            <a href="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg">
+                                                <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic1_page1.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="img/jpg/firstSection_page1/slider2_page1/sliderPic3_page1.jpg">
+                                                <img src="img/jpg/firstSection_page1/slider2_page1/sliderPic3_page1.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <p class="commentAppData_index">18 марта 2021</p>
                             </div>
                             <div class="s3_slide1WhoWrote_index">
                                 <div class="s3_slide1Person_index">
@@ -313,78 +426,8 @@
                                 <div class="commentApplication_index">
                                     <p class="commentAppTitle_index">Приложения:</p>
                                     <div class="commentAppContent_index"></div>
-                                    <p class="commentAppData_index">18 марта 2021</p>
                                 </div>
-                            </div>
-                            <div class="s3_slide1WhoWrote_index">
-                                <div class="s3_slide1Person_index">
-                                    <span class="s3_slide1Avatar_index"><img src="img/svg/fifthSection_page1/Client1_icon_slide1_page1.svg" alt="#"></span>
-                                    <div class="s3_slide1PersonData_index">
-                                        <span class="s3_slide1Name_index">Егор Смирнов</span>
-                                        <span class="s3_slide1Who_index">Частный клиент</span>
-                                    </div>
-                                </div>
-                                <div class="s3_slide1ReviewLinks_index">
-                                    <a class="s3_slide1Attachment_index" href="#">
-                                        <span class="s3_slide1AttachmentIcon_index"></span>
-                                        <span class="s3_slide1AttachmentText_index">
-                                            3 вложения
-                                        </span>
-                                    </a>
-                                    <a class="s3_slide1ReviewLink_index">
-                                        <span class="s3_slide1ReviewLinkIcon_index"></span>
-                                        <span class="s3_slide1ReviewLinkText_index" href="#">
-                                            Читать полностью
-                                        </span>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="s3_slide_index swiper-slide catalog-slider-slide" data-categories="[2]" data-id="2">
-                        <div class="s3_slideContent_index">
-                            <div class="s3_slide1Review_index">
-                                <div class="s3_slide1PositiveComment">
-                                    <div class="s3_slide1PositiveReview_index">
-                                        <span class="s3_plusIcon_index"></span>
-                                        <span class="s3_positiveText_index">
-                                            Достоинства:
-                                        </span>
-                                    </div>
-                                    <div class="s3_positiveText_index">
-                                        Удобство и доступность в строительстве, дешевле фанеры,<br> прочность, влагостойкость.
-                                    </div>
-                                </div>
-                                <div class="s3_slide1NegativeComment">
-                                    <div class="s3_slide1NegativeReview_index">
-                                        <span class="s3_minusIcon_index"></span>
-                                        <span class="s3_negativeText_index">
-                                            Недостатки:
-                                        </span>
-                                    </div>
-                                    <div class="s3_negativeText_index">
-                                        Чтобы разрезать нужен специальный инструмент, не самый экологичный материал.
-                                    </div>
-                                </div>
-                                <div class="s3_reviewComment_index">
-                                    <div class="s3_reviewCommentText1_index">
-                                        Текст отзыва:
-                                    </div>
-                                    <div class="reviewText_index">
-                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
-                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. Сначала решили последовать советам родителей и знакомых и не мазать глиной стены изнутри по-старинке, а обшить все изнутри плитами ОСБ для выравнивания стен, ведь стены, сделанные из досок, были очень неровными. Мы закупили много плит ОСБ и сделали эту работу на 50 процентов.
-                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2044 году мы купили недостроенный деревянный дом саманного типа.
-                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2044 году мы купили недостроенный деревянный дом саманного типа.
-                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2044 году мы купили недостроенный деревянный дом саманного типа.
-                                        В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2013 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2014 году мы купили недостроенный деревянный дом саманного типа. В 2044 году мы купили недостроенный деревянный дом саманного cтипа.
-                                    </div>
-                                </div>
-                                <button type="button" class="readAllBtn_reviews">читать полностью</button>
-                                <div class="commentApplication_index">
-                                    <p class="commentAppTitle_index">Приложения:</p>
-                                    <div class="commentAppContent_index"></div>
-                                    <p class="commentAppData_index">18 марта 2021</p>
-                                </div>
+                                <p class="commentAppData_index">18 марта 2021</p>
                             </div>
                             <div class="s3_slide1WhoWrote_index">
                                 <div class="s3_slide1Person_index">
@@ -447,9 +490,30 @@
                                 <button type="button" class="readAllBtn_reviews">читать полностью</button>
                                 <div class="commentApplication_index">
                                     <p class="commentAppTitle_index">Приложения:</p>
-                                    <div class="commentAppContent_index"></div>
-                                    <p class="commentAppData_index">18 марта 2021</p>
+                                    <div class="commentAppContent_index">
+                                        <div class="card">
+                                            <a href="img/jpg/secondSection_page4/Content1_page4.jpg">
+                                                <img src="img/jpg/secondSection_page4/Content1_page4.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="img/jpg/secondSection_page4/Content2_page4.jpg">
+                                                <img src="img/jpg/secondSection_page4/Content2_page4.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="img/jpg/secondSection_page4/Content3_page4.jpg">
+                                                <img src="img/jpg/secondSection_page4/Content3_page4.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                        <div class="card">
+                                            <a href="img/jpg/secondSection_page4/Content4_page4.jpg">
+                                                <img src="img/jpg/secondSection_page4/Content4_page4.jpg" class="card-img-top">
+                                            </a>
+                                        </div>
+                                    </div>
                                 </div>
+                                <p class="commentAppData_index">18 марта 2021</p>
                             </div>
                             <div class="s3_slide1WhoWrote_index">
                                 <div class="s3_slide1Person_index">
@@ -577,6 +641,7 @@
     <script src="./libs/jquery-3.5.1.min.js"></script>
     <script src="./libs/bootstrap.bundle.min.js"></script>
     <script src="./libs/slick.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js" integrity="sha512-7KzSt4AJ9bLchXCRllnyYUDjfhO2IFEWSa+a5/3kPGQbr+swRTorHQfyADAhSlVHCs1bpFdB1447ZRzFyiiXsg==" crossorigin="anonymous"></script>
     <script src="./js/main.js"></script>
 </body>
 </html>

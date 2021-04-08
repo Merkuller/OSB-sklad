@@ -191,18 +191,19 @@ if (document.querySelector('.shippedQuantity_index')) {
 if (document.querySelector('.popupIdentificationBtn')) {
 
     let btns = document.querySelectorAll('.popupIdentificationBtn');
-    
+        fields = document.querySelectorAll('.captureName');
+        
     btns[0].classList.add('select');
+    fields[0].classList.add('hidden');
 
     btns.forEach((btn) => {
         btn.addEventListener('click', () => {
+            document.querySelector('.popupIdentificationBtn.select').classList.remove('select');
+            document.querySelector('.captureName.hidden').classList.remove('hidden');
             btn.classList.add('select');
-            for (let i = 0; i < btns.length; i ++) {
-                if (btn !== btns[i]) {
-                    btns[i].classList.remove('select');
-                }
-            }
-        })
+            let fieldNumber = Number(btn.getAttribute('for'));
+            fields[fieldNumber].classList.add('hidden');
+        });
     })
 }
 
@@ -547,10 +548,11 @@ if (document.querySelector('.dragNdrop_reviews')) {
         makeFiles();
     });
 
-    dropArea.addEventListener('dragover', e => {                                                     
+    dropArea.addEventListener('dragover', e => {
+        e.stopPropagation();                                                     
         e.preventDefault();                                                     
         changeDropArea('add');                                                    
-    });                                                     
+    }, false);                                                     
 
     dropArea.addEventListener('dragleave', () => {
         changeDropArea('remove');
@@ -640,6 +642,21 @@ moreListElements.addEventListener('click', function() {
         moreListElements.style.display = "none";
     }
 })
+if (document.querySelector('.content_reviews')) {
+
+    let gallerys = document.querySelectorAll('.commentApplication_index');
+        body = document.querySelector('body');
+
+    body.style.overflow = 'visible';
+    gallerys.forEach(el => {
+        let imgs = el.querySelector('.commentAppContent_index');
+        let className = imgs.getAttribute('class')
+        if (imgs.children.length === 0) el.style.display = "none";
+        baguetteBox.run(`.${className}`, {
+            animation: 'fadeIn'
+        });
+    });
+}
 // Этот скрипт отвечает за галлерею страницы.
 //gallerySwitcher_productCard
 if (document.querySelector('.page3ContentImg')) {

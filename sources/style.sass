@@ -5753,15 +5753,19 @@ input::-webkit-inner-spin-button
     left: 0
     top: 3.5px
     background-image: url('../img/svg/firstSection_page3/Calculation.svg')
-    transition: color 0.2s ease-in-out
+    transition: all 0.2s ease-in-out
 
   &:hover
     color: #EC8B33
     transition: color 0.2s ease-in-out
+    &::before
+      background-image: url('../img/svg/firstSection_page3/CalculationHover.svg')
 
   &:active
     color: #CA782E
     transition: color 0.1s ease-in-out
+    &::before
+      background-image: url('../img/svg/firstSection_page3/CalculationActive.svg')
 
 /* Выпадающее меню */
 .row
@@ -9704,27 +9708,10 @@ input::-webkit-inner-spin-button
             @media screen and ( max-width: 538px)
               margin-right: 0px
               margin-bottom: 5px
-          .popupIdentificationBtn
-            position: relative
-            flex: 1 1 50%
-            text-align: center
-            padding: 13px 0px
-            border: 2px solid #BFBFBF
-            font-weight: bold
-            font-size: 20px
-            line-height: 36px
-            color: #010101
-            border-radius: 4px
-            background-color: #FFFFFF
-            transition: all .2s ease-in-out
-            &:focus
-              outline: none
-            &:hover
-              color: #EC8B33
-              border-color: #EC8B33
-            &:active
-              color: #CA782E
-              border-color: #CA782E
+          .radioBtn
+            width: 275px
+            position: relative  
+            display: inline-block
             &:last-of-type
               left: -5px
               @media screen and ( max-width: 538px)
@@ -9732,11 +9719,33 @@ input::-webkit-inner-spin-button
                 margin-top: 10px
             @media screen and ( max-width: 538px)
               width: 100%
-          .select
-            border-color: #EC8B33
-            color: #EC8B33
-            transition: all .2s ease-in-out
-            z-index: 10
+            .popupIdentificationBtn
+              display: block
+              position: relative
+              flex: 1 1 50%
+              text-align: center
+              padding: 13px 0px
+              border: 2px solid #BFBFBF
+              font-weight: bold
+              font-size: 20px
+              line-height: 36px
+              color: #010101
+              border-radius: 4px
+              background-color: #FFFFFF
+              transition: all .2s ease-in-out
+              &:focus
+                outline: none
+              &:hover
+                color: #EC8B33
+                border-color: #EC8B33
+              &:active
+                color: #CA782E
+                border-color: #CA782E
+              &.select
+                border-color: #EC8B33
+                color: #EC8B33
+                transition: all .2s ease-in-out
+                z-index: 10 
         .popupFields
           padding: 0px 40px
           @media screen and ( max-width: 425px)
@@ -9747,6 +9756,10 @@ input::-webkit-inner-spin-button
             background-color: #F0EFEE
             font-size: 20px
             line-height: 36px
+            &.hidden
+              display: none
+            &.show
+              display: block
           .popupCommentField
             border: none
             background-color: #F0EFEE
@@ -9760,11 +9773,17 @@ input::-webkit-inner-spin-button
           .uploadedFiles
             display: flex
             width: 100%
+            @media screen and ( max-width: 618px)
+              flex-wrap: wrap
+            @media screen and ( max-width: 434px)
+              justify-content: space-around
             .uploadedFile
               position: relative
               width: 80px
               height: 80px
               margin: 15px
+              @media screen and ( max-width: 434px)
+                margin: 11px
               .deleteBtn
                 position: absolute
                 width: 16px
@@ -9774,6 +9793,8 @@ input::-webkit-inner-spin-button
                 right: -20px
                 border: none
                 border-radius: 50%
+                @media screen and ( max-width: 434px)
+                  right: -19px
                 &:focus
                   outline: none
               img
@@ -9792,6 +9813,8 @@ input::-webkit-inner-spin-button
             background-color: #F0EFEE
             border-radius: 4px
             transition: all .2s ease-in-out
+            @media screen and ( max-width: 480px)
+              padding: 80px 20px 23px 23px
             &.activeArea
               background-color: #EC8B33
             .dragIcon
@@ -9802,9 +9825,15 @@ input::-webkit-inner-spin-button
               background-position: center
               top: 30px
               left: 30px
+              pointer-events: none
               transition: all .2s ease-in-out
+              @media screen and ( max-width: 480px)
+                top: 15px
+                left: 50%
+                transform: translateX(-50%)
             .dragAreaContent
               transition: all .2s ease-in-out
+              pointer-events: none
               &.hidden
                 z-index: -10
                 opacity: 0
@@ -9816,7 +9845,12 @@ input::-webkit-inner-spin-button
                 line-height: 36px
                 color: #EC8B33
                 text-decoration: none
+                pointer-events: auto
                 transition: all .2s ease-in-out
+                @media screen and ( max-width: 480px)
+                  width: 100%
+                  display: block
+                  text-align: center
                 &:hover
                   color: #CA782E
                 &:active
@@ -9830,12 +9864,18 @@ input::-webkit-inner-spin-button
                 font-size: 20px
                 line-height: 36px
                 color: #4E4E4E
+                @media screen and ( max-width: 480px)
+                  display: block
+                  width: 100%
+                  text-align: center
               .headerDragText
                 font-style: normal
                 font-weight: normal
                 font-size: 20px
                 line-height: 36px
                 color: #4E4E4E
+                @media screen and ( max-width: 480px)
+                  text-align: center
             .dropHereText
               width: 100%
               text-align: left
@@ -9847,9 +9887,12 @@ input::-webkit-inner-spin-button
               opacity: 0
               z-index: -10
               position: absolute
+              pointer-events: none
               top: 50%
               transform: translate(0, -50%)
               transition: all .2s ease-in-out
+              @media screen and ( max-width: 480px)
+                top: 80%
               &.show
                 opacity: 1
                 z-index: 10
@@ -9859,7 +9902,9 @@ input::-webkit-inner-spin-button
             font-weight: normal
             font-size: 16px
             line-height: 28px
-            color: #999999  
+            color: #999999
+            @media screen and ( max-width: 375px)
+              text-align: center
         .checBoxContainer
           width: 88.2%
           padding-bottom: 40px
@@ -9929,6 +9974,7 @@ input::-webkit-inner-spin-button
       @media screen and ( max-width: 425px)
         margin-bottom: 40px
   .wrapper
+    overflow: visible
     flex-wrap: nowrap
     @media screen and ( max-width: 768px)
       flex-direction: column-reverse
@@ -10019,7 +10065,11 @@ input::-webkit-inner-spin-button
       .sideBarContent_reviews
         position: -webkit-sticky
         position: sticky
-        top: 0
+        top: 2%
+        margin-bottom: 58px
+        @media screen and ( max-width: 768px)
+          position: static
+          margin-bottom: 0px
         .makeReview_reviews
           width: 100%
           padding: 13px 0px
@@ -10087,22 +10137,39 @@ input::-webkit-inner-spin-button
       text-align: center
   .commentAppContent_index
     width: 100%
-    height: 160px
-    margin-bottom: 26px
     display: flex
-    overflow: hidden
-    img
-      object-fit: cover
-      display: block
-      background-position: center
-      height: 160px
-      margin: 0px 0.5%
-  .commentAppData_index
-    color: #999999
-    width: 100%
-    @media screen and ( max-width: 375px)
-      text-align: center
+    // overflow: hidden
+    .card
+      width: 80px
+      height: 80px
+      overflow: hidden
+      margin-right: 12px
+      &:last-of-type
+        margin-right: 0px
+      a
+        width: 100%
+        height: 100%
+        .card-img-top
+          width: 100%
+          height: 100%
+          object-fit: cover
+.commentAppData_index
+  margin-top: 26px
+  color: #999999
+  width: 100%
+  @media screen and ( max-width: 375px)
+    text-align: center
+#previous-button
+  &:focus
+    outline: none
 
+#next-button
+  &:focus
+    outline: none
+
+#close-button
+  &:focus
+    outline: none
 /* ТРИНАДЦАТАЯ СТРАНИЦА. КАТАЛОГ
 
 .mainContent_catalog
