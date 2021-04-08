@@ -6249,7 +6249,7 @@ header {
   border: 2px solid #BFBFBF;
   border-radius: 4px;
   outline: none;
-  margin-bottom: 10px;
+  margin-bottom: 16px;
 }
 
 .popup .popupBody .popupContent .popupSubmitBtn {
@@ -14743,7 +14743,6 @@ input::-webkit-inner-spin-button {
 
 .content_reviews .popup .popupBody .popupContent .uploadedFilesWrapper {
   padding: 0px 40px;
-  margin-bottom: 5px;
 }
 
 .content_reviews .popup .popupBody .popupContent .uploadedFilesWrapper .uploadedFiles {
@@ -14771,7 +14770,12 @@ input::-webkit-inner-spin-button {
   position: relative;
   width: 80px;
   height: 80px;
-  margin: 15px;
+  margin-right: 32px;
+  margin-bottom: 15px;
+}
+
+.content_reviews .popup .popupBody .popupContent .uploadedFilesWrapper .uploadedFiles .uploadedFile:last-of-type {
+  margin-right: 0px;
 }
 
 @media screen and (max-width: 434px) {

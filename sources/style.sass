@@ -4182,7 +4182,7 @@ header
         border: 2px solid #BFBFBF
         border-radius: 4px
         outline: none
-        margin-bottom: 10px
+        margin-bottom: 16px
       .popupSubmitBtn
         display: block
         padding: 10px 30px
@@ -9769,7 +9769,6 @@ input::-webkit-inner-spin-button
             padding-top: 13px
         .uploadedFilesWrapper
           padding: 0px 40px
-          margin-bottom: 5px
           .uploadedFiles
             display: flex
             width: 100%
@@ -9781,7 +9780,10 @@ input::-webkit-inner-spin-button
               position: relative
               width: 80px
               height: 80px
-              margin: 15px
+              margin-right: 32px
+              margin-bottom: 15px
+              &:last-of-type
+                margin-right: 0px
               @media screen and ( max-width: 434px)
                 margin: 11px
               .deleteBtn

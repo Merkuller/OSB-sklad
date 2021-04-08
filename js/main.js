@@ -502,23 +502,39 @@ if (document.querySelector('.contentReviews_reviews')) {
         };
 
     commentApplications.forEach(app => app.style.display = 'block');
+    
+    function chechHeight() {
+        commentBtns.forEach(btn => {
+            let commentBlock = btn.parentElement;
+            let commentText = commentBlock.querySelector('.reviewText_index');
+            if (calcHeight(commentText) / calcLineHeight(commentText) > lineNumbers) {
+                btn.style.display = 'block';
+                commentText.classList.toggle('commentHight');
+            }
+        });
+    }
 
-    commentBtns.forEach(btn => {
-        let commentBlock = btn.parentElement;
-        let commentText = commentBlock.querySelector('.reviewText_index');
-        if (calcHeight(commentText) / calcLineHeight(commentText) > lineNumbers) {
-            btn.style.display = 'block';
-            commentText.classList.toggle('commentHight');
-        }
-    });
+    function btnTextCanger() {
+        commentBlock.addEventListener('click', function (e) {
+            if (e.target.classList.contains('readAllBtn_reviews')) {
+                let text = e.target.parentElement.querySelector('.reviewText_index');
+                text.classList.toggle('commentAppear');
+                e.target.textContent = text.classList.contains('commentAppear') ? 'свернуть' : 'читать полностью';
+            }
+        })
+    }
 
-    commentBlock.addEventListener('click', function (e) {
-        if (e.target.classList.contains('readAllBtn_reviews')) {
-            let text = e.target.parentElement.querySelector('.reviewText_index');
-            text.classList.toggle('commentAppear');
-            e.target.textContent = text.classList.contains('commentAppear') ? 'свернуть' : 'читать полностью';
-        }
-    })
+    chechHeight();
+    btnTextCanger();
+
+    if (document.querySelector('.revBtn')) {
+        let bt = document.querySelector('.revBtn');
+
+        bt.addEventListener('click', () => {
+            chechHeight();
+            btnTextCanger();
+        })
+    }
 }
 if (document.querySelector('.dragNdrop_reviews')) {
     let dropArea = document.querySelector('.drag-area');
