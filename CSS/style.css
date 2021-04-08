@@ -721,8 +721,9 @@ header {
 }
 
 .secondNavbar .secondNavbarIcons .nav-item:nth-of-type(1) {
-  width: 40px;
+  min-width: 40px;
   height: 24px;
+  padding: 0px 5px;
   border-radius: 47% 47% 0% 47%;
   background-color: #EC8B33;
   display: -webkit-box;
@@ -3158,6 +3159,7 @@ header {
 
 /* Текст отзыва */
 .reviewText_index {
+  white-space: pre-line;
   font-style: normal;
   font-weight: normal;
   font-size: 16px;
@@ -7601,71 +7603,6 @@ header {
 .sectionTwo_productCard .popup .popupBody .popupContent .popupAgreement a {
   text-decoration: underline;
   color: #4E4E4E;
-}
-
-.dragNdrop_reviews {
-  padding: 0px 40px;
-  margin-bottom: 16px;
-}
-
-.box.has-advanced-upload {
-  background-color: white;
-  padding: 25px 20px 23px 120px;
-  position: relative;
-  background-color: #F0EFEE;
-  border-radius: 4px;
-}
-
-.box.has-advanced-upload::before {
-  content: '';
-  height: 60px;
-  width: 60px;
-  position: absolute;
-  top: 30px;
-  left: 40px;
-  background-image: url("../img/svg/reviews/drugNdrop.svg");
-}
-
-.box.is-uploading .box__input {
-  visibility: none;
-}
-
-.box.is-uploading .box__uploading {
-  display: block;
-}
-
-.box__file {
-  opacity: 0;
-  position: absolute;
-  z-index: -20;
-}
-
-.dNdlink_reviews {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 36px;
-  color: #EC8B33;
-}
-
-.box.has-advanced-upload .box__dragndrop {
-  display: inline;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 20px;
-  line-height: 36px;
-  color: #4E4E4E;
-}
-
-.box__dragndrop,
-.box__uploading,
-.box__success,
-.box__error {
-  display: none;
-}
-
-.box.is-dragover {
-  background-color: grey;
 }
 
 .secondSection_productCard {
@@ -14596,8 +14533,8 @@ input::-webkit-inner-spin-button {
   height: 100vh;
   padding: 0px;
   max-width: 680px;
-  overflow: auto;
-  overflow: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
   padding-bottom: 20px;
   -webkit-transform: translate(0px, 0px);
           transform: translate(0px, 0px);
@@ -14781,6 +14718,162 @@ input::-webkit-inner-spin-button {
   padding-top: 13px;
 }
 
+.content_reviews .popup .popupBody .popupContent .uploadedFilesWrapper {
+  padding: 0px 40px;
+  margin-bottom: 5px;
+}
+
+.content_reviews .popup .popupBody .popupContent .uploadedFilesWrapper .uploadedFiles {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+
+.content_reviews .popup .popupBody .popupContent .uploadedFilesWrapper .uploadedFiles .uploadedFile {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  margin: 15px;
+}
+
+.content_reviews .popup .popupBody .popupContent .uploadedFilesWrapper .uploadedFiles .uploadedFile .deleteBtn {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background-image: url("../img/svg/reviews/deleteIconBtn.svg");
+  background-position: center;
+  right: -20px;
+  border: none;
+  border-radius: 50%;
+}
+
+.content_reviews .popup .popupBody .popupContent .uploadedFilesWrapper .uploadedFiles .uploadedFile .deleteBtn:focus {
+  outline: none;
+}
+
+.content_reviews .popup .popupBody .popupContent .uploadedFilesWrapper .uploadedFiles .uploadedFile img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews {
+  padding: 0px 40px;
+  position: relative;
+  z-index: 20;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area {
+  min-height: 120px;
+  padding: 25px 20px 23px 110px;
+  position: relative;
+  background-color: #F0EFEE;
+  border-radius: 4px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area.activeArea {
+  background-color: #EC8B33;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dragIcon {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-image: url("../img/svg/reviews/dragNdrop.svg");
+  background-position: center;
+  top: 30px;
+  left: 30px;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dragAreaContent {
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dragAreaContent.hidden {
+  z-index: -10;
+  opacity: 0;
+  position: absolute;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dragAreaContent .browseFile {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #EC8B33;
+  text-decoration: none;
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dragAreaContent .browseFile:hover {
+  color: #CA782E;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dragAreaContent .browseFile:active {
+  color: #EC8B33;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dragAreaContent .browseFile.disabled {
+  pointer-events: none;
+  color: #4E4E4E;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dragAreaContent .browseFileText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #4E4E4E;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dragAreaContent .headerDragText {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #4E4E4E;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dropHereText {
+  width: 100%;
+  text-align: left;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 36px;
+  color: #010101;
+  opacity: 0;
+  z-index: -10;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translate(0, -50%);
+          transform: translate(0, -50%);
+  -webkit-transition: all .2s ease-in-out;
+  transition: all .2s ease-in-out;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .drag-area .dropHereText.show {
+  opacity: 1;
+  z-index: 10;
+}
+
+.content_reviews .popup .popupBody .popupContent .dragNdrop_reviews .limitedFiles {
+  margin-top: 8px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #999999;
+}
+
 .content_reviews .popup .popupBody .popupContent .checBoxContainer {
   width: 88.2%;
   padding-bottom: 40px;
@@ -14788,6 +14881,10 @@ input::-webkit-inner-spin-button {
   border-bottom: 2px solid #F0EFEE;
   margin: 0px auto;
   margin-bottom: 22px;
+}
+
+.content_reviews .popup .popupBody .popupContent .checBoxContainer .popupCheckBtn {
+  margin-top: 16px;
 }
 
 .content_reviews .popup .popupBody .popupContent .checBoxContainer .popupCheckBtn .checkBtn {
@@ -16790,5 +16887,9 @@ input::-webkit-inner-spin-button {
 
 .bodyPaddingRight {
   padding-right: 17px;
+}
+
+.activeArea {
+  background-color: #EC8B33;
 }
 /*# sourceMappingURL=style.css.map */
