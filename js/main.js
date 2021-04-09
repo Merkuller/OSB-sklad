@@ -346,11 +346,6 @@ if (document.querySelector('.fieldBlock_productCard')) {
         makeCalcBlock = document.querySelector('.youNeedIs_productCard');
         thisWord = document.querySelector('.wordToDecline_productCard');
         wordArr = ['лист', 'листа', 'листов'];
-    // function getValue(attr) {
-    //     if (evt.target.getAttribute('name') === attr) {
-    //         return evt.target.value;
-    //     }
-    // }
 
     function wordDecline(num, words) {
         let count = num % 100;
@@ -947,6 +942,17 @@ if (document.querySelector('.popup')) {
 
         });
     });
+}
+if (document.querySelector('.sectionTwo_productCard')) {
+
+    let sectionThree_productCard = document.querySelector('.sectionThree_productCard');
+        mediaQuery = window.matchMedia('(max-width: 1024px)');
+
+    sectionThree_productCard.style.paddingTop = '121px';
+    sectionThree_productCard.style.paddingBottom = '119px';
+    sectionThree_productCard.style.borderBottom = '2px solid #F0EFEE';
+
+    if (mediaQuery.matches) sectionThree_productCard.style.paddingTop = '0px';
 }
 // Этот скрипт передаёт значение карзины из одного элемента в дублирующийся
 // shopBasketValueSender
