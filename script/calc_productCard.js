@@ -10,11 +10,6 @@ if (document.querySelector('.fieldBlock_productCard')) {
         makeCalcBlock = document.querySelector('.youNeedIs_productCard');
         thisWord = document.querySelector('.wordToDecline_productCard');
         wordArr = ['лист', 'листа', 'листов'];
-    // function getValue(attr) {
-    //     if (evt.target.getAttribute('name') === attr) {
-    //         return evt.target.value;
-    //     }
-    // }
 
     function wordDecline(num, words) {
         let count = num % 100;

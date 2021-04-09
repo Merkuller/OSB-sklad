@@ -10276,7 +10276,7 @@ input::-webkit-inner-spin-button
     flex-wrap: wrap
 
 .contacts
-  flex: 0 0 (180px * 100%) / 1400px
+  flex: 1 1 30%
   min-width: 174px
   @media screen and ( max-width: 1024px)
     flex-grow: 1
@@ -10288,7 +10288,7 @@ input::-webkit-inner-spin-button
     flex-basis: 100%
 
   .contactsElement
-    max-width: 174px
+    width: 100%
     margin-bottom: 24px
     display: block
     padding-left: 28px
@@ -10300,6 +10300,8 @@ input::-webkit-inner-spin-button
     color: #FFFFFF
     text-decoration: none
     transition: color 0.2s ease-in-out
+    &:nth-last-of-type(2)
+      max-width: 174px
     
     &::before
       content: ""
@@ -10433,7 +10435,7 @@ input::-webkit-inner-spin-button
     background-image: url('../img/svg/footer_page1/youtubeIcon_active_page1.svg')
 
 .footerMenu
-  flex: 0 1 (185px * 100%) / 1400px 
+  flex: 1 1 30% 
   @media screen and ( max-width: 1024px)
     flex-grow: 1
     margin-right: 30px
@@ -10467,7 +10469,7 @@ input::-webkit-inner-spin-button
         transition: color 0.1s ease-in-out
 
 .footerMenuByApplication
-  flex: 0 1 (289px * 100%) / 1400px 
+  flex: 1 1 30% 
   transition: color 0.2s ease-in-out
   @media screen and ( max-width: 1024px)
     flex-basis: 100%
@@ -10505,7 +10507,7 @@ input::-webkit-inner-spin-button
     text-decoration: underline
 
 .footerMenuByManufacturer
-  flex: 0 1 (244px * 100%) / 1400px 
+  flex: 1 1 30% 
   @media screen and ( max-width: 1024px)
     flex-grow: 1
   @media screen and ( max-width: 768px)
@@ -10715,9 +10717,7 @@ input::-webkit-inner-spin-button
             .productLink
               img
                 width: 100%
-          .productCardForm
-            // @media screen and ( max-width: 1001px)
-              
+          .productCardForm             
             @media screen and ( max-width: 455px)
               flex-direction: row
             .productCardTotalPrice

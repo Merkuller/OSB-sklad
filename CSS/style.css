@@ -15597,9 +15597,9 @@ input::-webkit-inner-spin-button {
 }
 
 .contacts {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 12.85714%;
-          flex: 0 0 12.85714%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
   min-width: 174px;
 }
 
@@ -15628,7 +15628,7 @@ input::-webkit-inner-spin-button {
 }
 
 .contacts .contactsElement {
-  max-width: 174px;
+  width: 100%;
   margin-bottom: 24px;
   display: block;
   padding-left: 28px;
@@ -15641,6 +15641,10 @@ input::-webkit-inner-spin-button {
   text-decoration: none;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
+}
+
+.contacts .contactsElement:nth-last-of-type(2) {
+  max-width: 174px;
 }
 
 .contacts .contactsElement::before {
@@ -15804,9 +15808,9 @@ input::-webkit-inner-spin-button {
 }
 
 .footerMenu {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 13.21429%;
-          flex: 0 1 13.21429%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
 }
 
 @media screen and (max-width: 1024px) {
@@ -15862,9 +15866,9 @@ input::-webkit-inner-spin-button {
 }
 
 .footerMenuByApplication {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 20.64286%;
-          flex: 0 1 20.64286%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
   -webkit-transition: color 0.2s ease-in-out;
   transition: color 0.2s ease-in-out;
 }
@@ -15931,9 +15935,9 @@ input::-webkit-inner-spin-button {
 }
 
 .footerMenuByManufacturer {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 17.42857%;
-          flex: 0 1 17.42857%;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 30%;
+          flex: 1 1 30%;
 }
 
 @media screen and (max-width: 1024px) {
