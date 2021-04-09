@@ -15720,16 +15720,6 @@ input::-webkit-inner-spin-button {
   background-image: url("../img/svg/footer_page1/vector_page1.svg");
 }
 
-.contactsCity::after {
-  content: "";
-  width: 3px;
-  height: 13px;
-  position: absolute;
-  right: 0px;
-  top: 3px;
-  background-image: url("../img/svg/footer_page1/group_page1.svg");
-}
-
 @media screen and (max-width: 1024px) {
   .contactsIcon {
     position: absolute;
