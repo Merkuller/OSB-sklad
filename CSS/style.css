@@ -8948,7 +8948,6 @@ input::-webkit-inner-spin-button {
 @media screen and (max-width: 1024px) {
   .sectionThree_productCard {
     padding-top: 0px;
-    padding-bottom: 60px;
   }
   .sectionThree_productCard .thirdSection_productCard .productCards {
     width: 100%;
