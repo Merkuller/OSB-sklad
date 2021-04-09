@@ -15699,6 +15699,7 @@ input::-webkit-inner-spin-button {
   line-height: 20px;
   color: #ffffff;
   text-align: left;
+  cursor: pointer;
 }
 
 .contactsTown {
