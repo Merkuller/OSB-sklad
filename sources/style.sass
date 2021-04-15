@@ -7660,6 +7660,63 @@ input::-webkit-inner-spin-button
   width: 100%
   display: block
 
+.townList_contacts
+  width: 100%
+  @media screen and ( max-width: 1024px)
+    margin-top: 60px
+  @media screen and ( max-width: 425px)
+    margin-top: 40px
+  .townListHeader_contacts
+    font-style: normal
+    font-weight: bold
+    font-size: 28px
+    line-height: 36px
+    color: #4E4E4E
+    margin-bottom: 60px
+    @media screen and ( max-width: 1024px)
+      margin-bottom: 40px
+    @media screen and ( max-width: 425px)
+      text-align: center
+  .townListContent_contacts
+    display: flex
+    justify-content: flex-start
+    flex-wrap: wrap
+    width: 100%
+    .townListContentCard_contacts
+      flex: 0 1 24%
+      margin-bottom: 41px
+      @media screen and ( max-width: 1052px)
+        flex-basis: 33.3%
+      @media screen and ( max-width: 720px)
+        flex-basis: 50%
+        margin-bottom: 20px
+      @media screen and ( max-width: 498px)
+        flex-basis: 100%
+      &:hover
+        .townListContentCardName_contacts
+          color: #EC8B33
+      .townListContentCardName_contacts
+        text-decoration: none
+        font-style: normal
+        font-weight: bold
+        font-size: 28px
+        line-height: 36px
+        color: #010101
+        margin-bottom: 7px
+        transition: .3s
+      .townListContentCardPhone_contacts
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 28px
+        color: #010101
+      .townListContentCardAdres_contacts,
+      .townListContentCardTime_contacts
+        font-style: normal
+        font-weight: normal
+        font-size: 16px
+        line-height: 28px
+        color: #999999
 /* ДЕВЯТАЯ СТРАНИЦА. КОРЗИНА. 1 ЭТАП
 /* Первая секция. 9 страница. Корзина 1 этап
 

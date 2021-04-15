@@ -11363,6 +11363,117 @@ input::-webkit-inner-spin-button {
   display: block;
 }
 
+.townList_contacts {
+  width: 100%;
+}
+
+@media screen and (max-width: 1024px) {
+  .townList_contacts {
+    margin-top: 60px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .townList_contacts {
+    margin-top: 40px;
+  }
+}
+
+.townList_contacts .townListHeader_contacts {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  color: #4E4E4E;
+  margin-bottom: 60px;
+}
+
+@media screen and (max-width: 1024px) {
+  .townList_contacts .townListHeader_contacts {
+    margin-bottom: 40px;
+  }
+}
+
+@media screen and (max-width: 425px) {
+  .townList_contacts .townListHeader_contacts {
+    text-align: center;
+  }
+}
+
+.townList_contacts .townListContent_contacts {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  width: 100%;
+}
+
+.townList_contacts .townListContent_contacts .townListContentCard_contacts {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 24%;
+          flex: 0 1 24%;
+  margin-bottom: 41px;
+}
+
+@media screen and (max-width: 1052px) {
+  .townList_contacts .townListContent_contacts .townListContentCard_contacts {
+    -ms-flex-preferred-size: 33.3%;
+        flex-basis: 33.3%;
+  }
+}
+
+@media screen and (max-width: 720px) {
+  .townList_contacts .townListContent_contacts .townListContentCard_contacts {
+    -ms-flex-preferred-size: 50%;
+        flex-basis: 50%;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 498px) {
+  .townList_contacts .townListContent_contacts .townListContentCard_contacts {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+  }
+}
+
+.townList_contacts .townListContent_contacts .townListContentCard_contacts:hover .townListContentCardName_contacts {
+  color: #EC8B33;
+}
+
+.townList_contacts .townListContent_contacts .townListContentCard_contacts .townListContentCardName_contacts {
+  text-decoration: none;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 28px;
+  line-height: 36px;
+  color: #010101;
+  margin-bottom: 7px;
+  -webkit-transition: .3s;
+  transition: .3s;
+}
+
+.townList_contacts .townListContent_contacts .townListContentCard_contacts .townListContentCardPhone_contacts {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #010101;
+}
+
+.townList_contacts .townListContent_contacts .townListContentCard_contacts .townListContentCardAdres_contacts,
+.townList_contacts .townListContent_contacts .townListContentCard_contacts .townListContentCardTime_contacts {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  color: #999999;
+}
+
 /* ДЕВЯТАЯ СТРАНИЦА. КОРЗИНА. 1 ЭТАП */
 /* Первая секция. 9 страница. Корзина 1 этап */
 .sectionOne_shopBasketFirstStep {
