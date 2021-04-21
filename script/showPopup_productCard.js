@@ -1,4 +1,5 @@
 if (document.querySelector('.firstSectionPage3Content') || document.querySelector('.productCards')) {
+    
     let popup = document.querySelector('.sectionThree_productCard .popup');
         modalForComment = document.querySelector('.sectionTwo_productCard .popup');
         closePopupBtn = document.querySelectorAll('.popupCloseBtn');

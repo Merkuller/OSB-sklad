@@ -3159,6 +3159,7 @@ header {
 
 /* Текст отзыва */
 .reviewText_index {
+  overflow: hidden;
   white-space: pre-line;
   font-style: normal;
   font-weight: normal;
