@@ -1,6 +1,6 @@
 // Маска для поля ввода номера
 //phoneNumberMask
-if (document.getElementById('#phone')) {
+if (document.getElementById('#phone')) { 
     window.addEventListener("DOMContentLoaded", function() {
         [].forEach.call( document.querySelectorAll('#phone'), function(input) {
             var keyCode;
