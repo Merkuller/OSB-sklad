@@ -833,7 +833,7 @@ if (document.querySelector('.dataField_shopBasketThirdStep')) {
 }
 // Маска для поля ввода номера
 //phoneNumberMask
-if (document.querySelector('#phone')) {
+if (document.getElementById('#phone')) { 
     window.addEventListener("DOMContentLoaded", function() {
         [].forEach.call( document.querySelectorAll('#phone'), function(input) {
             var keyCode;
