@@ -1223,6 +1223,20 @@ if (document.querySelector('.button_certificates')) {
     }
 }
 
+//totalGoodsCounter_shopBasketFirstStep
+
+if (document.querySelector('.quantityPurchase')) {
+    
+    let fields = document.querySelectorAll('.calculatorNumber_shopBasketFirstStep');
+    let x = 0;
+
+    fields.forEach(field => {
+        field.addEventListener('input', function() {
+            x += Number(field.value);
+            document.querySelector('.quantityPurchase').textContent = x;
+        })
+    })
+}
 // Этот скрипт копирует содержимое первого элемента списка при десктопной версии и в первый элемент списка мобильной версии
 // transferCitySelect
 
