@@ -17156,4 +17156,12 @@ input::-webkit-inner-spin-button {
 .activeArea {
   background-color: #EC8B33;
 }
+
+.popupLink {
+  color: #363636;
+}
+
+.popupLink:hover {
+  color: #363636;
+}
 /*# sourceMappingURL=style.css.map */
