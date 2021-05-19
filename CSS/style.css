@@ -15681,21 +15681,25 @@ input::-webkit-inner-spin-button {
   max-width: 100%;
   background-color: #685A51;
   padding-top: 121px;
-  padding-bottom: 50px;
+  padding-bottom: 100px;
 }
 
 @media screen and (max-width: 1024px) {
   .footer {
     padding-top: 60px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
   }
 }
 
 @media screen and (max-width: 768px) {
   .footer {
     padding: 40px 0px;
-    padding-bottom: 100px;
+    padding-bottom: 150px;
   }
+}
+
+.footer .wrapper {
+  position: relative;
 }
 
 .footer_content {
@@ -15846,7 +15850,7 @@ input::-webkit-inner-spin-button {
     left: 50%;
     -webkit-transform: translateX(-50%);
             transform: translateX(-50%);
-    bottom: 30px;
+    bottom: -60px;
   }
 }
 
@@ -16100,6 +16104,165 @@ input::-webkit-inner-spin-button {
   color: #CA782E;
   -webkit-transition: color 0.1s ease-in-out;
   transition: color 0.1s ease-in-out;
+}
+
+/* Элемент с статистикой визитов */
+.viewsStatistics {
+  position: absolute;
+  width: 90px;
+  height: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EC8B33;
+  bottom: -60px;
+  padding-right: 7px;
+}
+
+.viewsStatistics:hover .graph img {
+  opacity: 0;
+}
+
+@media screen and (max-width: 1024px) {
+  .viewsStatistics {
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    bottom: -110px;
+  }
+}
+
+.viewsStatistics .graph {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+  position: relative;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(99, 110, 114, 0.8)), to(#fbfcfa));
+  background: linear-gradient(to top, rgba(99, 110, 114, 0.8) 0%, #fbfcfa 100%);
+  border: 2px solid #8e8f8e;
+  padding-left: 5px;
+  padding-right: 7px;
+  border-right: none;
+}
+
+.viewsStatistics .graph::before {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 55%;
+  border-left: 2px solid #8e8f8e;
+  background: #EC8B33;
+  -webkit-transform: skewX(-15deg);
+          transform: skewX(-15deg);
+  right: -7px;
+  bottom: -2px;
+}
+
+.viewsStatistics .graph::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  height: 55%;
+  border-left: 2px solid #8e8f8e;
+  background: #EC8B33;
+  -webkit-transform: skewX(15deg);
+          transform: skewX(15deg);
+  right: -7px;
+  top: -2px;
+}
+
+.viewsStatistics .graph img {
+  display: inline-block;
+  width: 15px;
+  height: 45%;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.viewsStatistics .viewsStatisticsVals {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+.viewsStatistics .viewsStatisticsVals .viewsWatchersVal {
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: default;
+}
+
+.viewsStatistics .viewsStatisticsVals .viewsWatchersVal::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/svg/eye-icon.svg");
+  background-size: 100%;
+  margin-left: 3px;
+  display: inline-block;
+}
+
+.viewsStatistics .viewsStatisticsVals .viewsGuestsVal {
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: default;
+}
+
+.viewsStatistics .viewsStatisticsVals .viewsGuestsVal::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/svg/enter-icon.svg");
+  background-size: 100%;
+  margin-left: 3px;
+  display: inline-block;
+}
+
+.viewsStatistics .viewsStatisticsVals .viewsSpecGuestsVal {
+  font-size: 10px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: default;
+}
+
+.viewsStatistics .viewsStatisticsVals .viewsSpecGuestsVal::after {
+  content: '';
+  width: 10px;
+  height: 10px;
+  background-image: url("../img/svg/person-icon.svg");
+  background-size: 100%;
+  margin-left: 3px;
+  display: inline-block;
 }
 
 /* Кнопка скроллинга вверх */

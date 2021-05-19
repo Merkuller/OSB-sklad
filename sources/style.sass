@@ -10326,13 +10326,17 @@ input::-webkit-inner-spin-button
   max-width: 100%
   background-color: #685A51
   padding-top: 121px
-  padding-bottom: 50px
+  padding-bottom: 100px
   @media screen and ( max-width: 1024px)
     padding-top: 60px 
-    padding-bottom: 100px
+    padding-bottom: 150px
   @media screen and ( max-width: 768px)
     padding: 40px 0px
-    padding-bottom: 100px
+    padding-bottom: 150px
+
+.footer
+  .wrapper
+    position: relative
 
 .footer_content
   width: 100%
@@ -10440,7 +10444,7 @@ input::-webkit-inner-spin-button
     position: absolute
     left: 50%
     transform: translateX(-50%)
-    bottom: 30px
+    bottom: -60px
 
   a
     display: inline-block
@@ -10596,6 +10600,105 @@ input::-webkit-inner-spin-button
     &:active
       color: #CA782E
       transition: color 0.1s ease-in-out
+
+/* Элемент с статистикой визитов
+
+.viewsStatistics
+  position: absolute
+  width: 90px
+  height: 40px
+  display: flex
+  justify-content: space-between
+  align-items: center
+  background-color: #EC8B33
+  bottom: -60px
+  padding-right: 7px
+  &:hover
+    .graph
+      img
+        opacity: 0
+  @media screen and ( max-width: 1024px)
+    left: 50%
+    transform: translateX(-50%)
+    bottom: -110px
+  .graph
+    display: flex
+    align-items: center
+    height: 100%
+    position: relative
+    background: linear-gradient(to top, rgba(99,110,114,0.8) 0%,#fbfcfa 100%)
+    border: 2px solid #8e8f8e
+    padding-left: 5px
+    padding-right: 7px
+    border-right: none
+    &::before
+      content: ''
+      position: absolute
+      width: 10px
+      height: 55%
+      border-left: 2px solid #8e8f8e
+      background: #EC8B33
+      transform: skewX(-15deg)
+      right: -7px
+      bottom: -2px
+    &::after
+      content: ''
+      position: absolute
+      width: 10px
+      height: 55%
+      border-left: 2px solid #8e8f8e
+      background: #EC8B33
+      transform: skewX(15deg)
+      right: -7px
+      top: -2px
+    img
+      display: inline-block
+      width: 15px
+      height: 45%
+      transition: all .3s
+  .viewsStatisticsVals
+    display: flex
+    flex-direction: column
+    align-items: flex-end
+    .viewsWatchersVal
+      font-size: 10px
+      display: flex
+      align-items: center
+      cursor: default
+      &::after
+        content: ''
+        width: 10px 
+        height: 10px
+        background-image: url('../img/svg/eye-icon.svg')
+        background-size: 100%
+        margin-left: 3px
+        display: inline-block
+    .viewsGuestsVal
+      font-size: 10px
+      display: flex
+      align-items: center
+      cursor: default
+      &::after
+        content: ''
+        width: 10px 
+        height: 10px
+        background-image: url('../img/svg/enter-icon.svg')
+        background-size: 100%
+        margin-left: 3px
+        display: inline-block
+    .viewsSpecGuestsVal
+      font-size: 10px
+      display: flex
+      align-items: center
+      cursor: default
+      &::after
+        content: ''
+        width: 10px 
+        height: 10px
+        background-image: url('../img/svg/person-icon.svg')
+        background-size: 100%
+        margin-left: 3px
+        display: inline-block
 
 /* Кнопка скроллинга вверх
 
