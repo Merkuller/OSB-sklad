@@ -1,7 +1,7 @@
 //Этот скрипт генерирует рандомное количество посещений в день
 //userVisits
 
-if (document.querySelector('.footer')) {
+if (document.querySelector('.viewsStatistics')) {
 
     let watchersVal = document.querySelector('.viewsWatchersVal')
         guestsVal = document.querySelector('.viewsGuestsVal') 
